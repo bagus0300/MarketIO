@@ -1,11 +1,32 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    Test
-</body>
+<html lang="en" class="min-h-screen">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            {% block title %}
+            {% endblock title %}
+        </title>
+        <!-- TAILWIND CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script type="module" src="{% static 'base/tailwind.config.js' %}"></script>
+        <!-- HTMX -->
+        <script src="https://unpkg.com/htmx.org@1.9.5"></script>
+        <!-- ALPINE JS -->
+        <script defer
+                src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.0/dist/cdn.min.js"></script>
+    </head>
+    <body class="min-h-screen border-8 flex flex-col justify-between">
+        {% include 'partials/header.html' %}
+        <main class="border-green-500 border-2 flex flex-grow">
+            <div class="container border-2">
+                {% block content %}
+                    <br>
+                    <br>
+                {% endblock content %}
+            </div>
+        </main>
+        {% include 'partials/footer.html' %}
+    </body>
 </html>
