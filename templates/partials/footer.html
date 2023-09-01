@@ -1,31 +1,61 @@
 {% load static %}
-<footer class="border-2 h-[18rem] grid">
-    <div class="container border-2 border-red-400 flex justify-between py-[50px]">
-        <div class="border-pink-400 border-2 flex-1 flex flex-col justify-between">
-            <div class="flex flex-col">
-                <a href="#">Link</a>
-                <a href="#">Link</a>
-                <a href="#">Link</a>
-            </div>
-            <div>
-                <p>Newletter form</p>
-                <input type="text"
-                       name="email"
-                       id="newsletter-email"
-                       class="border-2 border-primary">
-            </div>
-        </div>
-        <div class="border-blue-400 border-2 flex-1 flex flex-col justify-between items-end">
-            <div class="flex items-end flex-col">
-                <div>
-                    <span class="bg-black">Link</span>
-                    <span class="bg-black">Link</span>
-                    <span class="bg-black">Link</span>
-                    <span class="bg-black">Link</span>
+<footer class="h-[340px] grid text-base lg:text-xl">
+    <div class="container flex justify-between flex-wrap">
+        <div class="flex justify-between py-12 border-t-2 border-primary w-full">
+            <div class="flex-1 flex flex-col justify-between">
+                <div class="flex flex-col gap-3">
+                    <a href="#">Contact</a>
+                    <a href="#">About</a>
+                    <a href="#">Terms & Conditions</a>
                 </div>
-                <div>logo</div>
+                <div>
+                    <p class="font-bold mb-2">Subscribe to our email offers</p>
+                    <div class="relative w-[300px]">
+                        <input type="text"
+                               name="email"
+                               id="newsletter-email"
+                               class="border-2 px-3 border-primary h-12 placeholder:text-secondary w-full"
+                               placeholder="Email">
+                        <div class="right-0 top-0 absolute h-12 w-12">
+                            <div class="h-full w-full flex justify-center items-center">
+                                <svg width="22"
+                                     height="22"
+                                     viewBox="0 0 22 22"
+                                     fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="-8.74228e-08" y1="11" x2="20.7778" y2="11" stroke="black" stroke-width="2" />
+                                    <line x1="21.2929" y1="11.7071" x2="10.2929" y2="0.707106" stroke="black" stroke-width="2" />
+                                    <line y1="-1" x2="13.8279" y2="-1" transform="matrix(-0.707107 0.707107 0.707107 0.707107 20.7778 12.2227)" stroke="black" stroke-width="2" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p>A Django project by Carl Murray</p>
+            <div class="flex-1 flex flex-col justify-between items-end">
+                <div class="flex items-end flex-col gap-6">
+                    <div class="flex gap-4 lg:gap-8">
+                        <img class="w-8 lg:w-auto"
+                             src="{% static 'base/portfolio-link.svg' %}"
+                             alt="Link to personal portfolio">
+                        <img class="w-8 lg:w-auto"
+                             src="{% static 'base/github-link.svg' %}"
+                             alt="Link to GitHub profile">
+                        <img class="w-8 lg:w-auto"
+                             src="{% static 'base/linkedin-link.svg' %}"
+                             alt="Link to LinkedIn profile">
+                        <img class="w-8 lg:w-auto"
+                             src="{% static 'base/facebook-link.svg' %}"
+                             alt="Link to project Facebook marketing page">
+                    </div>
+                    <div>
+                        <img width="80" src="{% static 'base/laced-logo.svg' %}" alt="">
+                    </div>
+                </div>
+                <p class="font-sm">
+                    A Django project by <span class="font-bold">Carl Murray</span>
+                </p>
+            </div>
         </div>
     </div>
 </footer>

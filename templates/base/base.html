@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en" class="min-h-screen">
+<html lang="en" class="min-h-screen text-primary">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,13 +17,12 @@
         <script defer
                 src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.0/dist/cdn.min.js"></script>
     </head>
-    <body class="min-h-screen border-8 flex flex-col justify-between">
+    <body class="min-h-screen flex flex-col justify-between">
         {% include 'partials/header.html' %}
-        <main class="border-green-500 border-2 flex flex-grow">
-            <div class="container border-2">
+        <main class="flex flex-grow">
+            <div class="container py-12">
                 {% block content %}
-                    <br>
-                    <br>
+
                 {% endblock content %}
             </div>
         </main>
