@@ -173,3 +173,6 @@ laced_venv/Scripts/pip3.exe
 laced_venv/Scripts/python.exe
 laced_venv/Scripts/pythonw.exe
 laced_venv/Scripts/sqlformat.exe
+laced_venv/Scripts/gunicorn.exe
+laced_venv/Scripts/jp.py
+laced_venv/ 
