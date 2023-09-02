@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en" class="min-h-screen text-primary">
+<html lang="en" class="min-h-screen overflow-x-hidden text-primary">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,13 +16,33 @@
         <!-- ALPINE JS -->
         <script defer
                 src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.0/dist/cdn.min.js"></script>
+        <!-- CUSTOMISE TAILWIND -->
+        <script>
+            tailwind.config = {
+                theme: {
+                  extend: {
+                    colors: {
+                      'primary':'#111111',
+                      'secondary':'#566565',
+                    },
+                    container: {
+                      center: true,
+                      padding: '2rem',
+                    },
+                    fontFamily: {
+                      sans: ['Roboto', 'sans-serif'],
+                    },
+            
+                  }
+                },
+              }
+        </script>
     </head>
-    <body class="min-h-screen flex flex-col justify-between">
+    <body class="flex flex-col justify-between min-h-screen">
         {% include 'partials/header.html' %}
         <main class="flex flex-grow">
             <div class="container py-12">
                 {% block content %}
-
                 {% endblock content %}
             </div>
         </main>
