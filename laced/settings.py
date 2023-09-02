@@ -33,11 +33,13 @@ ALLOWED_HOSTS = [
     '*', '.herokuapp.com', 'https://laced-pp5-396f22c24818.herokuapp.com/'
 ]
 
+AUTH_USER_MODEL = "users.User"
 
 # Application definition
 
 INSTALLED_APPS = [
     'core',
+    'users',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
