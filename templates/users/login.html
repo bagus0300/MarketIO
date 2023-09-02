@@ -1,0 +1,28 @@
+{% extends 'users/auth_base.html' %}
+{% load static %}
+{% block content %}
+    <form action=""
+          method="post"
+          class="flex flex-col items-center justify-center w-full gap-6">
+        {% csrf_token %}
+        <div class="w-full">
+            <label class="font-bold text-primary" for="email">EMAIL</label>
+            <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
+                   type="email"
+                   name="email"
+                   id="email"
+                   required>
+        </div>
+        <div class="w-full">
+            <label class="font-bold text-primary" for="password1">PASSWORD</label>
+            <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
+                   type="password"
+                   name="password1"
+                   id="password1"
+                   maxlength="100"
+                   required>
+        </div>
+        <button class="inline-block w-full h-12 text-center text-white bg-black md:px-0"
+                type="submit">LOGIN</button>
+    </form>
+{% endblock content %}

@@ -1,2 +1,3 @@
 djlint
 black
+django-debug-toolbar
