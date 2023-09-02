@@ -1,23 +1,23 @@
 {% load static %}
 <footer class="h-[340px] grid text-base lg:text-xl">
-    <div class="container flex justify-between flex-wrap">
-        <div class="flex justify-between py-12 border-t-2 border-primary w-full">
-            <div class="flex-1 flex flex-col justify-between">
+    <div class="container flex flex-wrap justify-between">
+        <div class="flex flex-col justify-between w-full gap-8 py-12 border-t-2 sm:gap-0 sm:flex-row border-primary">
+            <div class="flex flex-col justify-between flex-1">
                 <div class="flex flex-col gap-3">
                     <a href="#">Contact</a>
                     <a href="#">About</a>
                     <a href="#">Terms & Conditions</a>
                 </div>
                 <div>
-                    <p class="font-bold mb-2">Subscribe to our email offers</p>
+                    <p class="mt-4 mb-2 font-bold sm:mt-0">Subscribe to our email offers</p>
                     <div class="relative w-[300px]">
                         <input type="text"
                                name="email"
                                id="newsletter-email"
-                               class="border-2 px-3 border-primary h-12 placeholder:text-secondary w-full"
+                               class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
                                placeholder="Email">
-                        <div class="right-0 top-0 absolute h-12 w-12">
-                            <div class="h-full w-full flex justify-center items-center">
+                        <div class="absolute top-0 right-0 w-12 h-12">
+                            <div class="flex items-center justify-center w-full h-full">
                                 <svg width="22"
                                      height="22"
                                      viewBox="0 0 22 22"
@@ -32,8 +32,8 @@
                     </div>
                 </div>
             </div>
-            <div class="flex-1 flex flex-col justify-between items-end">
-                <div class="flex items-end flex-col gap-6">
+            <div class="flex flex-col justify-between flex-1 gap-4 sm:gap-0 sm:items-end">
+                <div class="flex flex-col gap-6 sm:items-end">
                     <div class="flex gap-4 lg:gap-8">
                         <img class="w-8 lg:w-auto"
                              src="{% static 'base/portfolio-link.svg' %}"

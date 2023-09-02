@@ -1,10 +1,10 @@
 {% load static %}
-<div>
-    <div class="mb-2 border-2 aspect-square">
-        <img src="" alt="">
+<div class="mb-4">
+    <div class="mb-2 aspect-square bg-cover bg-center bg-[url('{% static 'base/placeholder-img.webp' %}')]">
+        {% comment %} <img src="{% static 'base/placeholder-img.webp' %}" alt=""> {% endcomment %}
     </div>
     <div class="">
-        <span class="block font-bold text-primary">Product Name</span>
-        <span class="block text-secondary">Price</span>
+        <span class="block text-xl font-bold text-primary">Product Name</span>
+        <span class="block text-lg text-secondary">Price</span>
     </div>
 </div>
