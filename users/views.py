@@ -5,7 +5,6 @@ from .forms import CustomUserCreationForm
 from django.contrib import messages
 
 # TODO:
-# add messages
 # add error handling
 # redirect to next page
 def signup_view(request):
@@ -16,21 +15,16 @@ def signup_view(request):
             login(request, user)
             messages.info(request, "Successfully signed up!")
             return redirect('home')
-        print(dict(form.errors))    
-        for e in form.errors:
-            print(e)
-    return render(request, 'users/signup.html', {'form':form})
+    return render(request, 'users/signup.html')
 
 
 def login_view(request):
     if request.method == 'POST':
         form = AuthenticationForm(request, data=request.POST)
         if form.is_valid():
-            print('Wwowoowowo')
             email = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password')
             user = authenticate(request, email=email, password=password)
-            print(user)
             if user is not None:
                 login(request, user)
                 messages.info(request, "Successfully logged in!")
