@@ -17,3 +17,5 @@ typing_extensions==4.7.1
 tzdata==2023.3
 urllib3==1.26.16
 whitenoise==6.5.0
+pillow == 10.0.0
+django-debug-toolbar
