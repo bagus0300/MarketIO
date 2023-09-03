@@ -1,12 +1,14 @@
 {% load static %}
 <header class="h-[90px] flex items-center">
     <nav class="container flex items-center justify-between">
+        <!-- HOME LOGO -->
         <div>
             <a href="{% url 'home' %}">
                 <img src="{% static 'base/laced-logo.svg' %}"
                      alt="Brand logo spelling the word 'laced' in Courier Prime typeface">
             </a>
         </div>
+        <!-- NAV LINKS -->
         <ul class="flex items-center gap-8 text-xl">
             <li class="hidden md:block">
                 <a href="/">SHOP</a>
@@ -17,6 +19,7 @@
             <li class="hidden md:block">
                 <a href="#">CONTACT</a>
             </li>
+            <!-- SEARCH -->
             <li>
                 <a href="#">
                     <svg width="22"
@@ -28,7 +31,11 @@
                     </svg>
                 </a>
             </li>
-            <li>
+            <!-- USER CONTROLS -->
+            <li x-data="{open:false}"
+                @mouseenter="open = !open"
+                @mouseleave="open =!open"
+                class="relative">
                 <a href="#">
                     <svg width="27"
                          height="37"
@@ -39,7 +46,25 @@
                         <circle cx="13.5" cy="9.5" r="5.5" stroke="black" stroke-width="2" />
                     </svg>
                 </a>
+                <!-- USER CONTROLS DROPDOWN CONTAINER -->
+                <div x-cloak x-show="open" class="absolute px-6 py-3 text-sm font-bold text-center translate-x-1/2 bg-white border-2 border-primary right-1/2">
+                    <ul class="flex flex-col justify-center">
+                        {% if request.user.is_authenticated %}
+                            <li>
+                                <a class="block p-1 underline transition-all hover:decoration-primary decoration-2 decoration-transparent underline-offset-4" href="{% url 'logout' %}">LOGOUT</a>
+                            </li>
+                        {% else %}
+                            <li>
+                                <a class="block p-1 underline transition-all hover:decoration-primary decoration-2 decoration-transparent underline-offset-4" href="{% url 'login' %}">LOGIN</a>
+                            </li>
+                            <li>
+                                <a class="block p-1 underline transition-all hover:decoration-primary decoration-2 decoration-transparent underline-offset-4" href="{% url 'signup' %}">SIGNUP</a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
             </li>
+            <!-- SHOPPING BAG -->
             <li>
                 <a href="#">
                     <svg width="22"
@@ -51,12 +76,6 @@
                     </svg>
                 </a>
             </li>
-            <!-- FOR DEV ONLY, TO BE REFACTORED-->
-            {% if request.user.is_authenticated %}
-                <li>
-                    <a href="{% url 'logout' %}">LOGOUT</a>
-                </li>
-            {% endif %}
         </ul>
     </nav>
 </header>
