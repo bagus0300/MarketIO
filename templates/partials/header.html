@@ -2,8 +2,10 @@
 <header class="h-[90px] flex items-center">
     <nav class="container flex items-center justify-between">
         <div>
-            <img src="{% static 'base/laced-logo.svg' %}"
-                 alt="Brand logo spelling the word 'laced' in Courier Prime typeface">
+            <a href="{% url 'home' %}">
+                <img src="{% static 'base/laced-logo.svg' %}"
+                     alt="Brand logo spelling the word 'laced' in Courier Prime typeface">
+            </a>
         </div>
         <ul class="flex items-center gap-8 text-xl">
             <li class="hidden md:block">
@@ -49,6 +51,12 @@
                     </svg>
                 </a>
             </li>
+            <!-- FOR DEV ONLY, TO BE REFACTORED-->
+            {% if request.user.is_authenticated %}
+                <li>
+                    <a href="{% url 'logout' %}">LOGOUT</a>
+                </li>
+            {% endif %}
         </ul>
     </nav>
 </header>

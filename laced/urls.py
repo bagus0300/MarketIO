@@ -25,6 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', core_views.home_view, name='home'),
     path('login/', user_views.login_view, name='login'),
+    path('logout/', user_views.logout_view, name='logout'),
     path('signup/', user_views.signup_view, name='signup'),
     path("__debug__/", include("debug_toolbar.urls")),
 

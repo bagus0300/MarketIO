@@ -9,20 +9,21 @@
             <label class="font-bold text-primary" for="email">EMAIL</label>
             <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
                    type="email"
-                   name="email"
+                   name="username"
                    id="email"
                    required>
         </div>
         <div class="w-full">
-            <label class="font-bold text-primary" for="password1">PASSWORD</label>
+            <label class="font-bold text-primary" for="password">PASSWORD</label>
             <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
                    type="password"
-                   name="password1"
-                   id="password1"
+                   name="password"
+                   id="password"
                    maxlength="100"
                    required>
         </div>
         <button class="inline-block w-full h-12 text-center text-white bg-black md:px-0"
                 type="submit">LOGIN</button>
     </form>
+    {{form.errors}}
 {% endblock content %}
