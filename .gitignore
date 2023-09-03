@@ -177,3 +177,4 @@ laced_venv/Scripts/gunicorn.exe
 laced_venv/Scripts/jp.py
 laced_venv/ 
 .vscode/settings.json
+media/
