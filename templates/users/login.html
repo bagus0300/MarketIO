@@ -1,6 +1,9 @@
 {% extends 'users/auth_base.html' %}
 {% load static %}
 {% block content %}
+    <div class="mb-4 font-bold text-red-600">
+        {% if form.errors %}{{ form.non_field_errors }}{% endif %}
+    </div>
     <form action=""
           method="post"
           class="flex flex-col items-center justify-center w-full gap-6">
@@ -25,5 +28,4 @@
         <button class="inline-block w-full h-12 text-center text-white bg-black md:px-0"
                 type="submit">LOGIN</button>
     </form>
-    {{form.errors}}
 {% endblock content %}

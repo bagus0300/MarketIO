@@ -1,6 +1,12 @@
 {% extends 'users/auth_base.html' %}
 {% load static %}
 {% block content %}
+    <div class="w-full mb-4 font-bold text-red-600">
+        {% if form.errors %}
+            {{ form.non_field_errors }}
+            {% for field in form %}{{ field.errors }}{% endfor %}
+        {% endif %}
+    </div>
     <form action=""
           method="post"
           class="flex flex-col items-center justify-center w-full gap-6">
@@ -10,7 +16,8 @@
             <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
                    type="email"
                    name="email"
-                   id="email" required>
+                   id="email"
+                   required>
         </div>
         <div class="w-full">
             <label class="font-bold text-primary" for="first_name">FIRST NAME</label>
@@ -18,7 +25,8 @@
                    type="text"
                    name="first_name"
                    id="first_name"
-                   maxlength="100" required>
+                   maxlength="100"
+                   required>
         </div>
         <div class="w-full">
             <label class="font-bold text-primary" for="last_name">LAST NAME</label>
@@ -26,7 +34,8 @@
                    type="text"
                    name="last_name"
                    id="last_name"
-                   maxlength="100" required>
+                   maxlength="100"
+                   required>
         </div>
         <div class="w-full">
             <label class="font-bold text-primary" for="password1">PASSWORD</label>
@@ -34,7 +43,8 @@
                    type="password"
                    name="password1"
                    id="password1"
-                   maxlength="100" required>
+                   maxlength="100"
+                   required>
         </div>
         <div class="w-full">
             <label class="font-bold text-primary" for="password2">CONFIRM PASSWORD</label>
@@ -42,7 +52,8 @@
                    type="password"
                    name="password2"
                    id="password2"
-                   maxlength="100" required>
+                   maxlength="100"
+                   required>
         </div>
         <button class="inline-block w-full h-12 text-center text-white bg-black md:px-0"
                 type="submit">SIGNUP</button>

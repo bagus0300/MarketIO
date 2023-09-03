@@ -4,8 +4,22 @@
   {% include 'base/_head.html' %}
   <body class="flex flex-col justify-between min-h-screen">
     {% include 'partials/header.html' %}
-    <main class="flex flex-grow">
-      <div class="container py-12">
+    <main class="relative flex flex-grow">
+      <div class="container relative py-12">
+        <!-- MESSAGES -->
+        {% if messages %}
+          {% for message in messages %}
+            <div x-data="{open:false}"
+                 x-show="open"
+                 x-transition.duration.600
+                 x-cloak
+                 x-init="setTimeout(()=>{open=true; setTimeout(()=>{open=false;}, 5000)}, 100)"
+                 class="fixed px-12 py-2 font-bold text-white bg-black border-2 bottom-5 right-5 border-primary">
+              {{ message }}
+            </div>
+          {% endfor %}
+        {% endif %}
+        <!-- CONTENT BLOCK -->
         {% block content %}
         {% endblock content %}
       </div>
