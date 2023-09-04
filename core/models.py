@@ -37,6 +37,8 @@ class Product(models.Model):
         blank=True,
     )
     price = models.DecimalField(decimal_places=2, max_digits=10)
+    sale_price = models.DecimalField(decimal_places=2, max_digits=10, default=False)
+    is_featured = models.BooleanField(_("Featured Product?"), default=False)
 
     def __str__(self):
         return self.name
