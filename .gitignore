@@ -165,3 +165,4 @@ laced_venv/
 .vscode/settings.json
 media/
 staticfiles/
+product_imgs/

@@ -1,6 +1,7 @@
 from django.db import models
 from django.core.validators import RegexValidator
 from django.utils.translation import gettext as _
+import os
 
 
 class Product(models.Model):
@@ -48,10 +49,20 @@ class ProductCategory(models.Model):
     """
     Product category model for storing product categories.
     """
+
     name = models.CharField(max_length=50)
 
     def __str__(self):
         return self.name
+
+
+def upload_to_product_img(instance, filename):
+    """ 
+    Defines the upload path for product images.
+    """
+    
+    filename = os.path.basename(filename)
+    return os.path.join("product_imgs", filename)
 
 
 class ProductImage(models.Model):
@@ -59,7 +70,7 @@ class ProductImage(models.Model):
     Product image model for storing product images.
     """
 
-    image = models.ImageField(_("Image"), upload_to="media/")
+    image = models.ImageField(_("Image"), upload_to=upload_to_product_img)
     product = models.ForeignKey(
         "core.Product", on_delete=models.CASCADE, null=True, blank=True, default=None
     )
