@@ -72,5 +72,5 @@ class ProductImage(models.Model):
 
     image = models.ImageField(_("Image"), upload_to=upload_to_product_img)
     product = models.ForeignKey(
-        "core.Product", on_delete=models.CASCADE, null=True, blank=True, default=None
+        "core.Product", on_delete=models.SET_NULL, null=True, blank=True, default=None
     )

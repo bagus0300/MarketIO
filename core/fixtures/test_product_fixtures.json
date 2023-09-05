@@ -1,100 +1,756 @@
-[{"model":"core.product","pk":1,"fields":{"name":"dis parturient","sku":"412848","description":"In congue. Etiam justo. Etiam pretium iaculis justo.","category":2,"price":99.18,"sale_price":39.48,"is_featured":false}},
-{"model":"core.product","pk":2,"fields":{"name":"condimentum id","sku":"216008","description":"Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.","category":5,"price":122.23,"sale_price":26.36,"is_featured":true}},
-{"model":"core.product","pk":3,"fields":{"name":"at nulla","sku":"017802","description":"Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.\n\nCurabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.","category":3,"price":148.48,"sale_price":23.06,"is_featured":false}},
-{"model":"core.product","pk":4,"fields":{"name":"arcu sed","sku":"617437","description":"Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.","category":1,"price":123.76,"sale_price":51.38,"is_featured":true}},
-{"model":"core.product","pk":5,"fields":{"name":"ligula pellentesque","sku":"902391","description":"Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.","category":3,"price":77.07,"sale_price":26.23,"is_featured":false}},
-{"model":"core.product","pk":6,"fields":{"name":"cursus urna","sku":"231391","description":"Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\n\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.","category":2,"price":136.69,"sale_price":50.39,"is_featured":false}},
-{"model":"core.product","pk":7,"fields":{"name":"eleifend donec","sku":"950305","description":"Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.","category":2,"price":114.71,"sale_price":24.0,"is_featured":true}},
-{"model":"core.product","pk":8,"fields":{"name":"tellus nulla","sku":"409208","description":"Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.","category":3,"price":118.52,"sale_price":60.0,"is_featured":false}},
-{"model":"core.product","pk":9,"fields":{"name":"ipsum","sku":"600388","description":"Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.","category":2,"price":93.07,"sale_price":20.24,"is_featured":false}},
-{"model":"core.product","pk":10,"fields":{"name":"dapibus at","sku":"694163","description":"Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.\n\nSed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.","category":5,"price":101.99,"sale_price":30.2,"is_featured":true}},
-{"model":"core.product","pk":11,"fields":{"name":"erat vestibulum","sku":"706294","description":"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.\n\nPhasellus in felis. Donec semper sapien a libero. Nam dui.","category":5,"price":126.82,"sale_price":35.99,"is_featured":true}},
-{"model":"core.product","pk":12,"fields":{"name":"pellentesque quisque","sku":"966407","description":"Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.","category":2,"price":128.32,"sale_price":38.43,"is_featured":true}},
-{"model":"core.product","pk":13,"fields":{"name":"aliquet","sku":"428393","description":"Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.","category":5,"price":107.85,"sale_price":42.3,"is_featured":true}},
-{"model":"core.product","pk":14,"fields":{"name":"tempor","sku":"150766","description":"Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.\n\nPellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.","category":3,"price":115.43,"sale_price":39.95,"is_featured":false}},
-{"model":"core.product","pk":15,"fields":{"name":"at vulputate","sku":"062915","description":"Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.","category":1,"price":128.82,"sale_price":42.62,"is_featured":false}},
-{"model":"core.product","pk":16,"fields":{"name":"elit","sku":"242342","description":"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.\n\nPhasellus in felis. Donec semper sapien a libero. Nam dui.","category":2,"price":88.53,"sale_price":55.03,"is_featured":false}},
-{"model":"core.product","pk":17,"fields":{"name":"libero nullam","sku":"634416","description":"Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.","category":5,"price":139.5,"sale_price":24.18,"is_featured":false}},
-{"model":"core.product","pk":18,"fields":{"name":"pede","sku":"472652","description":"In congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.","category":3,"price":99.6,"sale_price":54.13,"is_featured":true}},
-{"model":"core.product","pk":19,"fields":{"name":"mollis","sku":"357262","description":"Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.","category":5,"price":134.56,"sale_price":40.33,"is_featured":true}},
-{"model":"core.product","pk":20,"fields":{"name":"porttitor lacus","sku":"056945","description":"Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.","category":1,"price":76.82,"sale_price":45.73,"is_featured":false}},
-{"model":"core.product","pk":21,"fields":{"name":"neque","sku":"464312","description":"Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.","category":5,"price":75.44,"sale_price":25.27,"is_featured":false}},
-{"model":"core.product","pk":22,"fields":{"name":"eros elementum","sku":"619760","description":"Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.\n\nMorbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.","category":2,"price":89.97,"sale_price":36.38,"is_featured":true}},
-{"model":"core.product","pk":23,"fields":{"name":"sit amet","sku":"166761","description":"Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.","category":3,"price":127.17,"sale_price":27.02,"is_featured":true}},
-{"model":"core.product","pk":24,"fields":{"name":"sagittis","sku":"294857","description":"Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.","category":1,"price":132.47,"sale_price":47.09,"is_featured":false}},
-{"model":"core.product","pk":25,"fields":{"name":"porttitor pede","sku":"999958","description":"Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.","category":5,"price":82.85,"sale_price":61.62,"is_featured":false}},
-{"model":"core.product","pk":26,"fields":{"name":"praesent lectus","sku":"610836","description":"Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.","category":5,"price":83.29,"sale_price":26.74,"is_featured":false}},
-{"model":"core.product","pk":27,"fields":{"name":"sed lacus","sku":"730659","description":"Sed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.","category":5,"price":98.37,"sale_price":55.55,"is_featured":true}},
-{"model":"core.product","pk":28,"fields":{"name":"in","sku":"625696","description":"Sed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.","category":5,"price":84.97,"sale_price":60.11,"is_featured":false}},
-{"model":"core.product","pk":29,"fields":{"name":"nulla","sku":"900197","description":"Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.","category":4,"price":90.02,"sale_price":21.39,"is_featured":true}},
-{"model":"core.product","pk":30,"fields":{"name":"tempus","sku":"044105","description":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.","category":4,"price":135.25,"sale_price":45.86,"is_featured":false}},
-{"model":"core.product","pk":31,"fields":{"name":"suscipit nulla","sku":"339951","description":"In congue. Etiam justo. Etiam pretium iaculis justo.","category":1,"price":128.56,"sale_price":36.72,"is_featured":true}},
-{"model":"core.product","pk":32,"fields":{"name":"posuere","sku":"469922","description":"In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.","category":3,"price":76.7,"sale_price":41.75,"is_featured":false}},
-{"model":"core.product","pk":33,"fields":{"name":"amet","sku":"563984","description":"Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.","category":4,"price":118.33,"sale_price":64.83,"is_featured":true}},
-{"model":"core.product","pk":34,"fields":{"name":"porttitor lorem","sku":"350663","description":"Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.","category":3,"price":110.5,"sale_price":61.92,"is_featured":false}},
-{"model":"core.product","pk":35,"fields":{"name":"mauris vulputate","sku":"536727","description":"Phasellus in felis. Donec semper sapien a libero. Nam dui.","category":2,"price":136.87,"sale_price":64.07,"is_featured":true}},
-{"model":"core.product","pk":36,"fields":{"name":"integer a","sku":"456715","description":"Sed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.","category":1,"price":118.52,"sale_price":22.94,"is_featured":true}},
-{"model":"core.product","pk":37,"fields":{"name":"nibh","sku":"206735","description":"Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.","category":2,"price":76.55,"sale_price":41.83,"is_featured":false}},
-{"model":"core.product","pk":38,"fields":{"name":"felis","sku":"022150","description":"Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.","category":1,"price":126.86,"sale_price":48.46,"is_featured":false}},
-{"model":"core.product","pk":39,"fields":{"name":"leo","sku":"155863","description":"Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.","category":2,"price":98.57,"sale_price":67.36,"is_featured":true}},
-{"model":"core.product","pk":40,"fields":{"name":"habitasse","sku":"527833","description":"Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.","category":2,"price":140.13,"sale_price":40.18,"is_featured":false}},
-{"model":"core.product","pk":41,"fields":{"name":"metus","sku":"145395","description":"Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.","category":1,"price":134.07,"sale_price":56.37,"is_featured":false}},
-{"model":"core.product","pk":42,"fields":{"name":"neque","sku":"743930","description":"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.\n\nPhasellus in felis. Donec semper sapien a libero. Nam dui.","category":4,"price":144.79,"sale_price":35.14,"is_featured":true}},
-{"model":"core.product","pk":43,"fields":{"name":"nunc viverra","sku":"754281","description":"Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.","category":4,"price":86.44,"sale_price":43.19,"is_featured":false}},
-{"model":"core.product","pk":44,"fields":{"name":"nisi","sku":"019274","description":"Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.\n\nIn quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.","category":1,"price":101.76,"sale_price":58.28,"is_featured":true}},
-{"model":"core.product","pk":45,"fields":{"name":"ante","sku":"383097","description":"Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.\n\nFusce consequat. Nulla nisl. Nunc nisl.","category":4,"price":109.88,"sale_price":47.3,"is_featured":false}},
-{"model":"core.product","pk":46,"fields":{"name":"posuere felis","sku":"444331","description":"Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.","category":5,"price":142.95,"sale_price":67.25,"is_featured":false}},
-{"model":"core.product","pk":47,"fields":{"name":"ut rhoncus","sku":"191883","description":"Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.","category":2,"price":88.23,"sale_price":32.03,"is_featured":true}},
-{"model":"core.product","pk":48,"fields":{"name":"cursus urna","sku":"372862","description":"In congue. Etiam justo. Etiam pretium iaculis justo.","category":1,"price":78.23,"sale_price":34.85,"is_featured":true}},
-{"model":"core.product","pk":49,"fields":{"name":"quisque","sku":"966093","description":"Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.","category":3,"price":138.37,"sale_price":54.88,"is_featured":false}},
-{"model":"core.product","pk":50,"fields":{"name":"quis odio","sku":"370811","description":"In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.","category":1,"price":146.83,"sale_price":41.94,"is_featured":true}},
-{"model":"core.product","pk":51,"fields":{"name":"vestibulum aliquet","sku":"011428","description":"Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.","category":5,"price":122.38,"sale_price":68.01,"is_featured":true}},
-{"model":"core.product","pk":52,"fields":{"name":"ante vel","sku":"908517","description":"Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.","category":5,"price":111.5,"sale_price":33.22,"is_featured":false}},
-{"model":"core.product","pk":53,"fields":{"name":"donec","sku":"830923","description":"Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.","category":1,"price":80.86,"sale_price":28.56,"is_featured":false}},
-{"model":"core.product","pk":54,"fields":{"name":"eget eros","sku":"923863","description":"Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.","category":4,"price":101.0,"sale_price":64.67,"is_featured":false}},
-{"model":"core.product","pk":55,"fields":{"name":"dui nec","sku":"713567","description":"Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.","category":1,"price":84.09,"sale_price":32.24,"is_featured":true}},
-{"model":"core.product","pk":56,"fields":{"name":"sollicitudin","sku":"519220","description":"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.","category":2,"price":79.55,"sale_price":37.43,"is_featured":false}},
-{"model":"core.product","pk":57,"fields":{"name":"auctor sed","sku":"706715","description":"Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.","category":2,"price":127.83,"sale_price":26.32,"is_featured":false}},
-{"model":"core.product","pk":58,"fields":{"name":"quis turpis","sku":"122229","description":"Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.","category":1,"price":147.45,"sale_price":41.28,"is_featured":true}},
-{"model":"core.product","pk":59,"fields":{"name":"eros","sku":"558481","description":"Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.","category":1,"price":129.01,"sale_price":35.97,"is_featured":false}},
-{"model":"core.product","pk":60,"fields":{"name":"mattis","sku":"611306","description":"Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.","category":5,"price":104.8,"sale_price":27.51,"is_featured":false}},
-{"model":"core.product","pk":61,"fields":{"name":"egestas","sku":"085222","description":"Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.\n\nNam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.","category":1,"price":84.13,"sale_price":30.62,"is_featured":false}},
-{"model":"core.product","pk":62,"fields":{"name":"nisl","sku":"738556","description":"Sed ante. Vivamus tortor. Duis mattis egestas metus.","category":3,"price":106.33,"sale_price":69.96,"is_featured":false}},
-{"model":"core.product","pk":63,"fields":{"name":"curabitur at","sku":"911775","description":"Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.","category":3,"price":75.96,"sale_price":60.13,"is_featured":true}},
-{"model":"core.product","pk":64,"fields":{"name":"eu","sku":"227817","description":"Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.","category":4,"price":139.7,"sale_price":64.08,"is_featured":false}},
-{"model":"core.product","pk":65,"fields":{"name":"platea","sku":"168464","description":"Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.","category":3,"price":111.71,"sale_price":47.07,"is_featured":true}},
-{"model":"core.product","pk":66,"fields":{"name":"porta","sku":"413079","description":"Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.\n\nCurabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.","category":5,"price":138.82,"sale_price":50.19,"is_featured":false}},
-{"model":"core.product","pk":67,"fields":{"name":"ipsum dolor","sku":"391934","description":"Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.\n\nIn quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.","category":1,"price":125.62,"sale_price":32.92,"is_featured":true}},
-{"model":"core.product","pk":68,"fields":{"name":"justo sollicitudin","sku":"414164","description":"Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.","category":1,"price":123.69,"sale_price":50.78,"is_featured":false}},
-{"model":"core.product","pk":69,"fields":{"name":"ultricies","sku":"463758","description":"Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.","category":4,"price":80.4,"sale_price":61.18,"is_featured":true}},
-{"model":"core.product","pk":70,"fields":{"name":"blandit mi","sku":"314086","description":"Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.","category":2,"price":127.33,"sale_price":67.06,"is_featured":true}},
-{"model":"core.product","pk":71,"fields":{"name":"proin eu","sku":"107950","description":"Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.","category":3,"price":131.09,"sale_price":63.06,"is_featured":true}},
-{"model":"core.product","pk":72,"fields":{"name":"eleifend pede","sku":"600260","description":"Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.","category":4,"price":89.44,"sale_price":48.86,"is_featured":false}},
-{"model":"core.product","pk":73,"fields":{"name":"ante ipsum","sku":"490126","description":"Fusce consequat. Nulla nisl. Nunc nisl.","category":3,"price":129.39,"sale_price":68.57,"is_featured":true}},
-{"model":"core.product","pk":74,"fields":{"name":"donec quis","sku":"257212","description":"Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.","category":1,"price":137.11,"sale_price":67.54,"is_featured":false}},
-{"model":"core.product","pk":75,"fields":{"name":"pede justo","sku":"953333","description":"Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.","category":3,"price":131.31,"sale_price":23.82,"is_featured":false}},
-{"model":"core.product","pk":76,"fields":{"name":"diam id","sku":"603484","description":"Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.","category":5,"price":108.44,"sale_price":53.07,"is_featured":true}},
-{"model":"core.product","pk":77,"fields":{"name":"sed","sku":"742980","description":"Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.","category":5,"price":101.46,"sale_price":33.63,"is_featured":true}},
-{"model":"core.product","pk":78,"fields":{"name":"maecenas ut","sku":"004619","description":"Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.","category":3,"price":130.75,"sale_price":47.29,"is_featured":true}},
-{"model":"core.product","pk":79,"fields":{"name":"aliquet ultrices","sku":"094579","description":"In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.","category":3,"price":92.87,"sale_price":45.03,"is_featured":true}},
-{"model":"core.product","pk":80,"fields":{"name":"at velit","sku":"872979","description":"Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.\n\nIn sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.","category":5,"price":128.42,"sale_price":59.01,"is_featured":false}},
-{"model":"core.product","pk":81,"fields":{"name":"vel","sku":"215827","description":"Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.\n\nNam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.","category":5,"price":142.9,"sale_price":46.95,"is_featured":true}},
-{"model":"core.product","pk":82,"fields":{"name":"velit vivamus","sku":"307845","description":"Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.","category":1,"price":113.42,"sale_price":34.7,"is_featured":true}},
-{"model":"core.product","pk":83,"fields":{"name":"augue","sku":"168076","description":"Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.\n\nSed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.","category":1,"price":143.14,"sale_price":66.81,"is_featured":true}},
-{"model":"core.product","pk":84,"fields":{"name":"orci luctus","sku":"099829","description":"Sed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.","category":3,"price":77.27,"sale_price":69.21,"is_featured":false}},
-{"model":"core.product","pk":85,"fields":{"name":"cras","sku":"268344","description":"Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.","category":2,"price":146.7,"sale_price":49.79,"is_featured":true}},
-{"model":"core.product","pk":86,"fields":{"name":"ipsum","sku":"370216","description":"Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.","category":2,"price":144.74,"sale_price":26.24,"is_featured":false}},
-{"model":"core.product","pk":87,"fields":{"name":"nisl","sku":"743673","description":"Sed ante. Vivamus tortor. Duis mattis egestas metus.","category":4,"price":138.47,"sale_price":69.42,"is_featured":true}},
-{"model":"core.product","pk":88,"fields":{"name":"odio","sku":"848314","description":"Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.\n\nPraesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.","category":4,"price":105.44,"sale_price":56.54,"is_featured":false}},
-{"model":"core.product","pk":89,"fields":{"name":"integer","sku":"223422","description":"Sed ante. Vivamus tortor. Duis mattis egestas metus.","category":3,"price":125.11,"sale_price":43.05,"is_featured":true}},
-{"model":"core.product","pk":90,"fields":{"name":"mus","sku":"961861","description":"Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.","category":3,"price":88.66,"sale_price":26.43,"is_featured":false}},
-{"model":"core.product","pk":91,"fields":{"name":"hac","sku":"324976","description":"Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.","category":1,"price":122.96,"sale_price":67.02,"is_featured":true}},
-{"model":"core.product","pk":92,"fields":{"name":"proin","sku":"888896","description":"Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.","category":1,"price":139.71,"sale_price":30.27,"is_featured":true}},
-{"model":"core.product","pk":93,"fields":{"name":"lorem ipsum","sku":"875476","description":"Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.","category":2,"price":129.54,"sale_price":61.77,"is_featured":true}},
-{"model":"core.product","pk":94,"fields":{"name":"imperdiet","sku":"315057","description":"Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.","category":5,"price":83.63,"sale_price":24.9,"is_featured":false}},
-{"model":"core.product","pk":95,"fields":{"name":"eleifend pede","sku":"510781","description":"Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.","category":2,"price":96.98,"sale_price":32.22,"is_featured":true}},
-{"model":"core.product","pk":96,"fields":{"name":"amet","sku":"794662","description":"Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.","category":3,"price":82.41,"sale_price":36.77,"is_featured":false}},
-{"model":"core.product","pk":97,"fields":{"name":"ultrices","sku":"188989","description":"Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.","category":4,"price":138.74,"sale_price":46.65,"is_featured":false}},
-{"model":"core.product","pk":98,"fields":{"name":"duis ac","sku":"274587","description":"Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.","category":3,"price":129.85,"sale_price":26.04,"is_featured":false}},
-{"model":"core.product","pk":99,"fields":{"name":"ac nibh","sku":"655933","description":"Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\nEtiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.","category":4,"price":112.25,"sale_price":31.55,"is_featured":true}},
-{"model":"core.product","pk":100,"fields":{"name":"scelerisque quam","sku":"557539","description":"Fusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.","category":2,"price":110.5,"sale_price":41.75,"is_featured":false}}]
+[
+    {
+        "model": "core.product",
+        "pk": 1,
+        "fields": {
+            "name": "JavaScript Runner Pro",
+            "sku": "123456",
+            "description": "Experience top performance with JavaScript Runner Pro shoes. These shoes are designed for runners who demand the best.",
+            "category": 2,
+            "price": 109.99,
+            "sale_price": 39.99,
+            "is_featured": true
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 2,
+        "fields": {
+            "name": "HTML5 Hurdle Sprinter",
+            "sku": "234561",
+            "description": "Clear hurdles with ease in HTML5 Hurdle Sprinter shoes. Their HTML5-inspired design ensures a smooth performance.",
+            "category": 1,
+            "price": 99.95,
+            "sale_price": 29.95,
+            "is_featured": false
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 3,
+        "fields": {
+            "name": "Python Performer Elite",
+            "sku": "345612",
+            "description": "Perform at an elite level with Python Performer Elite shoes. These shoes provide comfort and high performance.",
+            "category": 2,
+            "price": 119.99,
+            "sale_price": 49.99,
+            "is_featured": true
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 4,
+        "fields": {
+            "name": "React Runner Dynamic",
+            "sku": "456123",
+            "description": "Run dynamically with React Runner Dynamic shoes. They offer React-inspired responsiveness and agility.",
+            "category": 3,
+            "price": 109.95,
+            "sale_price": 39.95,
+            "is_featured": true
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 5,
+        "fields": {
+            "name": "Vue.js Velocity Runner",
+            "sku": "561234",
+            "description": "Experience velocity with Vue.js Velocity Runner shoes. Their Vue.js-powered technology ensures top speed.",
+            "category": 3,
+            "price": 99.99,
+            "sale_price": 34.99,
+            "is_featured": false
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 6,
+        "fields": {
+            "name": "Django Dynamo Sprinter",
+            "sku": "612345",
+            "description": "Sprint like a dynamo with Django Dynamo Sprinter shoes. Their Django-inspired design guarantees power and style.",
+            "category": 2,
+            "price": 104.99,
+            "sale_price": 44.99,
+            "is_featured": false
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 7,
+        "fields": {
+            "name": "SQL Slick Sprinter",
+            "sku": "123457",
+            "description": "Sprint slickly with SQL Slick Sprinter shoes. Their SQL-inspired design ensures precision and grace.",
+            "category": 2,
+            "price": 114.99,
+            "sale_price": 39.99,
+            "is_featured": false
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 8,
+        "fields": {
+            "name": "Node.js Nova Runner",
+            "sku": "234568",
+            "description": "Run like a pro with Node.js Nova Runner shoes. Their Node.js-powered technology guarantees a top-notch performance.",
+            "category": 1,
+            "price": 119.95,
+            "sale_price": 49.95,
+            "is_featured": true
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 9,
+        "fields": {
+            "name": "CSS Cyclone Sprinter",
+            "sku": "345679",
+            "description": "Sprint like a cyclone with CSS Cyclone Sprinter shoes. These shoes offer CSS-inspired agility and speed.",
+            "category": 5,
+            "price": 99.95,
+            "sale_price": 34.95,
+            "is_featured": false
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 10,
+        "fields": {
+            "name": "Bootstrap Blaze Runner",
+            "sku": "456190",
+            "description": "Run like a blaze with Bootstrap Blaze Runner shoes. Their Bootstrap-inspired design guarantees power and style.",
+            "category": 1,
+            "price": 109.99,
+            "sale_price": 39.99,
+            "is_featured": true
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 11,
+        "fields": {
+            "name": "Angular Accelerator Runner",
+            "sku": "561901",
+            "description": "Accelerate with Angular Accelerator Runner shoes. These shoes offer Angular-inspired support and agility.",
+            "category": 1,
+            "price": 114.95,
+            "sale_price": 44.95,
+            "is_featured": true
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 12,
+        "fields": {
+            "name": "Vue.js Velocity Sprinter",
+            "sku": "612012",
+            "description": "Sprint with velocity in Vue.js Velocity Sprinter shoes. Their Vue.js-powered technology ensures precision and style.",
+            "category": 3,
+            "price": 104.99,
+            "sale_price": 44.99,
+            "is_featured": false
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 13,
+        "fields": {
+            "name": "Python Performer Sprinter",
+            "sku": "123501",
+            "description": "Sprint like a performer with Python Performer Sprinter shoes. Their Python-inspired construction ensures power and agility.",
+            "category": 2,
+            "price": 99.95,
+            "sale_price": 34.95,
+            "is_featured": false
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 14,
+        "fields": {
+            "name": "React Runner Precision",
+            "sku": "234512",
+            "description": "Run with precision in React Runner Precision shoes. These shoes offer React-inspired responsiveness and control.",
+            "category": 3,
+            "price": 109.99,
+            "sale_price": 39.99,
+            "is_featured": false
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 15,
+        "fields": {
+            "name": "HTML5 Hurdle Sprinter Dynamic",
+            "sku": "345123",
+            "description": "Sprint dynamically over hurdles with HTML5 Hurdle Sprinter Dynamic shoes. Their HTML5-inspired design ensures top performance.",
+            "category": 1,
+            "price": 119.95,
+            "sale_price": 49.95,
+            "is_featured": true
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 16,
+        "fields": {
+            "name": "Django Dynamo Runner Pro",
+            "sku": "451234",
+            "description": "Experience pro-level performance with Django Dynamo Runner Pro shoes. Their Django-inspired design guarantees power and style.",
+            "category": 2,
+            "price": 114.95,
+            "sale_price": 44.95,
+            "is_featured": true
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 17,
+        "fields": {
+            "name": "SQL Slick Sprinter Elite",
+            "sku": "637855",
+            "description": "Sprint with elite precision in SQL Slick Sprinter Elite shoes. Their SQL-inspired design ensures control and style.",
+            "category": 1,
+            "price": 109.99,
+            "sale_price": 39.99,
+            "is_featured": false
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 18,
+        "fields": {
+            "name": "Node.js Nova Sprinter",
+            "sku": "346366",
+            "description": "Sprint like a pro with Node.js Nova Sprinter shoes. Their Node.js-powered technology guarantees top performance.",
+            "category": 2,
+            "price": 104.95,
+            "sale_price": 44.95,
+            "is_featured": false
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 19,
+        "fields": {
+            "name": "CSS Cyclone Runner Dynamic",
+            "sku": "456543",
+            "description": "Run dynamically like a cyclone with CSS Cyclone Runner Dynamic shoes. These shoes offer CSS-inspired agility and speed.",
+            "category": 3,
+            "price": 99.99,
+            "sale_price": 34.99,
+            "is_featured": true
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 20,
+        "fields": {
+            "name": "Bootstrap Blaze Sprinter",
+            "sku": "345678",
+            "description": "Sprint like a blaze with Bootstrap Blaze Sprinter shoes. Their Bootstrap-inspired design guarantees power and style.",
+            "category": 1,
+            "price": 119.99,
+            "sale_price": 49.99,
+            "is_featured": true
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 21,
+        "fields": {
+            "name": "Angular Accelerator Sprinter",
+            "sku": "634782",
+            "description": "Sprint with acceleration in Angular Accelerator Sprinter shoes. These shoes offer Angular-inspired support and agility.",
+            "category": 1,
+            "price": 114.95,
+            "sale_price": 44.95,
+            "is_featured": false
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 22,
+        "fields": {
+            "name": "Vue.js Velocity Runner Pro",
+            "sku": "864225",
+            "description": "Experience pro-level velocity with Vue.js Velocity Runner Pro shoes. Their Vue.js-powered technology ensures precision and style.",
+            "category": 3,
+            "price": 104.99,
+            "sale_price": 44.99,
+            "is_featured": true
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 23,
+        "fields": {
+            "name": "Python Performer Sprinter Elite",
+            "sku": "612011",
+            "description": "Sprint with elite precision in Python Performer Sprinter Elite shoes. Their Python-inspired construction ensures control and style.",
+            "category": 2,
+            "price": 109.99,
+            "sale_price": 39.99,
+            "is_featured": false
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 24,
+        "fields": {
+            "name": "React Runner Precision Pro",
+            "sku": "123202",
+            "description": "Experience pro-level precision with React Runner Precision Pro shoes. These shoes offer React-inspired responsiveness and control.",
+            "category": 2,
+            "price": 119.95,
+            "sale_price": 49.95,
+            "is_featured": false
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 25,
+        "fields": {
+            "name": "HTML5 Hurdle Sprinter Dynamic Elite",
+            "sku": "244613",
+            "description": "Sprint dynamically with elite precision in HTML5 Hurdle Sprinter Dynamic Elite shoes. Their HTML5-inspired design ensures top performance.",
+            "category": 5,
+            "price": 99.95,
+            "sale_price": 34.95,
+            "is_featured": true
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 26,
+        "fields": {
+            "name": "Django Dynamo Runner Pro Max",
+            "sku": "345724",
+            "description": "Experience max performance with Django Dynamo Runner Pro Max shoes. Their Django-inspired design guarantees power and style.",
+            "category": 1,
+            "price": 104.99,
+            "sale_price": 44.99,
+            "is_featured": false
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 27,
+        "fields": {
+            "name": "SQL Slick Sprinter Elite X",
+            "sku": "459835",
+            "description": "Sprint with elite precision in SQL Slick Sprinter Elite X shoes. Their SQL-inspired design ensures control and style.",
+            "category": 3,
+            "price": 109.99,
+            "sale_price": 39.99,
+            "is_featured": true
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 28,
+        "fields": {
+            "name": "Node.js Nova Sprinter Max",
+            "sku": "561946",
+            "description": "Experience max velocity with Node.js Nova Sprinter Max shoes. Their Node.js-powered technology ensures precision and style.",
+            "category": 1,
+            "price": 114.95,
+            "sale_price": 44.95,
+            "is_featured": true
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 29,
+        "fields": {
+            "name": "CSS Cyclone Runner Dynamic Elite",
+            "sku": "612057",
+            "description": "Sprint dynamically with elite precision in CSS Cyclone Runner Dynamic Elite shoes. These shoes offer CSS-inspired agility and speed.",
+            "category": 2,
+            "price": 119.99,
+            "sale_price": 49.99,
+            "is_featured": false
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 30,
+        "fields": {
+            "name": "Bootstrap Blaze Sprinter Pro",
+            "sku": "123504",
+            "description": "Experience pro-level velocity with Bootstrap Blaze Sprinter Pro shoes. Their Bootstrap-inspired design guarantees power and style.",
+            "category": 3,
+            "price": 99.95,
+            "sale_price": 34.95,
+            "is_featured": false
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 31,
+        "fields": {
+            "name": "Angular Accelerator Runner Elite",
+            "sku": "234615",
+            "description": "Run with elite acceleration in Angular Accelerator Runner Elite shoes. These shoes offer Angular-inspired support and agility.",
+            "category": 1,
+            "price": 104.99,
+            "sale_price": 44.99,
+            "is_featured": false
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 32,
+        "fields": {
+            "name": "Vue.js Velocity Runner Pro Max",
+            "sku": "345726",
+            "description": "Experience max velocity with Vue.js Velocity Runner Pro Max shoes. Their Vue.js-powered technology ensures precision and style.",
+            "category": 1,
+            "price": 119.95,
+            "sale_price": 49.95,
+            "is_featured": true
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 33,
+        "fields": {
+            "name": "Python Performer Sprinter Max",
+            "sku": "456837",
+            "description": "Experience max performance with Python Performer Sprinter Max shoes. Their Python-inspired construction ensures control and style.",
+            "category": 2,
+            "price": 99.99,
+            "sale_price": 34.99,
+            "is_featured": true
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 34,
+        "fields": {
+            "name": "React Runner Precision Pro X",
+            "sku": "561948",
+            "description": "Experience precision like never before with React Runner Precision Pro X shoes. These shoes offer React-inspired responsiveness and control.",
+            "category": 2,
+            "price": 114.95,
+            "sale_price": 44.95,
+            "is_featured": false
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 35,
+        "fields": {
+            "name": "HTML5 Hurdle Sprinter Dynamic Elite X",
+            "sku": "612059",
+            "description": "Sprint dynamically with elite precision like never before in HTML5 Hurdle Sprinter Dynamic Elite X shoes. Their HTML5-inspired design ensures top performance.",
+            "category": 3,
+            "price": 109.99,
+            "sale_price": 39.99,
+            "is_featured": true
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 36,
+        "fields": {
+            "name": "Django Dynamo Runner Pro Max Plus",
+            "sku": "123515",
+            "description": "Experience max performance and style with Django Dynamo Runner Pro Max Plus shoes. Their Django-inspired design guarantees power and style.",
+            "category": 1,
+            "price": 104.99,
+            "sale_price": 44.99,
+            "is_featured": false
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 37,
+        "fields": {
+            "name": "SQL Slick Sprinter Elite X2",
+            "sku": "234626",
+            "description": "Sprint with elite precision in SQL Slick Sprinter Elite X2 shoes. Their SQL-inspired design ensures control and style.",
+            "category": 2,
+            "price": 119.95,
+            "sale_price": 49.95,
+            "is_featured": false
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 38,
+        "fields": {
+            "name": "Node.js Nova Sprinter Max Pro",
+            "sku": "345737",
+            "description": "Experience pro-level velocity with Node.js Nova Sprinter Max Pro shoes. Their Node.js-powered technology ensures precision and style.",
+            "category": 1,
+            "price": 99.99,
+            "sale_price": 34.99,
+            "is_featured": true
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 39,
+        "fields": {
+            "name": "CSS Cyclone Runner Dynamic Elite X",
+            "sku": "456848",
+            "description": "Sprint dynamically with elite precision in CSS Cyclone Runner Dynamic Elite X shoes. These shoes offer CSS-inspired agility and speed.",
+            "category": 3,
+            "price": 114.95,
+            "sale_price": 44.95,
+            "is_featured": true
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 40,
+        "fields": {
+            "name": "Bootstrap Blaze Sprinter Pro Max",
+            "sku": "561959",
+            "description": "Experience max velocity with Bootstrap Blaze Sprinter Pro Max shoes. Their Bootstrap-inspired design guarantees power and style.",
+            "category": 1,
+            "price": 109.99,
+            "sale_price": 39.99,
+            "is_featured": false
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 41,
+        "fields": {
+            "name": "Angular Accelerator Runner Elite X",
+            "sku": "612060",
+            "description": "Run with elite acceleration like never before in Angular Accelerator Runner Elite X shoes. These shoes offer Angular-inspired support and agility.",
+            "category": 2,
+            "price": 104.99,
+            "sale_price": 44.99,
+            "is_featured": false
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 42,
+        "fields": {
+            "name": "Vue.js Velocity Runner Pro Max Plus",
+            "sku": "123516",
+            "description": "Experience max velocity and style with Vue.js Velocity Runner Pro Max Plus shoes. Their Vue.js-powered technology ensures precision and style.",
+            "category": 1,
+            "price": 119.95,
+            "sale_price": 49.95,
+            "is_featured": true
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 43,
+        "fields": {
+            "name": "Python Performer Sprinter Max Pro",
+            "sku": "234627",
+            "description": "Experience max performance and pro-level style with Python Performer Sprinter Max Pro shoes. Their Python-inspired construction ensures control and style.",
+            "category": 3,
+            "price": 99.99,
+            "sale_price": 34.99,
+            "is_featured": true
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 44,
+        "fields": {
+            "name": "React Runner Precision Pro X2",
+            "sku": "345738",
+            "description": "Experience precision like never before with React Runner Precision Pro X2 shoes. These shoes offer React-inspired responsiveness and control.",
+            "category": 2,
+            "price": 114.95,
+            "sale_price": 44.95,
+            "is_featured": false
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 45,
+        "fields": {
+            "name": "HTML5 Hurdle Sprinter Dynamic Elite X2",
+            "sku": "456849",
+            "description": "Sprint dynamically with elite precision like never before in HTML5 Hurdle Sprinter Dynamic Elite X2 shoes. Their HTML5-inspired design ensures top performance.",
+            "category": 3,
+            "price": 109.99,
+            "sale_price": 39.99,
+            "is_featured": true
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 46,
+        "fields": {
+            "name": "Django Dynamo Runner Pro Max Plus X",
+            "sku": "561960",
+            "description": "Experience max performance, style, and pro-level precision with Django Dynamo Runner Pro Max Plus X shoes. Their Django-inspired design guarantees power and style.",
+            "category": 1,
+            "price": 104.99,
+            "sale_price": 44.99,
+            "is_featured": false
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 47,
+        "fields": {
+            "name": "SQL Slick Sprinter Elite X2 Plus",
+            "sku": "612061",
+            "description": "Sprint with elite precision and style in SQL Slick Sprinter Elite X2 Plus shoes. Their SQL-inspired design ensures control and style.",
+            "category": 2,
+            "price": 119.95,
+            "sale_price": 49.95,
+            "is_featured": false
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 48,
+        "fields": {
+            "name": "Node.js Nova Sprinter Max Pro X",
+            "sku": "123517",
+            "description": "Experience pro-level velocity, style, and precision with Node.js Nova Sprinter Max Pro X shoes. Their Node.js-powered technology ensures precision and style.",
+            "category": 1,
+            "price": 99.99,
+            "sale_price": 34.99,
+            "is_featured": true
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 49,
+        "fields": {
+            "name": "CSS Cyclone Runner Dynamic Elite X2",
+            "sku": "234628",
+            "description": "Sprint dynamically with elite precision like never before in CSS Cyclone Runner Dynamic Elite X2 shoes. These shoes offer CSS-inspired agility and speed.",
+            "category": 3,
+            "price": 114.95,
+            "sale_price": 44.95,
+            "is_featured": true
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 50,
+        "fields": {
+            "name": "Bootstrap Blaze Sprinter Pro Max Plus",
+            "sku": "345739",
+            "description": "Experience max velocity, style, and pro-level precision with Bootstrap Blaze Sprinter Pro Max Plus shoes. Their Bootstrap-inspired design guarantees power and style.",
+            "category": 1,
+            "price": 109.99,
+            "sale_price": 39.99,
+            "is_featured": false
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 51,
+        "fields": {
+            "name": "Angular Accelerator Runner Elite X2",
+            "sku": "456850",
+            "description": "Run with elite acceleration and style in Angular Accelerator Runner Elite X2 shoes. These shoes offer Angular-inspired support and agility.",
+            "category": 2,
+            "price": 104.99,
+            "sale_price": 44.99,
+            "is_featured": false
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 52,
+        "fields": {
+            "name": "Vue.js Velocity Runner Pro Max Plus X",
+            "sku": "561961",
+            "description": "Experience max velocity, style, and pro-level precision with Vue.js Velocity Runner Pro Max Plus X shoes. Their Vue.js-powered technology ensures precision and style.",
+            "category": 1,
+            "price": 119.95,
+            "sale_price": 49.95,
+            "is_featured": true
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 53,
+        "fields": {
+            "name": "Python Performer Sprinter Max Pro X",
+            "sku": "612062",
+            "description": "Experience max performance, style, and pro-level precision with Python Performer Sprinter Max Pro X shoes. Their Python-inspired construction ensures control and style.",
+            "category": 3,
+            "price": 99.99,
+            "sale_price": 34.99,
+            "is_featured": true
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 54,
+        "fields": {
+            "name": "React Runner Precision Pro X2 Plus",
+            "sku": "123518",
+            "description": "Experience precision like never before with React Runner Precision Pro X2 Plus shoes. These shoes offer React-inspired responsiveness and control.",
+            "category": 2,
+            "price": 114.95,
+            "sale_price": 44.95,
+            "is_featured": false
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 55,
+        "fields": {
+            "name": "HTML5 Hurdle Sprinter Dynamic Elite X2 Plus",
+            "sku": "234629",
+            "description": "Sprint dynamically with elite precision like never before in HTML5 Hurdle Sprinter Dynamic Elite X2 Plus shoes. Their HTML5-inspired design ensures top performance.",
+            "category": 3,
+            "price": 109.99,
+            "sale_price": 39.99,
+            "is_featured": true
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 56,
+        "fields": {
+            "name": "Django Dynamo Runner Pro Max Plus X2",
+            "sku": "345740",
+            "description": "Experience max performance, style, and pro-level precision like never before with Django Dynamo Runner Pro Max Plus X2 shoes. Their Django-inspired design guarantees power and style.",
+            "category": 1,
+            "price": 104.99,
+            "sale_price": 44.99,
+            "is_featured": false
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 57,
+        "fields": {
+            "name": "SQL Slick Sprinter Elite X2 Plus X",
+            "sku": "456851",
+            "description": "Sprint with elite precision and style like never before in SQL Slick Sprinter Elite X2 Plus X shoes. Their SQL-inspired design ensures control and style.",
+            "category": 2,
+            "price": 119.95,
+            "sale_price": 49.95,
+            "is_featured": false
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 58,
+        "fields": {
+            "name": "Node.js Nova Sprinter Max Pro X2",
+            "sku": "561962",
+            "description": "Experience max velocity, style, and pro-level precision like never before with Node.js Nova Sprinter Max Pro X2 shoes. Their Node.js-powered technology ensures precision and style.",
+            "category": 1,
+            "price": 99.99,
+            "sale_price": 34.99,
+            "is_featured": true
+        }
+    }
+]
