@@ -1,0 +1,10 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="grid w-full grid-cols-12 gap-10">
+    <div class="col-span-6 border-2 aspect-square bg-cover bg-center bg-[url('{{ product.productimage_set.first.image.url }}')]"></div>
+    <div class="col-span-6 border-2"></div>
+
+</div>
+{% endblock content %}

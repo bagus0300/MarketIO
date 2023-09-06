@@ -21,3 +21,17 @@ def home_view(request):
         "sale_products": sale_products,
     }
     return render(request, "home/home.html", context)
+
+def products_view(request):
+    products = Product.objects.all()
+    context = {
+        'products':products,
+    }
+    return render(request, 'products/products_view.html', context)
+
+def product_detail_view(request, product_id):
+    product = Product.objects.get(id=product_id)
+    context = {
+        'product':product,
+    }
+    return render(request, 'products/product_detail_view.html', context)
