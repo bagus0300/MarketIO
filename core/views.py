@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from .models import Product
+from .models import Product, ProductImage
 import random
+from django.db.models import Prefetch
 
 
 def home_view(request):
@@ -22,16 +23,18 @@ def home_view(request):
     }
     return render(request, "home/home.html", context)
 
+
 def products_view(request):
-    products = Product.objects.all()
+    products = Product.objects.all().prefetch_related("productimage_set")
     context = {
-        'products':products,
+        "products": products,
     }
-    return render(request, 'products/products_view.html', context)
+    return render(request, "products/products_view.html", context)
+
 
 def product_detail_view(request, product_id):
     product = Product.objects.get(id=product_id)
     context = {
-        'product':product,
+        "product": product,
     }
-    return render(request, 'products/product_detail_view.html', context)
+    return render(request, "products/product_detail_view.html", context)

@@ -1,13 +1,16 @@
 {% load static %}
 <a href="{% url 'product_detail' product_id %}">
-<div class="mb-4">
-    <div class="mb-2 aspect-square bg-cover bg-center bg-[url('{{ product.productimage_set.first.image.url }}')]">
-        {% comment %} <img src="{% static 'base/placeholder-img.webp' %}" alt=""> {% endcomment %}
+    <div class="mb-4">
+        <!-- PRODUCT IMAGE -->
+        <div class="mb-2 aspect-square bg-cover bg-center bg-[url('{% for img in product_images %}{% if forloop.first %}{{ img.image.url }}{% endif %}{% endfor %}')]">
+        </div>
+        <!-- PRODUCT NAME + PRICE -->
+        <div class="">
+            <span class="block text-xl font-bold text-primary">{{ product.name }}</span>
+            {% if product.sale_price %}
+                <span class="inline mr-2 text-lg font-bold text-green-600 ">€{{ product.sale_price }}</span>
+            {% endif %}
+            <span class=" text-lg text-secondary {% if product.sale_price %}line-through{% endif %} ">€{{ product.price }}</span>
+        </div>
     </div>
-    <div class="">
-        <span class="block text-xl font-bold text-primary">{{ product.name }}</span>
-        {% if product.sale_price %}<span class="inline mr-2 text-lg font-bold text-green-600 ">€{{ product.sale_price }}</span>{% endif %}
-        <span class=" text-lg text-secondary {% if product.sale_price %}line-through{% endif %} ">€{{ product.price }}</span>
-    </div>
-</div>
 </a>

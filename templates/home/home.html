@@ -21,17 +21,25 @@
         </div>
     </div>
     <!-- FEATURED PRODUCTS -->
-    <div class="w-full mb-4 text-2xl font-bold border-b-2 border-primary text-primary"><h2>FEATURED PRODUCTS</h2></div>
-    <div class="grid grid-cols-12 gap-4">
+    <div class="w-full mb-4 text-2xl font-bold border-b-2 border-primary text-primary">
+        <h2>FEATURED PRODUCTS</h2>
+    </div>
+    <div class="grid grid-cols-12 gap-4 mb-16">
         {% for product in featured_products %}
-            <div class="col-span-12 sm:col-span-6 md:col-span-4">{% include 'partials/product-card.html' with product_id=product.id %}</div>
+            <div class="col-span-12 sm:col-span-6 md:col-span-4">
+                {% include 'partials/product-card.html' with product_id=product.id product=product product_images=product.productimage_set.all %}
+            </div>
         {% endfor %}
     </div>
     <!-- SALE PRODUCTS -->
-    <div class="w-full mb-4 text-2xl font-bold border-b-2 border-primary text-primary"><h2>OFFERS</h2></div>
-    <div class="grid grid-cols-12 gap-4">
+    <div class="w-full mb-4 text-2xl font-bold border-b-2 border-primary text-primary">
+        <h2>OFFERS</h2>
+    </div>
+    <div class="grid grid-cols-12 gap-4 mb-16">
         {% for product in sale_products %}
-            <div class="col-span-12 sm:col-span-6 md:col-span-4">{% include 'partials/product-card.html' with product_id=product.id %}</div>
+            <div class="col-span-12 sm:col-span-6 md:col-span-4">
+                {% include 'partials/product-card.html' with product_id=product.id product=product product_images=product.productimage_set.all %}
+            </div>
         {% endfor %}
     </div>
 {% endblock content %}

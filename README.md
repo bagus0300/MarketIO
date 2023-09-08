@@ -1,2 +1,7 @@
 # laced-pp5
-Django-based eCommerce site with Wagtail CMS
+Django-based eCommerce site
+
+# Work in progress
+
+# Bugs
+- Poor performance - SQL query issue. Fixed with prefetch_related, 1600ms to 120ms improvement. Implement same fix site-wide to improve performance. 
