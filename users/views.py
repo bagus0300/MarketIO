@@ -15,6 +15,8 @@ def signup_view(request):
             user = form.save()
             login(request, user)
             messages.info(request, "Successfully signed up!")
+            if request.GET.get("next"):
+                return redirect(request.GET.get("next"))
             return redirect("home")
     return render(request, "users/signup.html")
 
@@ -29,6 +31,8 @@ def login_view(request):
             if user is not None:
                 login(request, user)
                 messages.info(request, "Successfully logged in!")
+                if request.GET.get("next"):
+                    return redirect(request.GET.get("next"))
                 return redirect("home")
         return render(request, "users/login.html", {"form": form})
     return render(request, "users/login.html")
