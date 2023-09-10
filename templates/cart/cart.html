@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
     <h1 class="mb-2 text-3xl font-bold text-primary">SHOPPING BAG</h1>
-    <div class="grid grid-cols-12 grid-flow-dense gap-x-4">
+    <div class="grid grid-cols-12 grid-flow-dense gap-x-4" hx-target>
         {% for item in cart_items %}
             <div id="item{{item.id}}"
                  class="flex gap-6 h-64 col-span-9 py-4 {% if forloop.first %}border-t-2{% endif %} border-b-2 border-gray-300">
@@ -44,7 +44,11 @@
                                 </svg>
                             </button>
                         </div>
-                        <span class="underline text-md text-primary">Delete</span>
+                        <span class="underline cursor-pointer hover:font-bold text-md text-primary"
+                              hx-post="{% url 'delete_cart_item' item.id %}"
+                              hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'
+                              hx-target="#item{{item.id}}"
+                              hx-swap="outerHTML">Delete</span>
                     </div>
                 </div>
             </div>

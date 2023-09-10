@@ -100,6 +100,10 @@ def add_to_cart(request):
         )
     )
 
+def remove_from_cart(request, cart_item_id):
+    cart_item = CartItem.objects.get(id=cart_item_id)
+    cart_item.delete()
+    return HttpResponse('')
 
 def cart_view(request):
     if request.user.is_authenticated:
