@@ -79,16 +79,23 @@ def add_remove_user_favourite(request, product_id):
 
 
 def add_to_cart(request):
-    print(request.POST.get('product_variant'))
-    product = ProductVariant.objects.filter(size=request.POST.get('product_variant')).first()
-    cart = Cart.objects.get_or_create(user=request.user)[0]
-    quantity = int(request.POST.get('quantity'))
-    cart.add_item(product,  quantity)
+    product = ProductVariant.objects.filter(
+        size=request.POST.get("product_variant")
+    ).first()
+    if request.user.is_authenticated:
+        cart = Cart.objects.get_or_create(user=request.user)[0]
+    else:
+        cart = Cart.objects.get_or_create(session=request.session.session_key)[0]
+    quantity = int(request.POST.get("quantity"))
+    cart.add_item(product, quantity)
     cart_total_quantity = cart.get_total_items()
-    print(f'Qty: {cart_total_quantity}')
-    return HttpResponse(("<div id='cart-counter-badge' "
-                         "hx-swap-oob='true' " 
-                         "class='w-5 h-5 text-center text-white "
-                         "flex items-center justify-center rounded-full "
-                         "bg-primary text-[10px] absolute -right-3 "
-                         f"font-bold -top-1 bg-red-700'>{cart_total_quantity}</div>)"))
+    return HttpResponse(
+        (
+            "<div id='cart-counter-badge' "
+            "hx-swap-oob='true' "
+            "class='w-5 h-5 text-center text-white "
+            "flex items-center justify-center rounded-full "
+            "bg-primary text-[10px] absolute -right-3 "
+            f"font-bold -top-1 bg-red-700'>{cart_total_quantity}</div>)"
+        )
+    )

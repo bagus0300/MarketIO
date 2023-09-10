@@ -6,13 +6,15 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 #         model = User
 #         fields = ['email', 'password1', 'password2', 'first_name', 'last_name']
 
+
 class CustomUserCreationForm(UserCreationForm):
     class Meta:
         model = User
         fields = ("email", "first_name", "last_name")
 
+
 # class CustomLoginForm(AuthenticationForm):
-#     email = 
+#     email =
 #     class Meta:
 #         model = User
 #         fields = ("email", "password")
