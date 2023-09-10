@@ -5,6 +5,7 @@ import random
 from django.db.models import Prefetch
 from users.models import UserFavourite
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
 
 
 def home_view(request):
@@ -59,7 +60,7 @@ def product_detail_view(request, product_id):
     }
     return render(request, "products/product_detail_view.html", context)
 
-
+@login_required
 def add_remove_user_favourite(request, product_id):
     product = Product.objects.get(id=product_id)
     product_favourite = UserFavourite.objects.filter(user=request.user, product=product)
