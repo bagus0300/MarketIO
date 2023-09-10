@@ -2,19 +2,20 @@
 {% load static %}
 {% block content %}
     <h1 class="mb-2 text-3xl font-bold text-primary">SHOPPING BAG</h1>
-    <div class="grid grid-cols-12 grid-flow-dense gap-x-4" hx-target>
+    <div class="grid grid-cols-12 grid-flow-dense gap-x-4">
         {% for item in cart_items %}
             <div id="item{{item.id}}"
                  class="flex gap-6 h-64 col-span-9 py-4 {% if forloop.first %}border-t-2{% endif %} border-b-2 border-gray-300">
-                <div class="h-full aspect-square bg-cover bg-center bg-[url('{{ item.item.product.productimage_set.first.image.url }}')]">
-                </div>
+                <a href="{% url 'product_detail' item.item.product.id %}"><div class="h-full aspect-square bg-cover bg-center bg-[url('{{ item.item.product.productimage_set.first.image.url }}')]">
+                </div></a>
                 <div class="flex flex-col w-full h-full">
                     <h3 class="mb-2 text-xl font-bold text-primary">{{ item.item.product.name }}</h3>
-                    <h5 class="mb-2 text-lg text-secondary">€{{ item.item.product.price }} each</h5>
+                    <h5 class="mb-2 font-bold">{{item.item.get_size_display}}</h5>
+                    <h4 class="mb-2 text-lg text-secondary">€{{ item.item.product.price }} each</h4>
                     <div class="flex items-center gap-6 mt-auto">
                         <div hx-trigger="false"
                              class="flex justify-between h-8 bg-white border-2 w-28 border-primary text-primary"
-                             x-data="{qty:{{ item.item.quantity }}}">
+                             x-data="{qty:{{ item.quantity }}}">
                             <button class="flex items-center justify-center h-full text-white transition-all bg-black aspect-square hover:bg-secondary"
                                     x-on:click="qty > 1 ? qty-- : ''">
                                 <svg width="21"
@@ -54,7 +55,7 @@
             </div>
         {% endfor %}
         <div class="sticky flex flex-col justify-between h-48 col-span-3 p-6 border-2 border-secondary top-8">
-            <h2 class="text-xl font-bold text-primary">Subtotal: €{{ cart.get_total_price }}</h2>
+            <h2 class="text-xl font-bold text-primary"><span id="subtotal">Subtotal: €{{ cart.get_total_price }}</span></h2>
             <a href="#"
                class="w-full py-4 mt-auto font-bold text-center text-white bg-primary">CHECKOUT</a>
         </div>

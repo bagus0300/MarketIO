@@ -102,8 +102,10 @@ def add_to_cart(request):
 
 def remove_from_cart(request, cart_item_id):
     cart_item = CartItem.objects.get(id=cart_item_id)
+    cart = cart_item.cart
     cart_item.delete()
-    return HttpResponse('')
+    return HttpResponse((f'<span hx-swap-oob="true" id="subtotal">'
+                        f'Subtotal: €{cart.get_total_price()}</span>'))
 
 def cart_view(request):
     if request.user.is_authenticated:
