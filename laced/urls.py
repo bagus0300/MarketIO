@@ -29,6 +29,7 @@ urlpatterns = [
     path('signup/', user_views.signup_view, name='signup'),
     path('products/', core_views.products_view, name='products'),
     path('products/<int:product_id>/', core_views.product_detail_view, name='product_detail'),
+    path('products/add_to_cart/', core_views.add_to_cart, name='add_to_cart'),
     path('products/<int:product_id>/favourite/', core_views.add_remove_user_favourite, name='favourite'),
     path("__debug__/", include("debug_toolbar.urls")),
 

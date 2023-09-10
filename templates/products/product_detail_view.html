@@ -36,7 +36,10 @@
                         {% endif %}
                     {% endfor %}
                 </ul>
-                <div class="grid grid-cols-12 gap-3 mb-0">
+                <form class="grid grid-cols-12 gap-3 mb-0" hx-post="{% url 'add_to_cart' %}" hx-swap="none">
+                    <input type="hidden" name="product_id" value="{{product.id}}">
+                    <input type="hidden" name="product_variant" required>
+                    {% csrf_token %}
                     <!-- QTY SELECTION -->
                     <div class="flex justify-between col-span-12 bg-white border-2 sm:col-span-6 xl:col-span-4 border-primary text-primary"
                          x-data="{qty:1}">
@@ -72,7 +75,7 @@
                     <button class="col-span-12 py-4 font-bold text-white transition-all border-2 sm:col-span-6 xl:col-span-8 border-primary bg-primary hover:bg-secondary">
                         ADD TO BAG
                     </button>
-                </div>
+                </form>
                 <!-- ADD FAVOURITE -->
                 {% include 'products/partials/_favourite_button.html' %}
             </div>

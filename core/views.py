@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from .models import Product, ProductImage
+from .models import *
+from users.models import User
 import random
 from django.db.models import Prefetch
 from users.models import UserFavourite
@@ -40,14 +41,17 @@ def products_view(request):
 
 def product_detail_view(request, product_id):
     product = Product.objects.get(id=product_id)
-    user_favourites = UserFavourite.objects.filter(
-        user=request.user, product_id=product_id
-    )
-
-    if len(user_favourites) > 0:
-        is_favourite = True
-    else:
+    if request.user.is_anonymous:
         is_favourite = False
+    else:
+        user_favourites = UserFavourite.objects.filter(
+            user=request.user, product_id=product_id
+        )
+
+        if len(user_favourites) > 0:
+            is_favourite = True
+        else:
+            is_favourite = False
 
     context = {
         "product": product,
@@ -72,3 +76,19 @@ def add_remove_user_favourite(request, product_id):
         "product": product,
     }
     return render(request, "products/partials/_favourite_button.html", context)
+
+
+def add_to_cart(request):
+    print(request.POST.get('product_variant'))
+    product = ProductVariant.objects.filter(size=request.POST.get('product_variant')).first()
+    cart = Cart.objects.get_or_create(user=request.user)[0]
+    quantity = int(request.POST.get('quantity'))
+    cart.add_item(product,  quantity)
+    cart_total_quantity = cart.get_total_items()
+    print(f'Qty: {cart_total_quantity}')
+    return HttpResponse(("<div id='cart-counter-badge' "
+                         "hx-swap-oob='true' " 
+                         "class='w-5 h-5 text-center text-white "
+                         "flex items-center justify-center rounded-full "
+                         "bg-primary text-[10px] absolute -right-3 "
+                         f"font-bold -top-1 bg-red-700'>{cart_total_quantity}</div>)"))

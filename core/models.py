@@ -103,3 +103,43 @@ class ProductVariant(models.Model):
     quantity = models.PositiveIntegerField(
         _("Qty in stock"), blank=True, default=0, null=True
     )
+    
+    def __str__(self):
+        return f'{self.product.name}; {self.size}'
+
+
+class CartItem(models.Model):
+    item = models.ForeignKey("ProductVariant", on_delete=models.CASCADE)
+    cart = models.ForeignKey("Cart", on_delete=models.CASCADE)
+    quantity = models.PositiveIntegerField()
+    
+    def __str__(self):
+        return f'{self.quantity}no. {self.item.product.name}'
+
+
+class Cart(models.Model):
+    user = models.OneToOneField("users.User", on_delete=models.CASCADE, default=None)
+
+    def add_item(self, product, quantity):
+        cart_item = CartItem.objects.filter(item=product, cart=self)
+        # print(cart_item)
+        if cart_item.exists():
+            # print(cart_item)
+            cart_item = cart_item.first()
+            # print(cart_item.quantity)
+            cart_item.quantity = cart_item.quantity + quantity
+            cart_item.save()
+            return 
+        return CartItem.objects.create(item=product, cart=self, quantity=quantity)
+
+    def remove_item(self, product):
+        return CartItem.objects.get(item=product, cart=self).delete()
+
+    def get_total_items(self):
+        items = self.cartitem_set.all()
+        total_quantity = 0
+        for item in items:
+            total_quantity += item.quantity
+        print(items)
+        print(total_quantity)
+        return total_quantity
