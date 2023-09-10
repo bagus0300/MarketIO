@@ -4,7 +4,8 @@
     <h1 class="mb-2 text-3xl font-bold text-primary">SHOPPING BAG</h1>
     <div class="grid grid-cols-12 grid-flow-dense gap-x-4">
         {% for item in cart_items %}
-            <div class="flex gap-6 h-64 col-span-9 py-4 {% if forloop.first %}border-t-2{% endif %} border-b-2 border-gray-300">
+            <div id="item{{item.id}}"
+                 class="flex gap-6 h-64 col-span-9 py-4 {% if forloop.first %}border-t-2{% endif %} border-b-2 border-gray-300">
                 <div class="h-full aspect-square bg-cover bg-center bg-[url('{{ item.item.product.productimage_set.first.image.url }}')]">
                 </div>
                 <div class="flex flex-col w-full h-full">

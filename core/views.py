@@ -80,7 +80,7 @@ def add_remove_user_favourite(request, product_id):
 
 def add_to_cart(request):
     product = ProductVariant.objects.filter(
-        size=request.POST.get("product_variant")
+        id=request.POST.get("product_variant")
     ).first()
     if request.user.is_authenticated:
         cart = Cart.objects.get_or_create(user=request.user)[0]

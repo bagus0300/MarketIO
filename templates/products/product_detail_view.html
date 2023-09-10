@@ -28,7 +28,7 @@
                         {% if variant.quantity is not 0 %}
                             <li class="col-span-2">
                                 <button data-selected
-                                        data-variant="{{ variant.size }}"
+                                        data-variant="{{ variant.id }}"
                                         class="w-full py-4 text-center transition-all border-2 cursor-pointer border-primary hover:bg-primary hover:text-white">
                                     {{ variant.get_size_display }}
                                 </button>
