@@ -60,6 +60,7 @@ def product_detail_view(request, product_id):
     }
     return render(request, "products/product_detail_view.html", context)
 
+
 @login_required
 def add_remove_user_favourite(request, product_id):
     product = Product.objects.get(id=product_id)
@@ -101,12 +102,36 @@ def add_to_cart(request):
         )
     )
 
+
 def remove_from_cart(request, cart_item_id):
     cart_item = CartItem.objects.get(id=cart_item_id)
     cart = cart_item.cart
     cart_item.delete()
-    return HttpResponse((f'<span hx-swap-oob="true" id="subtotal">'
-                        f'Subtotal: €{cart.get_total_price()}</span>'))
+    return HttpResponse(
+        (
+            f'<span hx-swap-oob="true" id="subtotal">'
+            f"Subtotal: €{cart.get_total_price()}</span>"
+        )
+    )
+
+
+def update_cart_quantity(request, cart_item_id, quantity):
+    cart_item = CartItem.objects.get(id=cart_item_id)
+    print(cart_item)
+    cart = cart_item.cart
+    print(cart)
+    cart_item.quantity = quantity
+    print(quantity)
+    cart_item.save()
+    cart.save()
+    print(cart.get_total_price())
+    return HttpResponse(
+        (
+            f'<span hx-swap-oob="true" id="subtotal">'
+            f"Subtotal: €{cart.get_total_price()}</span>"
+        )
+    )
+
 
 def cart_view(request):
     if request.user.is_authenticated:

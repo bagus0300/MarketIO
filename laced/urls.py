@@ -35,7 +35,8 @@ urlpatterns = [
     ),
     path("products/add_to_cart/", core_views.add_to_cart, name="add_to_cart"),
     path("cart/", core_views.cart_view, name="cart"),
-    path("cart/remove_from_cart/<int:cart_item_id>", core_views.remove_from_cart, name="delete_cart_item"),
+    path("cart/update_cart_quantity/<int:cart_item_id>/<int:quantity>/", core_views.update_cart_quantity, name="update_cart_quantity"),
+    path("cart/remove_from_cart/<int:cart_item_id>/", core_views.remove_from_cart, name="delete_cart_item"),
     path(
         "products/<int:product_id>/favourite/",
         core_views.add_remove_user_favourite,
