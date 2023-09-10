@@ -1,0 +1,57 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+    <h1 class="mb-2 text-3xl font-bold text-primary">SHOPPING BAG</h1>
+    <div class="grid grid-cols-12 grid-flow-dense gap-x-4">
+        {% for item in cart_items %}
+            <div class="flex gap-6 h-64 col-span-9 py-4 {% if forloop.first %}border-t-2{% endif %} border-b-2 border-gray-300">
+                <div class="h-full aspect-square bg-cover bg-center bg-[url('{{ item.item.product.productimage_set.first.image.url }}')]">
+                </div>
+                <div class="flex flex-col w-full h-full">
+                    <h3 class="mb-2 text-xl font-bold text-primary">{{ item.item.product.name }}</h3>
+                    <h5 class="mb-2 text-lg text-secondary">€{{ item.item.product.price }} each</h5>
+                    <div class="flex items-center gap-6 mt-auto">
+                        <div hx-trigger="false"
+                             class="flex justify-between h-8 bg-white border-2 w-28 border-primary text-primary"
+                             x-data="{qty:{{ item.item.quantity }}}">
+                            <button class="flex items-center justify-center h-full text-white transition-all bg-black aspect-square hover:bg-secondary"
+                                    x-on:click="qty > 1 ? qty-- : ''">
+                                <svg width="21"
+                                     height="2"
+                                     viewBox="0 0 21 2"
+                                     fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="0.0712891" y1="1" x2="20.1733" y2="1" stroke="white" stroke-width="2" />
+                                </svg>
+                            </button>
+                            <!-- QTY INPUT -->
+                            <input type="text"
+                                   name="quantity"
+                                   id="quantity"
+                                   class="w-full py-3 text-lg text-center text-primary"
+                                   x-text="qty"
+                                   x-bind:value="qty">
+                            <button hx-disable
+                                    class="flex items-center justify-center h-full text-white transition-all bg-black aspect-square hover:bg-secondary"
+                                    x-on:click="qty < 10 ? qty++ : ''">
+                                <svg width="21"
+                                     height="20"
+                                     viewBox="0 0 21 20"
+                                     fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.8827 9V0H9.88265V9H0.82666V11H9.88265V20H11.8827V11H20.9287V9H11.8827Z" fill="white" />
+                                </svg>
+                            </button>
+                        </div>
+                        <span class="underline text-md text-primary">Delete</span>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        <div class="sticky flex flex-col justify-between h-48 col-span-3 p-6 border-2 border-secondary top-8">
+            <h2 class="text-xl font-bold text-primary">Subtotal: €{{ cart.get_total_price }}</h2>
+            <a href="#"
+               class="w-full py-4 mt-auto font-bold text-center text-white bg-primary">CHECKOUT</a>
+        </div>
+    </div>
+{% endblock content %}

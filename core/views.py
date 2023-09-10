@@ -99,3 +99,17 @@ def add_to_cart(request):
             f"font-bold -top-1 bg-red-700'>{cart_total_quantity}</div>)"
         )
     )
+
+
+def cart_view(request):
+    if request.user.is_authenticated:
+        cart = Cart.objects.get_or_create(user=request.user)[0]
+    else:
+        cart = Cart.objects.get_or_create(session=request.session.session_key)[0]
+    cart_items = cart.cartitem_set.all()
+
+    context = {
+        "cart_items": cart_items,
+        "cart": cart,
+    }
+    return render(request, "cart/cart.html", context)

@@ -22,22 +22,28 @@ from core import views as core_views
 from users import views as user_views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', core_views.home_view, name='home'),
-    path('login/', user_views.login_view, name='login'),
-    path('logout/', user_views.logout_view, name='logout'),
-    path('signup/', user_views.signup_view, name='signup'),
-    path('products/', core_views.products_view, name='products'),
-    path('products/<int:product_id>/', core_views.product_detail_view, name='product_detail'),
-    path('products/add_to_cart/', core_views.add_to_cart, name='add_to_cart'),
-    path('products/<int:product_id>/favourite/', core_views.add_remove_user_favourite, name='favourite'),
+    path("admin/", admin.site.urls),
+    path("", core_views.home_view, name="home"),
+    path("login/", user_views.login_view, name="login"),
+    path("logout/", user_views.logout_view, name="logout"),
+    path("signup/", user_views.signup_view, name="signup"),
+    path("products/", core_views.products_view, name="products"),
+    path(
+        "products/<int:product_id>/",
+        core_views.product_detail_view,
+        name="product_detail",
+    ),
+    path("products/add_to_cart/", core_views.add_to_cart, name="add_to_cart"),
+    path("cart/", core_views.cart_view, name="cart"),
+    path(
+        "products/<int:product_id>/favourite/",
+        core_views.add_remove_user_favourite,
+        name="favourite",
+    ),
     path("__debug__/", include("debug_toolbar.urls")),
-
 ]
 
 # USED TO SERVE MEDIA FILES IN DEVELOPMENT
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL,
-                          document_root=settings.MEDIA_ROOT)
-    urlpatterns += static(settings.STATIC_URL,
-                          document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

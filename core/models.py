@@ -141,3 +141,10 @@ class Cart(models.Model):
         for item in items:
             total_quantity += item.quantity
         return total_quantity
+
+    def get_total_price(self):
+        items = self.cartitem_set.all()
+        total_price = 0
+        for item in items:
+            total_price += item.item.product.price
+        return total_price
