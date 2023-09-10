@@ -36,12 +36,12 @@
                         {% endif %}
                     {% endfor %}
                 </ul>
-                <form class="grid grid-cols-12 gap-3 mb-0" hx-post="{% url 'add_to_cart' %}" hx-swap="none">
+                <form class="grid grid-cols-12 gap-3 mb-0" hx-post="{% url 'add_to_cart' %}" hx-swap="none" hx-trigger="click target:#submit">
                     <input type="hidden" name="product_id" value="{{product.id}}">
                     <input type="hidden" name="product_variant" required>
                     {% csrf_token %}
                     <!-- QTY SELECTION -->
-                    <div class="flex justify-between col-span-12 bg-white border-2 sm:col-span-6 xl:col-span-4 border-primary text-primary"
+                    <div hx-trigger="false" class="flex justify-between col-span-12 bg-white border-2 sm:col-span-6 xl:col-span-4 border-primary text-primary"
                          x-data="{qty:1}">
                         <button class="flex items-center justify-center h-full text-white transition-all bg-black aspect-square hover:bg-secondary"
                                 x-on:click="qty > 1 ? qty-- : ''">
@@ -60,7 +60,7 @@
                                class="w-full py-4 text-xl text-center text-primary"
                                x-text="qty"
                                x-bind:value="qty">
-                        <button class="flex items-center justify-center h-full text-white transition-all bg-black aspect-square hover:bg-secondary"
+                        <button hx-disable class="flex items-center justify-center h-full text-white transition-all bg-black aspect-square hover:bg-secondary"
                                 x-on:click="qty < 10 ? qty++ : ''">
                             <svg width="21"
                                  height="20"
@@ -72,7 +72,7 @@
                         </button>
                     </div>
                     <!-- ADD TO BAG -->
-                    <button class="col-span-12 py-4 font-bold text-white transition-all border-2 sm:col-span-6 xl:col-span-8 border-primary bg-primary hover:bg-secondary">
+                    <button id="submit" class="col-span-12 py-4 font-bold text-white transition-all border-2 sm:col-span-6 xl:col-span-8 border-primary bg-primary hover:bg-secondary">
                         ADD TO BAG
                     </button>
                 </form>
