@@ -166,3 +166,4 @@ laced_venv/
 media/
 staticfiles/
 product_imgs/
+jsconfig.json
