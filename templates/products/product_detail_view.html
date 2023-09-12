@@ -52,17 +52,18 @@
                 </ul>
                 <p id="errorMsg" class="invisible font-bold text-red-500">Error message</p>
                 <form class="grid grid-cols-12 gap-3 mb-0"
-                      hx-post="{% url 'add_to_cart' %}"
                       hx-swap="none"
-                      hx-trigger="click from:#submit throttle:3s"
-                      hx-indicator="#indicator">
+                      hx-indicator="#indicator"
+                      hx-post="{% url 'add_to_cart' %}"
+                      hx-trigger="submit throttle:3s">
                     <input type="hidden" name="product_id" value="{{ product.id }}">
                     <input type="hidden" name="product_variant" required>
                     {% csrf_token %}
                     <!-- QTY SELECTION -->
                     <div class="flex justify-between col-span-12 bg-white border-2 sm:col-span-6 xl:col-span-4 border-primary text-primary"
                          x-data="{qty:1}">
-                        <button class="flex items-center justify-center h-full text-white transition-all bg-black aspect-square hover:bg-secondary"
+                        <button form="false"
+                                class="flex items-center justify-center h-full text-white transition-all bg-black aspect-square hover:bg-secondary"
                                 x-on:click="qty > 1 ? qty-- : ''">
                             <svg width="21"
                                  height="2"
@@ -80,6 +81,7 @@
                                x-text="qty"
                                x-bind:value="qty">
                         <button hx-disable
+                                form="false"
                                 class="flex items-center justify-center h-full text-white transition-all bg-black aspect-square hover:bg-secondary"
                                 x-on:click="qty < 10 ? qty++ : ''">
                             <svg width="21"
@@ -93,6 +95,7 @@
                     </div>
                     <!-- ADD TO BAG -->
                     <button id="submit"
+                            type="submit"
                             class="flex items-center justify-center col-span-12 gap-4 py-4 font-bold text-white transition-all border-2 add-to-cart sm:col-span-6 xl:col-span-8 border-primary bg-primary hover:bg-secondary">
                         <span id="cta-text" class="transition-all duration-1000 add-to-cart">ADD TO BAG</span>
                         <img id="indicator"
