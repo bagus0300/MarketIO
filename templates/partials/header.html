@@ -54,6 +54,10 @@
                         {% if request.user.is_authenticated %}
                             <li>
                                 <a class="block p-1 underline transition-all hover:decoration-primary decoration-2 decoration-transparent underline-offset-4"
+                                   href="{% url 'account' %}">ACCOUNT</a>
+                            </li>
+                            <li>
+                                <a class="block p-1 underline transition-all hover:decoration-primary decoration-2 decoration-transparent underline-offset-4"
                                    href="{% url 'logout' %}">LOGOUT</a>
                             </li>
                         {% else %}

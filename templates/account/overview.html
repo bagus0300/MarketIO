@@ -1,0 +1,37 @@
+{% extends "base/base.html" %}
+{% block content %}
+    <div class="grid grid-flow-row grid-cols-1 gap-6 md:grid-cols-12">
+        <div class="text-2xl font-bold border-b-2 col-span-full border-primary text-primary">
+            <h2>ACCOUNT OVERVIEW</h2>
+        </div>
+        <a href="{% url 'account_orders' %}" class="flex flex-col items-center justify-center p-12 border-2 border-primary md:col-span-4">
+            <svg width="35"
+                 height=""
+                 viewBox="0 0 22 37"
+                 fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7 6C7 3.79086 8.79086 2 11 2C13.2091 2 15 3.79086 15 6V7H7V6ZM5 9V11.5C5 12.0523 5.44772 12.5 6 12.5C6.55228 12.5 7 12.0523 7 11.5V9H15V11.5C15 12.0523 15.4477 12.5 16 12.5C16.5523 12.5 17 12.0523 17 11.5V9H19C19.5523 9 20 9.44772 20 10V27C20 27.5523 19.5523 28 19 28H3C2.44772 28 2 27.5523 2 27V10C2 9.44772 2.44772 9 3 9H5ZM5 7V6C5 2.68629 7.68629 0 11 0C14.3137 0 17 2.68629 17 6V7H19C20.6569 7 22 8.34315 22 10V27C22 28.6569 20.6569 30 19 30H3C1.34315 30 0 28.6569 0 27V10C0 8.34315 1.34315 7 3 7H5Z" fill="black" />
+            </svg>
+            <h2 class="text-2xl font-bold">ORDERS</h2>
+        </a>
+        <a href="{% url 'account_addresses' %}" class="flex flex-col items-center justify-center p-12 border-2 border-primary md:col-span-4">
+            <svg width="35"
+                 height=""
+                 viewBox="0 0 29 33"
+                 fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.5 1.30841L28 12.6992V32H1V12.6992L14.5 1.30841Z" stroke="black" stroke-width="3" />
+            </svg>
+            <h2 class="text-2xl font-bold">ADDRESSES</h2>
+        </a>
+        <a href="{% url 'account_favourites' %}" class="flex flex-col items-center justify-center p-12 border-2 border-primary md:col-span-4">
+            <svg width="35"
+                 height=""
+                 viewBox="0 0 19 19"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path fill="none" stroke="#111111" fill-rule="evenodd" clip-rule="evenodd" d="M1 6.54014C1 3.4804 3.1005 1 6 1C7.22698 1 8.75 2.31908 9.5 3.11053C10.25 2.31908 11.773 1 13 1C15.8995 1 18 3.4804 18 6.54014C18 8.27982 17.25 9.58328 16.0519 10.8476L9.5 18L2.94811 10.8476C1.86623 9.70593 1 8.27982 1 6.54014Z" stroke-width="2" />
+            </svg>
+            <h2 class="text-2xl font-bold">FAVOURITES</h2>
+        </a>
+    </div>
+{% endblock content %}

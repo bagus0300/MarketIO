@@ -27,6 +27,8 @@ urlpatterns = [
     path("login/", user_views.login_view, name="login"),
     path("logout/", user_views.logout_view, name="logout"),
     path("signup/", user_views.signup_view, name="signup"),
+    path("account/", core_views.account_view, name="account"),
+    path("account/favourites/", core_views.account_favourites_view, name="account_favourites"),
     path("products/", core_views.products_view, name="products"),
     path(
         "products/<int:product_id>/",

@@ -170,3 +170,11 @@ def cart_view(request):
         "cart": cart,
     }
     return render(request, "cart/cart.html", context)
+@login_required
+def account_view(request):
+    return render(request, 'account/overview.html')
+
+@login_required
+def account_favourites_view(request):
+    favourite_products = UserFavourite.objects.filter(user=request.user)
+    return render(request, 'account/favourites.html', {"favourite_products":favourite_products})
