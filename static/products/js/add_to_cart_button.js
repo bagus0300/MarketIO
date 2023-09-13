@@ -8,13 +8,14 @@ let form = document.querySelector("form");
 let submitBtn = document.querySelector("#submit"); // Add to cart btn
 let errorMsg = document.querySelector("#errorMsg");
 let errorMsgVisible = false;
-
-// Listen for htmx request on add to cart CTA click
-form.addEventListener("htmx:beforeRequest", handleRequest);
+let sizesContainer = document.querySelector("#sizesContainer");
 
 // Handles request
 // Show success or error feedback
 function handleRequest(e) {
+  // if (!checkSizeSelected(e)){
+  //   return
+  // };
   // Hide CTA text on click
   cartCtaText.classList.add("hidden");
 
@@ -53,3 +54,27 @@ function handleRequest(e) {
     }
   });
 }
+// Checks that a size has been selected.
+// Show error feedback  if false.
+function checkSizeSelected(e) {
+  let selectedSize = document.querySelector('[data-selected="true"]');
+  if (!selectedSize) {
+    e.preventDefault();
+    console.log(e.target);
+    // htmx.trigger("form", "htmx:abort");
+    errorMsg.innerText = "Please select a size.";
+    errorMsg.classList.remove("invisible");
+    sizesContainer.classList.add("bg-red-100", "p-2", "-m-2");
+    errorMsgVisible = !errorMsgVisible;
+    return selectedSize;
+  } else {
+    errorMsg.classList.add("invisible");
+    sizesContainer.classList.remove("bg-red-100", "p-2", "-m-2");
+
+    // Listen for htmx request on add to cart CTA click
+    form.addEventListener("htmx:beforeRequest", handleRequest);
+  }
+}
+
+// Listen for click on CTA and validate
+submitBtn.addEventListener("click", checkSizeSelected);
