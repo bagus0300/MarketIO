@@ -170,9 +170,19 @@ def cart_view(request):
         "cart": cart,
     }
     return render(request, "cart/cart.html", context)
+
+
 @login_required
 def account_view(request):
     return render(request, 'account/overview.html')
+
+@login_required
+def account_orders_view(request):
+    return render(request, 'account/orders.html')
+
+@login_required
+def account_addresses_view(request):
+    return render(request, 'account/addresses.html')
 
 @login_required
 def account_favourites_view(request):

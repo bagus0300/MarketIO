@@ -28,6 +28,8 @@ urlpatterns = [
     path("logout/", user_views.logout_view, name="logout"),
     path("signup/", user_views.signup_view, name="signup"),
     path("account/", core_views.account_view, name="account"),
+    path("account/addresses/", core_views.account_addresses_view, name="account_addresses"),
+    path("account/orders/", core_views.account_orders_view, name="account_orders"),
     path("account/favourites/", core_views.account_favourites_view, name="account_favourites"),
     path("products/", core_views.products_view, name="products"),
     path(
