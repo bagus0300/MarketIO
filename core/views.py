@@ -101,7 +101,7 @@ def add_to_cart(request):
             "class='w-5 h-5 text-center text-white "
             "flex items-center justify-center rounded-full "
             "bg-primary text-[10px] absolute -right-3 "
-            f"font-bold -top-1 bg-red-700'>{badge_quantity}</div>)"
+            f"font-bold -top-1 bg-red-700'>{badge_quantity}</div>"
         )
     )
 
@@ -110,10 +110,21 @@ def remove_from_cart(request, cart_item_id):
     cart_item = CartItem.objects.get(id=cart_item_id)
     cart = cart_item.cart
     cart_item.delete()
+    cart_total_quantity = cart.get_total_items()
+    badge_quantity = cart_total_quantity
+    if badge_quantity > 99:
+        badge_quantity = '99+'
+
     return HttpResponse(
         (
             f'<span hx-swap-oob="true" id="subtotal">'
             f"Subtotal: €{cart.get_total_price()}</span>"
+            "<div id='cart-counter-badge' "
+            "hx-swap-oob='true' "
+            "class='w-5 h-5 text-center text-white "
+            "flex items-center justify-center rounded-full "
+            "bg-primary text-[10px] absolute -right-3 "
+            f"font-bold -top-1 bg-red-700'>{badge_quantity}</div>"
         )
     )
 
@@ -128,10 +139,21 @@ def update_cart_quantity(request, cart_item_id, quantity):
     cart_item.save()
     cart.save()
     print(cart.get_total_price())
+    cart_total_quantity = cart.get_total_items()
+    badge_quantity = cart_total_quantity
+    if badge_quantity > 99:
+        badge_quantity = '99+'
+
     return HttpResponse(
         (
             f'<span hx-swap-oob="true" id="subtotal">'
             f"Subtotal: €{cart.get_total_price()}</span>"
+            "<div id='cart-counter-badge' "
+            "hx-swap-oob='true' "
+            "class='w-5 h-5 text-center text-white "
+            "flex items-center justify-center rounded-full "
+            "bg-primary text-[10px] absolute -right-3 "
+            f"font-bold -top-1 bg-red-700'>{badge_quantity}</div>)"
         )
     )
 
