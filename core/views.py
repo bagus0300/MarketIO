@@ -91,6 +91,9 @@ def add_to_cart(request):
     quantity = int(request.POST.get("quantity"))
     cart.add_item(product, quantity)
     cart_total_quantity = cart.get_total_items()
+    badge_quantity = cart_total_quantity
+    if badge_quantity > 99:
+        badge_quantity = '99+'
     return HttpResponse(
         (
             "<div id='cart-counter-badge' "
@@ -98,7 +101,7 @@ def add_to_cart(request):
             "class='w-5 h-5 text-center text-white "
             "flex items-center justify-center rounded-full "
             "bg-primary text-[10px] absolute -right-3 "
-            f"font-bold -top-1 bg-red-700'>{cart_total_quantity}</div>)"
+            f"font-bold -top-1 bg-red-700'>{badge_quantity}</div>)"
         )
     )
 
