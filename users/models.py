@@ -98,3 +98,13 @@ class UserFavourite(models.Model):
 
     def __str__(self):
         return f"{self.product.name}"
+
+
+class UserAddress(models.Model):
+    user = models.ForeignKey("User", on_delete=models.CASCADE)
+    name = models.CharField(max_length=500)
+    address_line_1 = models.CharField(max_length=500)
+    address_line_2 = models.CharField(max_length=500, blank=True, null=True)
+    city = models.CharField(max_length=500)
+    county = models.CharField(max_length=50)
+    eircode = models.CharField(max_length=8)

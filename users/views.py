@@ -3,6 +3,7 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import authenticate, login, logout
 from .forms import CustomUserCreationForm
 from django.contrib import messages
+from .models import UserAddress
 
 
 # TODO:
@@ -42,3 +43,11 @@ def logout_view(request):
     logout(request)
     messages.info(request, "Successfully logged out!")
     return redirect("home")
+
+
+def account_addresses_view(request):
+    addresses = UserAddress.objects.filter(user=request.user)
+    context = {
+        "addresses":addresses,
+    }
+    return render(request, 'account/addresses.html', context)

@@ -1,3 +1,31 @@
 {% extends "base/base.html" %}
 {% block content %}
+    <div class="grid grid-flow-row grid-cols-1 gap-6 md:grid-cols-12">
+        <div class="text-2xl font-bold border-b-2 col-span-full border-primary text-primary">
+            <h2>SHIPPING ADDRESSES</h2>
+        </div>
+        <a href="{% url 'account_orders' %}"
+           class="flex flex-col items-center justify-center gap-4 p-12 border-2 border-primary md:col-span-4">
+            <svg width="41"
+                 height="40"
+                 viewBox="0 0 41 40"
+                 fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <rect x="2.25488" y="1.5" width="37" height="37" rx="18.5" fill="white" stroke="#111111" stroke-width="3" />
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5885 19.2766V11.915L19.5885 11.915L19.5885 19.2766H12.4219V21.2766H19.5885L19.5885 28.9363H21.5885V21.2766H29.0885V19.2766H21.5885Z" fill="#111111" />
+            </svg>
+            <h2 class="text-2xl font-bold">ADD ADDRESS</h2>
+        </a>
+        {% for address in addresses %}
+            <div class="flex flex-col gap-4 p-12 leading-3 border-2 border-primary md:col-span-4">
+                <h2 class="text-2xl font-bold">ADDRESS {{ forloop.counter }}</h2>
+                <p>{{ address.name }}</p>
+                <p>{{ address.address_line_1 }}</p>
+                <p>{{ address.address_line_2 }}</p>
+                <p>{{ address.city }}</p>
+                <p>{{ address.county }}</p>
+                <p>{{ address.eircode }}</p>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock content %}
