@@ -101,10 +101,39 @@ class UserFavourite(models.Model):
 
 
 class UserAddress(models.Model):
+    COUNTIES = [
+        ('carlow', 'Carlow'),
+        ('cavan', 'Cavan'),
+        ('clare', 'Clare'),
+        ('cork', 'Cork'),
+        ('donegal', 'Donegal'),
+        ('dublin', 'Dublin'),
+        ('galway', 'Galway'),
+        ('kerry', 'Kerry'),
+        ('kildare', 'Kildare'),
+        ('kilkenny', 'Kilkenny'),
+        ('laois', 'Laois'),
+        ('leitrim', 'Leitrim'),
+        ('limerick', 'Limerick'),
+        ('longford', 'Longford'),
+        ('louth', 'Louth'),
+        ('mayo', 'Mayo'),
+        ('meath', 'Meath'),
+        ('monaghan', 'Monaghan'),
+        ('offaly', 'Offaly'),
+        ('roscommon', 'Roscommon'),
+        ('sligo', 'Sligo'),
+        ('tipperary', 'Tipperary'),
+        ('waterford', 'Waterford'),
+        ('westmeath', 'Westmeath'),
+        ('wexford', 'Wexford'),
+        ('wicklow', 'Wicklow')
+    ]
+
     user = models.ForeignKey("User", on_delete=models.CASCADE)
     name = models.CharField(max_length=500)
     address_line_1 = models.CharField(max_length=500)
     address_line_2 = models.CharField(max_length=500, blank=True, null=True)
     city = models.CharField(max_length=500)
-    county = models.CharField(max_length=50)
+    county = models.CharField(max_length=50, choices=COUNTIES)
     eircode = models.CharField(max_length=8)

@@ -49,5 +49,6 @@ def account_addresses_view(request):
     addresses = UserAddress.objects.filter(user=request.user)
     context = {
         "addresses":addresses,
+        "counties":UserAddress.COUNTIES
     }
     return render(request, 'account/addresses.html', context)
