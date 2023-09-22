@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import authenticate, login, logout
-from .forms import CustomUserCreationForm
+from .forms import CustomUserCreationForm, CreateUserAddressForm
 from django.contrib import messages
 from .models import UserAddress
 
@@ -47,6 +47,14 @@ def logout_view(request):
 
 def account_addresses_view(request):
     addresses = UserAddress.objects.filter(user=request.user)
+    if request.method == 'POST':
+        address = UserAddress(user=request.user)
+        form = CreateUserAddressForm(request.POST, instance=address)
+        if form.is_valid():
+            address = form.save(commit=False)
+            address.user = request.user
+            address.save()
+
     context = {
         "addresses":addresses,
         "counties":UserAddress.COUNTIES

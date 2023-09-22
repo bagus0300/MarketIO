@@ -1,5 +1,6 @@
-from .models import User
+from .models import User, UserAddress
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.forms import ModelForm
 
 # class UserForm(ModelForm):
 #     class Meta:
@@ -18,3 +19,8 @@ class CustomUserCreationForm(UserCreationForm):
 #     class Meta:
 #         model = User
 #         fields = ("email", "password")
+
+class CreateUserAddressForm(ModelForm):
+    class Meta:
+        model = UserAddress
+        exclude = ['user']

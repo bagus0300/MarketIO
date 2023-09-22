@@ -1,11 +1,20 @@
 {% extends "base/base.html" %}
 {% block content %}
-    <dialog class="p-20 border-2 w-[600px] border-primary">
+
+    <dialog class="p-20 border-2 w-[600px] border-primary" x-ref="modal">
         <form action=""
               method="post"
               class="flex flex-col items-center justify-center w-full gap-6">
             {% csrf_token %}
             <h2 class="text-xl font-bold text-center">ADD ADDRESS</h2>
+            <div class="w-full">
+                <label class="font-bold text-primary" for="address_line_1">FULL NAME*</label>
+                <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
+                       type="text"
+                       name="name"
+                       id="name"
+                       required>
+            </div>
             <div class="w-full">
                 <label class="font-bold text-primary" for="address_line_1">ADDRESS LINE 1*</label>
                 <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
@@ -37,7 +46,7 @@
                         id="county"
                         required>
                     <option value="" disabled selected>Select...</option>
-                    {% for county in counties %}<option value="{{ county }}">{{ county.1 }}</option>{% endfor %}
+                    {% for county in counties %}<option value="{{ county.0 }}">{{ county.1 }}</option>{% endfor %}
                 </select>
             </div>
             <div class="w-full">
@@ -56,7 +65,7 @@
         <div class="text-2xl font-bold border-b-2 col-span-full border-primary text-primary">
             <h2>SHIPPING ADDRESSES</h2>
         </div>
-        <a href="{% url 'account_orders' %}"
+        <div x-on:click="$refs.modal.showModal()"
            class="flex flex-col items-center justify-center gap-4 p-12 border-2 border-primary md:col-span-4">
             <svg width="41"
                  height="40"
@@ -67,7 +76,7 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5885 19.2766V11.915L19.5885 11.915L19.5885 19.2766H12.4219V21.2766H19.5885L19.5885 28.9363H21.5885V21.2766H29.0885V19.2766H21.5885Z" fill="#111111" />
             </svg>
             <h2 class="text-2xl font-bold">ADD ADDRESS</h2>
-        </a>
+        </div>
         {% for address in addresses %}
             <div class="flex flex-col gap-4 p-12 leading-3 border-2 border-primary md:col-span-4">
                 <h2 class="text-2xl font-bold">ADDRESS {{ forloop.counter }}</h2>
@@ -80,5 +89,4 @@
             </div>
         {% endfor %}
     </div>
-    <script>document.querySelector("dialog").showModal();</script>
 {% endblock content %}
