@@ -1,7 +1,16 @@
 {% extends "base/base.html" %}
 {% block content %}
-
-    <dialog class="p-20 border-2 w-[600px] border-primary" x-ref="modal">
+    <dialog class="p-20 border-2 w-[600px] border-primary fixed" x-ref="modal">
+        <svg x-on:click="$refs.modal.close()"
+             class="absolute cursor-pointer right-8 top-8 hover:stroke-secondary stroke-primary"
+             width="27"
+             height="27"
+             viewBox="0 0 27 27"
+             fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path class="" d="M2 2L25 25" stroke="" stroke-width="4" />
+            <path class="" d="M25 2L2 25" stroke="" stroke-width="4" />
+        </svg>
         <form action=""
               method="post"
               class="flex flex-col items-center justify-center w-full gap-6">
@@ -66,7 +75,7 @@
             <h2>SHIPPING ADDRESSES</h2>
         </div>
         <div x-on:click="$refs.modal.showModal()"
-           class="flex flex-col items-center justify-center gap-4 p-12 border-2 border-primary md:col-span-4">
+             class="flex flex-col items-center justify-center gap-4 p-12 border-2 border-primary md:col-span-4">
             <svg width="41"
                  height="40"
                  viewBox="0 0 41 40"
