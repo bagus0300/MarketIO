@@ -4,7 +4,7 @@ from django.contrib.auth.models import (
     BaseUserManager,
     PermissionsMixin,
 )
-
+from django.db.models import Q, UniqueConstraint
 
 class UserManager(BaseUserManager):
     def create_user(self, email, first_name, last_name, password=None):
@@ -137,3 +137,9 @@ class UserAddress(models.Model):
     city = models.CharField(max_length=500)
     county = models.CharField(max_length=50, choices=COUNTIES)
     eircode = models.CharField(max_length=8)
+    is_default = models.BooleanField(default=False)
+
+    class Meta:
+        constraints = [
+            UniqueConstraint(fields=["user", "is_default"], condition=Q(is_default="True"), name="unique_default_address")
+        ]
