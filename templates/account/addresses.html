@@ -87,7 +87,8 @@
             <h2 class="text-2xl font-bold">ADD ADDRESS</h2>
         </div>
         {% for address in addresses %}
-            <div class="flex flex-col gap-4 p-12 leading-3 border-2 border-primary md:col-span-4">
+            <div id="address-{{ address.id }}"
+                 class="flex flex-col gap-4 p-12 leading-3 border-2 border-primary md:col-span-4">
                 <h2 class="text-2xl font-bold">ADDRESS {{ forloop.counter }}</h2>
                 <p>{{ address.name }}</p>
                 <p>{{ address.address_line_1 }}</p>
@@ -95,6 +96,18 @@
                 <p>{{ address.city }}</p>
                 <p>{{ address.county }}</p>
                 <p>{{ address.eircode }}</p>
+                <div class="flex flex-col items-start gap-4 my-4 underline"
+                     hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
+                    <button hx-post="{% url "account_addresses" %}?set_default={{ address.id }}"
+                            class="inline">Set default</button>
+                    <button hx-post="{% url "account_addresses" %}?edit={{ address.id }}"
+                            class="inline">Edit</button>
+                    <button hx-confirm="Are you sure?"
+                            hx-post="{% url "account_addresses" %}?delete={{ address.id }}"
+                            hx-swap="outerHTML"
+                            hx-target="#address-{{ address.id }}"
+                            class="inline">Delete</button>
+                </div>
             </div>
         {% endfor %}
     </div>
