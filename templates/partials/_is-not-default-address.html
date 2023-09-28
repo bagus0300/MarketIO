@@ -1,0 +1,9 @@
+{% comment %} 
+This partial template is the 'set default' button for each address.
+When the button is clicked, htmx request sent, new default address set, and 
+_is-default-address.html template is swapped in the DOM to show the new default address.
+{% endcomment %}
+<button hx-post="{% url "account_addresses" %}?set_default={{ address.id }}"
+        hx-swap="outerHTML"
+        hx-swap-oob="outerHTML:[data-default]"
+        class="inline py-2 underline setDefaultBtn">Set default</button>

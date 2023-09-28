@@ -1,0 +1,19 @@
+{% comment %} 
+This partial template shows the currently selected default user address with appropriate styling.
+This template is included in the htmx request response when user clicks the 'set default' button on an address. 
+When a new default address is selected, this template is swapped with _is-not-default-address.html in the DOM.
+{% endcomment %}
+<span class="py-2 font-bold text-green-700"
+      data-default="true"
+      hx-swap="outerHTML"
+      hx-target="this">Default address
+  <svg class="inline"
+       width="15"
+       height="15"
+       viewBox="0 0 29 29"
+       fill="#15803d"
+       xmlns="http://www.w3.org/2000/svg">
+    <circle cx="14.5" cy="14.5" r="13.5" stroke="white" stroke-width="2" />
+    <path d="M7 15L11.5 19.5L22 9" stroke="white" stroke-width="2" />
+  </svg>
+</span>
