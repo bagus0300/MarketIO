@@ -50,28 +50,41 @@ def logout_view(request):
 def account_addresses_view(request):
     addresses = UserAddress.objects.filter(user=request.user).order_by("-is_default")
     if request.method == "POST":
+        # IF USER IS DELETING AN ADDRESS
         if request.GET.get("delete"):
             address = UserAddress.objects.get(id=request.GET.get("delete"))
-            address.delete()
+            # IF USER IS DELETING THEIR DEFAULT ADDRESS, SET THE FIRST ADDRESS IN THE LIST TO DEFAULT
+            if address.is_default:
+                address.delete()
+                new_default = addresses.first()
+                new_default.is_default = True
+                new_default.save()
+            # IF USER IS DELETING AN ADDRESS THAT IS NOT THEIR DEFAULT
+            else:
+                address.delete()
+            # RETURN A BLANK RESPONSE WITH A HEADER THAT HTMX CAN USE TO REDIRECT
             response = HttpResponse()
             response.headers["HX-Redirect"] = "/account/addresses/"
             messages.info(request, "Successfully deleted address!")
             return response
+        # IF USER IS SETTING AN ADDRESS TO DEFAULT
         elif request.GET.get("set_default"):
             address = UserAddress.objects.get(id=request.GET.get("set_default"))
-            previous_default = UserAddress.objects.get(
-                user=request.user, is_default=True
-            )
-            previous_default.is_default = False
-            previous_default.save()
+            # IF USER HAS A DEFAULT ADDRESS, SET IT TO FALSE
+            if UserAddress.objects.filter(user=request.user, is_default=True).exists():
+                previous_default = UserAddress.objects.get(
+                    user=request.user, is_default=True
+                )
+                previous_default.is_default = False
+                previous_default.save()
             address.is_default = True
             address.save()
-            print(address.id)
-            print(previous_default.id)
             # RENDERS HTML FILES AS STRINGS FOR HTMX OOB-SWAP
-            template1 = render_to_string(
-                "partials/_is-not-default-address.html", {"address": previous_default}
-            )
+            if previous_default:
+                template1 = render_to_string(
+                    "partials/_is-not-default-address.html",
+                    {"address": previous_default},
+                )
             template2 = render_to_string(
                 "partials/_is-default-address.html", {"address": address}
             )
