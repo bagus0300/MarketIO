@@ -1,14 +1,14 @@
 {% extends "base/base.html" %}
 {% block content %}
-<div class="w-full mb-4 text-2xl font-bold border-b-2 border-primary text-primary">
-    <h2>FAVOURITE PRODUCTS</h2>
-</div>
-<div class="grid grid-cols-12 gap-4 mb-16">
-    {% for product in favourite_products %}
-        <div class="col-span-12 sm:col-span-6 md:col-span-4">
-            {% include 'partials/product-card.html' with product_id=product.product.id product=product.product product_images=product.product.productimage_set.all %}
-        </div>
-    {% endfor %}
-</div>
-
+    {% include "account/_back_to_account_btn.html" %}
+    <div class="w-full mb-4 text-2xl font-bold border-b-2 border-primary text-primary">
+        <h2>FAVOURITE PRODUCTS</h2>
+    </div>
+    <div class="grid grid-cols-12 gap-4 mb-16">
+        {% for product in favourite_products %}
+            <div class="col-span-12 sm:col-span-6 md:col-span-4">
+                {% include 'partials/product-card.html' with product_id=product.product.id product=product.product product_images=product.product.productimage_set.all %}
+            </div>
+        {% endfor %}
+    </div>
 {% endblock content %}
