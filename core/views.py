@@ -188,3 +188,17 @@ def account_addresses_view(request):
 def account_favourites_view(request):
     favourite_products = UserFavourite.objects.filter(user=request.user)
     return render(request, 'account/favourites.html', {"favourite_products":favourite_products})
+
+def checkout_view(request):
+    if request.user.is_authenticated:
+        cart = Cart.objects.get_or_create(user=request.user)[0]
+    else:
+        cart = Cart.objects.get_or_create(session=request.session.session_key)[0]
+    cart_items = cart.cartitem_set.all()
+
+    context = {
+        "cart_items": cart_items,
+        "cart": cart,
+    }
+
+    return render(request, 'checkout/checkout.html', context)

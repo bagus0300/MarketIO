@@ -1,0 +1,97 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block content %}
+    <div class="grid h-full grid-cols-12 gap-4">
+        <div class="col-span-8">
+            <!-- SELECT ADDRESS -->
+            <div class="p-6 bg-gray-100 border-primary">
+                <h2 class="mb-2 text-xl font-bold">SELECT ADDRESS</h2>
+
+                <select name="" id="" class="w-full h-12 bg-white border-2 border-primary">
+                    <option value="">Address 1</option>
+                    <option value="">Address 2</option>
+                    <option value="">Address 3</option>
+                </select>
+            </div>
+            <!-- END SELECT ADDRESS -->
+            <!-- ADDRESS -->
+            <form action=""
+              method="post"
+              class="flex flex-col w-full gap-6 p-6">
+            {% csrf_token %}
+            <h2 class="text-xl font-bold">ADD ADDRESS</h2>
+            <div class="w-full">
+                <label class="font-bold text-primary" for="address_line_1">FULL NAME*</label>
+                <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
+                       type="text"
+                       name="name"
+                       id="name"
+                       required>
+            </div>
+            <div class="w-full">
+                <label class="font-bold text-primary" for="address_line_1">ADDRESS LINE 1*</label>
+                <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
+                       type="text"
+                       name="address_line_1"
+                       id="address_line_1"
+                       required>
+            </div>
+            <div class="w-full">
+                <label class="font-bold text-primary" for="address_line_2">ADDRESS LINE 2</label>
+                <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
+                       type="text"
+                       name="address_line_2"
+                       id="address_line_2">
+            </div>
+            <div class="w-full">
+                <label class="font-bold text-primary" for="city">CITY/REGION*</label>
+                <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
+                       type="text"
+                       name="city"
+                       id="city"
+                       required>
+            </div>
+            <div class="w-full">
+                <label class="font-bold text-primary" for="county">COUNTY*</label>
+                <select class="w-full h-12 px-3 bg-white border-2 border-primary placeholder:text-secondary"
+                        type="text"
+                        name="county"
+                        id="county"
+                        required>
+                    <option value="" disabled selected>Select...</option>
+                    {% for county in counties %}<option value="{{ county.0 }}">{{ county.1 }}</option>{% endfor %}
+                </select>
+            </div>
+            <div class="w-full">
+                <label class="font-bold text-primary" for="eircode">EIRCODE*</label>
+                <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
+                       type="text"
+                       name="eircode"
+                       id="eircode"
+                       required>
+            </div>
+            <button class="inline-block w-full h-12 text-center text-white bg-black md:px-0"
+                    type="submit">SAVE ADDRESS</button>
+        </form>
+        </div>
+        <div class="col-span-4 px-4 border-4">
+            {% for item in cart_items %}
+            <div id="item{{ item.id }}"
+                 class="flex gap-6 h-40 col-span-9 py-4 {% if forloop.first %}border-t-2{% endif %} border-b-2 border-gray-300">
+                <a href="{% url 'product_detail' item.item.product.id %}">
+                    <div class="h-full aspect-square bg-cover bg-center bg-[url('{{ item.item.product.productimage_set.first.image.url }}')]">
+                    </div>
+                </a>
+                <div class="flex flex-col w-full h-full">
+                    <h3 class="mb-2 text-xl font-bold text-primary">{{ item.item.product.name }}</h3>
+                    <h5 class="mb-2 font-bold">{{ item.item.get_size_display }}</h5>
+                    <h4 class="mb-2 text-lg text-secondary">€{{ item.item.product.price }} each</h4>
+                    <h4 class="mb-2 text-lg text-secondary">Quantity: {{ item.quantity }}</h4>
+                    
+                </div>
+            </div>
+        {% endfor %}
+
+        </div>
+    </div>
+{% endblock content %}

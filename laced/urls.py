@@ -46,6 +46,7 @@ urlpatterns = [
         core_views.add_remove_user_favourite,
         name="favourite",
     ),
+    path("checkout/", core_views.checkout_view, name="checkout"),
     path("__debug__/", include("debug_toolbar.urls")),
 ]
 
