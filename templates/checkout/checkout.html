@@ -73,14 +73,14 @@
             <button class="inline-block w-full h-12 text-center text-white bg-black md:px-0"
                     type="submit">SAVE ADDRESS</button>
         </form>
-        <form id="payment-form">
+        <form id="payment-form" class="p-6 font-sans">
             {% csrf_token %}
             <div id="payment-elements">
               <!--Stripe.js injects the Payment Element-->
             </div>
-            <button id="submit">
+            <button id="submit" class="inline-block w-full h-12 text-center text-white mt-6 bg-black md:px-0">
               <div class="spinner hidden" id="spinner"></div>
-              <span id="button-text">Pay now</span>
+              <span id="button-text">PAY €{{cart.get_total_price}}</span>
             </button>
             <div id="payment-message" class="hidden"></div>
           </form>

@@ -167,3 +167,4 @@ media/
 staticfiles/
 product_imgs/
 jsconfig.json
+.DS_Store

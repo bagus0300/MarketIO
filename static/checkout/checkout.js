@@ -34,7 +34,35 @@ const response = await fetch("/create_payment_intent/", {
 
   const appearance = {
     theme: 'stripe',
-  };
+  
+    variables: {
+      colorPrimary: '#111111',
+      colorBackground: '#ffffff',
+      colorText: '#30313d',
+      colorDanger: '#df1b41',
+      fontFamily: 'Arial, sans-serif',
+      spacingUnit: '5px',
+      borderRadius: '0px',
+      // See all possible variables below
+    },
+
+    rules: {
+      '.Input': {
+        border: '2px solid #111111',
+        lineHeight: '3em',
+        paddingBottom: '0',
+        paddingTop: '0',
+      },
+      '.Label': {
+        color: '#111111',
+        fontWeight: 'bold',
+        textTransform: 'uppercase',
+        fontFamily: 'Arial, sans-serif',
+      },
+      
+  }
+};
+
   elements = stripe.elements({ appearance, clientSecret });
 
   const paymentElementOptions = {
