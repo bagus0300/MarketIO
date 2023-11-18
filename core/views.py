@@ -4,8 +4,13 @@ from users.models import User
 import random
 from django.db.models import Prefetch
 from users.models import UserFavourite
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.contrib.auth.decorators import login_required
+import stripe
+import json
+
+stripe.api_key = 'sk_test_51NbLmNBTGDhz14YGNE1hEazGhXD7ZPDvTsvgj6TknLaagVbrYZf34mmuCQcHKJ5nbzNSRc2vOpNMHX3gJwgXK3r6002hzSnizQ'
+
 
 
 def home_view(request):
@@ -202,3 +207,21 @@ def checkout_view(request):
     }
 
     return render(request, 'checkout/checkout.html', context)
+
+def create_payment(request):
+    try:
+        data = json.loads(request.body)
+        # Create a PaymentIntent with the order amount and currency
+        intent = stripe.PaymentIntent.create(
+            amount=100,
+            currency='usd',
+            # In the latest version of the API, specifying the `automatic_payment_methods` parameter is optional because Stripe enables its functionality by default.
+            automatic_payment_methods={
+                'enabled': True,
+            },
+        )
+        return JsonResponse({
+            'clientSecret': intent['client_secret']
+        })
+    except Exception as e:
+        return JsonResponse({'error': str(e)}, status=403)

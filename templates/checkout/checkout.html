@@ -73,6 +73,18 @@
             <button class="inline-block w-full h-12 text-center text-white bg-black md:px-0"
                     type="submit">SAVE ADDRESS</button>
         </form>
+        <form id="payment-form">
+            {% csrf_token %}
+            <div id="payment-elements">
+              <!--Stripe.js injects the Payment Element-->
+            </div>
+            <button id="submit">
+              <div class="spinner hidden" id="spinner"></div>
+              <span id="button-text">Pay now</span>
+            </button>
+            <div id="payment-message" class="hidden"></div>
+          </form>
+        
         </div>
         <div class="col-span-4 px-4 border-4">
             {% for item in cart_items %}
@@ -92,6 +104,14 @@
             </div>
         {% endfor %}
 
+
         </div>
     </div>
 {% endblock content %}
+
+{% block scripts %}
+{{block.super}}
+<script src="{% static "checkout/checkout.js" %}"></script>
+{% endblock scripts %}
+
+
