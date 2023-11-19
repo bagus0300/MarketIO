@@ -1,7 +1,7 @@
 {% extends "base/base.html" %}
 {% load static %}
 {% block content %}
-    <div class="grid h-full grid-cols-12 gap-4">
+    <div class="grid h-full grid-cols-12 gap-4" x-data>
         <div class="col-span-8">
             <!-- SELECT ADDRESS -->
             <div class="p-6 bg-gray-100 border-primary">
@@ -24,9 +24,9 @@
             <!-- ADDRESS -->
             <form action=""
               method="post"
-              class="flex flex-col relative w-full gap-6 p-6 h-[76px] overflow-hidden bg-gray-100">
+              class="flex flex-col relative w-full gap-6 p-6 max-h-[76px] transition-all duration-300 overflow-hidden bg-gray-100" x-data x-ref="addAddressAccordion">
             {% csrf_token %}
-            <div class="w-full h-[76px] cursor-pointer accordionContol"></div>
+            <div class="w-full h-[76px] absolute left-0 top-0 cursor-pointer accordionContol" x-on:click="$refs.addAddressAccordion.classList.toggle('max-h-[3000px]')"></div>
             <h2 class="text-xl font-bold">ADD NEW ADDRESS</h2>
             <div class="w-full">
                 <label class="font-bold text-primary" for="address_line_1">FULL NAME*</label>
