@@ -1,7 +1,9 @@
 // This is a public sample test API key.
 // Don’t submit any personally identifiable information in requests made with this key.
 // Sign in to see your own test API key embedded in code samples.
-const stripe = Stripe("pk_test_51NbLmNBTGDhz14YGUPhmxtehPHbzVTepagoF5lU9EbqpuD0iUVhidmmf3S4OgLecGecnj3w1VPSG8LNS8PJ0VUq600srgN4uDP");
+const stripe = Stripe(
+  "pk_test_51NbLmNBTGDhz14YGUPhmxtehPHbzVTepagoF5lU9EbqpuD0iUVhidmmf3S4OgLecGecnj3w1VPSG8LNS8PJ0VUq600srgN4uDP"
+);
 
 // The items the customer wants to buy
 const items = [{ id: "xl-tshirt" }];
@@ -17,51 +19,51 @@ document
 
 // Fetches a payment intent and captures the client secret
 async function initialize() {
-// Get CSRF token
-const csrfToken = document.cookie.split('; ')
-  .find(row => row.startsWith('csrftoken='))
-  .split('=')[1];
+  // Get CSRF token
+  const csrfToken = document.cookie
+    .split("; ")
+    .find((row) => row.startsWith("csrftoken="))
+    .split("=")[1];
 
-const response = await fetch("/create_payment_intent/", {
-  method: "POST",
-  headers: { 
-    "Content-Type": "application/json",
-    "X-CSRFToken": csrfToken  // Add CSRF token here
-  },
-  body: JSON.stringify({ items }),
-});
+  const response = await fetch("/create_payment_intent/", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-CSRFToken": csrfToken, // Add CSRF token here
+    },
+    body: JSON.stringify({ items }),
+  });
   const { clientSecret } = await response.json();
 
   const appearance = {
-    theme: 'stripe',
-  
+    theme: "stripe",
+
     variables: {
-      colorPrimary: '#111111',
-      colorBackground: '#ffffff',
-      colorText: '#30313d',
-      colorDanger: '#df1b41',
-      fontFamily: 'Arial, sans-serif',
-      spacingUnit: '5px',
-      borderRadius: '0px',
+      colorPrimary: "#111111",
+      colorBackground: "#ffffff",
+      colorText: "#30313d",
+      colorDanger: "#df1b41",
+      fontFamily: "Arial, sans-serif",
+      spacingUnit: "5px",
+      borderRadius: "0px",
       // See all possible variables below
     },
 
     rules: {
-      '.Input': {
-        border: '2px solid #111111',
-        lineHeight: '3em',
-        paddingBottom: '0',
-        paddingTop: '0',
+      ".Input": {
+        border: "2px solid #111111",
+        lineHeight: "3em",
+        paddingBottom: "0",
+        paddingTop: "0",
       },
-      '.Label': {
-        color: '#111111',
-        fontWeight: 'bold',
-        textTransform: 'uppercase',
-        fontFamily: 'Arial, sans-serif',
+      ".Label": {
+        color: "#111111",
+        fontWeight: "bold",
+        textTransform: "uppercase",
+        fontFamily: "Arial, sans-serif",
       },
-      
-  }
-};
+    },
+  };
 
   elements = stripe.elements({ appearance, clientSecret });
 

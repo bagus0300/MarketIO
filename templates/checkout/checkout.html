@@ -1,128 +1,127 @@
 {% extends "base/base.html" %}
 {% load static %}
 {% block content %}
-    <div class="grid h-full grid-cols-12 gap-4" x-data>
-        <div class="col-span-8">
+    <div class="flex flex-col-reverse h-full grid-cols-12 md:gap-4 md:grid"
+         x-data>
+        <div class="col-span-12 sm:col-span-6">
             <!-- SELECT ADDRESS -->
             <div class="p-6 bg-gray-100 border-primary">
                 <h2 class="mb-2 text-xl font-bold">SELECT ADDRESS</h2>
-
-                <select name="" id="" class="w-full h-12 bg-white border-2 px-3 border-primary">
+                <select name=""
+                        id=""
+                        class="w-full h-12 px-3 bg-white border-2 border-primary">
                     <option value="">Address 1</option>
                     <option value="">Address 2</option>
                     <option value="">Address 3</option>
                 </select>
             </div>
             <!-- END SELECT ADDRESS -->
-
             <div class="flex items-center">
-            <hr class="border-gray-500 border-1 flex-grow">
-            <div class="text-center m-4 font-bold">OR</div>
-            <hr class="border-gray-500 border-1 flex-grow">
+                <hr class="flex-grow border-gray-500 border-1" />
+                <div class="m-4 font-bold text-center">OR</div>
+                <hr class="flex-grow border-gray-500 border-1" />
             </div>
-
             <!-- ADDRESS -->
             <form action=""
-              method="post"
-              class="flex flex-col relative w-full gap-6 p-6 max-h-[76px] transition-all duration-300 overflow-hidden bg-gray-100" x-data x-ref="addAddressAccordion">
-            {% csrf_token %}
-            <div class="w-full h-[76px] absolute left-0 top-0 cursor-pointer accordionContol" x-on:click="$refs.addAddressAccordion.classList.toggle('max-h-[3000px]')"></div>
-            <h2 class="text-xl font-bold">ADD NEW ADDRESS</h2>
-            <div class="w-full">
-                <label class="font-bold text-primary" for="address_line_1">FULL NAME*</label>
-                <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
-                       type="text"
-                       name="name"
-                       id="name"
-                       required>
-            </div>
-            <div class="w-full">
-                <label class="font-bold text-primary" for="address_line_1">ADDRESS LINE 1*</label>
-                <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
-                       type="text"
-                       name="address_line_1"
-                       id="address_line_1"
-                       required>
-            </div>
-            <div class="w-full">
-                <label class="font-bold text-primary" for="address_line_2">ADDRESS LINE 2</label>
-                <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
-                       type="text"
-                       name="address_line_2"
-                       id="address_line_2">
-            </div>
-            <div class="w-full">
-                <label class="font-bold text-primary" for="city">CITY/REGION*</label>
-                <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
-                       type="text"
-                       name="city"
-                       id="city"
-                       required>
-            </div>
-            <div class="w-full">
-                <label class="font-bold text-primary" for="county">COUNTY*</label>
-                <select class="w-full h-12 px-3 bg-white border-2 border-primary placeholder:text-secondary"
-                        type="text"
-                        name="county"
-                        id="county"
-                        required>
-                    <option value="" disabled selected>Select...</option>
-                    {% for county in counties %}<option value="{{ county.0 }}">{{ county.1 }}</option>{% endfor %}
-                </select>
-            </div>
-            <div class="w-full">
-                <label class="font-bold text-primary" for="eircode">EIRCODE*</label>
-                <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
-                       type="text"
-                       name="eircode"
-                       id="eircode"
-                       required>
-            </div>
-            <button class="inline-block w-full h-12 text-center text-white bg-black md:px-0"
-                    type="submit">SAVE ADDRESS</button>
-        </form>
-        <hr class="border-gray-500 border-1 my-5 flex-grow">
-
-        <form id="payment-form" class="p-6 font-sans bg-gray-100">
-            <h2 class="text-xl font-bold mb-2">PAYMENT DETAILS</h2>
-            {% csrf_token %}
-            <div id="payment-elements">
-              <!--Stripe.js injects the Payment Element-->
-            </div>
-            <button id="submit" class="inline-block w-full h-12 text-center text-white mt-6 bg-black md:px-0">
-              <div class="spinner hidden" id="spinner"></div>
-              <span id="button-text">PAY €{{cart.get_total_price}}</span>
-            </button>
-            <div id="payment-message" class="hidden"></div>
-          </form>
-        
-        </div>
-        <div class="col-span-4 px-4 border-4">
-            {% for item in cart_items %}
-            <div id="item{{ item.id }}"
-                 class="flex gap-6 h-40 col-span-9 py-4 {% if forloop.first %}border-t-2{% endif %} border-b-2 border-gray-300">
-                <a href="{% url 'product_detail' item.item.product.id %}">
-                    <div class="h-full aspect-square bg-cover bg-center bg-[url('{{ item.item.product.productimage_set.first.image.url }}')]">
-                    </div>
-                </a>
-                <div class="flex flex-col w-full h-full">
-                    <h3 class="mb-2 text-xl font-bold text-primary">{{ item.item.product.name }}</h3>
-                    <h5 class="mb-2 font-bold">{{ item.item.get_size_display }}</h5>
-                    <h4 class="mb-2 text-lg text-secondary">€{{ item.item.product.price }} each</h4>
-                    <h4 class="mb-2 text-lg text-secondary">Quantity: {{ item.quantity }}</h4>
-                    
+                  method="post"
+                  class="flex flex-col relative w-full gap-6 p-6 max-h-[76px] transition-all duration-300 overflow-hidden bg-gray-100"
+                  x-data
+                  x-ref="addAddressAccordion">
+                {% csrf_token %}
+                <div class="w-full h-[76px] absolute left-0 top-0 cursor-pointer accordionContol"
+                     x-on:click="$refs.addAddressAccordion.classList.toggle('max-h-[3000px]')"></div>
+                <h2 class="text-xl font-bold">ADD NEW ADDRESS</h2>
+                <div class="w-full">
+                    <label class="font-bold text-primary" for="address_line_1">FULL NAME*</label>
+                    <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
+                           type="text"
+                           name="name"
+                           id="name"
+                           required />
                 </div>
-            </div>
-        {% endfor %}
-
-
+                <div class="w-full">
+                    <label class="font-bold text-primary" for="address_line_1">ADDRESS LINE 1*</label>
+                    <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
+                           type="text"
+                           name="address_line_1"
+                           id="address_line_1"
+                           required />
+                </div>
+                <div class="w-full">
+                    <label class="font-bold text-primary" for="address_line_2">ADDRESS LINE 2</label>
+                    <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
+                           type="text"
+                           name="address_line_2"
+                           id="address_line_2" />
+                </div>
+                <div class="w-full">
+                    <label class="font-bold text-primary" for="city">CITY/REGION*</label>
+                    <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
+                           type="text"
+                           name="city"
+                           id="city"
+                           required />
+                </div>
+                <div class="w-full">
+                    <label class="font-bold text-primary" for="county">COUNTY*</label>
+                    <select class="w-full h-12 px-3 bg-white border-2 border-primary placeholder:text-secondary"
+                            type="text"
+                            name="county"
+                            id="county"
+                            required>
+                        <option value="" disabled selected>Select...</option>
+                        {% for county in counties %}<option value="{{ county.0 }}">{{ county.1 }}</option>{% endfor %}
+                    </select>
+                </div>
+                <div class="w-full">
+                    <label class="font-bold text-primary" for="eircode">EIRCODE*</label>
+                    <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
+                           type="text"
+                           name="eircode"
+                           id="eircode"
+                           required />
+                </div>
+                <button class="inline-block w-full h-12 text-center text-white bg-black md:px-0"
+                        type="submit">SAVE ADDRESS</button>
+            </form>
+            <hr class="flex-grow my-5 border-gray-500 border-1" />
+            <form id="payment-form" class="p-6 font-sans bg-gray-100">
+                <h2 class="mb-2 text-xl font-bold">PAYMENT DETAILS</h2>
+                {% csrf_token %}
+                <div id="payment-elements">
+                    <!--Stripe.js injects the Payment Element-->
+                </div>
+                <button id="submit"
+                        class="inline-block w-full h-12 mt-6 text-center text-white bg-black md:px-0">
+                    <div class="hidden spinner" id="spinner"></div>
+                    <span id="button-text">PAY €{{ cart.get_total_price }}</span>
+                </button>
+                <div id="payment-message" class="hidden"></div>
+            </form>
+        </div>
+        <hr class="flex-grow my-5 border-gray-500 border-1 md:hidden" />
+        <!-- ORDER SUMMARY -->
+        <div class="w-full col-span-12 p-6 bg-gray-100 place-self-start sm:col-span-6 max-h-[76px] md:max-h-none overflow-hidden transition-all duration-300"
+             x-on:click="$el.classList.toggle('max-h-[3000px]');">
+            <h2 class="mb-6 text-xl font-bold" x-ref="orderSummaryAccordion">ORDER SUMMARY</h2>
+            {% for item in cart_items %}
+                <div id="item{{ item.id }}" class="flex col-span-9 gap-6 py-4">
+                    <a href="{% url 'product_detail' item.item.product.id %}">
+                        <div class="h-24 aspect-square bg-cover bg-center bg-[url('{{ item.item.product.productimage_set.first.image.url }}')]">
+                        </div>
+                    </a>
+                    <div class="flex flex-col w-full h-full">
+                        <h3 class="mb-[2px] text-sm sm:text-base font-bold text-primary">{{ item.item.product.name }}</h3>
+                        <h5 class="mb-[2px] text-xs sm:text-sm text-secondary">{{ item.item.get_size_display }}</h5>
+                        <h4 class="mb-[2px] text-xs sm:text-sm text-secondary">€{{ item.item.product.price }} each</h4>
+                        <h4 class="mb-[2px] text-xs sm:text-sm text-secondary">Quantity: {{ item.quantity }}</h4>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock content %}
-
 {% block scripts %}
-{{block.super}}
-<script src="{% static "checkout/checkout.js" %}"></script>
+    {{ block.super }}
+    <script src="{% static "checkout/checkout.js" %}">
 {% endblock scripts %}
-
-
