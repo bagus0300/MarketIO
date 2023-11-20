@@ -8,8 +8,11 @@ from django.http import HttpResponse, JsonResponse
 from django.contrib.auth.decorators import login_required
 import stripe
 import json
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
-stripe.api_key = 'sk_test_51NbLmNBTGDhz14YGNE1hEazGhXD7ZPDvTsvgj6TknLaagVbrYZf34mmuCQcHKJ5nbzNSRc2vOpNMHX3gJwgXK3r6002hzSnizQ'
+stripe.api_key = os.getenv('STRIPE_PRIVATE_KEY')
 
 
 
