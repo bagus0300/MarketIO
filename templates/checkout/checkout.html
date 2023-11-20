@@ -7,8 +7,7 @@
             <!-- SELECT ADDRESS -->
             <div class="p-6 bg-gray-100 border-primary">
                 <h2 class="mb-2 text-xl font-bold">SELECT ADDRESS</h2>
-                <select name=""
-                        id=""
+                <select name="selected_address"
                         class="w-full h-12 px-3 bg-white border-2 border-primary">
                     <option value="">Address 1</option>
                     <option value="">Address 2</option>
@@ -123,5 +122,5 @@
 {% endblock content %}
 {% block scripts %}
     {{ block.super }}
-    <script src="{% static "checkout/checkout.js" %}">
+    <script src="{% static 'checkout/checkout.js' %}"></script>
 {% endblock scripts %}
