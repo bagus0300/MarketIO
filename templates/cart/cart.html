@@ -5,7 +5,9 @@
     <div class="grid grid-cols-12 grid-flow-dense gap-x-4">
         {% for item in cart_items %}
             <div id="item{{ item.id }}"
-                 class="flex gap-6 h-64 col-span-9 py-4 {% if forloop.first %}border-t-2{% endif %} border-b-2 border-gray-300">
+                 class="flex gap-6 h-64 col-span-9 py-4
+                        {% if forloop.first %}border-t-2{% endif %}
+                        border-b-2 border-gray-300">
                 <a href="{% url 'product_detail' item.item.product.id %}">
                     <div class="h-full aspect-square bg-cover bg-center bg-[url('{{ item.item.product.productimage_set.first.image.url }}')]">
                     </div>
@@ -61,7 +63,7 @@
             <h2 class="text-xl font-bold text-primary">
                 <span id="subtotal">Subtotal: €{{ cart.get_total_price }}</span>
             </h2>
-            <a href="#"
+            <a href="{% url 'checkout' %}"
                class="w-full py-4 mt-auto font-bold text-center text-white bg-primary">CHECKOUT</a>
         </div>
     </div>
