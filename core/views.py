@@ -10,10 +10,11 @@ import stripe
 import json
 import os
 from dotenv import load_dotenv
+from django.views.decorators.csrf import csrf_exempt
+
 load_dotenv()
 
-stripe.api_key = os.getenv('STRIPE_PRIVATE_KEY')
-
+stripe.api_key = os.getenv("STRIPE_PRIVATE_KEY")
 
 
 def home_view(request):
@@ -101,7 +102,7 @@ def add_to_cart(request):
     cart_total_quantity = cart.get_total_items()
     badge_quantity = cart_total_quantity
     if badge_quantity > 99:
-        badge_quantity = '99+'
+        badge_quantity = "99+"
     return HttpResponse(
         (
             "<div id='cart-counter-badge' "
@@ -121,7 +122,7 @@ def remove_from_cart(request, cart_item_id):
     cart_total_quantity = cart.get_total_items()
     badge_quantity = cart_total_quantity
     if badge_quantity > 99:
-        badge_quantity = '99+'
+        badge_quantity = "99+"
 
     return HttpResponse(
         (
@@ -150,7 +151,7 @@ def update_cart_quantity(request, cart_item_id, quantity):
     cart_total_quantity = cart.get_total_items()
     badge_quantity = cart_total_quantity
     if badge_quantity > 99:
-        badge_quantity = '99+'
+        badge_quantity = "99+"
 
     return HttpResponse(
         (
@@ -182,20 +183,26 @@ def cart_view(request):
 
 @login_required
 def account_view(request):
-    return render(request, 'account/overview.html')
+    return render(request, "account/overview.html")
+
 
 @login_required
 def account_orders_view(request):
-    return render(request, 'account/orders.html')
+    return render(request, "account/orders.html")
+
 
 @login_required
 def account_addresses_view(request):
-    return render(request, 'account/addresses.html')
+    return render(request, "account/addresses.html")
+
 
 @login_required
 def account_favourites_view(request):
     favourite_products = UserFavourite.objects.filter(user=request.user)
-    return render(request, 'account/favourites.html', {"favourite_products":favourite_products})
+    return render(
+        request, "account/favourites.html", {"favourite_products": favourite_products}
+    )
+
 
 def checkout_view(request):
     if request.user.is_authenticated:
@@ -209,7 +216,8 @@ def checkout_view(request):
         "cart": cart,
     }
 
-    return render(request, 'checkout/checkout.html', context)
+    return render(request, "checkout/checkout.html", context)
+
 
 def create_payment(request):
     try:
@@ -217,17 +225,73 @@ def create_payment(request):
         # Create a PaymentIntent with the order amount and currency
         intent = stripe.PaymentIntent.create(
             amount=100,
-            currency='usd',
+            currency="usd",
             # In the latest version of the API, specifying the `automatic_payment_methods` parameter is optional because Stripe enables its functionality by default.
             automatic_payment_methods={
-                'enabled': True,
+                "enabled": True,
             },
         )
-        return JsonResponse({
-            'clientSecret': intent['client_secret']
-        })
+        return JsonResponse({"clientSecret": intent["client_secret"]})
     except Exception as e:
-        return JsonResponse({'error': str(e)}, status=403)
-    
+        return JsonResponse({"error": str(e)}, status=403)
+
+
 def checkout_confirmation_view(request):
-    return render(request, 'checkout/confirmation.html')
+    return render(request, "checkout/confirmation.html")
+
+@csrf_exempt
+def stripe_webhook(request):
+  payload = request.body
+  event = None
+
+  try:
+    event = stripe.Event.construct_from(
+      json.loads(payload), stripe.api_key
+    )
+  except ValueError as e:
+    # Invalid payload
+    return HttpResponse(status=400)
+
+  # Handle the event
+  if event.type == 'payment_intent.succeeded':
+    payment_intent = event.data.object # contains a stripe.PaymentIntent
+    # Then define and call a method to handle the successful payment intent.
+    # handle_payment_intent_succeeded(payment_intent)
+  elif event.type == 'payment_method.attached':
+    payment_method = event.data.object # contains a stripe.PaymentMethod
+    # Then define and call a method to handle the successful attachment of a PaymentMethod.
+    # handle_payment_method_attached(payment_method)
+  # ... handle other event types
+  else:
+    print('Unhandled event type {}'.format(event.type))
+
+  return HttpResponse(status=200)
+# @csrf_exempt
+# def stripe_webhook(request):
+#     event = None
+#     payload = request.data
+#     sig_header = request.headers["STRIPE_SIGNATURE"]
+
+#     try:
+#         event = stripe.Webhook.construct_event(payload, sig_header)
+#     except ValueError as e:
+#         # Invalid payload
+#         raise e
+#     except stripe.error.SignatureVerificationError as e:
+#         # Invalid signature
+#         raise e
+
+#     # Handle the event
+#     if event["type"] == "payment_intent.payment_failed":
+#         payment_intent = event["data"]["object"]
+#     elif event["type"] == "payment_intent.processing":
+#         payment_intent = event["data"]["object"]
+#     elif event["type"] == "payment_intent.succeeded":
+#         payment_intent = event["data"]["object"]
+#         #   CREATE ORDER HERE:...
+#         print("SUCCESSFUL!")
+#     # ... handle other event types
+#     else:
+#         print("Unhandled event type {}".format(event["type"]))
+
+#     return HttpResponse(status=200)
