@@ -228,3 +228,6 @@ def create_payment(request):
         })
     except Exception as e:
         return JsonResponse({'error': str(e)}, status=403)
+    
+def checkout_confirmation_view(request):
+    return render(request, 'checkout/confirmation.html')

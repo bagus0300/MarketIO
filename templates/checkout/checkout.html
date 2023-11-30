@@ -92,7 +92,9 @@
                 </div>
                 <button id="submit"
                         class="inline-block w-full h-12 mt-6 text-center text-white bg-black md:px-0">
-                    <div class="hidden spinner" id="spinner"></div>
+                    <div class="flex justify-center hidden" id="spinner">
+                        <img class="h-6" src="{% static 'base/tail-spin.svg' %}" alt="">
+                    </div>
                     <span id="button-text">PAY €{{ cart.get_total_price }}</span>
                 </button>
                 <div id="payment-message" class="hidden"></div>

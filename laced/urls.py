@@ -47,6 +47,7 @@ urlpatterns = [
         name="favourite",
     ),
     path("checkout/", core_views.checkout_view, name="checkout"),
+    path("checkout/confirmation/", core_views.checkout_confirmation_view, name="confirmation"),
     path("create_payment_intent/", core_views.create_payment, name="create_payment_intent"),
     path("__debug__/", include("debug_toolbar.urls")),
 ]
