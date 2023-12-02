@@ -2,6 +2,9 @@ from django.db import models
 from django.core.validators import RegexValidator
 from django.utils.translation import gettext as _
 import os
+from datetime import datetime
+import random
+from users.models import UserAddress
 
 
 class Product(models.Model):
@@ -147,6 +150,37 @@ class Cart(models.Model):
         total_price = 0
         for item in items:
             print(item)
-            total_price += (item.quantity * item.item.product.price)
+            total_price += item.quantity * item.item.product.price
             print(total_price)
         return total_price
+
+
+class OrderItem(models.Model):
+    order = models.ForeignKey("Order", on_delete=models.CASCADE)
+    item = models.ForeignKey("ProductVariant", on_delete=models.CASCADE)
+    quantity = models.PositiveIntegerField()
+    price = models.DecimalField(decimal_places=2, max_digits=10)
+
+
+class Order(models.Model):
+    order_id = models.CharField(
+        default=None, null=True, blank=True, editable=False, unique=True
+    )
+    user = models.ForeignKey("users.User", on_delete=models.DO_NOTHING)
+    address = models.ForeignKey("users.UserAddress", on_delete=models.DO_NOTHING)
+    email = models.EmailField()
+    date_created = models.DateTimeField(auto_now_add=True)
+
+    @classmethod
+    def generate_order_id(cls):
+        order_id = datetime.now().strftime("%Y%m%d%H%M%S%f") + random.randint(
+            1000, 9999
+        )
+        while cls.objects.filter(order_id=order_id).exists():
+            order_id = cls.generate_order_id()
+        return order_id
+
+
+class OrderAddress(UserAddress):
+    pass
+    # TODO: ADD SAVE METHOD
