@@ -1,3 +1,9 @@
+# TODO:
+# 1 Handle user address selection in checkout
+# 2 Add new address form and functionality in checkout 
+# 3 require login for checkout
+# 4 remove country dropdown stripe elements
+
 from django.shortcuts import render
 from .models import *
 from users.models import User
@@ -219,7 +225,7 @@ def checkout_view(request):
     return render(request, "checkout/checkout.html", context)
 
 
-def create_payment(request):
+def create_payment_intent(request):
     try:
         data = json.loads(request.body)
         # Create a PaymentIntent with the order amount and currency
@@ -230,6 +236,9 @@ def create_payment(request):
             automatic_payment_methods={
                 "enabled": True,
             },
+            metadata={
+                "email": request.user.email,
+            }
         )
         return JsonResponse({"clientSecret": intent["client_secret"]})
     except Exception as e:
@@ -243,7 +252,6 @@ def checkout_confirmation_view(request):
 def stripe_webhook(request):
   payload = request.body
   event = None
-
   try:
     event = stripe.Event.construct_from(
       json.loads(payload), stripe.api_key
@@ -254,14 +262,26 @@ def stripe_webhook(request):
 
   # Handle the event
   if event.type == 'payment_intent.succeeded':
+    print(event)
+    print('THIS IS THE EVEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEENT')
+    print(event['data']['object']['metadata']['email'])
     payment_intent = event.data.object # contains a stripe.PaymentIntent
     # Then define and call a method to handle the successful payment intent.
     # handle_payment_intent_succeeded(payment_intent)
+    customer_email=payment_intent.get('metadata').get('email')
+    order = Order.objects.create(
+        user=User.objects.get(email=customer_email),
+        address=UserAddress.objects.first(),
+        email=customer_email
+    )
+    order.save()
+    print('wowowowowowowowowowwo')
   elif event.type == 'payment_method.attached':
     payment_method = event.data.object # contains a stripe.PaymentMethod
     # Then define and call a method to handle the successful attachment of a PaymentMethod.
     # handle_payment_method_attached(payment_method)
   # ... handle other event types
+    print('FAIIIIIIIIIIIIIIIIIIL')
   else:
     print('Unhandled event type {}'.format(event.type))
 

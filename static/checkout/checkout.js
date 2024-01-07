@@ -83,9 +83,9 @@ async function handleSubmit(e) {
     elements,
     confirmParams: {
       // Make sure to change this to your payment completion page
-      // return_url: "http://localhost:8000/checkout/confirmation/",
-      return_url: "https://laced.carlmurray.design/checkout/confirmation/",
-      receipt_email: "carl.j.murray@gmail.com",
+      return_url: "http://localhost:8000/checkout/confirmation/",
+      // return_url: "https://laced.carlmurray.design/checkout/confirmation/",
+      receipt_email: "ccdscarl.j.murray@gmail.com",
     },
   });
 
