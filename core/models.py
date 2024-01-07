@@ -5,7 +5,7 @@ import os
 from datetime import datetime
 import random
 from users.models import UserAddress
-
+import uuid
 
 class Product(models.Model):
     """
@@ -163,23 +163,11 @@ class OrderItem(models.Model):
 
 
 class Order(models.Model):
-    order_id = models.CharField(
-        default=None, null=True, blank=True, editable=False, unique=True
-    )
+    order_id = models.UUIDField(default=uuid.uuid4, editable=False)
     user = models.ForeignKey("users.User", on_delete=models.DO_NOTHING)
     address = models.ForeignKey("users.UserAddress", on_delete=models.DO_NOTHING)
     email = models.EmailField()
     date_created = models.DateTimeField(auto_now_add=True)
-
-    @classmethod
-    def generate_order_id(cls):
-        order_id = datetime.now().strftime("%Y%m%d%H%M%S%f") + random.randint(
-            1000, 9999
-        )
-        while cls.objects.filter(order_id=order_id).exists():
-            order_id = cls.generate_order_id()
-        return order_id
-
 
 class OrderAddress(UserAddress):
     pass
