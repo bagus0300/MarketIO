@@ -9,6 +9,7 @@ const stripe = Stripe(
 const items = [{ id: "xl-tshirt" }];
 
 let elements;
+let email;
 
 initialize();
 checkStatus();
@@ -33,7 +34,9 @@ async function initialize() {
     },
     body: JSON.stringify({ items }),
   });
-  const { clientSecret } = await response.json();
+  const { intent } = await response.json();
+  const clientSecret = intent.client_secret;
+  email = intent.metadata.email;
 
   const appearance = {
     theme: "stripe",
@@ -85,7 +88,7 @@ async function handleSubmit(e) {
       // Make sure to change this to your payment completion page
       return_url: "http://localhost:8000/checkout/confirmation/",
       // return_url: "https://laced.carlmurray.design/checkout/confirmation/",
-      receipt_email: "ccdscarl.j.murray@gmail.com",
+      receipt_email: email,
     },
   });
 

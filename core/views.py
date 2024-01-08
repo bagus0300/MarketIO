@@ -209,7 +209,7 @@ def account_favourites_view(request):
         request, "account/favourites.html", {"favourite_products": favourite_products}
     )
 
-
+@login_required
 def checkout_view(request):
     if request.user.is_authenticated:
         cart = Cart.objects.get_or_create(user=request.user)[0]
@@ -226,7 +226,6 @@ def checkout_view(request):
 
     return render(request, "checkout/checkout.html", context)
 
-
 def create_payment_intent(request):
     try:
         data = json.loads(request.body)
@@ -242,12 +241,12 @@ def create_payment_intent(request):
                 "email": request.user.email,
             }
         )
-        return JsonResponse({"clientSecret": intent["client_secret"]})
+        return JsonResponse({"intent": intent})
     except Exception as e:
         return JsonResponse({"error": str(e)}, status=403)
 
-
 def checkout_confirmation_view(request):
+    order = Order.objects.get
     return render(request, "checkout/confirmation.html")
 
 @csrf_exempt
