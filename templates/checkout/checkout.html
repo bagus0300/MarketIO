@@ -9,9 +9,17 @@
                 <h2 class="mb-2 text-xl font-bold">SELECT ADDRESS</h2>
                 <select name="selected_address"
                         class="w-full h-12 px-3 bg-white border-2 border-primary">
-                    <option value="">Address 1</option>
-                    <option value="">Address 2</option>
-                    <option value="">Address 3</option>
+                    <option value="" selected>
+                        {{ default_address.address_line_1 }}, 
+                        {% if default_address.address_line_2 %}{{ default_address.address_line_2 }}, {% endif %}
+                        {{ default_address.city }}, {{ default_address.county }}, {{ default_address.eircode }}
+                    </option>
+                    {% for address in addresses %}
+                    <option value="">
+                        {{ address.address_line_1 }}, 
+                        {% if address.address_line_2 %}{{ address.address_line_2 }}, {% endif %}
+                        {{ address.city }}, {{ address.county }}, {{ address.eircode }}
+                    </option>                    {% endfor %}
                 </select>
             </div>
             <!-- END SELECT ADDRESS -->

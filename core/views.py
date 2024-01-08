@@ -6,7 +6,7 @@
 
 from django.shortcuts import render
 from .models import *
-from users.models import User
+from users.models import *
 import random
 from django.db.models import Prefetch
 from users.models import UserFavourite
@@ -220,6 +220,8 @@ def checkout_view(request):
     context = {
         "cart_items": cart_items,
         "cart": cart,
+        "addresses": UserAddress.objects.filter(user=request.user, is_default=False).order_by('id'),
+        "default_address": UserAddress.objects.filter(user=request.user, is_default=True).first(),
     }
 
     return render(request, "checkout/checkout.html", context)
