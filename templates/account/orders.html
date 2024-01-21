@@ -1,4 +1,8 @@
 {% extends "base/base.html" %}
 {% block content %}
     {% include "account/_back_to_account_btn.html" %}
+    {% for order in orders %}
+        <div>{{ order.order_id }}</div>
+        <div>{{ order.get_total }}</div>
+    {% endfor %}
 {% endblock content %}

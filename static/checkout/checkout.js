@@ -38,6 +38,7 @@ async function createPaymentIntent() {
     },
   });
   const paymentIntent = await response.json();
+  console.log(paymentIntent);
   // Capture client secret from PaymentIntent to use in Stripe Elements
   clientSecret = paymentIntent.intent.client_secret;
   email = paymentIntent.intent.metadata.email;

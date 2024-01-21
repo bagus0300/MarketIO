@@ -153,7 +153,14 @@ class Cart(models.Model):
             total_price += item.quantity * item.item.product.price
             print(total_price)
         return total_price
-
+    
+    def as_dict(self):
+        items = {"items": []}
+        for item in self.cartitem_set.all():
+            print(item.item.product.name)
+            item = dict({"item":item.item.id, "quantity":item.quantity})
+            items["items"].append(item)
+        return items
 
 class OrderItem(models.Model):
     order = models.ForeignKey("Order", on_delete=models.CASCADE)
@@ -168,6 +175,13 @@ class Order(models.Model):
     address = models.ForeignKey("users.UserAddress", on_delete=models.DO_NOTHING)
     email = models.EmailField()
     date_created = models.DateTimeField(auto_now_add=True)
+    
+    def get_total(self):
+        order_items = self.orderitem_set.all()
+        total = 0
+        for item in order_items:
+            total += item.price * item.quantity
+        return total
 
 class OrderAddress(UserAddress):
     pass

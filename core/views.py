@@ -195,7 +195,11 @@ def account_view(request):
 
 @login_required
 def account_orders_view(request):
-    return render(request, "account/orders.html")
+    orders = Order.objects.filter(user=request.user).order_by("-date_created")
+    context = {
+        "orders":orders,
+    }
+    return render(request, "account/orders.html", context)
 
 
 @login_required
@@ -228,7 +232,10 @@ def checkout_view(request):
     return render(request, "checkout/checkout.html", context)
 
 def create_payment_intent(request):
-    amount = Cart.objects.get(user=request.user).get_total_price()
+    cart = Cart.objects.get(user=request.user)
+    amount = cart.get_total_price()
+    items_dict = json.dumps(cart.as_dict())
+    print(items_dict)
     try:
         # Create a PaymentIntent with the order amount and currency
         intent = stripe.PaymentIntent.create(
@@ -241,6 +248,7 @@ def create_payment_intent(request):
             metadata={
                 "email": request.user.email,
                 "order_id": uuid.uuid4(),
+                "items": items_dict              
             }
         )
         return JsonResponse({"intent": intent})
@@ -275,16 +283,12 @@ def stripe_webhook(request):
 
   # Handle the event
   if event.type == 'payment_intent.succeeded':
-    print(event)
-    print('THIS IS THE EVEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEENT')
-    print(event['data']['object']['metadata']['email'])
     payment_intent = event.data.object # contains a stripe.PaymentIntent
     # Then define and call a method to handle the successful payment intent.
     # handle_payment_intent_succeeded(payment_intent)
+    order_items=dict(payment_intent.get('metadata').get('items'))
     customer_email=payment_intent.get('metadata').get('email')
     order_id=payment_intent.get('metadata').get('order_id')
-    print(order_id)
-    print('ORDERERERERERE')
     order = Order.objects.create(
         order_id=order_id,
         user=User.objects.get(email=customer_email),
@@ -292,6 +296,16 @@ def stripe_webhook(request):
         email=customer_email
     )
     order.save()
+    
+    for item in order_items:
+        order_item=OrderItem.objects.create(
+            order=order,
+            item=item.get("item"),
+            quantity=item.get("quantity"),
+        )
+        order_item.save()
+    
+    
     print('wowowowowowowowowowwo')
   elif event.type == 'payment_method.attached':
     payment_method = event.data.object # contains a stripe.PaymentMethod
