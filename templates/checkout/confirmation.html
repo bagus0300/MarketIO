@@ -1,9 +1,6 @@
-{% extends "base/base.html" %}
-{% load static %}
-{% block content %}
-    <div class="hidden" id="payment-message"></div>
-{% endblock content %}
-{% block scripts %}
-    {{ block.super }}
-    <script src="{% static 'checkout/checkout.js' %}"></script>
+{% extends "base/base.html" %} {% load static %} {% block content %}
+<div class="hidden" id="payment-message"></div>
+<div>{{order_id}}</div>
+{% endblock content %} {% block scripts %} {{ block.super }}
+<script src="{% static 'checkout/confirmation.js' %}"></script>
 {% endblock scripts %}

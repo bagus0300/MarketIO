@@ -163,7 +163,7 @@ class OrderItem(models.Model):
 
 
 class Order(models.Model):
-    order_id = models.UUIDField(default=uuid.uuid4, editable=False)
+    order_id = models.CharField()
     user = models.ForeignKey("users.User", on_delete=models.DO_NOTHING)
     address = models.ForeignKey("users.UserAddress", on_delete=models.DO_NOTHING)
     email = models.EmailField()

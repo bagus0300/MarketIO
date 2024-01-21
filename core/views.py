@@ -17,6 +17,7 @@ import json
 import os
 from dotenv import load_dotenv
 from django.views.decorators.csrf import csrf_exempt
+import math
 
 load_dotenv()
 
@@ -227,18 +228,19 @@ def checkout_view(request):
     return render(request, "checkout/checkout.html", context)
 
 def create_payment_intent(request):
+    amount = Cart.objects.get(user=request.user).get_total_price()
     try:
-        data = json.loads(request.body)
         # Create a PaymentIntent with the order amount and currency
         intent = stripe.PaymentIntent.create(
-            amount=100,
-            currency="usd",
+            amount=round(amount*100),
+            currency="eur",
             # In the latest version of the API, specifying the `automatic_payment_methods` parameter is optional because Stripe enables its functionality by default.
             automatic_payment_methods={
                 "enabled": True,
             },
             metadata={
                 "email": request.user.email,
+                "order_id": uuid.uuid4(),
             }
         )
         return JsonResponse({"intent": intent})
@@ -246,8 +248,17 @@ def create_payment_intent(request):
         return JsonResponse({"error": str(e)}, status=403)
 
 def checkout_confirmation_view(request):
-    order = Order.objects.get
-    return render(request, "checkout/confirmation.html")
+    print(request.GET.get('payment_intent_client_secret'))
+    payment_intent_client_secret = request.GET.get('payment_intent_client_secret')
+    payment_intent = request.GET.get('payment_intent')
+    payment_intent = stripe.PaymentIntent.retrieve(payment_intent)
+    print(payment_intent)
+    order_id = payment_intent.get('metadata').get('order_id')
+    context = {
+        "order_id":order_id
+    }
+    
+    return render(request, "checkout/confirmation.html", context)
 
 @csrf_exempt
 def stripe_webhook(request):
@@ -270,7 +281,11 @@ def stripe_webhook(request):
     # Then define and call a method to handle the successful payment intent.
     # handle_payment_intent_succeeded(payment_intent)
     customer_email=payment_intent.get('metadata').get('email')
+    order_id=payment_intent.get('metadata').get('order_id')
+    print(order_id)
+    print('ORDERERERERERE')
     order = Order.objects.create(
+        order_id=order_id,
         user=User.objects.get(email=customer_email),
         address=UserAddress.objects.first(),
         email=customer_email
