@@ -1,6 +1,6 @@
 # TODO:
 # 1 Handle user address selection in checkout
-# 2 Add new address form and functionality in checkout 
+# 2 Add new address form and functionality in checkout
 # 3 require login for checkout
 # 4 remove country dropdown stripe elements
 
@@ -197,7 +197,7 @@ def account_view(request):
 def account_orders_view(request):
     orders = Order.objects.filter(user=request.user).order_by("-date_created")
     context = {
-        "orders":orders,
+        "orders": orders,
     }
     return render(request, "account/orders.html", context)
 
@@ -214,6 +214,7 @@ def account_favourites_view(request):
         request, "account/favourites.html", {"favourite_products": favourite_products}
     )
 
+
 @login_required
 def checkout_view(request):
     if request.user.is_authenticated:
@@ -225,11 +226,16 @@ def checkout_view(request):
     context = {
         "cart_items": cart_items,
         "cart": cart,
-        "addresses": UserAddress.objects.filter(user=request.user, is_default=False).order_by('id'),
-        "default_address": UserAddress.objects.filter(user=request.user, is_default=True).first(),
+        "addresses": UserAddress.objects.filter(
+            user=request.user, is_default=False
+        ).order_by("id"),
+        "default_address": UserAddress.objects.filter(
+            user=request.user, is_default=True
+        ).first(),
     }
 
     return render(request, "checkout/checkout.html", context)
+
 
 def create_payment_intent(request):
     cart = Cart.objects.get(user=request.user)
@@ -239,7 +245,7 @@ def create_payment_intent(request):
     try:
         # Create a PaymentIntent with the order amount and currency
         intent = stripe.PaymentIntent.create(
-            amount=round(amount*100),
+            amount=round(amount * 100),
             currency="eur",
             # In the latest version of the API, specifying the `automatic_payment_methods` parameter is optional because Stripe enables its functionality by default.
             automatic_payment_methods={
@@ -248,101 +254,63 @@ def create_payment_intent(request):
             metadata={
                 "email": request.user.email,
                 "order_id": uuid.uuid4(),
-                "items": items_dict              
-            }
+                "items": items_dict,
+            },
         )
         return JsonResponse({"intent": intent})
     except Exception as e:
         return JsonResponse({"error": str(e)}, status=403)
 
+
 def checkout_confirmation_view(request):
-    print(request.GET.get('payment_intent_client_secret'))
-    payment_intent_client_secret = request.GET.get('payment_intent_client_secret')
-    payment_intent = request.GET.get('payment_intent')
+    payment_intent_client_secret = request.GET.get("payment_intent_client_secret")
+    payment_intent = request.GET.get("payment_intent")
     payment_intent = stripe.PaymentIntent.retrieve(payment_intent)
-    print(payment_intent)
-    order_id = payment_intent.get('metadata').get('order_id')
+    order_id = payment_intent.get("metadata").get("order_id")
     context = {
-        "order_id":order_id,
-        "status":payment_intent.get('status'),
+        "order_id": order_id,
+        "status": payment_intent.get("status"),
     }
-    
+
     return render(request, "checkout/confirmation.html", context)
+
 
 @csrf_exempt
 def stripe_webhook(request):
-  payload = request.body
-  event = None
-  try:
-    event = stripe.Event.construct_from(
-      json.loads(payload), stripe.api_key
-    )
-  except ValueError as e:
-    # Invalid payload
-    return HttpResponse(status=400)
+    payload = request.body
+    event = None
+    try:
+        event = stripe.Event.construct_from(json.loads(payload), stripe.api_key)
+    except ValueError as e:
+        # Invalid payload
+        return HttpResponse(status=400)
 
-  # Handle the event
-  if event.type == 'payment_intent.succeeded':
-    payment_intent = event.data.object # contains a stripe.PaymentIntent
-    # Then define and call a method to handle the successful payment intent.
-    # handle_payment_intent_succeeded(payment_intent)
-    order_items=dict(payment_intent.get('metadata').get('items'))
-    customer_email=payment_intent.get('metadata').get('email')
-    order_id=payment_intent.get('metadata').get('order_id')
-    order = Order.objects.create(
-        order_id=order_id,
-        user=User.objects.get(email=customer_email),
-        address=UserAddress.objects.first(),
-        email=customer_email
-    )
-    order.save()
-    
-    for item in order_items:
-        order_item=OrderItem.objects.create(
-            order=order,
-            item=item.get("item"),
-            quantity=item.get("quantity"),
+    # Handle the event
+    if event.type == "payment_intent.succeeded":
+        payment_intent = event.data.object 
+        order_items = json.loads(payment_intent.get("metadata").get("items"))
+        customer_email = payment_intent.get("metadata").get("email")
+        order_id = payment_intent.get("metadata").get("order_id")
+        order = Order.objects.create(
+            order_id=order_id,
+            user=User.objects.get(email=customer_email),
+            address=UserAddress.objects.first(),
+            email=customer_email,
         )
-        order_item.save()
-    
-    
-    print('wowowowowowowowowowwo')
-  elif event.type == 'payment_method.attached':
-    payment_method = event.data.object # contains a stripe.PaymentMethod
-    # Then define and call a method to handle the successful attachment of a PaymentMethod.
-    # handle_payment_method_attached(payment_method)
-  # ... handle other event types
-    print('FAIIIIIIIIIIIIIIIIIIL')
-  else:
-    print('Unhandled event type {}'.format(event.type))
+        order.save()
+        for item in order_items.get("items", []):
+            order_item = OrderItem.objects.create(
+                order=order,
+                item=ProductVariant.objects.get(id=item.get("item")),
+                quantity=item.get("quantity"),
+                price=item.get("quantity")
+                * ProductVariant.objects.get(id=item.get("item")).product.price,
+            )
+            order_item.save()
 
-  return HttpResponse(status=200)
-# @csrf_exempt
-# def stripe_webhook(request):
-#     event = None
-#     payload = request.data
-#     sig_header = request.headers["STRIPE_SIGNATURE"]
+    elif event.type == "payment_method.attached":
+        payment_method = event.data.object
+    else:
+        print("Unhandled event type {}".format(event.type))
 
-#     try:
-#         event = stripe.Webhook.construct_event(payload, sig_header)
-#     except ValueError as e:
-#         # Invalid payload
-#         raise e
-#     except stripe.error.SignatureVerificationError as e:
-#         # Invalid signature
-#         raise e
-
-#     # Handle the event
-#     if event["type"] == "payment_intent.payment_failed":
-#         payment_intent = event["data"]["object"]
-#     elif event["type"] == "payment_intent.processing":
-#         payment_intent = event["data"]["object"]
-#     elif event["type"] == "payment_intent.succeeded":
-#         payment_intent = event["data"]["object"]
-#         #   CREATE ORDER HERE:...
-#         print("SUCCESSFUL!")
-#     # ... handle other event types
-#     else:
-#         print("Unhandled event type {}".format(event["type"]))
-
-#     return HttpResponse(status=200)
+    return HttpResponse(status=200)
