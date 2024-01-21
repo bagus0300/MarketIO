@@ -53,6 +53,7 @@ function createStripeElements() {
 
 function handleSubmit(e) {
   e.preventDefault();
+  setLoading(true);
   stripe.confirmPayment({
     elements,
     confirmParams: {
@@ -61,4 +62,26 @@ function handleSubmit(e) {
       receipt_email: email,
     },
   });
+
+  if (error.type === "card_error" || error.type === "validation_error") {
+    showMessage(error.message);
+  } else {
+    showMessage("An unexpected error occurred.");
+  }
+
+  setLoading(false);
+}
+
+// Show a spinner on payment submission
+function setLoading(isLoading) {
+  if (isLoading) {
+    // Disable the button and show a spinner
+    document.querySelector("#submit").disabled = true;
+    document.querySelector("#spinner").classList.remove("hidden");
+    document.querySelector("#button-text").classList.add("hidden");
+  } else {
+    document.querySelector("#submit").disabled = false;
+    document.querySelector("#spinner").classList.add("hidden");
+    document.querySelector("#button-text").classList.remove("hidden");
+  }
 }
