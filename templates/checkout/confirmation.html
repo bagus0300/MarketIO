@@ -1,6 +1,18 @@
-{% extends "base/base.html" %} {% load static %} {% block content %}
-<div class="hidden" id="payment-message"></div>
-<div>{{order_id}}</div>
-{% endblock content %} {% block scripts %} {{ block.super }}
-<script src="{% static 'checkout/confirmation.js' %}"></script>
+{% extends "base/base.html" %}
+{% load static %}
+{% block content %}
+    {% if status == 'succeeded' %}
+        <h1 class="w-full my-10 text-3xl font-bold text-center text-primary">Payment Successful</h1>
+        <div class="flex flex-col items-center w-full h-full text-center">
+            <p class="mb-4 text-xl">
+                Thank you for your purchase! Your order ID is <strong>{{ order_id }}</strong>
+            </p>
+            <a class="flex items-center justify-center p-4 mt-4 text-white transition-all bg-black hover:bg-secondary"
+               href="{% url 'home' %}">RETURN TO HOME</a>
+        </div>
+    {% endif %}
+{% endblock content %}
+{% block scripts %}
+    {{ block.super }}
+    <script src="{% static 'checkout/confirmation.js' %}"></script>
 {% endblock scripts %}

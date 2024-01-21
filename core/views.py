@@ -255,7 +255,8 @@ def checkout_confirmation_view(request):
     print(payment_intent)
     order_id = payment_intent.get('metadata').get('order_id')
     context = {
-        "order_id":order_id
+        "order_id":order_id,
+        "status":payment_intent.get('status'),
     }
     
     return render(request, "checkout/confirmation.html", context)
