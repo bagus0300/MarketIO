@@ -46,6 +46,11 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+    
+    def get_price(self):
+        if self.sale_price:
+            return self.sale_price
+        return self.price
 
 
 class ProductCategory(models.Model):
@@ -150,7 +155,7 @@ class Cart(models.Model):
         total_price = 0
         for item in items:
             print(item)
-            total_price += item.quantity * item.item.product.price
+            total_price += item.quantity * item.item.product.get_price()
             print(total_price)
         return total_price
     

@@ -123,7 +123,7 @@
                     <div class="flex flex-col w-full h-full">
                         <h3 class="mb-[2px] text-sm sm:text-base font-bold text-primary">{{ item.item.product.name }}</h3>
                         <h5 class="mb-[2px] text-xs sm:text-sm text-secondary">{{ item.item.get_size_display }}</h5>
-                        <h4 class="mb-[2px] text-xs sm:text-sm text-secondary">€{{ item.item.product.price }} each</h4>
+                        <h4 class="mb-[2px] text-xs sm:text-sm text-secondary">€{{ item.item.product.get_price }} each</h4>
                         <h4 class="mb-[2px] text-xs sm:text-sm text-secondary">Quantity: {{ item.quantity }}</h4>
                     </div>
                 </div>

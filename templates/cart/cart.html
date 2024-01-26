@@ -15,7 +15,7 @@
                 <div class="flex flex-col w-full h-full">
                     <h3 class="mb-2 text-xl font-bold text-primary">{{ item.item.product.name }}</h3>
                     <h5 class="mb-2 font-bold">{{ item.item.get_size_display }}</h5>
-                    <h4 class="mb-2 text-lg text-secondary">€{{ item.item.product.price }} each</h4>
+                    <h4 class="mb-2 text-lg text-secondary">€{{ item.item.product.get_price }} each</h4>
                     <div class="flex items-center gap-6 mt-auto">
                         <div hx-trigger="false"
                              class="flex justify-between h-8 bg-white border-2 w-28 border-primary text-primary"

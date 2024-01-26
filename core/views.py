@@ -304,7 +304,7 @@ def stripe_webhook(request):
                 item=ProductVariant.objects.get(id=item.get("item")),
                 quantity=item.get("quantity"),
                 price=item.get("quantity")
-                * ProductVariant.objects.get(id=item.get("item")).product.price,
+                * ProductVariant.objects.get(id=item.get("item")).product.get_price(),
             )
             order_item.save()
 
