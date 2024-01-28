@@ -2,7 +2,34 @@
 {% block content %}
     {% include "account/_back_to_account_btn.html" %}
     {% for order in orders %}
-        <div>{{ order.order_id }}</div>
-        <div>{{ order.get_total }}</div>
+        <div class="my-6 bg-gray-100">
+            <div class="flex gap-8 p-4 text-xs text-white bg-primary">
+                <div class="flex flex-col">
+                    <span>ORDER PLACED</span>
+                    <span>{{ order.date_created }}</span>
+                </div>
+                <div class="flex flex-col">
+                    <span>TOTAL</span>
+                    <span>€{{ order.get_total }}</span>
+                </div>
+                <div class="flex flex-col">
+                    <span>ORDER ID</span>
+                    <span>{{ order.order_id|upper }}</span>
+                </div>
+            </div>
+            <div class="flex flex-col gap-4 p-4">
+                {% for item in order.orderitem_set.all %}
+                    <div class="flex gap-4 my-2">
+                        <div class="w-24 h-24 aspect-square bg-cover bg-center bg-[url('{{ item.item.product.productimage_set.first.image.url }}')]">
+                        </div>
+                        <div class="flex flex-col text-sm">
+                            <span>Item: {{ item.item.product.name }}</span>
+                            <span>Size: {{ item.item.size }}</span>
+                            <span>Quantity: {{ item.quantity }}</span>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
     {% endfor %}
 {% endblock content %}
