@@ -267,6 +267,8 @@ def checkout_confirmation_view(request):
     payment_intent = request.GET.get("payment_intent")
     payment_intent = stripe.PaymentIntent.retrieve(payment_intent)
     order_id = payment_intent.get("metadata").get("order_id")
+    cart = Cart.objects.get(user=request.user)
+    cart.delete()
     context = {
         "order_id": order_id,
         "status": payment_intent.get("status"),
