@@ -1,0 +1,22 @@
+<div class="p-6 bg-gray-100">
+    <h2 class="mb-2 text-xl font-bold">SHIPPING ADDRESS</h2>
+    {% if addresses %}
+        <p>
+            {{ default_address.address_line_1 }},
+            <br>
+            {% if default_address.address_line_2 %}
+                {{ default_address.address_line_2 }},
+                <br>
+            {% endif %}
+            {{ default_address.city }},
+            <br>
+            {{ default_address.county }},
+            <br>
+            {{ default_address.eircode }}
+        </p>
+        <button class="inline-block p-4 text-center border-2 border-primary text-primary">CHANGE ADDRESS</button>
+    {% else %}
+        <p>You haven't added an address yet. Please add one below before checking out.</p>
+        <button x-on:click="$refs.modal.showModal()" class="inline-block p-4 mt-4 text-center text-white bg-primary">ADD ADDRESS</button>
+    {% endif %}
+</div>

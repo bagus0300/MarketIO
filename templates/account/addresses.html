@@ -1,76 +1,7 @@
 {% extends "base/base.html" %}
 {% load static %}
 {% block content %}
-    <dialog class="p-20 border-2 w-[600px] border-primary fixed" x-ref="modal">
-        <svg x-on:click="$refs.modal.close()"
-             class="absolute cursor-pointer right-8 top-8 hover:stroke-secondary stroke-primary"
-             width="27"
-             height="27"
-             viewBox="0 0 27 27"
-             fill="none"
-             xmlns="http://www.w3.org/2000/svg">
-            <path class="" d="M2 2L25 25" stroke="" stroke-width="4" />
-            <path class="" d="M25 2L2 25" stroke="" stroke-width="4" />
-        </svg>
-        <form action=""
-              method="post"
-              class="flex flex-col items-center justify-center w-full gap-6">
-            {% csrf_token %}
-            <h2 class="text-xl font-bold text-center">ADD ADDRESS</h2>
-            <div class="w-full">
-                <label class="font-bold text-primary" for="address_line_1">FULL NAME*</label>
-                <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
-                       type="text"
-                       name="name"
-                       id="name"
-                       required>
-            </div>
-            <div class="w-full">
-                <label class="font-bold text-primary" for="address_line_1">ADDRESS LINE 1*</label>
-                <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
-                       type="text"
-                       name="address_line_1"
-                       id="address_line_1"
-                       required>
-            </div>
-            <div class="w-full">
-                <label class="font-bold text-primary" for="address_line_2">ADDRESS LINE 2</label>
-                <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
-                       type="text"
-                       name="address_line_2"
-                       id="address_line_2">
-            </div>
-            <div class="w-full">
-                <label class="font-bold text-primary" for="city">CITY/REGION*</label>
-                <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
-                       type="text"
-                       name="city"
-                       id="city"
-                       required>
-            </div>
-            <div class="w-full">
-                <label class="font-bold text-primary" for="county">COUNTY*</label>
-                <select class="w-full h-12 px-3 bg-white border-2 border-primary placeholder:text-secondary"
-                        type="text"
-                        name="county"
-                        id="county"
-                        required>
-                    <option value="" disabled selected>Select...</option>
-                    {% for county in counties %}<option value="{{ county.0 }}">{{ county.1 }}</option>{% endfor %}
-                </select>
-            </div>
-            <div class="w-full">
-                <label class="font-bold text-primary" for="eircode">EIRCODE*</label>
-                <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
-                       type="text"
-                       name="eircode"
-                       id="eircode"
-                       required>
-            </div>
-            <button class="inline-block w-full h-12 text-center text-white bg-black md:px-0"
-                    type="submit">SAVE ADDRESS</button>
-        </form>
-    </dialog>
+    {% include "partials/_add-address-form.html" with state="open"%}
     {% include "account/_back_to_account_btn.html" %}
     <div class="grid grid-flow-row grid-cols-1 gap-6 md:grid-cols-8 lg:grid-cols-12"
          x-data="">

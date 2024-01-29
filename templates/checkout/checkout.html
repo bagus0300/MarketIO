@@ -1,97 +1,13 @@
 {% extends "base/base.html" %}
 {% load static %}
 {% block content %}
+{% include "partials/_add-address-form.html" %}
     <div class="flex flex-col-reverse h-full grid-cols-12 md:gap-4 md:grid"
          x-data>
         <div class="col-span-12 sm:col-span-6">
-            <!-- SELECT ADDRESS -->
-            <div class="p-6 bg-gray-100 border-primary">
-                <h2 class="mb-2 text-xl font-bold">SELECT ADDRESS</h2>
-                <select name="selected_address"
-                        class="w-full h-12 px-3 bg-white border-2 border-primary">
-                    <option value="" selected>
-                        {{ default_address.address_line_1 }},
-                        {% if default_address.address_line_2 %}{{ default_address.address_line_2 }},{% endif %}
-                        {{ default_address.city }}, {{ default_address.county }}, {{ default_address.eircode }}
-                    </option>
-                    {% for address in addresses %}
-                        <option value="">
-                            {{ address.address_line_1 }},
-                            {% if address.address_line_2 %}{{ address.address_line_2 }},{% endif %}
-                            {{ address.city }}, {{ address.county }}, {{ address.eircode }}
-                        </option>
-                    {% endfor %}
-                </select>
-            </div>
-            <!-- END SELECT ADDRESS -->
-            <div class="flex items-center">
-                <hr class="flex-grow border-gray-500 border-1" />
-                <div class="m-4 font-bold text-center">OR</div>
-                <hr class="flex-grow border-gray-500 border-1" />
-            </div>
-            <!-- ADDRESS -->
-            <form action=""
-                  method="post"
-                  class="flex flex-col relative w-full gap-6 p-6 max-h-[76px] transition-all duration-300 overflow-hidden bg-gray-100"
-                  x-data
-                  x-ref="addAddressAccordion">
-                {% csrf_token %}
-                <div class="w-full h-[76px] absolute left-0 top-0 cursor-pointer accordionContol"
-                     x-on:click="$refs.addAddressAccordion.classList.toggle('max-h-[3000px]')"></div>
-                <h2 class="text-xl font-bold">ADD NEW ADDRESS</h2>
-                <div class="w-full">
-                    <label class="font-bold text-primary" for="address_line_1">FULL NAME*</label>
-                    <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
-                           type="text"
-                           name="name"
-                           id="name"
-                           required />
-                </div>
-                <div class="w-full">
-                    <label class="font-bold text-primary" for="address_line_1">ADDRESS LINE 1*</label>
-                    <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
-                           type="text"
-                           name="address_line_1"
-                           id="address_line_1"
-                           required />
-                </div>
-                <div class="w-full">
-                    <label class="font-bold text-primary" for="address_line_2">ADDRESS LINE 2</label>
-                    <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
-                           type="text"
-                           name="address_line_2"
-                           id="address_line_2" />
-                </div>
-                <div class="w-full">
-                    <label class="font-bold text-primary" for="city">CITY/REGION*</label>
-                    <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
-                           type="text"
-                           name="city"
-                           id="city"
-                           required />
-                </div>
-                <div class="w-full">
-                    <label class="font-bold text-primary" for="county">COUNTY*</label>
-                    <select class="w-full h-12 px-3 bg-white border-2 border-primary placeholder:text-secondary"
-                            type="text"
-                            name="county"
-                            id="county"
-                            required>
-                        <option value="" disabled selected>Select...</option>
-                        {% for county in counties %}<option value="{{ county.0 }}">{{ county.1 }}</option>{% endfor %}
-                    </select>
-                </div>
-                <div class="w-full">
-                    <label class="font-bold text-primary" for="eircode">EIRCODE*</label>
-                    <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
-                           type="text"
-                           name="eircode"
-                           id="eircode"
-                           required />
-                </div>
-                <button class="inline-block w-full h-12 text-center text-white bg-black md:px-0"
-                        type="submit">SAVE ADDRESS</button>
-            </form>
+          {% include "partials/_shipping-address-widget.html" %}
+            
+          
             <hr class="flex-grow my-5 border-gray-500 border-1" />
             <form id="payment-form" class="p-6 font-sans bg-gray-100">
                 <h2 class="mb-2 text-xl font-bold">PAYMENT DETAILS</h2>

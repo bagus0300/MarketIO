@@ -232,6 +232,8 @@ def checkout_view(request):
         "default_address": UserAddress.objects.filter(
             user=request.user, is_default=True
         ).first(),
+        "counties": UserAddress.COUNTIES,
+
     }
 
     return render(request, "checkout/checkout.html", context)
@@ -316,3 +318,4 @@ def stripe_webhook(request):
         print("Unhandled event type {}".format(event.type))
 
     return HttpResponse(status=200)
+
