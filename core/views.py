@@ -227,7 +227,7 @@ def checkout_view(request):
         "cart_items": cart_items,
         "cart": cart,
         "addresses": UserAddress.objects.filter(
-            user=request.user, is_default=False
+            user=request.user
         ).order_by("id"),
         "default_address": UserAddress.objects.filter(
             user=request.user, is_default=True

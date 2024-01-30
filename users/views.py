@@ -95,8 +95,11 @@ def account_addresses_view(request):
         if form.is_valid():
             address = form.save(commit=False)
             address.user = request.user
+            if not UserAddress.objects.filter(is_default=True, user=request.user).exists():
+                address.is_default = True
             address.save()
-            return redirect("account_addresses")
+            return redirect(request.META.get("HTTP_REFERER"))
 
     context = {"addresses": addresses, "counties": UserAddress.COUNTIES}
+    print(addresses)
     return render(request, "account/addresses.html", context)

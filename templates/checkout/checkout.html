@@ -5,7 +5,7 @@
     <div class="flex flex-col-reverse h-full grid-cols-12 md:gap-4 md:grid"
          x-data>
         <div class="col-span-12 sm:col-span-6">
-          {% include "partials/_shipping-address-widget.html" %}
+          {% include "partials/_shipping-address-widget.html" with addresses=addresses%}
             
           
             <hr class="flex-grow my-5 border-gray-500 border-1" />
