@@ -238,6 +238,12 @@ def checkout_view(request):
 
     return render(request, "checkout/checkout.html", context)
 
+def checkout_change_address(request):
+    #get user addresses, return widget with addresses
+    addresses = UserAddress.objects.filter(user=request.user)
+    context = {"addresses":addresses}
+    return render(request, "partials/_change-shipping-address-widget.html", context)
+
 
 def create_payment_intent(request):
     cart = Cart.objects.get(user=request.user)
