@@ -226,22 +226,40 @@ def checkout_view(request):
     context = {
         "cart_items": cart_items,
         "cart": cart,
-        "addresses": UserAddress.objects.filter(
-            user=request.user
-        ).order_by("id"),
+        "addresses": UserAddress.objects.filter(user=request.user).order_by("id"),
         "default_address": UserAddress.objects.filter(
             user=request.user, is_default=True
         ).first(),
         "counties": UserAddress.COUNTIES,
-
     }
 
     return render(request, "checkout/checkout.html", context)
 
+
 def checkout_change_address(request):
-    #get user addresses, return widget with addresses
     addresses = UserAddress.objects.filter(user=request.user)
-    context = {"addresses":addresses}
+    # IF CANCEL BUTTON PRESSED
+    if request.META.get("HTTP_ACTION") == "CANCEL":
+        prev_selected_address_id = request.GET.get("prev_selected_address_id")
+        prev_selected_address = UserAddress.objects.get(id=prev_selected_address_id)
+        return render(
+            request,
+            "partials/_shipping-address-widget.html",
+            {"default_address": prev_selected_address, "addresses": addresses},
+        )
+    # IF APPLY BUTTON CLICKED AND NEW ADDRESS CHOSEN
+    if request.method == "POST":
+        selected_address_id = request.POST.get("address")
+        selected_address = UserAddress.objects.get(id=selected_address_id)
+        return render(
+            request,
+            "partials/_shipping-address-widget.html",
+            {"default_address": selected_address, "addresses": addresses},
+        )
+    context = {
+        "addresses": addresses,
+        "prev_selected_address_id": request.GET.get("prev_selected_address_id"),
+    }
     return render(request, "partials/_change-shipping-address-widget.html", context)
 
 
@@ -297,7 +315,7 @@ def stripe_webhook(request):
 
     # Handle the event
     if event.type == "payment_intent.succeeded":
-        payment_intent = event.data.object 
+        payment_intent = event.data.object
         order_items = json.loads(payment_intent.get("metadata").get("items"))
         customer_email = payment_intent.get("metadata").get("email")
         order_id = payment_intent.get("metadata").get("order_id")
@@ -324,4 +342,3 @@ def stripe_webhook(request):
         print("Unhandled event type {}".format(event.type))
 
     return HttpResponse(status=200)
-

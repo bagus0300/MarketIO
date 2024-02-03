@@ -1,4 +1,4 @@
-<div class="p-6 bg-gray-100" id="address-widget">
+<form class="p-6 bg-gray-100" id="address-widget">
     <h2 class="mb-2 text-xl font-bold">SHIPPING ADDRESS</h2>
     {% if addresses %}
         <p>
@@ -14,9 +14,16 @@
             <br>
             {{ default_address.eircode }}
         </p>
-        <button hx-get="{% url "checkout_change_address" %}" hx-swap="outerHTML" hx-target="closest div" class="inline-block p-4 text-center border-2 border-primary text-primary">CHANGE ADDRESS</button>
+        <input type="hidden"
+               name="prev_selected_address"
+               value="{{ default_address.id }}">
+        <button hx-get="{% url "checkout_change_address" %}?prev_selected_address_id={{ default_address.id }}"
+                hx-swap="outerHTML"
+                hx-target="closest form"
+                class="inline-block p-4 text-center border-2 border-primary text-primary">CHANGE ADDRESS</button>
     {% else %}
         <p>You haven't added an address yet. Please add one below before checking out.</p>
-        <button x-on:click="$refs.modal.showModal()" class="inline-block p-4 mt-4 text-center text-white bg-primary">ADD ADDRESS</button>
+        <button x-on:click="$refs.modal.showModal()"
+                class="inline-block p-4 mt-4 text-center text-white bg-primary">ADD ADDRESS</button>
     {% endif %}
-</div>
+</form>

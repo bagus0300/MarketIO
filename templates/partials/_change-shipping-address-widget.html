@@ -1,8 +1,9 @@
-<div>
+<form action="">
+    {% comment %} <input type="hidden" name="prev_selected_address" value="{{prev_selected_address_id}}"> {% endcomment %}
     <fieldset class="flex flex-col gap-4 mb-4">
         {% for address in addresses %}
             <div class="border-primary border-[1px] p-4 flex gap-2">
-                <input name="address" type="radio" id="{{ address.id }}">
+                <input name="address" type="radio" id="{{ address.id }}" value="{{ address.id }}">
                 <label class="flex flex-grow p-4 pl-10 -m-4 -ml-10" for="{{ address.id }}">
                     {{ address.address_line_1 }},
                     {% if address.address_line_2 %}{{ address.address_line_2 }},{% endif %}
@@ -12,9 +13,11 @@
         {% endfor %}
     </fieldset>
     <div class="flex gap-4">
-        <button class="px-12 py-2 text-center text-white border-2 border-primary bg-primary">APPLY</button>
-        <button class="px-12 py-2 text-center border-2 border-primary text-primary hover:bg-primary hover:text-white">
+        <button hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' hx-target="closest form" hx-swap="outerHTML"
+            hx-post="{% url "checkout_change_address" %}" class="px-12 py-2 text-center text-white border-2 border-primary bg-primary">APPLY
+        </button>
+        <button hx-headers='{"X-CSRFToken": "{{ csrf_token }}", "ACTION":"CANCEL"}' hx-target="closest form" hx-swap="outerHTML" hx-get="{% url "checkout_change_address" %}?prev_selected_address_id={{prev_selected_address_id}}" class="px-12 py-2 text-center border-2 border-primary text-primary hover:bg-primary hover:text-white">
             CANCEL
         </button>
     </div>
-</div>
+</form>
