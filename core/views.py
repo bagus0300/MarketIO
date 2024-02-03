@@ -9,6 +9,7 @@ from .models import *
 from users.models import *
 import random
 from django.db.models import Prefetch
+
 # from users.models import UserFavourite
 from django.http import HttpResponse, JsonResponse
 from django.contrib.auth.decorators import login_required
@@ -281,14 +282,17 @@ def create_payment_intent(request):
                 "email": request.user.email,
                 "order_id": uuid.uuid4(),
                 "items": items_dict,
+                "address": "",
             },
         )
         return JsonResponse({"intent": intent})
     except Exception as e:
         return JsonResponse({"error": str(e)}, status=403)
 
+
 def add_payment_intent_address(request):
-    data = json.loads(request.body.decode('utf-8'))
+    data = json.loads(request.body.decode("utf-8"))
+    print(f"REQUEST BODY {data}")
 
     # Check if both 'client_secret' and 'address' are present in the data
     client_secret = data.get("client_secret")
@@ -298,8 +302,12 @@ def add_payment_intent_address(request):
     print(address_id)
     payment_intent = stripe.PaymentIntent.retrieve(intent_id)
     payment_intent.metadata.address = address_id
+    stripe.PaymentIntent.modify(intent_id, metadata=payment_intent.metadata)
+
+    print("ADDRESS ADDED TO META")
     print(payment_intent.metadata)
-    return HttpResponse('')
+    return HttpResponse("")
+
 
 def checkout_confirmation_view(request):
     payment_intent_client_secret = request.GET.get("payment_intent_client_secret")
@@ -329,19 +337,27 @@ def stripe_webhook(request):
     # Handle the event
     if event.type == "payment_intent.succeeded":
         payment_intent = event.data.object
+        print(payment_intent)
+        print(payment_intent.get("metadata"))
         order_items = json.loads(payment_intent.get("metadata").get("items"))
         customer_email = payment_intent.get("metadata").get("email")
         order_id = payment_intent.get("metadata").get("order_id")
         address_id = payment_intent.get("metadata").get("address")
+        print(f"THIS IS THE ADDRESS {address_id}")
+        print(f"THIS IS THE ORDER {order_id}")
+        order_address = OrderAddress.create_from_user_address(
+            order=None, user_address=UserAddress.objects.get(id=address_id)
+        )
+        order_address.save()
         order = Order.objects.create(
             order_id=order_id,
             user=User.objects.get(email=customer_email),
             email=customer_email,
+            address=order_address,
         )
-        order_address = OrderAddress.create_from_user_address(order, user_address=UserAddress.objects.get(id=address_id))
-        order_address.save()
-        order.address = order_address
         order.save()
+        order_address.order = order
+        order_address.save()
         for item in order_items.get("items", []):
             order_item = OrderItem.objects.create(
                 order=order,

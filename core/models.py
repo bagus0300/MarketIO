@@ -189,8 +189,8 @@ class Order(models.Model):
         return total
 
 class OrderAddress(UserAddress):
-    order = models.ForeignKey(Order, on_delete=models.CASCADE)
-
+    order = models.ForeignKey(Order, on_delete=models.CASCADE, blank=True, null=True)
+    is_default = False
 
     @classmethod
     def create_from_user_address(cls, order, user_address):
@@ -203,5 +203,5 @@ class OrderAddress(UserAddress):
             city=user_address.city,
             county=user_address.county,
             eircode=user_address.eircode,
-            is_default=user_address.is_default,
+            is_default=False,
         )
