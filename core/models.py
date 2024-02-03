@@ -177,7 +177,7 @@ class OrderItem(models.Model):
 class Order(models.Model):
     order_id = models.CharField()
     user = models.ForeignKey("users.User", on_delete=models.DO_NOTHING)
-    address = models.ForeignKey("users.UserAddress", on_delete=models.DO_NOTHING)
+    address = models.ForeignKey("core.OrderAddress", on_delete=models.DO_NOTHING, related_name='order_address')
     email = models.EmailField()
     date_created = models.DateTimeField(auto_now_add=True)
     
@@ -189,5 +189,19 @@ class Order(models.Model):
         return total
 
 class OrderAddress(UserAddress):
-    pass
-    # TODO: ADD SAVE METHOD
+    order = models.ForeignKey(Order, on_delete=models.CASCADE)
+
+
+    @classmethod
+    def create_from_user_address(cls, order, user_address):
+        return cls(
+            order=order,
+            user=user_address.user,
+            name=user_address.name,
+            address_line_1=user_address.address_line_1,
+            address_line_2=user_address.address_line_2,
+            city=user_address.city,
+            county=user_address.county,
+            eircode=user_address.eircode,
+            is_default=user_address.is_default,
+        )

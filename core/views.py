@@ -332,12 +332,15 @@ def stripe_webhook(request):
         order_items = json.loads(payment_intent.get("metadata").get("items"))
         customer_email = payment_intent.get("metadata").get("email")
         order_id = payment_intent.get("metadata").get("order_id")
+        address_id = payment_intent.get("metadata").get("address")
         order = Order.objects.create(
             order_id=order_id,
             user=User.objects.get(email=customer_email),
-            address=UserAddress.objects.first(),
             email=customer_email,
         )
+        order_address = OrderAddress.create_from_user_address(order, user_address=UserAddress.objects.get(id=address_id))
+        order_address.save()
+        order.address = order_address
         order.save()
         for item in order_items.get("items", []):
             order_item = OrderItem.objects.create(
