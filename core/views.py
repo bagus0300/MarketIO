@@ -9,7 +9,7 @@ from .models import *
 from users.models import *
 import random
 from django.db.models import Prefetch
-from users.models import UserFavourite
+# from users.models import UserFavourite
 from django.http import HttpResponse, JsonResponse
 from django.contrib.auth.decorators import login_required
 import stripe
