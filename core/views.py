@@ -287,6 +287,19 @@ def create_payment_intent(request):
     except Exception as e:
         return JsonResponse({"error": str(e)}, status=403)
 
+def add_payment_intent_address(request):
+    data = json.loads(request.body.decode('utf-8'))
+
+    # Check if both 'client_secret' and 'address' are present in the data
+    client_secret = data.get("client_secret")
+    address_id = data.get("address")
+    intent_id = data.get("intent_id")
+    print(client_secret)
+    print(address_id)
+    payment_intent = stripe.PaymentIntent.retrieve(intent_id)
+    payment_intent.metadata.address = address_id
+    print(payment_intent.metadata)
+    return HttpResponse('')
 
 def checkout_confirmation_view(request):
     payment_intent_client_secret = request.GET.get("payment_intent_client_secret")

@@ -50,6 +50,7 @@ urlpatterns = [
     path("checkout/confirmation/", core_views.checkout_confirmation_view, name="confirmation"),
     path("checkout/change_address/", core_views.checkout_change_address, name="checkout_change_address"),
     path("create_payment_intent/", core_views.create_payment_intent, name="create_payment_intent"),
+    path("add_payment_intent_address/", core_views.add_payment_intent_address, name="add_payment_intent_address"),
     path("stripe_webhook/", core_views.stripe_webhook, name="stripe_webhook"),
     path("__debug__/", include("debug_toolbar.urls")),
 ]

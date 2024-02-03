@@ -5,15 +5,17 @@ const stripe = Stripe(
 
 let elements;
 let email;
+let intentID;
 
 initialise();
 
 // Creates Stripe PaymentIntent and mounts Stripe Elements
 async function initialise() {
   let clientSecret = await createPaymentIntent();
+  console.log(clientSecret)
   let elements = createStripeElements();
   const paymentForm = document.querySelector("#payment-form");
-  paymentForm.addEventListener("submit", handleSubmit);
+  paymentForm.addEventListener("submit", async function(e) {handleSubmit(e, clientSecret)});
 }
 
 // Gets CSRF token from cookie to send with PaymentIntent fetch request
@@ -38,7 +40,8 @@ async function createPaymentIntent() {
     },
   });
   const paymentIntent = await response.json();
-  console.log(paymentIntent);
+  intentID = paymentIntent.intent.id;
+  console.log(paymentIntent.intent.id);
   // Capture client secret from PaymentIntent to use in Stripe Elements
   clientSecret = paymentIntent.intent.client_secret;
   email = paymentIntent.intent.metadata.email;
@@ -52,10 +55,25 @@ function createStripeElements() {
   paymentElement.mount("#payment-elements");
 }
 
-function handleSubmit(e) {
+async function handleSubmit(e, clientSecret) {
   e.preventDefault();
   setLoading(true);
-  stripe.confirmPayment({
+  const csrfToken = getCsrfToken();
+  let address = document.querySelector('[name="prev_selected_address"]').value;
+
+  const response = await fetch("/add_payment_intent_address/", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-CSRFToken": csrfToken,
+    },
+    body: JSON.stringify({
+      address: address,
+      client_secret: clientSecret,
+      intent_id: intentID,
+    }),
+  });
+  const {error} = await stripe.confirmPayment({
     elements,
     confirmParams: {
       //   return_url: "https://laced.carlmurray.design/checkout/confirmation/",
