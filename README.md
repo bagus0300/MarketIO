@@ -45,6 +45,107 @@ Django-based eCommerce site
   - Delete: Users can delete addresses from their profile.
 - Admin CRUD functionality exists for all Models and is done from the Django Admin dashboard.
 
+## Authentication & Authorisation
+
+
+- Users can create an account from the Signup page.
+- Users can login from the Login page.
+- Authorisation is required to reach certain pages such as Account and Checkout. Requesting these pages while unauthprised will redirect users to the Login page.
+
+## Homepage
+- The homepage shows Featured products and Sale products.
+- Six Featured/Sale products shown are chosen at random each time the page is loaded.
+
+## Shop Page
+- The Shop page, accessed from the top navigation, shows all products.
+
+## Product Detail Page
+- Each product has a product detail page with the product image, price and description.
+- Users can select a product variant, choose a quantity and add to cart.
+- Only variants which are in stock are shown on the page. 
+- When the Add to Cart button is pressed, an AJAX request is sent to a Django view which updates the user's cart.
+
+
+
+
+
+# Technologies
+
+- htmx was used to implement functionality throughout the site, including "Add to Cart" functionality and the "Change address" feature on the Checkout page.
+- Alpine.js was used to implement the item quantity selectors on the product detail and cart pages.
+- Stripe Elements was used to implement a PCI compliant checkout.
+- The project is built on top of the Django framework.
+- The database technology used is postgreSQL.
+- Leonardo.ai was used to generate product images.
+- Tailwind CSS was used to style front-end elements.
+
+# ⚙️ Technologies Used
+
+This section outlines the various technologies used throughout the project and the purpose each serves.
+
+## 💾 Core Development Technologies
+
+<details>
+
+- [Django](https://www.djangoproject.com/) used as a full-stack framwork for developing the app.
+- [JavaScript](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/) used for client-side interaction and validation.
+- [HTML](https://html.spec.whatwg.org/)/[CSS](https://www.w3.org/Style/CSS/Overview.en.html) + [Django Template Language](https://docs.djangoproject.com/en/4.2/ref/templates/language/) used for building out site pages.
+
+</details>
+
+## 📚 Libraries, Frameworks and Packages
+
+<details>
+
+- [Tailwind CSS](https://tailwindcss.com/) - used to style elements throughout the site.
+- [htmx](https://htmx.org/) - an open-source lightweight library used to fetch and load content dynamically via AJAX requests. Utilised specifically for the "Add to Cart" functionality and the "Change address" feature on the Checkout page.
+- [Alpine JS](https://alpinejs.dev/) - Used to implement the item quantity selectors on the product detail and cart pages.
+
+</details>
+
+## Python/Django Packages
+
+<details>
+
+- [Gunicorn](https://pypi.org/project/gunicorn/) - provides HTTP server.
+- [psycopg2](https://pypi.org/project/psycopg2/) - provides PostgreSQL connection.
+- [Pillow](https://pypi.org/project/Pillow/) - used for image processing (Model ImageField).
+- [Whitenoise](https://pypi.org/project/whitenoise/) - used for serving static files.
+- [Django Markdown Field](https://pypi.org/project/django-markdownfield/) - adds a markdown-compatible text field to admin panel (for BlogPost model).
+- [Black](https://pypi.org/project/black/) - A PEP8 compliant code formatter.
+- [Django Debug Toolbar](https://django-debug-toolbar.readthedocs.io/en/latest/) - used for debugging.
+- [Django Storages](https://django-storages.readthedocs.io/en/latest/) and [Boto3](https://pypi.org/project/boto3/) - used for storing static files and media files on AWS S3.
+
+</details>
+
+## Infrastructural Technologies
+
+<details>
+
+- [PostgreSQL](https://www.postgresql.org/) (via Digital Ocean) - used for database.
+- [Heroku](https://www.heroku.com/) - used for hosting the application.
+- [AWS S3](https://aws.amazon.com/s3/) - used for storing static files and media files.
+- [AWS CloudFront](https://aws.amazon.com/cloudfront/) - used to cache static and media files.
+
+
+## Roadmap
+The site has been delivered in its current state as an MVP and there is still much work to do to improve the UX and functionality of the site, including:
+- Product search and filters
+- Discount code functionality
+- Choice of shipping methods
+- Contact page
+
+# Business Model
+- Laced is an online eCommerce store where customers can purchase footware online and have it delivered to them.
+- All footware designs are AI generated using Leonardo.ai image generation, offering unique and differentiated footware designs.
+
+
+# Marketing
+
+## SEO
+- Keywords such as "performance", "agility" and speed were included in the product descriptions to boost search engine ranking.
+- A meta description was added to all products and main pages of the site for SEO purposes.
+- There is a significant amount of work involved in renaming all product images and adding alt text to improve SEO, and these items were considered outside of the scope of this project.
 
 
 
