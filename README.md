@@ -8,6 +8,9 @@ Django-based eCommerce site
 - add address - duplicate form submission on refresh - fixed with redirect
 - delete default address 
     - fixed by setting new default if current default address deleted. 
+- Addresses being added every time order made
+- Slow SQL queries
+- Template inheritance from _head
 
 
 Live site: https://flyux.carlmurray.design

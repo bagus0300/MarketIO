@@ -1,5 +1,6 @@
 {% extends 'base/base.html' %}
 {% load static %}
+{% block title %}{{product.name}}{% endblock title %}
 {% block content %}
     <a href="{% url 'products' %}"
        class="flex items-center gap-2 py-2 mb-4 text-lg w-fit hover:underline">

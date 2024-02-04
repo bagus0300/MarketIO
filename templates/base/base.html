@@ -1,7 +1,70 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en" class="min-h-screen overflow-x-hidden text-primary" x-data="">
-  {% include 'base/_head.html' %}
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {% block title %}
+      laced. | AI generated footware
+      {% endblock title %}
+    </title>
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'base/favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'base/favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'base/favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'base/favicon/site.webmanifest' %}">
+    <!-- GOOGLE FONTS ROBOTO -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+          rel="stylesheet">
+    <!-- TAILWIND CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- HTMX -->
+    <script src="https://unpkg.com/htmx.org@1.9.5"></script>
+    <!-- ALPINE JS -->
+    <script defer
+            src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.0/dist/cdn.min.js"></script>
+    <!-- CUSTOMISE TAILWIND -->
+    <script>
+          tailwind.config = {
+              theme: {
+                extend: {
+                  transitionProperty: {
+                    'height': 'height',
+                  },
+                  colors: {
+                    'primary':'#111111',
+                    'secondary':'#595959',
+                  },
+                  container: {
+                    center: true,
+                    padding: '2rem',
+                  },
+                  fontFamily: {
+                    sans: ['Roboto', 'sans-serif'],
+                  },
+          
+                }
+              },
+            }
+    </script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <style>[x-cloak] { display: none !important; }</style>
+    <style>
+      .htmx-indicator{
+      display:none;
+  }
+      .htmx-request #indicator{
+      display:inline;
+  }
+      .htmx-request#indicator{
+      display:inline;
+  }
+    </style>
+  </head>
+  
   <body class="flex flex-col justify-between min-h-screen">
     {% include 'partials/header.html' %}
     <main class="relative flex flex-grow">

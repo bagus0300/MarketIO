@@ -1,5 +1,6 @@
 {% extends "base/base.html" %}
 {% load static %}
+{% block title %}Thank you for your order!{% endblock title %}
 {% block content %}
     {% if status == 'succeeded' %}
         <h1 class="w-full my-10 text-3xl font-bold text-center text-primary">Payment Successful</h1>
