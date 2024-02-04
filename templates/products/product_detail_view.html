@@ -1,5 +1,6 @@
 {% extends 'base/base.html' %}
 {% load static %}
+{% block metadesc %}{{ product.description }}{% endblock metadesc %}
 {% block title %}{{product.name}}{% endblock title %}
 {% block content %}
     <a href="{% url 'products' %}"
