@@ -156,16 +156,19 @@ The site has been delivered in its current state as an MVP and there is still mu
 # Work in progress
 
 # Bugs
+
+## Resolved
+
 - Poor performance - SQL query issue. Fixed with prefetch_related, 1600ms to 120ms improvement. Implement same fix site-wide to improve performance. 
-- add address - duplicate form submission on refresh - fixed with redirect
-- delete default address 
-    - fixed by setting new default if current default address deleted. 
-- Addresses being added every time order made
+- A bug was identified where an address could be added multiple times by refreshing the page after submitting the address form. This was resolved by adding a redirect on submission.
+- During development, when a user deleted their default address, it caused issues in the checkout and profile as no new default address was being set. This was resolved by including logic to set a new default address every time the current default is deleted.
+- During testing of the payments integration, it was found that a new address was being added every time a payment/order was processed. This was due to incorrectly configured model inheritance where the `OrderAddress` was inherting from `UserAddress`, which meant every time an `OrderAddress` was created, it was also reflected in the `UserAddress` table. This was corrected by using an abstract `Address` class which both `UserAddress` and `OrderAddress` would inherit from, each now having their own tables in the database.
+
+## Unresolved
 - Slow SQL queries
 - Template inheritance from _head
 
 
-Live site: https://flyux.carlmurray.design
 
 
 ### 👨‍💻 Development
