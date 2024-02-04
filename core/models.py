@@ -4,7 +4,7 @@ from django.utils.translation import gettext as _
 import os
 from datetime import datetime
 import random
-from users.models import UserAddress
+from users.models import UserAddress, Address
 import uuid
 
 class Product(models.Model):
@@ -188,9 +188,8 @@ class Order(models.Model):
             total += item.price * item.quantity
         return total
 
-class OrderAddress(UserAddress):
+class OrderAddress(Address):
     order = models.ForeignKey(Order, on_delete=models.CASCADE, blank=True, null=True)
-    is_default = False
 
     @classmethod
     def create_from_user_address(cls, order, user_address):
@@ -203,5 +202,4 @@ class OrderAddress(UserAddress):
             city=user_address.city,
             county=user_address.county,
             eircode=user_address.eircode,
-            is_default=False,
         )

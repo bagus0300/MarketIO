@@ -100,7 +100,7 @@ class UserFavourite(models.Model):
         return f"{self.product.name}"
 
 
-class UserAddress(models.Model):
+class Address(models.Model):
     COUNTIES = [
         ('carlow', 'Carlow'),
         ('cavan', 'Cavan'),
@@ -130,13 +130,18 @@ class UserAddress(models.Model):
         ('wicklow', 'Wicklow')
     ]
 
-    user = models.ForeignKey("User", on_delete=models.CASCADE)
-    name = models.CharField(max_length=500)
-    address_line_1 = models.CharField(max_length=500)
+    user = models.ForeignKey("users.User", on_delete=models.CASCADE, default=1)
+    name = models.CharField(max_length=500, default="DEFAULT")
+    address_line_1 = models.CharField(max_length=500, default="DEFAULT")
     address_line_2 = models.CharField(max_length=500, blank=True, null=True)
-    city = models.CharField(max_length=500)
-    county = models.CharField(max_length=50, choices=COUNTIES)
-    eircode = models.CharField(max_length=8)
+    city = models.CharField(max_length=500, default="DEFAULT")
+    county = models.CharField(max_length=50, choices=COUNTIES, default="DEFAULT")
+    eircode = models.CharField(max_length=8, default="DEFAULT")
+
+    class Meta:
+        abstract = True
+
+class UserAddress(Address):
     is_default = models.BooleanField(default=False)
 
     class Meta:
