@@ -1,4 +1,5 @@
 # laced-pp5
+
 Django-based eCommerce site
 
 # Project Background
@@ -9,6 +10,7 @@ Django-based eCommerce site
 # Process
 
 ## Design
+
 - Mockups were designed in Figma to explore layout options which would then serve as a guide for development.
 
 ## Agile Development
@@ -34,10 +36,10 @@ Django-based eCommerce site
 13. As an admin, I want to add, edit, or remove product listings, including product details, images, and pricing, to keep the online store up-to-date. (Must have)
 14. As an admin, I want to categorise products into different categories and subcategories to improve navigation for customers.
 
-
 # Features
 
 ## CRUD Functionality
+
 - User CRUD functionality on the front-end was implemented primarily relates to the `UserAddress` model.
   - Create: Users can add a new address from their profile.
   - Read: Users can view all of their saved addresses.
@@ -47,27 +49,25 @@ Django-based eCommerce site
 
 ## Authentication & Authorisation
 
-
 - Users can create an account from the Signup page.
 - Users can login from the Login page.
 - Authorisation is required to reach certain pages such as Account and Checkout. Requesting these pages while unauthprised will redirect users to the Login page.
 
 ## Homepage
+
 - The homepage shows Featured products and Sale products.
 - Six Featured/Sale products shown are chosen at random each time the page is loaded.
 
 ## Shop Page
+
 - The Shop page, accessed from the top navigation, shows all products.
 
 ## Product Detail Page
+
 - Each product has a product detail page with the product image, price and description.
 - Users can select a product variant, choose a quantity and add to cart.
-- Only variants which are in stock are shown on the page. 
+- Only variants which are in stock are shown on the page.
 - When the Add to Cart button is pressed, an AJAX request is sent to a Django view which updates the user's cart.
-
-
-
-
 
 # Technologies
 
@@ -127,31 +127,27 @@ This section outlines the various technologies used throughout the project and t
 - [AWS S3](https://aws.amazon.com/s3/) - used for storing static files and media files.
 - [AWS CloudFront](https://aws.amazon.com/cloudfront/) - used to cache static and media files.
 
-
 ## Roadmap
+
 The site has been delivered in its current state as an MVP and there is still much work to do to improve the UX and functionality of the site, including:
+
 - Product search and filters
 - Discount code functionality
 - Choice of shipping methods
 - Contact page
 
 # Business Model
+
 - Laced is an online eCommerce store where customers can purchase footware online and have it delivered to them.
 - All footware designs are AI generated using Leonardo.ai image generation, offering unique and differentiated footware designs.
-
 
 # Marketing
 
 ## SEO
+
 - Keywords such as "performance", "agility" and speed were included in the product descriptions to boost search engine ranking.
 - A meta description was added to all products and main pages of the site for SEO purposes.
 - There is a significant amount of work involved in renaming all product images and adding alt text to improve SEO, and these items were considered outside of the scope of this project.
-
-
-
-
-
-
 
 # Work in progress
 
@@ -159,17 +155,13 @@ The site has been delivered in its current state as an MVP and there is still mu
 
 ## Resolved
 
-- Poor performance - SQL query issue. Fixed with prefetch_related, 1600ms to 120ms improvement. Implement same fix site-wide to improve performance. 
 - A bug was identified where an address could be added multiple times by refreshing the page after submitting the address form. This was resolved by adding a redirect on submission.
 - During development, when a user deleted their default address, it caused issues in the checkout and profile as no new default address was being set. This was resolved by including logic to set a new default address every time the current default is deleted.
 - During testing of the payments integration, it was found that a new address was being added every time a payment/order was processed. This was due to incorrectly configured model inheritance where the `OrderAddress` was inherting from `UserAddress`, which meant every time an `OrderAddress` was created, it was also reflected in the `UserAddress` table. This was corrected by using an abstract `Address` class which both `UserAddress` and `OrderAddress` would inherit from, each now having their own tables in the database.
 
 ## Unresolved
-- Slow SQL queries
-- Template inheritance from _head
 
-
-
+- Slow SQL queries are present throughout the site, particularly in the Admin site when browsing models. Attempts to fix this using `prefetch_related` have not been successful and further investigation is required which is planned for future development.
 
 ### 👨‍💻 Development
 
@@ -182,6 +174,7 @@ The site has been delivered in its current state as an MVP and there is still mu
 #### 📈 [Link to the GitHub Project board](https://github.com/users/CarlMurray/projects/4/views/2)
 
 #### 👤 User Stories
+
 1. As a customer, I want to be able to create a new account on the website so that I can save my shipping and billing information for future purchases. (Must have)
 2. As a customer, I want to be able to browse products by categories (e.g., Men's Shoes, Women's Shoes) so that I can easily find what I'm looking for. (Should have)
 3. As a customer, I want to be able to search for products by keywords so that I can quickly locate specific items. (Should have)
@@ -223,6 +216,8 @@ The data models for the project are shown below:
 <br>
 
 </details>
+</details>
+</details>
 
 ---
 
@@ -231,3 +226,212 @@ The data models for the project are shown below:
 <br>
 
 ---
+
+# 🧪 Testing
+
+## ⚒️ Manual Testing
+
+### 🛰️ Overview
+
+<details>
+
+- Responsiveness was tested as per below table (go to section: [Responsiveness](#-responsiveness-testing))
+- All HTML files were passed through the W3C validator with no errors
+- All JavaScript files were passed through JSHint with no errors present.
+- The website was tested on major browsers including Chrome, Safari, Firefox and Edge.
+- All user flows were tested in depth including navigating through the purchase flow, clicking CTAs and links, and form submission.
+- All forms were tested to ensure validation was present and that forms could be submitted without error
+- Lighthouse was used to test for Performance, Accessibility, Best Practices and SEO and adjustments were made to improve test results.
+- WAVE was used to test for accessibility issues and adjustments were made to improve test results.
+
+</details>
+
+---
+
+### 🧪 General Testing
+
+<details>
+<summary>Expand test detail</summary>
+
+| Test                  | Action                                                                                                                                                                                         | Success Criteria                                                              |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| Homepage loads        | Navigate to website URL                                                                                                                                                                        | Page loads < 3s, no errors                                                    |
+| Links                 | Click on each Navigation link, CTA, button, logo, footer link                                                                                                                                  | Correct page is loaded/correct action performed, new tab opened if applicable |
+| Form validation       | Enter data into each input field, ensure only valid data is accepted                                                                                                                           | Form doesn't submit until correct data entered, error message shown           |
+| Responsiveness        | Resize viewport window from 320px upwards with Chrome Dev Tools. Test devices as detailed in [Responsiveness Testing](#-responsiveness-testing)                                                | Page layout remains intact and adapts to screen size as intended              |
+| Lighthouse            | Perform Lighthouse test on each page for the primary user flow (Booking process)                                                                                                               | Score of > 89 on Performance, Accessibility, Best Practices                   |
+| Browser compatibility | Test links, layout, appearance, functionality and above Tests on Chrome, Safari, Firefox and Edge. BrowserStack used to test various mobile/large format devices with recent browser versions. | Website looks and functions as intended and passes all tests above            |
+
+</details>
+
+---
+
+### 🏠 Homepage Testing
+
+<details>
+<summary>Expand test detail</summary>
+
+| Test                       | Action                                                                 | Success Criteria                                                  |
+| -------------------------- | ---------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| CTA Clickability           | - Click on the Call to Action (CTA) button                             | - Button redirects to the appropriate page or section of the site |
+| Featured Products Display  | - Verify if the featured products section is displayed                 | - 6 featured products are visible on the homepage                 |
+| Sale Products Display      | - Verify if the sale products section is displayed                     | - 6 sale products are visible on the homepage                     |
+| Featured Product Links     | - Click on each of the featured product images or titles               | - Each click redirects to the corresponding product page          |
+| Sale Product Links         | - Click on each of the sale product images or titles                   | - Each click redirects to the corresponding product page          |
+| CTA Visibility             | - Ensure that the CTA is visible without scrolling                     | - CTA is displayed within the viewport of the user's screen       |
+| Featured Products Accuracy | - Compare the displayed featured products with the backend data        | - Ensure that the correct products are being displayed            |
+| Sale Products Accuracy     | - Compare the displayed sale products with the backend data            | - Ensure that the correct products are being displayed            |
+
+</details>
+
+---
+
+### Product Detail Page Testing
+
+<details>
+<summary>Expand test detail</summary>
+
+| Test                        | Action                                                                                                             | Success Criteria                                                                                                                                                              |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Image Display               | - Verify if the product image is displayed                                                                         | - The product image is prominently displayed and clearly shows the details of the product                                                                                     |
+| Product Information         | - Check if product details such as price, name, SKU, and description are visible                                   | - Price, name, SKU, and description are accurately displayed for the selected product                                                                                         |
+| Quantity Selector           | - Use the plus and minus buttons to adjust the quantity of the product                                             | - The quantity of the product can be adjusted using the plus and minus buttons                                                                                                |
+| Add to Cart                 | - Click the "Add to Cart" button                                                                                   | - The product is added to the cart successfully                                                                                                                               |
+| Cart Quantity Update        | - Add multiple quantities of the same product to the cart                                                          | - The cart updates with the correct quantity of the product                                                                                                                   |
+| Product Variant Display     | - Verify if the product variants (sizes) are displayed                                                             | - Only the available sizes in stock are displayed as options for the product variant selector                                                                                 |
+| Variant Selection           | - Select a different size from the product variants                                                                | - The product details (price, SKU, etc.) update to reflect the selected size                                                                                                  |
+| Out of Stock Variant        | - Ensure that out-of-stock sizes are not selectable                                                                | - Out-of-stock sizes are either grayed out or not displayed in the product variant selector, preventing selection                                                             |
+| Add to Cart from Variant    | - Select a size from the product variants and click "Add to Cart"                                                  | - The selected size is added to the cart with the correct quantity                                                                                                            |
+| Cart Update from Variant    | - Add a product to the cart from the product detail page and verify cart contents after selecting a different size | - The product is correctly added to the cart, and the cart reflects the updated quantity or variant selection                                                                 |
+
+</details>
+
+---
+
+### 💵 Payment & Confirmation Testing
+
+<details>
+<summary>Expand test detail</summary>
+
+| Test                                           | Action                                                                                                           | Success Criteria                                                                                                                 |
+| ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| Delivery Address Display                       | - Verify if the selected delivery address is displayed                                                           | - The user's selected delivery address is shown on the checkout page                                                             |
+| Change Address Button                          | - Click on the "Change Address" button                                                                           | - The user is able to select another address saved to their account                                                              |
+| Card Details Input Fields                      | - Fill in the card number, expiry date, cardholder name, and security code fields                                | - User is able to input their card details correctly                                                                             |
+| Order Summary Display                          | - Check if the order summary displays the product name, size, quantity, and price of the user's cart products    | - The order summary accurately reflects the items in the user's cart                                                             |
+| Stripe PaymentIntent Creation                  | - Load the checkout page                                                                                         | - A PaymentIntent is created by Stripe when the checkout page is loaded                                                          |
+| PaymentIntent Status Change                    | - Submit payment on the checkout page                                                                            | - The PaymentIntent status changes accordingly (e.g., from 'requires_payment_method' to 'processing' or 'succeeded')             |
+| Webhook Reception                              | - Simulate a webhook sent by Stripe to the server                                                                | - The Django view receives the webhook successfully                                                                              |
+| Order Creation in Database                     | - Confirm the user is redirected to the confirmation page after successful payment                               | - The confirmation page displays the order number                                                                                |
+| Verify Order in Database                       | - Check the database to ensure the user's order has been created correctly based on the payment and cart details | - The user's order is stored accurately in the database, including product details, delivery address, payment status, etc.       |
+| Error Handling for Card Decline                | - Attempt to submit payment with an invalid card                                                                 | - User receives an appropriate error message indicating the card was declined, and payment is not processed                      |
+| Redirection to Login for Unauthenticated Users | - Attempt to access the checkout page without being logged in                                                    | - Unauthenticated users are redirected to the login page with a message prompting them to log in before proceeding with checkout |
+
+</details>
+
+---
+
+### 🔒 Authorisation Testing
+
+<details>
+<summary>Expand test detail</summary>
+
+| Test                                      | Action                                                                                                                            | Success Criteria                                                                                                                                                    |
+| ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Account Page Access                       | - Attempt to access the account page without logging in                                                                           | - User is redirected to the login page with a message indicating the need to log in                                                                                 |
+| Orders Page Access                        | - Attempt to access the orders page without logging in                                                                            | - User is redirected to the login page with a message indicating the need to log in                                                                                 |
+| Addresses Page Access                     | - Attempt to access the addresses page without logging in                                                                         | - User is redirected to the login page with a message indicating the need to log in                                                                                 |
+| Favorites Page Access                     | - Attempt to access the favorites page without logging in                                                                         | - User is redirected to the login page with a message indicating the need to log in                                                                                 |
+| Unauthorized User Access                  | - Log in as a user and attempt to access another user's account page, orders page, addresses page, or favorites page              | - User is redirected to their own corresponding page with a message indicating they are not authorized to access another user's data                                |
+| User-Specific Data Access                 | - Log in as a user and attempt to access another user's addresses, orders, or favorites data                                      | - User is able to access and view only their own addresses, orders, and favorites data; attempting to access another user's data results in an error or redirection |
+| Checkout Page Access                      | - Attempt to proceed to checkout without being logged in                                                                          | - User is redirected to the login page with a message indicating the need to log in                                                                                 |
+| Logged In User Checkout Access            | - Log in as a user and attempt to access the checkout page                                                                        | - User is able to proceed to the checkout page                                                                                                                      |
+| Redirect to Previous Page After Login     | - Attempt to access a restricted page, then log in                                                                                | - User is redirected to the page they originally attempted to access after successfully logging in                                                                  |
+| Logout and Session Clearing               | - Log out from the account                                                                                                        | - User's session is cleared, and attempts to access restricted pages or proceed to checkout result in redirection to the login page                                 |
+
+
+</details>
+
+---
+
+### 🚦 Lighthouse Testing
+
+<details>
+
+- All pages were tested using Lighthouse with the primary goals of identifying performance and accessibility issues and ensuring adherance to best practices.
+- The Lighthouse test results for each step of the `core` user flow are shown below:
+<details>
+<summary>Homepage</summary>
+
+![Homepage Lighthouse test](/readme/Lighthouse-homepage.png)
+
+</details>
+<details>
+<summary>Product Detail</summary>
+
+![Flights Lighthouse test](/readme/Lighthouse-flights.png)
+
+</details>
+<details>
+<summary>Shop Page</summary>
+
+![Passengers Lighthouse test](/readme/Lighthouse-passengers.png)
+
+</details>
+<details>
+<summary>Checkout</summary>
+
+![Checkout Lighthouse test](/readme/Lighthouse-summary.png)
+
+</details>
+
+</details>
+
+---
+
+### 📱 Responsiveness Testing
+
+<details>
+
+- Testing for responsiveness was conducted using Chrome Dev Tools and ResponsivelyApp.
+- The website was tested extensively on a range of emulated mobile, tablet and large format screen sizes in both portrait and landscape orientations.
+<details>
+<summary>Responsiveness test results</summary>
+
+![Responsiveness testing with ResponsivelyApp](/readme/responsive-testing.png)
+
+</details>
+
+| Device             | iPhone SE   | iPhone X    | iPhone 12 Pro | iPhone 13 Pro Max | iPhone 14 Pro Max | iPad         | iPad Air     | iPad Pro      | Macbook Pro  |
+| ------------------ | ----------- | ----------- | ------------- | ----------------- | ----------------- | ------------ | ------------ | ------------- | ------------ |
+| **Resolution**     | **375x667** | **375x812** | **390x844**   | **414x76**        | **414x896**       | **768x1024** | **820x1180** | **1024x1366** | **1440x900** |
+| Render             | Pass        | Pass        | Pass          | Pass              | Pass              | Pass         | Pass         | Pass          | Pass         |
+| Layout             | Pass        | Pass        | Pass          | Pass              | Pass              | Pass         | Pass         | Pass          | Pass         |
+| Functionality      | Pass        | Pass        | Pass          | Pass              | Pass              | Pass         | Pass         | Pass          | Pass         |
+| Links              | Pass        | Pass        | Pass          | Pass              | Pass              | Pass         | Pass         | Pass          | Pass         |
+| Images             | Pass        | Pass        | Pass          | Pass              | Pass              | Pass         | Pass         | Pass          | Pass         |
+| Portrait/Landscape | Pass        | Pass        | Pass          | Pass              | Pass              | Pass         | Pass         | Pass          | Pass         |
+
+</details>
+
+---
+
+### ✅ Code Validation
+
+<details>
+
+- All HTML pages were checked with the [W3C Markup Validation Service](https://validator.w3.org/) with no major errors present. Errors were present for `htmx` attributes, however these are valid and necessary for the functionality of the site. There were also duplicate IDs present in the HTML, however these are also valid and necessary for the functionality of the site.
+- All JavaScript files were passed through [JSHint](https://jshint.com/) with no errors present.
+- All custom coded Python files were formatted with a PEP8 complaint formatter - [Black](https://pypi.org/project/black/).
+
+- HTML Validation Examples:
+  - [Homepage](https://validator.w3.org/nu/?doc=https%3A%2F%2Fflyux.carlmurray.design%2F)
+  - [Search Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fflyux.carlmurray.design%2Fsearch_results%2F%3Fcsrfmiddlewaretoken%3D8KBZVKvX5lSOnxG31kPxxvzRddpEYACScsdbbPRenaPjeZT3OdKDnNFBofnKkoF4%26trip_type%3Dreturn%26origin%3DDublin%2B%2528DUB%2529%26destination%3DCork%2B%2528ORK%2529%26outbound_date%3D2023-08-30%26return_date%3D2023-08-31%26passengers%3D1)
+  - [Checkout](https://validator.w3.org/nu/?doc=https%3A%2F%2Fflyux.carlmurray.design%2Fcheckout)
+  - [Blog](https://validator.w3.org/nu/?doc=https%3A%2F%2Fflyux.carlmurray.design%2Fblog)
+
+</details>
+
+<br>
+<br>
+<br>
