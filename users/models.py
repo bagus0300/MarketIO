@@ -6,6 +6,7 @@ from django.contrib.auth.models import (
 )
 from django.db.models import Q, UniqueConstraint
 
+
 class UserManager(BaseUserManager):
     def create_user(self, email, first_name, last_name, password=None):
         """
@@ -102,32 +103,32 @@ class UserFavourite(models.Model):
 
 class Address(models.Model):
     COUNTIES = [
-        ('carlow', 'Carlow'),
-        ('cavan', 'Cavan'),
-        ('clare', 'Clare'),
-        ('cork', 'Cork'),
-        ('donegal', 'Donegal'),
-        ('dublin', 'Dublin'),
-        ('galway', 'Galway'),
-        ('kerry', 'Kerry'),
-        ('kildare', 'Kildare'),
-        ('kilkenny', 'Kilkenny'),
-        ('laois', 'Laois'),
-        ('leitrim', 'Leitrim'),
-        ('limerick', 'Limerick'),
-        ('longford', 'Longford'),
-        ('louth', 'Louth'),
-        ('mayo', 'Mayo'),
-        ('meath', 'Meath'),
-        ('monaghan', 'Monaghan'),
-        ('offaly', 'Offaly'),
-        ('roscommon', 'Roscommon'),
-        ('sligo', 'Sligo'),
-        ('tipperary', 'Tipperary'),
-        ('waterford', 'Waterford'),
-        ('westmeath', 'Westmeath'),
-        ('wexford', 'Wexford'),
-        ('wicklow', 'Wicklow')
+        ("carlow", "Carlow"),
+        ("cavan", "Cavan"),
+        ("clare", "Clare"),
+        ("cork", "Cork"),
+        ("donegal", "Donegal"),
+        ("dublin", "Dublin"),
+        ("galway", "Galway"),
+        ("kerry", "Kerry"),
+        ("kildare", "Kildare"),
+        ("kilkenny", "Kilkenny"),
+        ("laois", "Laois"),
+        ("leitrim", "Leitrim"),
+        ("limerick", "Limerick"),
+        ("longford", "Longford"),
+        ("louth", "Louth"),
+        ("mayo", "Mayo"),
+        ("meath", "Meath"),
+        ("monaghan", "Monaghan"),
+        ("offaly", "Offaly"),
+        ("roscommon", "Roscommon"),
+        ("sligo", "Sligo"),
+        ("tipperary", "Tipperary"),
+        ("waterford", "Waterford"),
+        ("westmeath", "Westmeath"),
+        ("wexford", "Wexford"),
+        ("wicklow", "Wicklow"),
     ]
 
     user = models.ForeignKey("users.User", on_delete=models.CASCADE, default=1)
@@ -141,10 +142,15 @@ class Address(models.Model):
     class Meta:
         abstract = True
 
+
 class UserAddress(Address):
     is_default = models.BooleanField(default=False)
 
     class Meta:
         constraints = [
-            UniqueConstraint(fields=["user", "is_default"], condition=Q(is_default="True"), name="unique_default_address")
+            UniqueConstraint(
+                fields=["user", "is_default"],
+                condition=Q(is_default="True"),
+                name="unique_default_address",
+            )
         ]

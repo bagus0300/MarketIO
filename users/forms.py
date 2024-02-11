@@ -20,7 +20,8 @@ class CustomUserCreationForm(UserCreationForm):
 #         model = User
 #         fields = ("email", "password")
 
+
 class CreateUserAddressForm(ModelForm):
     class Meta:
         model = UserAddress
-        exclude = ['user']
+        exclude = ["user"]

@@ -12,10 +12,12 @@ initialise();
 // Creates Stripe PaymentIntent and mounts Stripe Elements
 async function initialise() {
   let clientSecret = await createPaymentIntent();
-  console.log(clientSecret)
+  console.log(clientSecret);
   let elements = createStripeElements();
   const paymentForm = document.querySelector("#payment-form");
-  paymentForm.addEventListener("submit", async function(e) {handleSubmit(e, clientSecret)});
+  paymentForm.addEventListener("submit", async function (e) {
+    handleSubmit(e, clientSecret);
+  });
 }
 
 // Gets CSRF token from cookie to send with PaymentIntent fetch request
@@ -73,7 +75,7 @@ async function handleSubmit(e, clientSecret) {
       intent_id: intentID,
     }),
   });
-  const {error} = await stripe.confirmPayment({
+  const { error } = await stripe.confirmPayment({
     elements,
     confirmParams: {
       //   return_url: "https://laced.carlmurray.design/checkout/confirmation/",
