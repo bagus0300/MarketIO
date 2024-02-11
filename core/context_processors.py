@@ -11,7 +11,6 @@ def cart_quantity_badge(request):
     cart_total_quantity = 0
     if request.user.is_authenticated:
         cart = Cart.objects.get_or_create(user=request.user)[0]
-        print(request.session.session_key)
         if Cart.objects.filter(session=request.session.session_key):
             session_cart = Cart.objects.filter(session=request.session.session_key)[0]
             for item in session_cart.cartitem_set.all():

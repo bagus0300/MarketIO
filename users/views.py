@@ -8,10 +8,17 @@ from django.http import HttpResponse
 from django.template.loader import render_to_string
 
 
-# TODO:
-# add error handling
-# redirect to next page
 def signup_view(request):
+    """
+    View function for user signup.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+
+    Returns:
+        HttpResponse: The HTTP response object.
+
+    """
     if request.method == "POST":
         form = CustomUserCreationForm(data=request.POST)
         if form.is_valid():
@@ -25,6 +32,16 @@ def signup_view(request):
 
 
 def login_view(request):
+    """
+    View function for handling user login.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+
+    Returns:
+        HttpResponse: The HTTP response object.
+
+    """
     if request.method == "POST":
         form = AuthenticationForm(request, data=request.POST)
         if form.is_valid():
@@ -42,12 +59,31 @@ def login_view(request):
 
 
 def logout_view(request):
+    """
+    Logs out the user and redirects to the home page.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+
+    Returns:
+        HttpResponseRedirect: Redirects to the home page.
+
+    """
     logout(request)
     messages.info(request, "Successfully logged out!")
     return redirect("home")
 
 
 def account_addresses_view(request):
+    """
+    View function for handling user addresses.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+
+    Returns:
+        HttpResponse: The HTTP response object.
+    """
     addresses = UserAddress.objects.filter(user=request.user).order_by("-is_default")
     if request.method == "POST":
         # IF USER IS DELETING AN ADDRESS
@@ -103,5 +139,4 @@ def account_addresses_view(request):
             return redirect(request.META.get("HTTP_REFERER"))
 
     context = {"addresses": addresses, "counties": UserAddress.COUNTIES}
-    print(addresses)
     return render(request, "account/addresses.html", context)

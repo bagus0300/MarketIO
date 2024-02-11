@@ -1,16 +1,8 @@
-# TODO:
-# 1 Handle user address selection in checkout
-# 2 Add new address form and functionality in checkout
-# 3 require login for checkout
-# 4 remove country dropdown stripe elements
-
 from django.shortcuts import render
 from .models import *
 from users.models import *
 import random
 from django.db.models import Prefetch
-
-# from users.models import UserFavourite
 from django.http import HttpResponse, JsonResponse
 from django.contrib.auth.decorators import login_required
 import stripe
@@ -18,7 +10,6 @@ import json
 import os
 from dotenv import load_dotenv
 from django.views.decorators.csrf import csrf_exempt
-import math
 
 load_dotenv()
 
@@ -26,6 +17,15 @@ stripe.api_key = os.getenv("STRIPE_PRIVATE_KEY")
 
 
 def home_view(request):
+    """
+    Renders the home page view.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+
+    Returns:
+        HttpResponse: The rendered home page template.
+    """
     # SELECT ALL FEATURED PRODUCTS
     featured_products = Product.objects.filter(is_featured=True).prefetch_related(
         "productimage_set"
@@ -50,6 +50,15 @@ def home_view(request):
 
 
 def products_view(request):
+    """
+    View function for displaying all products.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+
+    Returns:
+        HttpResponse: The HTTP response object containing the rendered template.
+    """
     products = Product.objects.all().prefetch_related("productimage_set")
     context = {
         "products": products,
@@ -58,6 +67,16 @@ def products_view(request):
 
 
 def product_detail_view(request, product_id):
+    """
+    View function to display the details of a product.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+        product_id (int): The ID of the product.
+
+    Returns:
+        HttpResponse: The HTTP response object containing the rendered template.
+    """
     product = Product.objects.get(id=product_id)
     if request.user.is_anonymous:
         is_favourite = False
@@ -80,12 +99,22 @@ def product_detail_view(request, product_id):
 
 @login_required
 def add_remove_user_favourite(request, product_id):
+    """
+    Add or remove a product from the user's favorites.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+        product_id (int): The ID of the product to add or remove.
+
+    Returns:
+        HttpResponse: The rendered HTML response containing the updated favorite button.
+
+    """
     product = Product.objects.get(id=product_id)
     product_favourite = UserFavourite.objects.filter(user=request.user, product=product)
     if len(product_favourite) > 0:
         product_favourite[0].delete()
         is_favourite = False
-
     else:
         UserFavourite.objects.create(user=request.user, product_id=product_id)
         is_favourite = True
@@ -98,6 +127,15 @@ def add_remove_user_favourite(request, product_id):
 
 
 def add_to_cart(request):
+    """
+    Add a product to the cart.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+
+    Returns:
+        HttpResponse: The HTTP response containing the cart counter badge.
+    """
     product = ProductVariant.objects.filter(
         id=request.POST.get("product_variant")
     ).first()
@@ -124,6 +162,16 @@ def add_to_cart(request):
 
 
 def remove_from_cart(request, cart_item_id):
+    """
+    Remove an item from the cart.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+        cart_item_id (int): The ID of the cart item to be removed.
+
+    Returns:
+        HttpResponse: The HTTP response containing the updated cart information.
+    """
     cart_item = CartItem.objects.get(id=cart_item_id)
     cart = cart_item.cart
     cart_item.delete()
@@ -147,15 +195,22 @@ def remove_from_cart(request, cart_item_id):
 
 
 def update_cart_quantity(request, cart_item_id, quantity):
+    """
+    Update the quantity of a cart item and return the updated cart information.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+        cart_item_id (int): The ID of the cart item to update.
+        quantity (int): The new quantity value.
+
+    Returns:
+        HttpResponse: The HTTP response containing the updated cart information.
+    """
     cart_item = CartItem.objects.get(id=cart_item_id)
-    print(cart_item)
     cart = cart_item.cart
-    print(cart)
     cart_item.quantity = quantity
-    print(quantity)
     cart_item.save()
     cart.save()
-    print(cart.get_total_price())
     cart_total_quantity = cart.get_total_items()
     badge_quantity = cart_total_quantity
     if badge_quantity > 99:
@@ -176,6 +231,15 @@ def update_cart_quantity(request, cart_item_id, quantity):
 
 
 def cart_view(request):
+    """
+    View function for displaying the cart.
+
+    If the user is authenticated, the function retrieves the cart associated with the user.
+    Otherwise, it retrieves the cart associated with the session.
+
+    Returns:
+        A rendered HTML template displaying the cart items and cart details.
+    """
     if request.user.is_authenticated:
         cart = Cart.objects.get_or_create(user=request.user)[0]
     else:
@@ -191,11 +255,29 @@ def cart_view(request):
 
 @login_required
 def account_view(request):
+    """
+    Renders the account overview page.
+
+    Args:
+        request: The HTTP request object.
+
+    Returns:
+        The rendered account overview page.
+    """
     return render(request, "account/overview.html")
 
 
 @login_required
 def account_orders_view(request):
+    """
+    View function to display the orders associated with the current user.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+
+    Returns:
+        HttpResponse: The HTTP response object containing the rendered template.
+    """
     orders = Order.objects.filter(user=request.user).order_by("-date_created")
     context = {
         "orders": orders,
@@ -205,11 +287,29 @@ def account_orders_view(request):
 
 @login_required
 def account_addresses_view(request):
+    """
+    Renders the addresses.html template for the account addresses view.
+
+    Args:
+        request: The HTTP request object.
+
+    Returns:
+        The rendered HTML template.
+    """
     return render(request, "account/addresses.html")
 
 
 @login_required
 def account_favourites_view(request):
+    """
+    View function that renders the user's favourite products.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+
+    Returns:
+        HttpResponse: The HTTP response object containing the rendered template.
+    """
     favourite_products = UserFavourite.objects.filter(user=request.user)
     return render(
         request, "account/favourites.html", {"favourite_products": favourite_products}
@@ -218,6 +318,15 @@ def account_favourites_view(request):
 
 @login_required
 def checkout_view(request):
+    """
+    View function for the checkout page.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+
+    Returns:
+        HttpResponse: The HTTP response object containing the rendered checkout page.
+    """
     if request.user.is_authenticated:
         cart = Cart.objects.get_or_create(user=request.user)[0]
     else:
@@ -238,6 +347,15 @@ def checkout_view(request):
 
 
 def checkout_change_address(request):
+    """
+    View function for handling the change of shipping address during checkout.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+
+    Returns:
+        HttpResponse: The HTTP response object containing the rendered template.
+    """
     addresses = UserAddress.objects.filter(user=request.user)
     # IF CANCEL BUTTON PRESSED
     if request.META.get("HTTP_ACTION") == "CANCEL":
@@ -265,10 +383,18 @@ def checkout_change_address(request):
 
 
 def create_payment_intent(request):
+    """
+    Create a payment intent for the user's cart.
+
+    Args:
+        request: The HTTP request object.
+
+    Returns:
+        A JSON response containing the payment intent if successful, or an error message if unsuccessful.
+    """
     cart = Cart.objects.get(user=request.user)
     amount = cart.get_total_price()
     items_dict = json.dumps(cart.as_dict())
-    print(items_dict)
     try:
         # Create a PaymentIntent with the order amount and currency
         intent = stripe.PaymentIntent.create(
@@ -291,25 +417,36 @@ def create_payment_intent(request):
 
 
 def add_payment_intent_address(request):
-    data = json.loads(request.body.decode("utf-8"))
-    print(f"REQUEST BODY {data}")
+    """
+    Add the address to the metadata of a payment intent.
 
+    Args:
+        request (HttpRequest): The HTTP request object.
+
+    Returns:
+        HttpResponse: An empty HTTP response.
+    """
+    data = json.loads(request.body.decode("utf-8"))
     # Check if both 'client_secret' and 'address' are present in the data
     client_secret = data.get("client_secret")
     address_id = data.get("address")
     intent_id = data.get("intent_id")
-    print(client_secret)
-    print(address_id)
     payment_intent = stripe.PaymentIntent.retrieve(intent_id)
     payment_intent.metadata.address = address_id
     stripe.PaymentIntent.modify(intent_id, metadata=payment_intent.metadata)
-
-    print("ADDRESS ADDED TO META")
-    print(payment_intent.metadata)
     return HttpResponse("")
 
 
 def checkout_confirmation_view(request):
+    """
+    Renders the checkout confirmation page with the order details.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+
+    Returns:
+        HttpResponse: The HTTP response object containing the rendered confirmation page.
+    """
     payment_intent_client_secret = request.GET.get("payment_intent_client_secret")
     payment_intent = request.GET.get("payment_intent")
     payment_intent = stripe.PaymentIntent.retrieve(payment_intent)
@@ -326,6 +463,16 @@ def checkout_confirmation_view(request):
 
 @csrf_exempt
 def stripe_webhook(request):
+    """
+    Handle Stripe webhook events.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+
+    Returns:
+        HttpResponse: The HTTP response object.
+
+    """
     payload = request.body
     event = None
     try:
@@ -337,14 +484,10 @@ def stripe_webhook(request):
     # Handle the event
     if event.type == "payment_intent.succeeded":
         payment_intent = event.data.object
-        print(payment_intent)
-        print(payment_intent.get("metadata"))
         order_items = json.loads(payment_intent.get("metadata").get("items"))
         customer_email = payment_intent.get("metadata").get("email")
         order_id = payment_intent.get("metadata").get("order_id")
         address_id = payment_intent.get("metadata").get("address")
-        print(f"THIS IS THE ADDRESS {address_id}")
-        print(f"THIS IS THE ORDER {order_id}")
         order_address = OrderAddress.create_from_user_address(
             order=None, user_address=UserAddress.objects.get(id=address_id)
         )

@@ -69,6 +69,10 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractBaseUser, PermissionsMixin):
+    """
+    Custom user model representing a user in the system.
+    """
+
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     email = models.EmailField(unique=True)
@@ -86,6 +90,10 @@ class User(AbstractBaseUser, PermissionsMixin):
 
 
 class UserFavourite(models.Model):
+    """
+    Represents a user's favorite product.
+    """
+
     user = models.ForeignKey(
         "User",
         on_delete=models.CASCADE,
@@ -102,6 +110,10 @@ class UserFavourite(models.Model):
 
 
 class Address(models.Model):
+    """
+    Represents an address with various fields such as name, address lines, city, county, and eircode.
+    """
+
     COUNTIES = [
         ("carlow", "Carlow"),
         ("cavan", "Cavan"),
@@ -144,6 +156,16 @@ class Address(models.Model):
 
 
 class UserAddress(Address):
+    """
+    Represents a user address.
+
+    Inherits from the Address model and adds an additional field `is_default`
+    to indicate whether this address is the default address for the user.
+
+    Attributes:
+        is_default (bool): Indicates whether this address is the default address for the user.
+    """
+
     is_default = models.BooleanField(default=False)
 
     class Meta:

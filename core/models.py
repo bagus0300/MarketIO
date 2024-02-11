@@ -118,6 +118,15 @@ class ProductVariant(models.Model):
 
 
 class CartItem(models.Model):
+    """
+    Represents an item in a cart.
+
+    Attributes:
+        item (ProductVariant): The product variant associated with the cart item.
+        cart (Cart): The cart that the item belongs to.
+        quantity (int): The quantity of the item in the cart.
+    """
+
     item = models.ForeignKey("ProductVariant", on_delete=models.CASCADE)
     cart = models.ForeignKey("Cart", on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField()
@@ -127,12 +136,30 @@ class CartItem(models.Model):
 
 
 class Cart(models.Model):
+    """
+    Represents a cart for a user.
+
+    Attributes:
+        user (users.User): The user associated with the cart.
+        session (str): The session ID associated with the cart.
+    """
+
     user = models.OneToOneField(
         "users.User", on_delete=models.CASCADE, default=None, null=True, blank=True
     )
     session = models.CharField(max_length=32, default=None, null=True, blank=True)
 
     def add_item(self, product, quantity):
+        """
+        Adds an item to the cart.
+
+        Args:
+            product: The product to be added.
+            quantity (int): The quantity of the product to be added.
+
+        Returns:
+            CartItem: The created or updated cart item.
+        """
         cart_item = CartItem.objects.filter(item=product, cart=self)
         if cart_item.exists():
             cart_item = cart_item.first()
@@ -142,9 +169,24 @@ class Cart(models.Model):
         return CartItem.objects.create(item=product, cart=self, quantity=quantity)
 
     def remove_item(self, product):
+        """
+        Removes an item from the cart.
+
+        Args:
+            product: The product to be removed.
+
+        Returns:
+            None
+        """
         return CartItem.objects.get(item=product, cart=self).delete()
 
     def get_total_items(self):
+        """
+        Calculates the total quantity of items in the cart.
+
+        Returns:
+            int: The total quantity of items in the cart.
+        """
         items = self.cartitem_set.all()
         total_quantity = 0
         for item in items:
@@ -152,24 +194,42 @@ class Cart(models.Model):
         return total_quantity
 
     def get_total_price(self):
+        """
+        Calculates the total price of all items in the cart.
+
+        Returns:
+            float: The total price of all items in the cart.
+        """
         items = self.cartitem_set.all()
         total_price = 0
         for item in items:
-            print(item)
             total_price += item.quantity * item.item.product.get_price()
-            print(total_price)
         return total_price
 
     def as_dict(self):
+        """
+        Converts the cart to a dictionary representation.
+
+        Returns:
+            dict: A dictionary representation of the cart.
+        """
         items = {"items": []}
         for item in self.cartitem_set.all():
-            print(item.item.product.name)
             item = dict({"item": item.item.id, "quantity": item.quantity})
             items["items"].append(item)
         return items
 
 
 class OrderItem(models.Model):
+    """
+    Represents an item in an order.
+
+    Attributes:
+        order (Order): The order to which this item belongs.
+        item (ProductVariant): The product variant associated with this item.
+        quantity (int): The quantity of this item in the order.
+        price (Decimal): The price of this item.
+    """
     order = models.ForeignKey("Order", on_delete=models.CASCADE)
     item = models.ForeignKey("ProductVariant", on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField()
@@ -177,6 +237,17 @@ class OrderItem(models.Model):
 
 
 class Order(models.Model):
+    """
+    Represents an order made by a user.
+
+    Attributes:
+        order_id (str): The ID of the order.
+        user (User): The user who placed the order.
+        address (OrderAddress): The address associated with the order.
+        email (str): The email address of the user who placed the order.
+        date_created (datetime): The date and time when the order was created.
+    """
+
     order_id = models.CharField()
     user = models.ForeignKey("users.User", on_delete=models.DO_NOTHING)
     address = models.ForeignKey(
@@ -186,6 +257,12 @@ class Order(models.Model):
     date_created = models.DateTimeField(auto_now_add=True)
 
     def get_total(self):
+        """
+        Calculates and returns the total price of the order.
+
+        Returns:
+            float: The total price of the order.
+        """
         order_items = self.orderitem_set.all()
         total = 0
         for item in order_items:
@@ -194,10 +271,29 @@ class Order(models.Model):
 
 
 class OrderAddress(Address):
+    """
+    Represents an address associated with an order.
+
+    Inherits from the Address class.
+
+    Attributes:
+        order (Order): The order associated with the address.
+    """
+
     order = models.ForeignKey(Order, on_delete=models.CASCADE, blank=True, null=True)
 
     @classmethod
     def create_from_user_address(cls, order, user_address):
+        """
+        Creates an OrderAddress instance from a user address.
+
+        Args:
+            order (Order): The order associated with the address.
+            user_address (UserAddress): The user address to create the OrderAddress from.
+
+        Returns:
+            OrderAddress: The created OrderAddress instance.
+        """
         return cls(
             order=order,
             user=user_address.user,
