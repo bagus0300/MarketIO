@@ -58,6 +58,10 @@ Django-based eCommerce site
 - The homepage shows Featured products and Sale products.
 - Six Featured/Sale products shown are chosen at random each time the page is loaded.
 
+## Footer
+
+- The footer features social links and a newsletter signup form.
+
 ## Shop Page
 
 - The Shop page, accessed from the top navigation, shows all products.
@@ -149,7 +153,34 @@ The site has been delivered in its current state as an MVP and there is still mu
 - A meta description was added to all products and main pages of the site for SEO purposes.
 - There is a significant amount of work involved in renaming all product images and adding alt text to improve SEO, and these items were considered outside of the scope of this project.
 
-# Work in progress
+## Social
+
+- A fictional Facebook business page was set up for the eCommerce store which offers several advantages:
+
+  - Increased Visibility: Facebook is one of the most popular social media platforms globally, with billions of active users. By having a presence on Facebook, the eCommerce store can increase its visibility and reach a wider audience.
+
+  - Customer Engagement: Facebook provides a platform for direct interaction with customers. Users can like, comment, and share posts, allowing for real-time engagement and feedback. This interaction fosters a sense of community around the brand and helps build relationships with customers.
+
+  - Marketing Opportunities: Facebook offers various marketing tools, such as targeted advertising and sponsored posts, that enable the store to reach specific demographics and target audiences. These tools can help drive traffic to the website and increase sales.
+
+  - Brand Building: A Facebook business page allows the store to showcase its brand personality, values, and story. Consistent branding across social media channels helps establish brand identity and recognition.
+
+  - Customer Support: Facebook can serve as a customer support channel, allowing customers to ask questions, seek assistance, and provide feedback. Timely responses to inquiries demonstrate excellent customer service and can help build trust and loyalty.
+
+## Newsletter
+
+- A newletter form is present on the footer of every page, which offers a variety of benefits:
+
+  - Lead Generation: The newsletter form serves as a lead generation tool, allowing visitors to subscribe to receive updates, promotions, and other relevant content from the store. By capturing email addresses, the store can build a valuable database of potential customers.
+
+  - Direct Communication: Newsletters provide a direct line of communication with subscribers. The store can use newsletters to share product announcements, special offers, industry news, and other information directly with customers, without relying on third-party platforms.
+
+  - Customer Retention: Regular newsletters help keep the store top-of-mind for subscribers, increasing the likelihood of repeat purchases. By providing valuable content and exclusive offers, newsletters can help foster customer loyalty and retention.
+
+  - Traffic and Engagement: Newsletters can drive traffic to the website by promoting new products, blog posts, or other content. Additionally, newsletters can encourage engagement by including calls-to-action that prompt subscribers to visit the website or follow the store on social media.
+
+  - Analytics and Insights: Newsletter platforms typically provide analytics tools that allow the store to track open rates, click-through rates, and other metrics. These insights can help optimize future campaigns and improve overall marketing effectiveness
+
 
 # Bugs
 
@@ -420,15 +451,9 @@ The data models for the project are shown below:
 
 <details>
 
-- All HTML pages were checked with the [W3C Markup Validation Service](https://validator.w3.org/) with no major errors present. Errors were present for `htmx` attributes, however these are valid and necessary for the functionality of the site. There were also duplicate IDs present in the HTML, however these are also valid and necessary for the functionality of the site.
+- All HTML pages were checked with the [W3C Markup Validation Service](https://validator.w3.org/) with no major errors present. Errors were present for `htmx` and `alpine.js` related attributes, however these are valid and necessary for the functionality of the site.
 - All JavaScript files were passed through [JSHint](https://jshint.com/) with no errors present.
 - All custom coded Python files were formatted with a PEP8 complaint formatter - [Black](https://pypi.org/project/black/).
-
-- HTML Validation Examples:
-  - [Homepage](https://validator.w3.org/nu/?doc=https%3A%2F%2Fflyux.carlmurray.design%2F)
-  - [Search Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fflyux.carlmurray.design%2Fsearch_results%2F%3Fcsrfmiddlewaretoken%3D8KBZVKvX5lSOnxG31kPxxvzRddpEYACScsdbbPRenaPjeZT3OdKDnNFBofnKkoF4%26trip_type%3Dreturn%26origin%3DDublin%2B%2528DUB%2529%26destination%3DCork%2B%2528ORK%2529%26outbound_date%3D2023-08-30%26return_date%3D2023-08-31%26passengers%3D1)
-  - [Checkout](https://validator.w3.org/nu/?doc=https%3A%2F%2Fflyux.carlmurray.design%2Fcheckout)
-  - [Blog](https://validator.w3.org/nu/?doc=https%3A%2F%2Fflyux.carlmurray.design%2Fblog)
 
 </details>
 
