@@ -36,6 +36,32 @@ Django-based eCommerce site
 13. As an admin, I want to add, edit, or remove product listings, including product details, images, and pricing, to keep the online store up-to-date. (Must have)
 14. As an admin, I want to categorise products into different categories and subcategories to improve navigation for customers.
 
+### 🧮 Data Models
+
+
+The data models for the project are shown below:
+
+![Database schema](/readme/dbdiagram.png)
+
+- Users app:
+  - `User` - custom user model which extends the Django `AbstractUser` model. Default username field is replaced with email field.
+  - `UserAddress` - a user's shipping/billing address.
+  - `UserFavourite` - products a user has added to 'Favourites'
+
+<br>
+
+- Core app:
+  - `Product` - represents a product. Contains name, SKU, description, category, price, sale_price and is_featured.
+  - `ProductCategory` - represents a category of products Contains name.
+  - `ProductImage` - represents Passengers associated with a Booking. Contains image and product.
+  - `ProductVariant` - represents a product variant such as different sizes. Contains product, size and quantity.
+  - `Cart` - represents a user's or session cart. Contains user and/or session ID if user not logged in.
+  - `CartItem` - represents an item in a cart. Contains item, cart and quantity.
+
+<br>
+
+
+
 # Features
 
 ## CRUD Functionality
@@ -242,34 +268,6 @@ This section outlines the various technologies used throughout the project and t
 - Slow SQL queries are present throughout the site, particularly in the Admin site when browsing models. Attempts to fix this using `prefetch_related` have not been successful and further investigation is required which is planned for future development.
 
 
-### 🧮 Data Models
-
-<details>
-
-The data models for the project are shown below:
-
-![Database schema](/readme/dbdiagram.png)
-
-- Users app:
-  - `User` - custom user model which extends the Django `AbstractUser` model. Default username field is replaced with email field.
-  - `UserAddress` - a user's shipping/billing address.
-  - `UserFavourite` - products a user has added to 'Favourites'
-
-<br>
-
-- Core app:
-  - `Product` - represents a product. Contains name, SKU, description, category, price, sale_price and is_featured.
-  - `ProductCategory` - represents a category of products Contains name.
-  - `ProductImage` - represents Passengers associated with a Booking. Contains image and product.
-  - `ProductVariant` - represents a product variant such as different sizes. Contains product, size and quantity.
-  - `Cart` - represents a user's or session cart. Contains user and/or session ID if user not logged in.
-  - `CartItem` - represents an item in a cart. Contains item, cart and quantity.
-
-<br>
-
-</details>
-</details>
-</details>
 
 ---
 
@@ -411,31 +409,7 @@ The data models for the project are shown below:
 <details>
 
 - All pages were tested using Lighthouse with the primary goals of identifying performance and accessibility issues and ensuring adherance to best practices.
-- The Lighthouse test results for each step of the `core` user flow are shown below:
-<details>
-<summary>Homepage</summary>
 
-![Homepage Lighthouse test](/readme/Lighthouse-homepage.png)
-
-</details>
-<details>
-<summary>Product Detail</summary>
-
-![Flights Lighthouse test](/readme/Lighthouse-flights.png)
-
-</details>
-<details>
-<summary>Shop Page</summary>
-
-![Passengers Lighthouse test](/readme/Lighthouse-passengers.png)
-
-</details>
-<details>
-<summary>Checkout</summary>
-
-![Checkout Lighthouse test](/readme/Lighthouse-summary.png)
-
-</details>
 
 </details>
 
@@ -481,3 +455,30 @@ The data models for the project are shown below:
 <br>
 <br>
 <br>
+
+
+# Deployment
+
+Clone the repo to your local machine and follow these steps to deploy locally. These instructions assume you are not using AWS for static files, and are serving static files locally, and that you have a PostgreSQL instance available for connection.
+
+ 1. In the root of the repo directory, create a `.env` file with the following environment variables.
+
+```python
+DEBUG=FALSE #django debug mode
+SECRET_KEY= #your django secret key
+STRIPE_PRIVATE_KEY= #your stripe private key
+DATABASE_URL= #your postgres database URL
+
+#set to false unless you have an AWS instance with S3 and Cloudfront
+USE_S3=FALSE
+#if above is FALSE, ignore below variables
+AWS_ACCESS_KEY_ID= #AWS access key
+AWS_SECRET_ACCESS_KEY= #AWS secret access key
+AWS_STORAGE_BUCKET_NAME= #name of your S3 storage bucket
+AWS_S3_CUSTOM_DOMAIN= #your cloudfront domain
+```
+
+2. Run `pip install -r requirements.txt` to install required packages.
+3. Run `python manage.py loaddata variants.json` to load ProductVariants to the database
+4. Run `python manage.py loaddata data.json` to load all other sample data including products, images etc.
+5. Run the local server with `python manage.py runserver`
