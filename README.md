@@ -1,6 +1,4 @@
-# laced-pp5
-
-Django-based eCommerce site
+# Live Site: https://laced.carlmurray.design
 
 # Project Background
 
@@ -313,6 +311,8 @@ This section outlines the various technologies used throughout the project and t
 ### Social
 
 - A fictional Facebook business page was set up for the eCommerce store which offers several advantages:
+
+![Facebook page](/readme/img/facebook-page.png)
 
   - Increased Visibility: Facebook is one of the most popular social media platforms globally, with billions of active users. By having a presence on Facebook, the eCommerce store can increase its visibility and reach a wider audience.
 
