@@ -73,6 +73,42 @@ Django-based eCommerce site
 - Only variants which are in stock are shown on the page.
 - When the Add to Cart button is pressed, an AJAX request is sent to a Django view which updates the user's cart.
 
+## Account
+
+The Account page contains the following pages:
+
+### Orders
+- The user can view all of their order history.
+
+### Addresses
+- CRUD functionality is implemented in this page.
+- The user can create, edit or delete a shipping address which can then be selected during checkout.
+
+### Favourites
+- The user can add a product as a "favourite" from the product detail page.
+- The Favourites page lets the user review their favourited products to make purchasing at a later date easier.
+
+
+## Cart
+- If a user is not logged in, the cart is associated with the current session ID. It can then be converted to a user's cart if they decide to login, so that they don't lose their items.
+- A badge beside the cart shows the quantity of items in the current cart, and is updated via `htmx` when a product is added/removed to/from the cart.
+
+
+## Checkout
+- The checkout page features an address selection widget that uses `htmx` to update the chosen address.
+- The payment form utilises Stripe Elements to ensure the secure and PCI compliant processing of payments.
+- An order summary is shown so the user can review their order before payment.
+
+## Roadmap
+
+The site has been delivered in its current state as an MVP and there is still much work to do to improve the UX and functionality of the site, including:
+
+- Product search and filters
+- Discount code functionality
+- Choice of shipping methods
+- Contact page
+
+
 # Technologies
 
 - htmx was used to implement functionality throughout the site, including "Add to Cart" functionality and the "Change address" feature on the Checkout page.
@@ -131,29 +167,40 @@ This section outlines the various technologies used throughout the project and t
 - [AWS S3](https://aws.amazon.com/s3/) - used for storing static files and media files.
 - [AWS CloudFront](https://aws.amazon.com/cloudfront/) - used to cache static and media files.
 
-## Roadmap
+</details>
 
-The site has been delivered in its current state as an MVP and there is still much work to do to improve the UX and functionality of the site, including:
+## Integrations
 
-- Product search and filters
-- Discount code functionality
-- Choice of shipping methods
-- Contact page
+<details>
+
+- [Stripe Elements](https://stripe.com/docs/payments/elements) - used for PCI compliant payments processing
+
+</details>
+
+## Content
+
+<details>
+
+- [Leonardo.ai](https://leonardo.ai) - used to generate product images
+
+</details>
+
+
 
 # Business Model
 
 - Laced is an online eCommerce store where customers can purchase footware online and have it delivered to them.
 - All footware designs are AI generated using Leonardo.ai image generation, offering unique and differentiated footware designs.
 
-# Marketing
+## Marketing
 
-## SEO
+### SEO
 
 - Keywords such as "performance", "agility" and speed were included in the product descriptions to boost search engine ranking.
 - A meta description was added to all products and main pages of the site for SEO purposes.
 - There is a significant amount of work involved in renaming all product images and adding alt text to improve SEO, and these items were considered outside of the scope of this project.
 
-## Social
+### Social
 
 - A fictional Facebook business page was set up for the eCommerce store which offers several advantages:
 
@@ -194,32 +241,6 @@ The site has been delivered in its current state as an MVP and there is still mu
 
 - Slow SQL queries are present throughout the site, particularly in the Admin site when browsing models. Attempts to fix this using `prefetch_related` have not been successful and further investigation is required which is planned for future development.
 
-### 👨‍💻 Development
-
-<details>
-
-- The development process was carried out using an Agile methodology with a focus on iterative development and continuous improvement.
-- The project was managed using a GitHub Project board with user stories and tasks.
-- User Stories were sized using T-shirt sizing (XS, S, M, L, XL) and prioritised based on the MoSCoW method (Must have, Should have, Could have, Won't have).
-
-#### 📈 [Link to the GitHub Project board](https://github.com/users/CarlMurray/projects/4/views/2)
-
-#### 👤 User Stories
-
-1. As a customer, I want to be able to create a new account on the website so that I can save my shipping and billing information for future purchases. (Must have)
-2. As a customer, I want to be able to browse products by categories (e.g., Men's Shoes, Women's Shoes) so that I can easily find what I'm looking for. (Should have)
-3. As a customer, I want to be able to search for products by keywords so that I can quickly locate specific items. (Should have)
-4. As a customer, I want to see detailed product information, including product descriptions, prices, available sizes, and customer reviews, so that I can make an informed purchasing decision. (Must have)
-5. As a customer, I want to add products to my shopping cart and review the items in my cart before proceeding to checkout.
-6. As a customer, I want to be able to select my preferred shipping method and enter my shipping address during the checkout process.
-7. As a customer, I want to have multiple payment options (e.g., credit card, PayPal) when making a purchase. (Should have)
-8. As a customer, I want to receive order confirmation emails with details of my purchase after completing a transaction. (Should have)
-9. As a customer, I want to be able to view and track the status of my orders, including order history and estimated delivery dates. (Should have)
-10. As a customer, I want to be able to leave reviews and ratings for products I've purchased to share my experiences with other users. (Could have)
-11. As an admin, I want to be able to log in securely to the admin panel of the e-commerce platform to manage the website's content and functionality. (Must have)
-12. As an admin, I want to add, edit, or remove product listings, including product details, images, and pricing, to keep the online store up-to-date. (Must have)
-13. As an admin, I want to categorize products into different categories and subcategories to improve navigation for customers. (Should have)
-14. As an admin, I want to review and moderate customer reviews and ratings to ensure the quality of user-generated content. (Must have - if reviews implemented)
 
 ### 🧮 Data Models
 
