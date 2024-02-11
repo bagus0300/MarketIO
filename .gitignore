@@ -163,8 +163,8 @@ pgpass.conf
 laced_venv/
 
 .vscode/settings.json
-media/
+# media/
 staticfiles/
-product_imgs/
+# product_imgs/
 jsconfig.json
 .DS_Store
