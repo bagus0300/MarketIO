@@ -12,6 +12,16 @@ Django-based eCommerce site
 ## Design
 
 - Mockups were designed in Figma to explore layout options which would then serve as a guide for development.
+- Note that some features in the original designs (such as the "View all" links, Blog, Contact page and product filters) have not been implemented in the MVP, but development of these features is planned for future releases.
+
+#### Homepage design
+![Homepage](/readme/img/homepage.png)
+
+#### Products page design
+![All products page](/readme/img/products.png)
+
+#### Product detail page design
+![Product detail page](/readme/img/productdetail.png)
 
 ## Agile Development
 
@@ -36,31 +46,105 @@ Django-based eCommerce site
 13. As an admin, I want to add, edit, or remove product listings, including product details, images, and pricing, to keep the online store up-to-date. (Must have)
 14. As an admin, I want to categorise products into different categories and subcategories to improve navigation for customers.
 
-### 🧮 Data Models
+## 🧮 Data Models
 
 
 The data models for the project are shown below:
 
-![Database schema](/readme/dbdiagram.png)
+![Database schema ERD](/readme/img/erd.png)
 
-- Users app:
-  - `User` - custom user model which extends the Django `AbstractUser` model. Default username field is replaced with email field.
-  - `UserAddress` - a user's shipping/billing address.
-  - `UserFavourite` - products a user has added to 'Favourites'
+### Users App
+
+#### User
+Description: Represents a custom user model with extended properties.
+- `email`: Email address of the user.
+- `first_name`: First name of the user.
+- `last_name`: Last name of the user.
+- `is_staff`: Indicates if the user is a staff member.
+- `is_active`: Indicates if the user account is active.
+- `is_superuser`: Indicates if the user has superuser privileges.
+
+#### UserFavourite
+Description: Represents a user's favorite product association.
+- `user`: ForeignKey to the `User` model representing the user who favorited the product.
+- `product`: ForeignKey to the `Product` model representing the favorite product.
+
+#### UserAddress
+Description: Represents an address associated with a user.
+- `user`: ForeignKey to the `User` model representing the user associated with the address.
+- `name`: Name associated with the address.
+- `address_line_1`: First line of the address.
+- `address_line_2`: Second line of the address (optional).
+- `city`: City of the address.
+- `county`: County of the address.
+- `eircode`: Eircode (Irish postal code) of the address.
+- `is_default`: Indicates if the address is the default address for the user.
+
+### Core App
+
+#### Product
+Description: Represents a product with details such as name, description, and price.
+- `name`: Name of the product.
+- `sku`: Stock Keeping Unit (SKU) of the product.
+- `description`: Description of the product.
+- `category`: ForeignKey to the `ProductCategory` model representing the category of the product.
+- `price`: Price of the product.
+- `sale_price`: Sale price of the product.
+- `is_featured`: Indicates if the product is featured.
+
+#### ProductCategory
+Description: Represents a category to which a product belongs.
+- `name`: Name of the product category.
+
+#### ProductImage
+Description: Represents an image associated with a product.
+- `image`: Image file of the product.
+- `product`: ForeignKey to the `Product` model representing the product associated with the image.
+
+#### ProductVariant
+Description: Represents a variant of a product, such as size and quantity.
+- `product`: ForeignKey to the `Product` model representing the product associated with the variant.
+- `size`: Size of the product variant.
+- `quantity`: Quantity of the product variant in stock.
+
+#### Cart
+Description: Represents a user's shopping cart.
+- `user`: ForeignKey to the `User` model representing the user associated with the cart.
+- `session`: Session ID associated with the cart.
+
+#### CartItem
+Description: Represents an item in a user's shopping cart.
+- `item`: ForeignKey to the `ProductVariant` model representing the product variant associated with the cart item.
+- `cart`: ForeignKey to the `Cart` model representing the cart that the item belongs to.
+- `quantity`: Quantity of the item in the cart.
+
+#### Order
+Description: Represents an order made by a user.
+- `order_id`: ID of the order.
+- `user`: ForeignKey to the `User` model representing the user who placed the order.
+- `address`: ForeignKey to the `OrderAddress` model representing the address associated with the order.
+- `email`: Email address of the user who placed the order.
+- `date_created`: Date and time when the order was created.
+
+#### OrderItem
+Description: Represents an item within an order.
+- `order`: ForeignKey to the `Order` model representing the order to which the item belongs.
+- `item`: ForeignKey to the `ProductVariant` model representing the product variant associated with the item.
+- `quantity`: Quantity of the item in the order.
+- `price`: Price of the item.
+
+#### OrderAddress
+Description: Represents an address associated with an order.
+- `order`: ForeignKey to the `Order` model representing the order associated with the address.
+- `name`: Name associated with the address.
+- `address_line_1`: First line of the address.
+- `address_line_2`: Second line of the address (optional).
+- `city`: City of the address.
+- `county`: County of the address.
+- `eircode`: Eircode (Irish postal code) of the address.
+
 
 <br>
-
-- Core app:
-  - `Product` - represents a product. Contains name, SKU, description, category, price, sale_price and is_featured.
-  - `ProductCategory` - represents a category of products Contains name.
-  - `ProductImage` - represents Passengers associated with a Booking. Contains image and product.
-  - `ProductVariant` - represents a product variant such as different sizes. Contains product, size and quantity.
-  - `Cart` - represents a user's or session cart. Contains user and/or session ID if user not logged in.
-  - `CartItem` - represents an item in a cart. Contains item, cart and quantity.
-
-<br>
-
-
 
 # Features
 
