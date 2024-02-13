@@ -60,9 +60,16 @@ function createStripeElements() {
 async function handleSubmit(e, clientSecret) {
   e.preventDefault();
   setLoading(true);
+  try {
+    let address = document.querySelector(
+      '[name="prev_selected_address"]'
+    ).value;
+  } catch {
+    alert("Please select an address before paying");
+    setLoading(false);
+    return;
+  }
   const csrfToken = getCsrfToken();
-  let address = document.querySelector('[name="prev_selected_address"]').value;
-
   const response = await fetch("/add_payment_intent_address/", {
     method: "POST",
     headers: {
