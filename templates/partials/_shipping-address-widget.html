@@ -23,7 +23,7 @@
                 class="inline-block p-4 text-center border-2 border-primary text-primary">CHANGE ADDRESS</button>
     {% else %}
         <p>You haven't added an address yet. Please add one below before checking out.</p>
-        <button x-on:click="$refs.modal.showModal()"
+        <button x-on:click="$refs.modal.showModal()" type="button"
                 class="inline-block p-4 mt-4 text-center text-white bg-primary">ADD ADDRESS</button>
     {% endif %}
 </form>
