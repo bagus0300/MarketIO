@@ -13,9 +13,6 @@ let sizesContainer = document.querySelector("#sizesContainer");
 // Handles request
 // Show success or error feedback
 function handleRequest(e) {
-  // if (!checkSizeSelected(e)){
-  //   return
-  // };
   // Hide CTA text on click
   cartCtaText.classList.add("hidden");
 
@@ -60,8 +57,6 @@ function checkSizeSelected(e) {
   let selectedSize = document.querySelector('[data-selected="true"]');
   if (!selectedSize) {
     e.preventDefault();
-    console.log(e.target);
-    // htmx.trigger("form", "htmx:abort");
     errorMsg.innerText = "Please select a size.";
     errorMsg.classList.remove("invisible");
     sizesContainer.classList.add("bg-red-100", "p-2", "-m-2");

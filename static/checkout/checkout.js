@@ -12,7 +12,6 @@ initialise();
 // Creates Stripe PaymentIntent and mounts Stripe Elements
 async function initialise() {
   let clientSecret = await createPaymentIntent();
-  console.log(clientSecret);
   let elements = createStripeElements();
   const paymentForm = document.querySelector("#payment-form");
   paymentForm.addEventListener("submit", async function (e) {
@@ -43,7 +42,6 @@ async function createPaymentIntent() {
   });
   const paymentIntent = await response.json();
   intentID = paymentIntent.intent.id;
-  console.log(paymentIntent.intent.id);
   // Capture client secret from PaymentIntent to use in Stripe Elements
   clientSecret = paymentIntent.intent.client_secret;
   email = paymentIntent.intent.metadata.email;
@@ -85,8 +83,10 @@ async function handleSubmit(e, clientSecret) {
   const { error } = await stripe.confirmPayment({
     elements,
     confirmParams: {
-      //   return_url: "https://laced.carlmurray.design/checkout/confirmation/",
-      return_url: "http://localhost:8000/checkout/confirmation/",
+      return_url: "https://laced.carlmurray.design/checkout/confirmation/",
+
+      // Uncomment for local testing only
+      // return_url: "http://localhost:8000/checkout/confirmation/",
       receipt_email: email,
     },
   });
