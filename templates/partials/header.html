@@ -68,11 +68,11 @@
                         {% else %}
                             <li>
                                 <a class="block p-1 underline transition-all hover:decoration-primary decoration-2 decoration-transparent underline-offset-4"
-                                   href="{% url 'login' %}">LOGIN</a>
+                                   href="{% url 'login' %}?next={{ request.path }}">LOGIN</a>
                             </li>
                             <li>
                                 <a class="block p-1 underline transition-all hover:decoration-primary decoration-2 decoration-transparent underline-offset-4"
-                                   href="{% url 'signup' %}">SIGNUP</a>
+                                   href="{% url 'signup' %}?next={{ request.path }}">SIGNUP</a>
                             </li>
                         {% endif %}
                     </ul>
