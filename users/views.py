@@ -23,8 +23,10 @@ def signup_view(request):
         HttpResponse: The HTTP response object.
 
     """
+    # If user is already authenticated, redirect to home
     if request.user.is_authenticated:
         return redirect("home")
+    # If the request method is POST, process the form data
     if request.method == "POST":
         form = CustomUserCreationForm(data=request.POST)
         if form.is_valid():
@@ -34,7 +36,13 @@ def signup_view(request):
             if request.GET.get("next"):
                 return redirect(request.GET.get("next"))
             return redirect("home")
-    form = CustomUserCreationForm()
+        else:
+            # If form is not valid, render the signup template with the form and errors
+            return render(request, "users/signup.html", {"form": form})
+    # If the request method is GET, render the signup template with a blank form
+    else:
+        form = CustomUserCreationForm()
+    
     return render(request, "users/signup.html", {"form": form})
 
 
