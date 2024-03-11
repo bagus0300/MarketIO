@@ -30,6 +30,7 @@ def signup_view(request):
             if request.GET.get("next"):
                 return redirect(request.GET.get("next"))
             return redirect("home")
+    form = CustomUserCreationForm()
     return render(request, "users/signup.html", {"form": form})
 
 
