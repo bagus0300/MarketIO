@@ -102,7 +102,7 @@ class UserFavourite(models.Model):
         related_name="favourites",
     )
     product = models.ForeignKey(
-        "core.Product", on_delete=models.CASCADE, blank=True, null=True
+        "products.Product", on_delete=models.CASCADE, blank=True, null=True
     )
 
     def __str__(self):

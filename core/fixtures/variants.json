@@ -1,6 +1,6 @@
 [
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 1,
         "fields": {
             "product": 2,
@@ -9,7 +9,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 2,
         "fields": {
             "product": 2,
@@ -18,7 +18,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 3,
         "fields": {
             "product": 2,
@@ -27,7 +27,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 4,
         "fields": {
             "product": 2,
@@ -36,7 +36,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 5,
         "fields": {
             "product": 2,
@@ -45,7 +45,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 6,
         "fields": {
             "product": 2,
@@ -54,7 +54,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 7,
         "fields": {
             "product": 2,
@@ -63,7 +63,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 8,
         "fields": {
             "product": 2,
@@ -72,7 +72,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 9,
         "fields": {
             "product": 2,
@@ -81,7 +81,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 10,
         "fields": {
             "product": 2,
@@ -90,7 +90,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 11,
         "fields": {
             "product": 2,
@@ -99,7 +99,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 12,
         "fields": {
             "product": 2,
@@ -108,7 +108,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 13,
         "fields": {
             "product": 2,
@@ -117,7 +117,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 14,
         "fields": {
             "product": 2,
@@ -126,7 +126,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 15,
         "fields": {
             "product": 5,
@@ -135,7 +135,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 16,
         "fields": {
             "product": 5,
@@ -144,7 +144,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 17,
         "fields": {
             "product": 5,
@@ -153,7 +153,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 18,
         "fields": {
             "product": 5,
@@ -162,7 +162,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 19,
         "fields": {
             "product": 5,
@@ -171,7 +171,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 20,
         "fields": {
             "product": 5,
@@ -180,7 +180,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 21,
         "fields": {
             "product": 5,
@@ -189,7 +189,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 22,
         "fields": {
             "product": 5,
@@ -198,7 +198,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 23,
         "fields": {
             "product": 5,
@@ -207,7 +207,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 24,
         "fields": {
             "product": 5,
@@ -216,7 +216,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 25,
         "fields": {
             "product": 5,
@@ -225,7 +225,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 26,
         "fields": {
             "product": 5,
@@ -234,7 +234,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 27,
         "fields": {
             "product": 5,
@@ -243,7 +243,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 28,
         "fields": {
             "product": 5,
@@ -252,7 +252,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 29,
         "fields": {
             "product": 6,
@@ -261,7 +261,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 30,
         "fields": {
             "product": 6,
@@ -270,7 +270,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 31,
         "fields": {
             "product": 6,
@@ -279,7 +279,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 32,
         "fields": {
             "product": 6,
@@ -288,7 +288,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 33,
         "fields": {
             "product": 6,
@@ -297,7 +297,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 34,
         "fields": {
             "product": 6,
@@ -306,7 +306,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 35,
         "fields": {
             "product": 6,
@@ -315,7 +315,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 36,
         "fields": {
             "product": 6,
@@ -324,7 +324,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 37,
         "fields": {
             "product": 6,
@@ -333,7 +333,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 38,
         "fields": {
             "product": 6,
@@ -342,7 +342,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 39,
         "fields": {
             "product": 6,
@@ -351,7 +351,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 40,
         "fields": {
             "product": 6,
@@ -360,7 +360,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 41,
         "fields": {
             "product": 6,
@@ -369,7 +369,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 42,
         "fields": {
             "product": 6,
@@ -378,7 +378,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 43,
         "fields": {
             "product": 7,
@@ -387,7 +387,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 44,
         "fields": {
             "product": 7,
@@ -396,7 +396,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 45,
         "fields": {
             "product": 7,
@@ -405,7 +405,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 46,
         "fields": {
             "product": 7,
@@ -414,7 +414,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 47,
         "fields": {
             "product": 7,
@@ -423,7 +423,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 48,
         "fields": {
             "product": 7,
@@ -432,7 +432,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 49,
         "fields": {
             "product": 7,
@@ -441,7 +441,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 50,
         "fields": {
             "product": 7,
@@ -450,7 +450,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 51,
         "fields": {
             "product": 7,
@@ -459,7 +459,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 52,
         "fields": {
             "product": 7,
@@ -468,7 +468,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 53,
         "fields": {
             "product": 7,
@@ -477,7 +477,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 54,
         "fields": {
             "product": 7,
@@ -486,7 +486,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 55,
         "fields": {
             "product": 7,
@@ -495,7 +495,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 56,
         "fields": {
             "product": 7,
@@ -504,7 +504,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 57,
         "fields": {
             "product": 9,
@@ -513,7 +513,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 58,
         "fields": {
             "product": 9,
@@ -522,7 +522,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 59,
         "fields": {
             "product": 9,
@@ -531,7 +531,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 60,
         "fields": {
             "product": 9,
@@ -540,7 +540,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 61,
         "fields": {
             "product": 9,
@@ -549,7 +549,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 62,
         "fields": {
             "product": 9,
@@ -558,7 +558,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 63,
         "fields": {
             "product": 9,
@@ -567,7 +567,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 64,
         "fields": {
             "product": 9,
@@ -576,7 +576,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 65,
         "fields": {
             "product": 9,
@@ -585,7 +585,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 66,
         "fields": {
             "product": 9,
@@ -594,7 +594,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 67,
         "fields": {
             "product": 9,
@@ -603,7 +603,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 68,
         "fields": {
             "product": 9,
@@ -612,7 +612,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 69,
         "fields": {
             "product": 9,
@@ -621,7 +621,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 70,
         "fields": {
             "product": 9,
@@ -630,7 +630,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 71,
         "fields": {
             "product": 12,
@@ -639,7 +639,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 72,
         "fields": {
             "product": 12,
@@ -648,7 +648,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 73,
         "fields": {
             "product": 12,
@@ -657,7 +657,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 74,
         "fields": {
             "product": 12,
@@ -666,7 +666,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 75,
         "fields": {
             "product": 12,
@@ -675,7 +675,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 76,
         "fields": {
             "product": 12,
@@ -684,7 +684,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 77,
         "fields": {
             "product": 12,
@@ -693,7 +693,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 78,
         "fields": {
             "product": 12,
@@ -702,7 +702,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 79,
         "fields": {
             "product": 12,
@@ -711,7 +711,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 80,
         "fields": {
             "product": 12,
@@ -720,7 +720,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 81,
         "fields": {
             "product": 12,
@@ -729,7 +729,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 82,
         "fields": {
             "product": 12,
@@ -738,7 +738,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 83,
         "fields": {
             "product": 12,
@@ -747,7 +747,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 84,
         "fields": {
             "product": 12,
@@ -756,7 +756,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 85,
         "fields": {
             "product": 13,
@@ -765,7 +765,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 86,
         "fields": {
             "product": 13,
@@ -774,7 +774,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 87,
         "fields": {
             "product": 13,
@@ -783,7 +783,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 88,
         "fields": {
             "product": 13,
@@ -792,7 +792,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 89,
         "fields": {
             "product": 13,
@@ -801,7 +801,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 90,
         "fields": {
             "product": 13,
@@ -810,7 +810,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 91,
         "fields": {
             "product": 13,
@@ -819,7 +819,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 92,
         "fields": {
             "product": 13,
@@ -828,7 +828,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 93,
         "fields": {
             "product": 13,
@@ -837,7 +837,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 94,
         "fields": {
             "product": 13,
@@ -846,7 +846,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 95,
         "fields": {
             "product": 13,
@@ -855,7 +855,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 96,
         "fields": {
             "product": 13,
@@ -864,7 +864,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 97,
         "fields": {
             "product": 13,
@@ -873,7 +873,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 98,
         "fields": {
             "product": 13,
@@ -882,7 +882,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 99,
         "fields": {
             "product": 14,
@@ -891,7 +891,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 100,
         "fields": {
             "product": 14,
@@ -900,7 +900,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 101,
         "fields": {
             "product": 14,
@@ -909,7 +909,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 102,
         "fields": {
             "product": 14,
@@ -918,7 +918,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 103,
         "fields": {
             "product": 14,
@@ -927,7 +927,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 104,
         "fields": {
             "product": 14,
@@ -936,7 +936,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 105,
         "fields": {
             "product": 14,
@@ -945,7 +945,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 106,
         "fields": {
             "product": 14,
@@ -954,7 +954,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 107,
         "fields": {
             "product": 14,
@@ -963,7 +963,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 108,
         "fields": {
             "product": 14,
@@ -972,7 +972,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 109,
         "fields": {
             "product": 14,
@@ -981,7 +981,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 110,
         "fields": {
             "product": 14,
@@ -990,7 +990,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 111,
         "fields": {
             "product": 14,
@@ -999,7 +999,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 112,
         "fields": {
             "product": 14,
@@ -1008,7 +1008,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 113,
         "fields": {
             "product": 17,
@@ -1017,7 +1017,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 114,
         "fields": {
             "product": 17,
@@ -1026,7 +1026,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 115,
         "fields": {
             "product": 17,
@@ -1035,7 +1035,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 116,
         "fields": {
             "product": 17,
@@ -1044,7 +1044,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 117,
         "fields": {
             "product": 17,
@@ -1053,7 +1053,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 118,
         "fields": {
             "product": 17,
@@ -1062,7 +1062,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 119,
         "fields": {
             "product": 17,
@@ -1071,7 +1071,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 120,
         "fields": {
             "product": 17,
@@ -1080,7 +1080,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 121,
         "fields": {
             "product": 17,
@@ -1089,7 +1089,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 122,
         "fields": {
             "product": 17,
@@ -1098,7 +1098,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 123,
         "fields": {
             "product": 17,
@@ -1107,7 +1107,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 124,
         "fields": {
             "product": 17,
@@ -1116,7 +1116,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 125,
         "fields": {
             "product": 17,
@@ -1125,7 +1125,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 126,
         "fields": {
             "product": 17,
@@ -1134,7 +1134,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 127,
         "fields": {
             "product": 18,
@@ -1143,7 +1143,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 128,
         "fields": {
             "product": 18,
@@ -1152,7 +1152,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 129,
         "fields": {
             "product": 18,
@@ -1161,7 +1161,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 130,
         "fields": {
             "product": 18,
@@ -1170,7 +1170,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 131,
         "fields": {
             "product": 18,
@@ -1179,7 +1179,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 132,
         "fields": {
             "product": 18,
@@ -1188,7 +1188,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 133,
         "fields": {
             "product": 18,
@@ -1197,7 +1197,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 134,
         "fields": {
             "product": 18,
@@ -1206,7 +1206,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 135,
         "fields": {
             "product": 18,
@@ -1215,7 +1215,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 136,
         "fields": {
             "product": 18,
@@ -1224,7 +1224,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 137,
         "fields": {
             "product": 18,
@@ -1233,7 +1233,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 138,
         "fields": {
             "product": 18,
@@ -1242,7 +1242,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 139,
         "fields": {
             "product": 18,
@@ -1251,7 +1251,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 140,
         "fields": {
             "product": 18,
@@ -1260,7 +1260,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 141,
         "fields": {
             "product": 21,
@@ -1269,7 +1269,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 142,
         "fields": {
             "product": 21,
@@ -1278,7 +1278,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 143,
         "fields": {
             "product": 21,
@@ -1287,7 +1287,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 144,
         "fields": {
             "product": 21,
@@ -1296,7 +1296,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 145,
         "fields": {
             "product": 21,
@@ -1305,7 +1305,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 146,
         "fields": {
             "product": 21,
@@ -1314,7 +1314,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 147,
         "fields": {
             "product": 21,
@@ -1323,7 +1323,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 148,
         "fields": {
             "product": 21,
@@ -1332,7 +1332,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 149,
         "fields": {
             "product": 21,
@@ -1341,7 +1341,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 150,
         "fields": {
             "product": 21,
@@ -1350,7 +1350,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 151,
         "fields": {
             "product": 21,
@@ -1359,7 +1359,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 152,
         "fields": {
             "product": 21,
@@ -1368,7 +1368,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 153,
         "fields": {
             "product": 21,
@@ -1377,7 +1377,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 154,
         "fields": {
             "product": 21,
@@ -1386,7 +1386,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 155,
         "fields": {
             "product": 23,
@@ -1395,7 +1395,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 156,
         "fields": {
             "product": 23,
@@ -1404,7 +1404,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 157,
         "fields": {
             "product": 23,
@@ -1413,7 +1413,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 158,
         "fields": {
             "product": 23,
@@ -1422,7 +1422,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 159,
         "fields": {
             "product": 23,
@@ -1431,7 +1431,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 160,
         "fields": {
             "product": 23,
@@ -1440,7 +1440,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 161,
         "fields": {
             "product": 23,
@@ -1449,7 +1449,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 162,
         "fields": {
             "product": 23,
@@ -1458,7 +1458,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 163,
         "fields": {
             "product": 23,
@@ -1467,7 +1467,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 164,
         "fields": {
             "product": 23,
@@ -1476,7 +1476,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 165,
         "fields": {
             "product": 23,
@@ -1485,7 +1485,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 166,
         "fields": {
             "product": 23,
@@ -1494,7 +1494,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 167,
         "fields": {
             "product": 23,
@@ -1503,7 +1503,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 168,
         "fields": {
             "product": 23,
@@ -1512,7 +1512,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 169,
         "fields": {
             "product": 24,
@@ -1521,7 +1521,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 170,
         "fields": {
             "product": 24,
@@ -1530,7 +1530,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 171,
         "fields": {
             "product": 24,
@@ -1539,7 +1539,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 172,
         "fields": {
             "product": 24,
@@ -1548,7 +1548,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 173,
         "fields": {
             "product": 24,
@@ -1557,7 +1557,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 174,
         "fields": {
             "product": 24,
@@ -1566,7 +1566,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 175,
         "fields": {
             "product": 24,
@@ -1575,7 +1575,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 176,
         "fields": {
             "product": 24,
@@ -1584,7 +1584,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 177,
         "fields": {
             "product": 24,
@@ -1593,7 +1593,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 178,
         "fields": {
             "product": 24,
@@ -1602,7 +1602,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 179,
         "fields": {
             "product": 24,
@@ -1611,7 +1611,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 180,
         "fields": {
             "product": 24,
@@ -1620,7 +1620,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 181,
         "fields": {
             "product": 24,
@@ -1629,7 +1629,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 182,
         "fields": {
             "product": 24,
@@ -1638,7 +1638,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 183,
         "fields": {
             "product": 26,
@@ -1647,7 +1647,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 184,
         "fields": {
             "product": 26,
@@ -1656,7 +1656,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 185,
         "fields": {
             "product": 26,
@@ -1665,7 +1665,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 186,
         "fields": {
             "product": 26,
@@ -1674,7 +1674,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 187,
         "fields": {
             "product": 26,
@@ -1683,7 +1683,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 188,
         "fields": {
             "product": 26,
@@ -1692,7 +1692,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 189,
         "fields": {
             "product": 26,
@@ -1701,7 +1701,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 190,
         "fields": {
             "product": 26,
@@ -1710,7 +1710,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 191,
         "fields": {
             "product": 26,
@@ -1719,7 +1719,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 192,
         "fields": {
             "product": 26,
@@ -1728,7 +1728,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 193,
         "fields": {
             "product": 26,
@@ -1737,7 +1737,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 194,
         "fields": {
             "product": 26,
@@ -1746,7 +1746,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 195,
         "fields": {
             "product": 26,
@@ -1755,7 +1755,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 196,
         "fields": {
             "product": 26,
@@ -1764,7 +1764,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 197,
         "fields": {
             "product": 29,
@@ -1773,7 +1773,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 198,
         "fields": {
             "product": 29,
@@ -1782,7 +1782,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 199,
         "fields": {
             "product": 29,
@@ -1791,7 +1791,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 200,
         "fields": {
             "product": 29,
@@ -1800,7 +1800,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 201,
         "fields": {
             "product": 29,
@@ -1809,7 +1809,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 202,
         "fields": {
             "product": 29,
@@ -1818,7 +1818,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 203,
         "fields": {
             "product": 29,
@@ -1827,7 +1827,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 204,
         "fields": {
             "product": 29,
@@ -1836,7 +1836,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 205,
         "fields": {
             "product": 29,
@@ -1845,7 +1845,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 206,
         "fields": {
             "product": 29,
@@ -1854,7 +1854,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 207,
         "fields": {
             "product": 29,
@@ -1863,7 +1863,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 208,
         "fields": {
             "product": 29,
@@ -1872,7 +1872,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 209,
         "fields": {
             "product": 29,
@@ -1881,7 +1881,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 210,
         "fields": {
             "product": 29,
@@ -1890,7 +1890,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 211,
         "fields": {
             "product": 30,
@@ -1899,7 +1899,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 212,
         "fields": {
             "product": 30,
@@ -1908,7 +1908,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 213,
         "fields": {
             "product": 30,
@@ -1917,7 +1917,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 214,
         "fields": {
             "product": 30,
@@ -1926,7 +1926,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 215,
         "fields": {
             "product": 30,
@@ -1935,7 +1935,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 216,
         "fields": {
             "product": 30,
@@ -1944,7 +1944,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 217,
         "fields": {
             "product": 30,
@@ -1953,7 +1953,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 218,
         "fields": {
             "product": 30,
@@ -1962,7 +1962,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 219,
         "fields": {
             "product": 30,
@@ -1971,7 +1971,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 220,
         "fields": {
             "product": 30,
@@ -1980,7 +1980,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 221,
         "fields": {
             "product": 30,
@@ -1989,7 +1989,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 222,
         "fields": {
             "product": 30,
@@ -1998,7 +1998,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 223,
         "fields": {
             "product": 30,
@@ -2007,7 +2007,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 224,
         "fields": {
             "product": 30,
@@ -2016,7 +2016,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 225,
         "fields": {
             "product": 31,
@@ -2025,7 +2025,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 226,
         "fields": {
             "product": 31,
@@ -2034,7 +2034,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 227,
         "fields": {
             "product": 31,
@@ -2043,7 +2043,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 228,
         "fields": {
             "product": 31,
@@ -2052,7 +2052,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 229,
         "fields": {
             "product": 31,
@@ -2061,7 +2061,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 230,
         "fields": {
             "product": 31,
@@ -2070,7 +2070,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 231,
         "fields": {
             "product": 31,
@@ -2079,7 +2079,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 232,
         "fields": {
             "product": 31,
@@ -2088,7 +2088,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 233,
         "fields": {
             "product": 31,
@@ -2097,7 +2097,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 234,
         "fields": {
             "product": 31,
@@ -2106,7 +2106,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 235,
         "fields": {
             "product": 31,
@@ -2115,7 +2115,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 236,
         "fields": {
             "product": 31,
@@ -2124,7 +2124,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 237,
         "fields": {
             "product": 31,
@@ -2133,7 +2133,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 238,
         "fields": {
             "product": 31,
@@ -2142,7 +2142,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 239,
         "fields": {
             "product": 34,
@@ -2151,7 +2151,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 240,
         "fields": {
             "product": 34,
@@ -2160,7 +2160,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 241,
         "fields": {
             "product": 34,
@@ -2169,7 +2169,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 242,
         "fields": {
             "product": 34,
@@ -2178,7 +2178,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 243,
         "fields": {
             "product": 34,
@@ -2187,7 +2187,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 244,
         "fields": {
             "product": 34,
@@ -2196,7 +2196,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 245,
         "fields": {
             "product": 34,
@@ -2205,7 +2205,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 246,
         "fields": {
             "product": 34,
@@ -2214,7 +2214,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 247,
         "fields": {
             "product": 34,
@@ -2223,7 +2223,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 248,
         "fields": {
             "product": 34,
@@ -2232,7 +2232,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 249,
         "fields": {
             "product": 34,
@@ -2241,7 +2241,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 250,
         "fields": {
             "product": 34,
@@ -2250,7 +2250,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 251,
         "fields": {
             "product": 34,
@@ -2259,7 +2259,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 252,
         "fields": {
             "product": 34,
@@ -2268,7 +2268,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 253,
         "fields": {
             "product": 36,
@@ -2277,7 +2277,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 254,
         "fields": {
             "product": 36,
@@ -2286,7 +2286,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 255,
         "fields": {
             "product": 36,
@@ -2295,7 +2295,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 256,
         "fields": {
             "product": 36,
@@ -2304,7 +2304,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 257,
         "fields": {
             "product": 36,
@@ -2313,7 +2313,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 258,
         "fields": {
             "product": 36,
@@ -2322,7 +2322,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 259,
         "fields": {
             "product": 36,
@@ -2331,7 +2331,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 260,
         "fields": {
             "product": 36,
@@ -2340,7 +2340,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 261,
         "fields": {
             "product": 36,
@@ -2349,7 +2349,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 262,
         "fields": {
             "product": 36,
@@ -2358,7 +2358,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 263,
         "fields": {
             "product": 36,
@@ -2367,7 +2367,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 264,
         "fields": {
             "product": 36,
@@ -2376,7 +2376,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 265,
         "fields": {
             "product": 36,
@@ -2385,7 +2385,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 266,
         "fields": {
             "product": 36,
@@ -2394,7 +2394,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 267,
         "fields": {
             "product": 3,
@@ -2403,7 +2403,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 268,
         "fields": {
             "product": 3,
@@ -2412,7 +2412,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 269,
         "fields": {
             "product": 3,
@@ -2421,7 +2421,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 270,
         "fields": {
             "product": 3,
@@ -2430,7 +2430,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 271,
         "fields": {
             "product": 3,
@@ -2439,7 +2439,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 272,
         "fields": {
             "product": 3,
@@ -2448,7 +2448,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 273,
         "fields": {
             "product": 3,
@@ -2457,7 +2457,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 274,
         "fields": {
             "product": 3,
@@ -2466,7 +2466,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 275,
         "fields": {
             "product": 3,
@@ -2475,7 +2475,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 276,
         "fields": {
             "product": 3,
@@ -2484,7 +2484,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 277,
         "fields": {
             "product": 3,
@@ -2493,7 +2493,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 278,
         "fields": {
             "product": 3,
@@ -2502,7 +2502,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 279,
         "fields": {
             "product": 3,
@@ -2511,7 +2511,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 280,
         "fields": {
             "product": 3,
@@ -2520,7 +2520,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 281,
         "fields": {
             "product": 4,
@@ -2529,7 +2529,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 282,
         "fields": {
             "product": 4,
@@ -2538,7 +2538,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 283,
         "fields": {
             "product": 4,
@@ -2547,7 +2547,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 284,
         "fields": {
             "product": 4,
@@ -2556,7 +2556,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 285,
         "fields": {
             "product": 4,
@@ -2565,7 +2565,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 286,
         "fields": {
             "product": 4,
@@ -2574,7 +2574,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 287,
         "fields": {
             "product": 4,
@@ -2583,7 +2583,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 288,
         "fields": {
             "product": 4,
@@ -2592,7 +2592,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 289,
         "fields": {
             "product": 4,
@@ -2601,7 +2601,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 290,
         "fields": {
             "product": 4,
@@ -2610,7 +2610,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 291,
         "fields": {
             "product": 4,
@@ -2619,7 +2619,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 292,
         "fields": {
             "product": 4,
@@ -2628,7 +2628,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 293,
         "fields": {
             "product": 4,
@@ -2637,7 +2637,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 294,
         "fields": {
             "product": 4,
@@ -2646,7 +2646,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 295,
         "fields": {
             "product": 8,
@@ -2655,7 +2655,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 296,
         "fields": {
             "product": 8,
@@ -2664,7 +2664,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 297,
         "fields": {
             "product": 8,
@@ -2673,7 +2673,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 298,
         "fields": {
             "product": 8,
@@ -2682,7 +2682,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 299,
         "fields": {
             "product": 8,
@@ -2691,7 +2691,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 300,
         "fields": {
             "product": 8,
@@ -2700,7 +2700,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 301,
         "fields": {
             "product": 8,
@@ -2709,7 +2709,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 302,
         "fields": {
             "product": 8,
@@ -2718,7 +2718,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 303,
         "fields": {
             "product": 8,
@@ -2727,7 +2727,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 304,
         "fields": {
             "product": 8,
@@ -2736,7 +2736,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 305,
         "fields": {
             "product": 8,
@@ -2745,7 +2745,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 306,
         "fields": {
             "product": 8,
@@ -2754,7 +2754,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 307,
         "fields": {
             "product": 8,
@@ -2763,7 +2763,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 308,
         "fields": {
             "product": 8,
@@ -2772,7 +2772,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 309,
         "fields": {
             "product": 10,
@@ -2781,7 +2781,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 310,
         "fields": {
             "product": 10,
@@ -2790,7 +2790,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 311,
         "fields": {
             "product": 10,
@@ -2799,7 +2799,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 312,
         "fields": {
             "product": 10,
@@ -2808,7 +2808,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 313,
         "fields": {
             "product": 10,
@@ -2817,7 +2817,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 314,
         "fields": {
             "product": 10,
@@ -2826,7 +2826,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 315,
         "fields": {
             "product": 10,
@@ -2835,7 +2835,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 316,
         "fields": {
             "product": 10,
@@ -2844,7 +2844,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 317,
         "fields": {
             "product": 10,
@@ -2853,7 +2853,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 318,
         "fields": {
             "product": 10,
@@ -2862,7 +2862,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 319,
         "fields": {
             "product": 10,
@@ -2871,7 +2871,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 320,
         "fields": {
             "product": 10,
@@ -2880,7 +2880,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 321,
         "fields": {
             "product": 10,
@@ -2889,7 +2889,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 322,
         "fields": {
             "product": 10,
@@ -2898,7 +2898,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 323,
         "fields": {
             "product": 11,
@@ -2907,7 +2907,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 324,
         "fields": {
             "product": 11,
@@ -2916,7 +2916,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 325,
         "fields": {
             "product": 11,
@@ -2925,7 +2925,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 326,
         "fields": {
             "product": 11,
@@ -2934,7 +2934,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 327,
         "fields": {
             "product": 11,
@@ -2943,7 +2943,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 328,
         "fields": {
             "product": 11,
@@ -2952,7 +2952,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 329,
         "fields": {
             "product": 11,
@@ -2961,7 +2961,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 330,
         "fields": {
             "product": 11,
@@ -2970,7 +2970,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 331,
         "fields": {
             "product": 11,
@@ -2979,7 +2979,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 332,
         "fields": {
             "product": 11,
@@ -2988,7 +2988,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 333,
         "fields": {
             "product": 11,
@@ -2997,7 +2997,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 334,
         "fields": {
             "product": 11,
@@ -3006,7 +3006,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 335,
         "fields": {
             "product": 11,
@@ -3015,7 +3015,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 336,
         "fields": {
             "product": 11,
@@ -3024,7 +3024,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 337,
         "fields": {
             "product": 15,
@@ -3033,7 +3033,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 338,
         "fields": {
             "product": 15,
@@ -3042,7 +3042,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 339,
         "fields": {
             "product": 15,
@@ -3051,7 +3051,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 340,
         "fields": {
             "product": 15,
@@ -3060,7 +3060,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 341,
         "fields": {
             "product": 15,
@@ -3069,7 +3069,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 342,
         "fields": {
             "product": 15,
@@ -3078,7 +3078,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 343,
         "fields": {
             "product": 15,
@@ -3087,7 +3087,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 344,
         "fields": {
             "product": 15,
@@ -3096,7 +3096,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 345,
         "fields": {
             "product": 15,
@@ -3105,7 +3105,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 346,
         "fields": {
             "product": 15,
@@ -3114,7 +3114,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 347,
         "fields": {
             "product": 15,
@@ -3123,7 +3123,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 348,
         "fields": {
             "product": 15,
@@ -3132,7 +3132,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 349,
         "fields": {
             "product": 15,
@@ -3141,7 +3141,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 350,
         "fields": {
             "product": 15,
@@ -3150,7 +3150,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 351,
         "fields": {
             "product": 16,
@@ -3159,7 +3159,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 352,
         "fields": {
             "product": 16,
@@ -3168,7 +3168,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 353,
         "fields": {
             "product": 16,
@@ -3177,7 +3177,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 354,
         "fields": {
             "product": 16,
@@ -3186,7 +3186,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 355,
         "fields": {
             "product": 16,
@@ -3195,7 +3195,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 356,
         "fields": {
             "product": 16,
@@ -3204,7 +3204,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 357,
         "fields": {
             "product": 16,
@@ -3213,7 +3213,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 358,
         "fields": {
             "product": 16,
@@ -3222,7 +3222,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 359,
         "fields": {
             "product": 16,
@@ -3231,7 +3231,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 360,
         "fields": {
             "product": 16,
@@ -3240,7 +3240,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 361,
         "fields": {
             "product": 16,
@@ -3249,7 +3249,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 362,
         "fields": {
             "product": 16,
@@ -3258,7 +3258,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 363,
         "fields": {
             "product": 16,
@@ -3267,7 +3267,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 364,
         "fields": {
             "product": 16,
@@ -3276,7 +3276,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 365,
         "fields": {
             "product": 19,
@@ -3285,7 +3285,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 366,
         "fields": {
             "product": 19,
@@ -3294,7 +3294,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 367,
         "fields": {
             "product": 19,
@@ -3303,7 +3303,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 368,
         "fields": {
             "product": 19,
@@ -3312,7 +3312,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 369,
         "fields": {
             "product": 19,
@@ -3321,7 +3321,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 370,
         "fields": {
             "product": 19,
@@ -3330,7 +3330,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 371,
         "fields": {
             "product": 19,
@@ -3339,7 +3339,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 372,
         "fields": {
             "product": 19,
@@ -3348,7 +3348,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 373,
         "fields": {
             "product": 19,
@@ -3357,7 +3357,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 374,
         "fields": {
             "product": 19,
@@ -3366,7 +3366,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 375,
         "fields": {
             "product": 19,
@@ -3375,7 +3375,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 376,
         "fields": {
             "product": 19,
@@ -3384,7 +3384,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 377,
         "fields": {
             "product": 19,
@@ -3393,7 +3393,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 378,
         "fields": {
             "product": 19,
@@ -3402,7 +3402,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 379,
         "fields": {
             "product": 20,
@@ -3411,7 +3411,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 380,
         "fields": {
             "product": 20,
@@ -3420,7 +3420,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 381,
         "fields": {
             "product": 20,
@@ -3429,7 +3429,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 382,
         "fields": {
             "product": 20,
@@ -3438,7 +3438,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 383,
         "fields": {
             "product": 20,
@@ -3447,7 +3447,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 384,
         "fields": {
             "product": 20,
@@ -3456,7 +3456,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 385,
         "fields": {
             "product": 20,
@@ -3465,7 +3465,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 386,
         "fields": {
             "product": 20,
@@ -3474,7 +3474,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 387,
         "fields": {
             "product": 20,
@@ -3483,7 +3483,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 388,
         "fields": {
             "product": 20,
@@ -3492,7 +3492,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 389,
         "fields": {
             "product": 20,
@@ -3501,7 +3501,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 390,
         "fields": {
             "product": 20,
@@ -3510,7 +3510,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 391,
         "fields": {
             "product": 20,
@@ -3519,7 +3519,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 392,
         "fields": {
             "product": 20,
@@ -3528,7 +3528,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 393,
         "fields": {
             "product": 22,
@@ -3537,7 +3537,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 394,
         "fields": {
             "product": 22,
@@ -3546,7 +3546,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 395,
         "fields": {
             "product": 22,
@@ -3555,7 +3555,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 396,
         "fields": {
             "product": 22,
@@ -3564,7 +3564,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 397,
         "fields": {
             "product": 22,
@@ -3573,7 +3573,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 398,
         "fields": {
             "product": 22,
@@ -3582,7 +3582,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 399,
         "fields": {
             "product": 22,
@@ -3591,7 +3591,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 400,
         "fields": {
             "product": 22,
@@ -3600,7 +3600,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 401,
         "fields": {
             "product": 22,
@@ -3609,7 +3609,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 402,
         "fields": {
             "product": 22,
@@ -3618,7 +3618,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 403,
         "fields": {
             "product": 22,
@@ -3627,7 +3627,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 404,
         "fields": {
             "product": 22,
@@ -3636,7 +3636,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 405,
         "fields": {
             "product": 22,
@@ -3645,7 +3645,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 406,
         "fields": {
             "product": 22,
@@ -3654,7 +3654,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 407,
         "fields": {
             "product": 25,
@@ -3663,7 +3663,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 408,
         "fields": {
             "product": 25,
@@ -3672,7 +3672,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 409,
         "fields": {
             "product": 25,
@@ -3681,7 +3681,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 410,
         "fields": {
             "product": 25,
@@ -3690,7 +3690,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 411,
         "fields": {
             "product": 25,
@@ -3699,7 +3699,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 412,
         "fields": {
             "product": 25,
@@ -3708,7 +3708,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 413,
         "fields": {
             "product": 25,
@@ -3717,7 +3717,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 414,
         "fields": {
             "product": 25,
@@ -3726,7 +3726,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 415,
         "fields": {
             "product": 25,
@@ -3735,7 +3735,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 416,
         "fields": {
             "product": 25,
@@ -3744,7 +3744,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 417,
         "fields": {
             "product": 25,
@@ -3753,7 +3753,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 418,
         "fields": {
             "product": 25,
@@ -3762,7 +3762,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 419,
         "fields": {
             "product": 25,
@@ -3771,7 +3771,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 420,
         "fields": {
             "product": 25,
@@ -3780,7 +3780,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 421,
         "fields": {
             "product": 27,
@@ -3789,7 +3789,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 422,
         "fields": {
             "product": 27,
@@ -3798,7 +3798,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 423,
         "fields": {
             "product": 27,
@@ -3807,7 +3807,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 424,
         "fields": {
             "product": 27,
@@ -3816,7 +3816,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 425,
         "fields": {
             "product": 27,
@@ -3825,7 +3825,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 426,
         "fields": {
             "product": 27,
@@ -3834,7 +3834,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 427,
         "fields": {
             "product": 27,
@@ -3843,7 +3843,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 428,
         "fields": {
             "product": 27,
@@ -3852,7 +3852,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 429,
         "fields": {
             "product": 27,
@@ -3861,7 +3861,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 430,
         "fields": {
             "product": 27,
@@ -3870,7 +3870,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 431,
         "fields": {
             "product": 27,
@@ -3879,7 +3879,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 432,
         "fields": {
             "product": 27,
@@ -3888,7 +3888,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 433,
         "fields": {
             "product": 27,
@@ -3897,7 +3897,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 434,
         "fields": {
             "product": 27,
@@ -3906,7 +3906,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 435,
         "fields": {
             "product": 28,
@@ -3915,7 +3915,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 436,
         "fields": {
             "product": 28,
@@ -3924,7 +3924,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 437,
         "fields": {
             "product": 28,
@@ -3933,7 +3933,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 438,
         "fields": {
             "product": 28,
@@ -3942,7 +3942,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 439,
         "fields": {
             "product": 28,
@@ -3951,7 +3951,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 440,
         "fields": {
             "product": 28,
@@ -3960,7 +3960,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 441,
         "fields": {
             "product": 28,
@@ -3969,7 +3969,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 442,
         "fields": {
             "product": 28,
@@ -3978,7 +3978,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 443,
         "fields": {
             "product": 28,
@@ -3987,7 +3987,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 444,
         "fields": {
             "product": 28,
@@ -3996,7 +3996,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 445,
         "fields": {
             "product": 28,
@@ -4005,7 +4005,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 446,
         "fields": {
             "product": 28,
@@ -4014,7 +4014,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 447,
         "fields": {
             "product": 28,
@@ -4023,7 +4023,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 448,
         "fields": {
             "product": 28,
@@ -4032,7 +4032,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 449,
         "fields": {
             "product": 32,
@@ -4041,7 +4041,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 450,
         "fields": {
             "product": 32,
@@ -4050,7 +4050,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 451,
         "fields": {
             "product": 32,
@@ -4059,7 +4059,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 452,
         "fields": {
             "product": 32,
@@ -4068,7 +4068,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 453,
         "fields": {
             "product": 32,
@@ -4077,7 +4077,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 454,
         "fields": {
             "product": 32,
@@ -4086,7 +4086,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 455,
         "fields": {
             "product": 32,
@@ -4095,7 +4095,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 456,
         "fields": {
             "product": 32,
@@ -4104,7 +4104,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 457,
         "fields": {
             "product": 32,
@@ -4113,7 +4113,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 458,
         "fields": {
             "product": 32,
@@ -4122,7 +4122,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 459,
         "fields": {
             "product": 32,
@@ -4131,7 +4131,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 460,
         "fields": {
             "product": 32,
@@ -4140,7 +4140,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 461,
         "fields": {
             "product": 32,
@@ -4149,7 +4149,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 462,
         "fields": {
             "product": 32,
@@ -4158,7 +4158,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 463,
         "fields": {
             "product": 33,
@@ -4167,7 +4167,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 464,
         "fields": {
             "product": 33,
@@ -4176,7 +4176,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 465,
         "fields": {
             "product": 33,
@@ -4185,7 +4185,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 466,
         "fields": {
             "product": 33,
@@ -4194,7 +4194,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 467,
         "fields": {
             "product": 33,
@@ -4203,7 +4203,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 468,
         "fields": {
             "product": 33,
@@ -4212,7 +4212,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 469,
         "fields": {
             "product": 33,
@@ -4221,7 +4221,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 470,
         "fields": {
             "product": 33,
@@ -4230,7 +4230,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 471,
         "fields": {
             "product": 33,
@@ -4239,7 +4239,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 472,
         "fields": {
             "product": 33,
@@ -4248,7 +4248,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 473,
         "fields": {
             "product": 33,
@@ -4257,7 +4257,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 474,
         "fields": {
             "product": 33,
@@ -4266,7 +4266,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 475,
         "fields": {
             "product": 33,
@@ -4275,7 +4275,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 476,
         "fields": {
             "product": 33,
@@ -4284,7 +4284,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 477,
         "fields": {
             "product": 35,
@@ -4293,7 +4293,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 478,
         "fields": {
             "product": 35,
@@ -4302,7 +4302,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 479,
         "fields": {
             "product": 35,
@@ -4311,7 +4311,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 480,
         "fields": {
             "product": 35,
@@ -4320,7 +4320,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 481,
         "fields": {
             "product": 35,
@@ -4329,7 +4329,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 482,
         "fields": {
             "product": 35,
@@ -4338,7 +4338,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 483,
         "fields": {
             "product": 35,
@@ -4347,7 +4347,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 484,
         "fields": {
             "product": 35,
@@ -4356,7 +4356,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 485,
         "fields": {
             "product": 35,
@@ -4365,7 +4365,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 486,
         "fields": {
             "product": 35,
@@ -4374,7 +4374,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 487,
         "fields": {
             "product": 35,
@@ -4383,7 +4383,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 488,
         "fields": {
             "product": 35,
@@ -4392,7 +4392,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 489,
         "fields": {
             "product": 35,
@@ -4401,7 +4401,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 490,
         "fields": {
             "product": 35,
@@ -4410,7 +4410,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 491,
         "fields": {
             "product": 37,
@@ -4419,7 +4419,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 492,
         "fields": {
             "product": 37,
@@ -4428,7 +4428,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 493,
         "fields": {
             "product": 37,
@@ -4437,7 +4437,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 494,
         "fields": {
             "product": 37,
@@ -4446,7 +4446,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 495,
         "fields": {
             "product": 37,
@@ -4455,7 +4455,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 496,
         "fields": {
             "product": 37,
@@ -4464,7 +4464,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 497,
         "fields": {
             "product": 37,
@@ -4473,7 +4473,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 498,
         "fields": {
             "product": 37,
@@ -4482,7 +4482,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 499,
         "fields": {
             "product": 37,
@@ -4491,7 +4491,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 500,
         "fields": {
             "product": 37,
@@ -4500,7 +4500,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 501,
         "fields": {
             "product": 37,
@@ -4509,7 +4509,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 502,
         "fields": {
             "product": 37,
@@ -4518,7 +4518,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 503,
         "fields": {
             "product": 37,
@@ -4527,7 +4527,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 504,
         "fields": {
             "product": 37,
@@ -4536,7 +4536,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 505,
         "fields": {
             "product": 40,
@@ -4545,7 +4545,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 506,
         "fields": {
             "product": 40,
@@ -4554,7 +4554,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 507,
         "fields": {
             "product": 40,
@@ -4563,7 +4563,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 508,
         "fields": {
             "product": 40,
@@ -4572,7 +4572,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 509,
         "fields": {
             "product": 40,
@@ -4581,7 +4581,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 510,
         "fields": {
             "product": 40,
@@ -4590,7 +4590,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 511,
         "fields": {
             "product": 40,
@@ -4599,7 +4599,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 512,
         "fields": {
             "product": 40,
@@ -4608,7 +4608,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 513,
         "fields": {
             "product": 40,
@@ -4617,7 +4617,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 514,
         "fields": {
             "product": 40,
@@ -4626,7 +4626,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 515,
         "fields": {
             "product": 40,
@@ -4635,7 +4635,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 516,
         "fields": {
             "product": 40,
@@ -4644,7 +4644,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 517,
         "fields": {
             "product": 40,
@@ -4653,7 +4653,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 518,
         "fields": {
             "product": 40,
@@ -4662,7 +4662,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 519,
         "fields": {
             "product": 41,
@@ -4671,7 +4671,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 520,
         "fields": {
             "product": 41,
@@ -4680,7 +4680,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 521,
         "fields": {
             "product": 41,
@@ -4689,7 +4689,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 522,
         "fields": {
             "product": 41,
@@ -4698,7 +4698,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 523,
         "fields": {
             "product": 41,
@@ -4707,7 +4707,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 524,
         "fields": {
             "product": 41,
@@ -4716,7 +4716,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 525,
         "fields": {
             "product": 41,
@@ -4725,7 +4725,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 526,
         "fields": {
             "product": 41,
@@ -4734,7 +4734,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 527,
         "fields": {
             "product": 41,
@@ -4743,7 +4743,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 528,
         "fields": {
             "product": 41,
@@ -4752,7 +4752,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 529,
         "fields": {
             "product": 41,
@@ -4761,7 +4761,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 530,
         "fields": {
             "product": 41,
@@ -4770,7 +4770,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 531,
         "fields": {
             "product": 41,
@@ -4779,7 +4779,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 532,
         "fields": {
             "product": 41,
@@ -4788,7 +4788,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 533,
         "fields": {
             "product": 44,
@@ -4797,7 +4797,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 534,
         "fields": {
             "product": 44,
@@ -4806,7 +4806,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 535,
         "fields": {
             "product": 44,
@@ -4815,7 +4815,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 536,
         "fields": {
             "product": 44,
@@ -4824,7 +4824,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 537,
         "fields": {
             "product": 44,
@@ -4833,7 +4833,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 538,
         "fields": {
             "product": 44,
@@ -4842,7 +4842,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 539,
         "fields": {
             "product": 44,
@@ -4851,7 +4851,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 540,
         "fields": {
             "product": 44,
@@ -4860,7 +4860,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 541,
         "fields": {
             "product": 44,
@@ -4869,7 +4869,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 542,
         "fields": {
             "product": 44,
@@ -4878,7 +4878,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 543,
         "fields": {
             "product": 44,
@@ -4887,7 +4887,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 544,
         "fields": {
             "product": 44,
@@ -4896,7 +4896,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 545,
         "fields": {
             "product": 44,
@@ -4905,7 +4905,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 546,
         "fields": {
             "product": 44,
@@ -4914,7 +4914,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 547,
         "fields": {
             "product": 46,
@@ -4923,7 +4923,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 548,
         "fields": {
             "product": 46,
@@ -4932,7 +4932,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 549,
         "fields": {
             "product": 46,
@@ -4941,7 +4941,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 550,
         "fields": {
             "product": 46,
@@ -4950,7 +4950,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 551,
         "fields": {
             "product": 46,
@@ -4959,7 +4959,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 552,
         "fields": {
             "product": 46,
@@ -4968,7 +4968,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 553,
         "fields": {
             "product": 46,
@@ -4977,7 +4977,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 554,
         "fields": {
             "product": 46,
@@ -4986,7 +4986,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 555,
         "fields": {
             "product": 46,
@@ -4995,7 +4995,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 556,
         "fields": {
             "product": 46,
@@ -5004,7 +5004,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 557,
         "fields": {
             "product": 46,
@@ -5013,7 +5013,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 558,
         "fields": {
             "product": 46,
@@ -5022,7 +5022,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 559,
         "fields": {
             "product": 46,
@@ -5031,7 +5031,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 560,
         "fields": {
             "product": 46,
@@ -5040,7 +5040,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 561,
         "fields": {
             "product": 47,
@@ -5049,7 +5049,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 562,
         "fields": {
             "product": 47,
@@ -5058,7 +5058,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 563,
         "fields": {
             "product": 47,
@@ -5067,7 +5067,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 564,
         "fields": {
             "product": 47,
@@ -5076,7 +5076,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 565,
         "fields": {
             "product": 47,
@@ -5085,7 +5085,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 566,
         "fields": {
             "product": 47,
@@ -5094,7 +5094,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 567,
         "fields": {
             "product": 47,
@@ -5103,7 +5103,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 568,
         "fields": {
             "product": 47,
@@ -5112,7 +5112,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 569,
         "fields": {
             "product": 47,
@@ -5121,7 +5121,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 570,
         "fields": {
             "product": 47,
@@ -5130,7 +5130,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 571,
         "fields": {
             "product": 47,
@@ -5139,7 +5139,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 572,
         "fields": {
             "product": 47,
@@ -5148,7 +5148,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 573,
         "fields": {
             "product": 47,
@@ -5157,7 +5157,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 574,
         "fields": {
             "product": 47,
@@ -5166,7 +5166,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 575,
         "fields": {
             "product": 50,
@@ -5175,7 +5175,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 576,
         "fields": {
             "product": 50,
@@ -5184,7 +5184,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 577,
         "fields": {
             "product": 50,
@@ -5193,7 +5193,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 578,
         "fields": {
             "product": 50,
@@ -5202,7 +5202,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 579,
         "fields": {
             "product": 50,
@@ -5211,7 +5211,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 580,
         "fields": {
             "product": 50,
@@ -5220,7 +5220,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 581,
         "fields": {
             "product": 50,
@@ -5229,7 +5229,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 582,
         "fields": {
             "product": 50,
@@ -5238,7 +5238,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 583,
         "fields": {
             "product": 50,
@@ -5247,7 +5247,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 584,
         "fields": {
             "product": 50,
@@ -5256,7 +5256,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 585,
         "fields": {
             "product": 50,
@@ -5265,7 +5265,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 586,
         "fields": {
             "product": 50,
@@ -5274,7 +5274,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 587,
         "fields": {
             "product": 50,
@@ -5283,7 +5283,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 588,
         "fields": {
             "product": 50,
@@ -5292,7 +5292,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 589,
         "fields": {
             "product": 51,
@@ -5301,7 +5301,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 590,
         "fields": {
             "product": 51,
@@ -5310,7 +5310,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 591,
         "fields": {
             "product": 51,
@@ -5319,7 +5319,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 592,
         "fields": {
             "product": 51,
@@ -5328,7 +5328,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 593,
         "fields": {
             "product": 51,
@@ -5337,7 +5337,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 594,
         "fields": {
             "product": 51,
@@ -5346,7 +5346,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 595,
         "fields": {
             "product": 51,
@@ -5355,7 +5355,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 596,
         "fields": {
             "product": 51,
@@ -5364,7 +5364,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 597,
         "fields": {
             "product": 51,
@@ -5373,7 +5373,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 598,
         "fields": {
             "product": 51,
@@ -5382,7 +5382,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 599,
         "fields": {
             "product": 51,
@@ -5391,7 +5391,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 600,
         "fields": {
             "product": 51,
@@ -5400,7 +5400,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 601,
         "fields": {
             "product": 51,
@@ -5409,7 +5409,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 602,
         "fields": {
             "product": 51,
@@ -5418,7 +5418,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 603,
         "fields": {
             "product": 54,
@@ -5427,7 +5427,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 604,
         "fields": {
             "product": 54,
@@ -5436,7 +5436,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 605,
         "fields": {
             "product": 54,
@@ -5445,7 +5445,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 606,
         "fields": {
             "product": 54,
@@ -5454,7 +5454,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 607,
         "fields": {
             "product": 54,
@@ -5463,7 +5463,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 608,
         "fields": {
             "product": 54,
@@ -5472,7 +5472,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 609,
         "fields": {
             "product": 54,
@@ -5481,7 +5481,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 610,
         "fields": {
             "product": 54,
@@ -5490,7 +5490,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 611,
         "fields": {
             "product": 54,
@@ -5499,7 +5499,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 612,
         "fields": {
             "product": 54,
@@ -5508,7 +5508,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 613,
         "fields": {
             "product": 54,
@@ -5517,7 +5517,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 614,
         "fields": {
             "product": 54,
@@ -5526,7 +5526,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 615,
         "fields": {
             "product": 54,
@@ -5535,7 +5535,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 616,
         "fields": {
             "product": 54,
@@ -5544,7 +5544,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 617,
         "fields": {
             "product": 56,
@@ -5553,7 +5553,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 618,
         "fields": {
             "product": 56,
@@ -5562,7 +5562,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 619,
         "fields": {
             "product": 56,
@@ -5571,7 +5571,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 620,
         "fields": {
             "product": 56,
@@ -5580,7 +5580,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 621,
         "fields": {
             "product": 56,
@@ -5589,7 +5589,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 622,
         "fields": {
             "product": 56,
@@ -5598,7 +5598,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 623,
         "fields": {
             "product": 56,
@@ -5607,7 +5607,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 624,
         "fields": {
             "product": 56,
@@ -5616,7 +5616,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 625,
         "fields": {
             "product": 56,
@@ -5625,7 +5625,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 626,
         "fields": {
             "product": 56,
@@ -5634,7 +5634,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 627,
         "fields": {
             "product": 56,
@@ -5643,7 +5643,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 628,
         "fields": {
             "product": 56,
@@ -5652,7 +5652,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 629,
         "fields": {
             "product": 56,
@@ -5661,7 +5661,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 630,
         "fields": {
             "product": 56,
@@ -5670,7 +5670,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 631,
         "fields": {
             "product": 57,
@@ -5679,7 +5679,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 632,
         "fields": {
             "product": 57,
@@ -5688,7 +5688,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 633,
         "fields": {
             "product": 57,
@@ -5697,7 +5697,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 634,
         "fields": {
             "product": 57,
@@ -5706,7 +5706,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 635,
         "fields": {
             "product": 57,
@@ -5715,7 +5715,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 636,
         "fields": {
             "product": 57,
@@ -5724,7 +5724,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 637,
         "fields": {
             "product": 57,
@@ -5733,7 +5733,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 638,
         "fields": {
             "product": 57,
@@ -5742,7 +5742,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 639,
         "fields": {
             "product": 57,
@@ -5751,7 +5751,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 640,
         "fields": {
             "product": 57,
@@ -5760,7 +5760,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 641,
         "fields": {
             "product": 57,
@@ -5769,7 +5769,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 642,
         "fields": {
             "product": 57,
@@ -5778,7 +5778,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 643,
         "fields": {
             "product": 57,
@@ -5787,7 +5787,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 644,
         "fields": {
             "product": 57,
@@ -5796,7 +5796,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 645,
         "fields": {
             "product": 1,
@@ -5805,7 +5805,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 646,
         "fields": {
             "product": 1,
@@ -5814,7 +5814,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 647,
         "fields": {
             "product": 1,
@@ -5823,7 +5823,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 648,
         "fields": {
             "product": 1,
@@ -5832,7 +5832,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 649,
         "fields": {
             "product": 1,
@@ -5841,7 +5841,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 650,
         "fields": {
             "product": 1,
@@ -5850,7 +5850,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 651,
         "fields": {
             "product": 1,
@@ -5859,7 +5859,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 652,
         "fields": {
             "product": 1,
@@ -5868,7 +5868,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 653,
         "fields": {
             "product": 1,
@@ -5877,7 +5877,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 654,
         "fields": {
             "product": 1,
@@ -5886,7 +5886,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 655,
         "fields": {
             "product": 1,
@@ -5895,7 +5895,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 656,
         "fields": {
             "product": 1,
@@ -5904,7 +5904,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 657,
         "fields": {
             "product": 1,
@@ -5913,7 +5913,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 658,
         "fields": {
             "product": 1,
@@ -5922,7 +5922,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 659,
         "fields": {
             "product": 38,
@@ -5931,7 +5931,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 660,
         "fields": {
             "product": 38,
@@ -5940,7 +5940,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 661,
         "fields": {
             "product": 38,
@@ -5949,7 +5949,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 662,
         "fields": {
             "product": 38,
@@ -5958,7 +5958,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 663,
         "fields": {
             "product": 38,
@@ -5967,7 +5967,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 664,
         "fields": {
             "product": 38,
@@ -5976,7 +5976,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 665,
         "fields": {
             "product": 38,
@@ -5985,7 +5985,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 666,
         "fields": {
             "product": 38,
@@ -5994,7 +5994,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 667,
         "fields": {
             "product": 38,
@@ -6003,7 +6003,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 668,
         "fields": {
             "product": 38,
@@ -6012,7 +6012,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 669,
         "fields": {
             "product": 38,
@@ -6021,7 +6021,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 670,
         "fields": {
             "product": 38,
@@ -6030,7 +6030,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 671,
         "fields": {
             "product": 38,
@@ -6039,7 +6039,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 672,
         "fields": {
             "product": 38,
@@ -6048,7 +6048,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 673,
         "fields": {
             "product": 39,
@@ -6057,7 +6057,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 674,
         "fields": {
             "product": 39,
@@ -6066,7 +6066,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 675,
         "fields": {
             "product": 39,
@@ -6075,7 +6075,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 676,
         "fields": {
             "product": 39,
@@ -6084,7 +6084,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 677,
         "fields": {
             "product": 39,
@@ -6093,7 +6093,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 678,
         "fields": {
             "product": 39,
@@ -6102,7 +6102,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 679,
         "fields": {
             "product": 39,
@@ -6111,7 +6111,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 680,
         "fields": {
             "product": 39,
@@ -6120,7 +6120,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 681,
         "fields": {
             "product": 39,
@@ -6129,7 +6129,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 682,
         "fields": {
             "product": 39,
@@ -6138,7 +6138,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 683,
         "fields": {
             "product": 39,
@@ -6147,7 +6147,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 684,
         "fields": {
             "product": 39,
@@ -6156,7 +6156,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 685,
         "fields": {
             "product": 39,
@@ -6165,7 +6165,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 686,
         "fields": {
             "product": 39,
@@ -6174,7 +6174,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 687,
         "fields": {
             "product": 42,
@@ -6183,7 +6183,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 688,
         "fields": {
             "product": 42,
@@ -6192,7 +6192,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 689,
         "fields": {
             "product": 42,
@@ -6201,7 +6201,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 690,
         "fields": {
             "product": 42,
@@ -6210,7 +6210,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 691,
         "fields": {
             "product": 42,
@@ -6219,7 +6219,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 692,
         "fields": {
             "product": 42,
@@ -6228,7 +6228,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 693,
         "fields": {
             "product": 42,
@@ -6237,7 +6237,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 694,
         "fields": {
             "product": 42,
@@ -6246,7 +6246,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 695,
         "fields": {
             "product": 42,
@@ -6255,7 +6255,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 696,
         "fields": {
             "product": 42,
@@ -6264,7 +6264,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 697,
         "fields": {
             "product": 42,
@@ -6273,7 +6273,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 698,
         "fields": {
             "product": 42,
@@ -6282,7 +6282,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 699,
         "fields": {
             "product": 42,
@@ -6291,7 +6291,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 700,
         "fields": {
             "product": 42,
@@ -6300,7 +6300,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 701,
         "fields": {
             "product": 43,
@@ -6309,7 +6309,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 702,
         "fields": {
             "product": 43,
@@ -6318,7 +6318,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 703,
         "fields": {
             "product": 43,
@@ -6327,7 +6327,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 704,
         "fields": {
             "product": 43,
@@ -6336,7 +6336,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 705,
         "fields": {
             "product": 43,
@@ -6345,7 +6345,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 706,
         "fields": {
             "product": 43,
@@ -6354,7 +6354,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 707,
         "fields": {
             "product": 43,
@@ -6363,7 +6363,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 708,
         "fields": {
             "product": 43,
@@ -6372,7 +6372,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 709,
         "fields": {
             "product": 43,
@@ -6381,7 +6381,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 710,
         "fields": {
             "product": 43,
@@ -6390,7 +6390,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 711,
         "fields": {
             "product": 43,
@@ -6399,7 +6399,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 712,
         "fields": {
             "product": 43,
@@ -6408,7 +6408,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 713,
         "fields": {
             "product": 43,
@@ -6417,7 +6417,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 714,
         "fields": {
             "product": 43,
@@ -6426,7 +6426,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 715,
         "fields": {
             "product": 45,
@@ -6435,7 +6435,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 716,
         "fields": {
             "product": 45,
@@ -6444,7 +6444,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 717,
         "fields": {
             "product": 45,
@@ -6453,7 +6453,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 718,
         "fields": {
             "product": 45,
@@ -6462,7 +6462,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 719,
         "fields": {
             "product": 45,
@@ -6471,7 +6471,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 720,
         "fields": {
             "product": 45,
@@ -6480,7 +6480,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 721,
         "fields": {
             "product": 45,
@@ -6489,7 +6489,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 722,
         "fields": {
             "product": 45,
@@ -6498,7 +6498,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 723,
         "fields": {
             "product": 45,
@@ -6507,7 +6507,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 724,
         "fields": {
             "product": 45,
@@ -6516,7 +6516,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 725,
         "fields": {
             "product": 45,
@@ -6525,7 +6525,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 726,
         "fields": {
             "product": 45,
@@ -6534,7 +6534,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 727,
         "fields": {
             "product": 45,
@@ -6543,7 +6543,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 728,
         "fields": {
             "product": 45,
@@ -6552,7 +6552,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 729,
         "fields": {
             "product": 48,
@@ -6561,7 +6561,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 730,
         "fields": {
             "product": 48,
@@ -6570,7 +6570,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 731,
         "fields": {
             "product": 48,
@@ -6579,7 +6579,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 732,
         "fields": {
             "product": 48,
@@ -6588,7 +6588,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 733,
         "fields": {
             "product": 48,
@@ -6597,7 +6597,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 734,
         "fields": {
             "product": 48,
@@ -6606,7 +6606,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 735,
         "fields": {
             "product": 48,
@@ -6615,7 +6615,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 736,
         "fields": {
             "product": 48,
@@ -6624,7 +6624,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 737,
         "fields": {
             "product": 48,
@@ -6633,7 +6633,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 738,
         "fields": {
             "product": 48,
@@ -6642,7 +6642,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 739,
         "fields": {
             "product": 48,
@@ -6651,7 +6651,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 740,
         "fields": {
             "product": 48,
@@ -6660,7 +6660,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 741,
         "fields": {
             "product": 48,
@@ -6669,7 +6669,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 742,
         "fields": {
             "product": 48,
@@ -6678,7 +6678,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 743,
         "fields": {
             "product": 49,
@@ -6687,7 +6687,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 744,
         "fields": {
             "product": 49,
@@ -6696,7 +6696,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 745,
         "fields": {
             "product": 49,
@@ -6705,7 +6705,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 746,
         "fields": {
             "product": 49,
@@ -6714,7 +6714,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 747,
         "fields": {
             "product": 49,
@@ -6723,7 +6723,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 748,
         "fields": {
             "product": 49,
@@ -6732,7 +6732,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 749,
         "fields": {
             "product": 49,
@@ -6741,7 +6741,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 750,
         "fields": {
             "product": 49,
@@ -6750,7 +6750,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 751,
         "fields": {
             "product": 49,
@@ -6759,7 +6759,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 752,
         "fields": {
             "product": 49,
@@ -6768,7 +6768,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 753,
         "fields": {
             "product": 49,
@@ -6777,7 +6777,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 754,
         "fields": {
             "product": 49,
@@ -6786,7 +6786,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 755,
         "fields": {
             "product": 49,
@@ -6795,7 +6795,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 756,
         "fields": {
             "product": 49,
@@ -6804,7 +6804,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 757,
         "fields": {
             "product": 52,
@@ -6813,7 +6813,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 758,
         "fields": {
             "product": 52,
@@ -6822,7 +6822,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 759,
         "fields": {
             "product": 52,
@@ -6831,7 +6831,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 760,
         "fields": {
             "product": 52,
@@ -6840,7 +6840,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 761,
         "fields": {
             "product": 52,
@@ -6849,7 +6849,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 762,
         "fields": {
             "product": 52,
@@ -6858,7 +6858,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 763,
         "fields": {
             "product": 52,
@@ -6867,7 +6867,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 764,
         "fields": {
             "product": 52,
@@ -6876,7 +6876,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 765,
         "fields": {
             "product": 52,
@@ -6885,7 +6885,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 766,
         "fields": {
             "product": 52,
@@ -6894,7 +6894,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 767,
         "fields": {
             "product": 52,
@@ -6903,7 +6903,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 768,
         "fields": {
             "product": 52,
@@ -6912,7 +6912,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 769,
         "fields": {
             "product": 52,
@@ -6921,7 +6921,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 770,
         "fields": {
             "product": 52,
@@ -6930,7 +6930,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 771,
         "fields": {
             "product": 53,
@@ -6939,7 +6939,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 772,
         "fields": {
             "product": 53,
@@ -6948,7 +6948,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 773,
         "fields": {
             "product": 53,
@@ -6957,7 +6957,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 774,
         "fields": {
             "product": 53,
@@ -6966,7 +6966,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 775,
         "fields": {
             "product": 53,
@@ -6975,7 +6975,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 776,
         "fields": {
             "product": 53,
@@ -6984,7 +6984,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 777,
         "fields": {
             "product": 53,
@@ -6993,7 +6993,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 778,
         "fields": {
             "product": 53,
@@ -7002,7 +7002,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 779,
         "fields": {
             "product": 53,
@@ -7011,7 +7011,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 780,
         "fields": {
             "product": 53,
@@ -7020,7 +7020,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 781,
         "fields": {
             "product": 53,
@@ -7029,7 +7029,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 782,
         "fields": {
             "product": 53,
@@ -7038,7 +7038,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 783,
         "fields": {
             "product": 53,
@@ -7047,7 +7047,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 784,
         "fields": {
             "product": 53,
@@ -7056,7 +7056,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 785,
         "fields": {
             "product": 55,
@@ -7065,7 +7065,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 786,
         "fields": {
             "product": 55,
@@ -7074,7 +7074,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 787,
         "fields": {
             "product": 55,
@@ -7083,7 +7083,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 788,
         "fields": {
             "product": 55,
@@ -7092,7 +7092,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 789,
         "fields": {
             "product": 55,
@@ -7101,7 +7101,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 790,
         "fields": {
             "product": 55,
@@ -7110,7 +7110,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 791,
         "fields": {
             "product": 55,
@@ -7119,7 +7119,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 792,
         "fields": {
             "product": 55,
@@ -7128,7 +7128,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 793,
         "fields": {
             "product": 55,
@@ -7137,7 +7137,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 794,
         "fields": {
             "product": 55,
@@ -7146,7 +7146,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 795,
         "fields": {
             "product": 55,
@@ -7155,7 +7155,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 796,
         "fields": {
             "product": 55,
@@ -7164,7 +7164,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 797,
         "fields": {
             "product": 55,
@@ -7173,7 +7173,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 798,
         "fields": {
             "product": 55,
@@ -7182,7 +7182,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 799,
         "fields": {
             "product": 58,
@@ -7191,7 +7191,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 800,
         "fields": {
             "product": 58,
@@ -7200,7 +7200,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 801,
         "fields": {
             "product": 58,
@@ -7209,7 +7209,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 802,
         "fields": {
             "product": 58,
@@ -7218,7 +7218,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 803,
         "fields": {
             "product": 58,
@@ -7227,7 +7227,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 804,
         "fields": {
             "product": 58,
@@ -7236,7 +7236,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 805,
         "fields": {
             "product": 58,
@@ -7245,7 +7245,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 806,
         "fields": {
             "product": 58,
@@ -7254,7 +7254,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 807,
         "fields": {
             "product": 58,
@@ -7263,7 +7263,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 808,
         "fields": {
             "product": 58,
@@ -7272,7 +7272,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 809,
         "fields": {
             "product": 58,
@@ -7281,7 +7281,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 810,
         "fields": {
             "product": 58,
@@ -7290,7 +7290,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 811,
         "fields": {
             "product": 58,
@@ -7299,7 +7299,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 812,
         "fields": {
             "product": 58,
@@ -7308,7 +7308,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 813,
         "fields": {
             "product": 60,
@@ -7317,7 +7317,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 814,
         "fields": {
             "product": 60,
@@ -7326,7 +7326,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 815,
         "fields": {
             "product": 60,
@@ -7335,7 +7335,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 816,
         "fields": {
             "product": 60,
@@ -7344,7 +7344,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 817,
         "fields": {
             "product": 60,
@@ -7353,7 +7353,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 818,
         "fields": {
             "product": 60,
@@ -7362,7 +7362,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 819,
         "fields": {
             "product": 60,
@@ -7371,7 +7371,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 820,
         "fields": {
             "product": 60,
@@ -7380,7 +7380,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 821,
         "fields": {
             "product": 60,
@@ -7389,7 +7389,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 822,
         "fields": {
             "product": 60,
@@ -7398,7 +7398,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 823,
         "fields": {
             "product": 60,
@@ -7407,7 +7407,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 824,
         "fields": {
             "product": 60,
@@ -7416,7 +7416,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 825,
         "fields": {
             "product": 60,
@@ -7425,7 +7425,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 826,
         "fields": {
             "product": 60,
@@ -7434,7 +7434,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 827,
         "fields": {
             "product": 61,
@@ -7443,7 +7443,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 828,
         "fields": {
             "product": 61,
@@ -7452,7 +7452,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 829,
         "fields": {
             "product": 61,
@@ -7461,7 +7461,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 830,
         "fields": {
             "product": 61,
@@ -7470,7 +7470,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 831,
         "fields": {
             "product": 61,
@@ -7479,7 +7479,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 832,
         "fields": {
             "product": 61,
@@ -7488,7 +7488,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 833,
         "fields": {
             "product": 61,
@@ -7497,7 +7497,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 834,
         "fields": {
             "product": 61,
@@ -7506,7 +7506,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 835,
         "fields": {
             "product": 61,
@@ -7515,7 +7515,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 836,
         "fields": {
             "product": 61,
@@ -7524,7 +7524,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 837,
         "fields": {
             "product": 61,
@@ -7533,7 +7533,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 838,
         "fields": {
             "product": 61,
@@ -7542,7 +7542,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 839,
         "fields": {
             "product": 61,
@@ -7551,7 +7551,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 840,
         "fields": {
             "product": 61,
@@ -7560,7 +7560,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 841,
         "fields": {
             "product": 59,
@@ -7569,7 +7569,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 842,
         "fields": {
             "product": 59,
@@ -7578,7 +7578,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 843,
         "fields": {
             "product": 59,
@@ -7587,7 +7587,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 844,
         "fields": {
             "product": 59,
@@ -7596,7 +7596,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 845,
         "fields": {
             "product": 59,
@@ -7605,7 +7605,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 846,
         "fields": {
             "product": 59,
@@ -7614,7 +7614,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 847,
         "fields": {
             "product": 59,
@@ -7623,7 +7623,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 848,
         "fields": {
             "product": 59,
@@ -7632,7 +7632,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 849,
         "fields": {
             "product": 59,
@@ -7641,7 +7641,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 850,
         "fields": {
             "product": 59,
@@ -7650,7 +7650,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 851,
         "fields": {
             "product": 59,
@@ -7659,7 +7659,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 852,
         "fields": {
             "product": 59,
@@ -7668,7 +7668,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 853,
         "fields": {
             "product": 59,
@@ -7677,7 +7677,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 854,
         "fields": {
             "product": 59,
@@ -7686,7 +7686,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 855,
         "fields": {
             "product": 62,
@@ -7695,7 +7695,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 856,
         "fields": {
             "product": 62,
@@ -7704,7 +7704,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 857,
         "fields": {
             "product": 62,
@@ -7713,7 +7713,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 858,
         "fields": {
             "product": 62,
@@ -7722,7 +7722,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 859,
         "fields": {
             "product": 62,
@@ -7731,7 +7731,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 860,
         "fields": {
             "product": 62,
@@ -7740,7 +7740,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 861,
         "fields": {
             "product": 62,
@@ -7749,7 +7749,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 862,
         "fields": {
             "product": 62,
@@ -7758,7 +7758,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 863,
         "fields": {
             "product": 62,
@@ -7767,7 +7767,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 864,
         "fields": {
             "product": 62,
@@ -7776,7 +7776,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 865,
         "fields": {
             "product": 62,
@@ -7785,7 +7785,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 866,
         "fields": {
             "product": 62,
@@ -7794,7 +7794,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 867,
         "fields": {
             "product": 62,
@@ -7803,7 +7803,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 868,
         "fields": {
             "product": 62,
@@ -7812,7 +7812,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 869,
         "fields": {
             "product": 63,
@@ -7821,7 +7821,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 870,
         "fields": {
             "product": 63,
@@ -7830,7 +7830,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 871,
         "fields": {
             "product": 63,
@@ -7839,7 +7839,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 872,
         "fields": {
             "product": 63,
@@ -7848,7 +7848,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 873,
         "fields": {
             "product": 63,
@@ -7857,7 +7857,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 874,
         "fields": {
             "product": 63,
@@ -7866,7 +7866,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 875,
         "fields": {
             "product": 63,
@@ -7875,7 +7875,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 876,
         "fields": {
             "product": 63,
@@ -7884,7 +7884,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 877,
         "fields": {
             "product": 63,
@@ -7893,7 +7893,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 878,
         "fields": {
             "product": 63,
@@ -7902,7 +7902,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 879,
         "fields": {
             "product": 63,
@@ -7911,7 +7911,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 880,
         "fields": {
             "product": 63,
@@ -7920,7 +7920,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 881,
         "fields": {
             "product": 63,
@@ -7929,7 +7929,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 882,
         "fields": {
             "product": 63,
@@ -7938,7 +7938,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 883,
         "fields": {
             "product": 64,
@@ -7947,7 +7947,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 884,
         "fields": {
             "product": 64,
@@ -7956,7 +7956,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 885,
         "fields": {
             "product": 64,
@@ -7965,7 +7965,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 886,
         "fields": {
             "product": 64,
@@ -7974,7 +7974,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 887,
         "fields": {
             "product": 64,
@@ -7983,7 +7983,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 888,
         "fields": {
             "product": 64,
@@ -7992,7 +7992,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 889,
         "fields": {
             "product": 64,
@@ -8001,7 +8001,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 890,
         "fields": {
             "product": 64,
@@ -8010,7 +8010,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 891,
         "fields": {
             "product": 64,
@@ -8019,7 +8019,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 892,
         "fields": {
             "product": 64,
@@ -8028,7 +8028,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 893,
         "fields": {
             "product": 64,
@@ -8037,7 +8037,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 894,
         "fields": {
             "product": 64,
@@ -8046,7 +8046,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 895,
         "fields": {
             "product": 64,
@@ -8055,7 +8055,7 @@
         }
     },
     {
-        "model": "core.productvariant",
+        "model": "products.productvariant",
         "pk": 896,
         "fields": {
             "product": 64,

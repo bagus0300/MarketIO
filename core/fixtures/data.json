@@ -1,6 +1,6 @@
 [
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 1,
         "fields": {
             "name": "JavaScript Runner Pro",
@@ -13,7 +13,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 2,
         "fields": {
             "name": "HTML5 Hurdle Sprinter",
@@ -26,7 +26,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 3,
         "fields": {
             "name": "Python Performer Elite",
@@ -39,7 +39,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 4,
         "fields": {
             "name": "React Runner Dynamic",
@@ -52,7 +52,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 5,
         "fields": {
             "name": "Vue.js Velocity Runner",
@@ -65,7 +65,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 6,
         "fields": {
             "name": "Django Dynamo Sprinter",
@@ -78,7 +78,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 7,
         "fields": {
             "name": "SQL Slick Sprinter",
@@ -91,7 +91,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 8,
         "fields": {
             "name": "Node.js Nova Runner",
@@ -104,7 +104,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 9,
         "fields": {
             "name": "CSS Cyclone Sprinter",
@@ -117,7 +117,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 10,
         "fields": {
             "name": "Bootstrap Blaze Runner",
@@ -130,7 +130,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 11,
         "fields": {
             "name": "Angular Accelerator Runner",
@@ -143,7 +143,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 12,
         "fields": {
             "name": "Vue.js Velocity Sprinter",
@@ -156,7 +156,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 13,
         "fields": {
             "name": "Python Performer Sprinter",
@@ -169,7 +169,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 14,
         "fields": {
             "name": "React Runner Precision",
@@ -182,7 +182,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 15,
         "fields": {
             "name": "HTML5 Hurdle Sprinter Dynamic",
@@ -195,7 +195,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 16,
         "fields": {
             "name": "Django Dynamo Runner Pro",
@@ -208,7 +208,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 17,
         "fields": {
             "name": "SQL Slick Sprinter Elite",
@@ -221,7 +221,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 18,
         "fields": {
             "name": "Node.js Nova Sprinter",
@@ -234,7 +234,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 19,
         "fields": {
             "name": "CSS Cyclone Runner Dynamic",
@@ -247,7 +247,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 20,
         "fields": {
             "name": "Bootstrap Blaze Sprinter",
@@ -260,7 +260,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 21,
         "fields": {
             "name": "Angular Accelerator Sprinter",
@@ -273,7 +273,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 22,
         "fields": {
             "name": "Vue.js Velocity Runner Pro",
@@ -286,7 +286,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 23,
         "fields": {
             "name": "Python Performer Sprinter Elite",
@@ -299,7 +299,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 24,
         "fields": {
             "name": "React Runner Precision Pro",
@@ -312,7 +312,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 25,
         "fields": {
             "name": "HTML5 Hurdle Sprinter Dynamic Elite",
@@ -325,7 +325,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 26,
         "fields": {
             "name": "Django Dynamo Runner Pro Max",
@@ -338,7 +338,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 27,
         "fields": {
             "name": "SQL Slick Sprinter Elite X",
@@ -351,7 +351,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 28,
         "fields": {
             "name": "Node.js Nova Sprinter Max",
@@ -364,7 +364,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 29,
         "fields": {
             "name": "CSS Cyclone Runner Dynamic Elite",
@@ -377,7 +377,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 30,
         "fields": {
             "name": "Bootstrap Blaze Sprinter Pro",
@@ -390,7 +390,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 31,
         "fields": {
             "name": "Angular Accelerator Runner Elite",
@@ -403,7 +403,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 32,
         "fields": {
             "name": "Vue.js Velocity Runner Pro Max",
@@ -416,7 +416,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 33,
         "fields": {
             "name": "Python Performer Sprinter Max",
@@ -429,7 +429,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 34,
         "fields": {
             "name": "React Runner Precision Pro X",
@@ -442,7 +442,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 35,
         "fields": {
             "name": "HTML5 Hurdle Sprinter Dynamic Elite X",
@@ -455,7 +455,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 36,
         "fields": {
             "name": "Django Dynamo Runner Pro Max Plus",
@@ -468,7 +468,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 37,
         "fields": {
             "name": "SQL Slick Sprinter Elite X2",
@@ -481,7 +481,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 38,
         "fields": {
             "name": "Node.js Nova Sprinter Max Pro",
@@ -494,7 +494,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 39,
         "fields": {
             "name": "CSS Cyclone Runner Dynamic Elite X",
@@ -507,7 +507,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 40,
         "fields": {
             "name": "Bootstrap Blaze Sprinter Pro Max",
@@ -520,7 +520,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 41,
         "fields": {
             "name": "Angular Accelerator Runner Elite X",
@@ -533,7 +533,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 42,
         "fields": {
             "name": "Vue.js Velocity Runner Pro Max Plus",
@@ -546,7 +546,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 43,
         "fields": {
             "name": "Python Performer Sprinter Max Pro",
@@ -559,7 +559,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 44,
         "fields": {
             "name": "React Runner Precision Pro X2",
@@ -572,7 +572,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 45,
         "fields": {
             "name": "HTML5 Hurdle Sprinter Dynamic Elite X2",
@@ -585,7 +585,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 46,
         "fields": {
             "name": "Django Dynamo Runner Pro Max Plus X",
@@ -598,7 +598,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 47,
         "fields": {
             "name": "SQL Slick Sprinter Elite X2 Plus",
@@ -611,7 +611,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 48,
         "fields": {
             "name": "Node.js Nova Sprinter Max Pro X",
@@ -624,7 +624,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 49,
         "fields": {
             "name": "CSS Cyclone Runner Dynamic Elite X2",
@@ -637,7 +637,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 50,
         "fields": {
             "name": "Bootstrap Blaze Sprinter Pro Max Plus",
@@ -650,7 +650,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 51,
         "fields": {
             "name": "Angular Accelerator Runner Elite X2",
@@ -663,7 +663,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 52,
         "fields": {
             "name": "Vue.js Velocity Runner Pro Max Plus X",
@@ -676,7 +676,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 53,
         "fields": {
             "name": "Python Performer Sprinter Max Pro X",
@@ -689,7 +689,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 54,
         "fields": {
             "name": "React Runner Precision Pro X2 Plus",
@@ -702,7 +702,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 55,
         "fields": {
             "name": "HTML5 Hurdle Sprinter Dynamic Elite X2 Plus",
@@ -715,7 +715,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 56,
         "fields": {
             "name": "Django Dynamo Runner Pro Max Plus X2",
@@ -728,7 +728,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 57,
         "fields": {
             "name": "SQL Slick Sprinter Elite X2 Plus X",
@@ -741,7 +741,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 58,
         "fields": {
             "name": "Node.js Nova Sprinter Max Pro X2",
@@ -754,7 +754,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 59,
         "fields": {
             "name": "HTMX S2 Script",
@@ -767,7 +767,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 60,
         "fields": {
             "name": "Tailwind Optimise Pro",
@@ -780,7 +780,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 61,
         "fields": {
             "name": "Alpine JS PRO",
@@ -793,7 +793,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 62,
         "fields": {
             "name": "Figma Proto X",
@@ -806,7 +806,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 63,
         "fields": {
             "name": "Swift Premium Gold",
@@ -819,7 +819,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 64,
         "fields": {
             "name": "Flask FlexRun",
@@ -832,56 +832,56 @@
         }
     },
     {
-        "model": "core.productcategory",
+        "model": "products.productcategory",
         "pk": 1,
         "fields": {
             "name": "Men's Running"
         }
     },
     {
-        "model": "core.productcategory",
+        "model": "products.productcategory",
         "pk": 2,
         "fields": {
             "name": "Women's Running"
         }
     },
     {
-        "model": "core.productcategory",
+        "model": "products.productcategory",
         "pk": 3,
         "fields": {
             "name": "Men's Trainers"
         }
     },
     {
-        "model": "core.productcategory",
+        "model": "products.productcategory",
         "pk": 4,
         "fields": {
             "name": "Women's Trainers"
         }
     },
     {
-        "model": "core.productcategory",
+        "model": "products.productcategory",
         "pk": 5,
         "fields": {
             "name": "Other"
         }
     },
     {
-        "model": "core.productcategory",
+        "model": "products.productcategory",
         "pk": 6,
         "fields": {
             "name": "test"
         }
     },
     {
-        "model": "core.productcategory",
+        "model": "products.productcategory",
         "pk": 7,
         "fields": {
             "name": "testes"
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 1,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_10.webp",
@@ -889,7 +889,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 2,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_11.webp",
@@ -897,7 +897,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 3,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_12.webp",
@@ -905,7 +905,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 4,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_13.webp",
@@ -913,7 +913,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 5,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_14.webp",
@@ -921,7 +921,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 6,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_15.webp",
@@ -929,7 +929,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 7,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_16.webp",
@@ -937,7 +937,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 8,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_17.webp",
@@ -945,7 +945,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 9,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_18.webp",
@@ -953,7 +953,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 10,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_19.webp",
@@ -961,7 +961,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 11,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_20.webp",
@@ -969,7 +969,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 12,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_21.webp",
@@ -977,7 +977,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 13,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_22.webp",
@@ -985,7 +985,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 14,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_23.webp",
@@ -993,7 +993,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 15,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_24.webp",
@@ -1001,7 +1001,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 16,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_25.webp",
@@ -1009,7 +1009,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 17,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_26.webp",
@@ -1017,7 +1017,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 18,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_27.webp",
@@ -1025,7 +1025,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 19,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_28.webp",
@@ -1033,7 +1033,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 20,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_29.webp",
@@ -1041,7 +1041,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 21,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_30.webp",
@@ -1049,7 +1049,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 22,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_31.webp",
@@ -1057,7 +1057,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 23,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_32.webp",
@@ -1065,7 +1065,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 24,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_33.webp",
@@ -1073,7 +1073,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 25,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_34.webp",
@@ -1081,7 +1081,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 26,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_35.webp",
@@ -1089,7 +1089,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 27,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_36.webp",
@@ -1097,7 +1097,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 28,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_37.webp",
@@ -1105,7 +1105,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 29,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_38.webp",
@@ -1113,7 +1113,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 30,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_39.webp",
@@ -1121,7 +1121,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 31,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_40.webp",
@@ -1129,7 +1129,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 32,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_41.webp",
@@ -1137,7 +1137,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 33,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_42.webp",
@@ -1145,7 +1145,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 34,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_43.webp",
@@ -1153,7 +1153,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 35,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_44.webp",
@@ -1161,7 +1161,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 36,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_45.webp",
@@ -1169,7 +1169,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 37,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_46.webp",
@@ -1177,7 +1177,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 38,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_47.webp",
@@ -1185,7 +1185,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 39,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_48.webp",
@@ -1193,7 +1193,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 40,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_49.webp",
@@ -1201,7 +1201,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 41,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_50.webp",
@@ -1209,7 +1209,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 42,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_51.webp",
@@ -1217,7 +1217,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 43,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_52.webp",
@@ -1225,7 +1225,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 44,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_53.webp",
@@ -1233,7 +1233,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 45,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_54.webp",
@@ -1241,7 +1241,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 46,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_8.webp",
@@ -1249,7 +1249,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 47,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_9.webp",
@@ -1257,7 +1257,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 48,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_1_1.webp",
@@ -1265,7 +1265,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 49,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_1_2.webp",
@@ -1273,7 +1273,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 50,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_1.webp",
@@ -1281,7 +1281,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 51,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_2_4.webp",
@@ -1289,7 +1289,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 52,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_2_5.webp",
@@ -1297,7 +1297,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 53,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_2_6.webp",
@@ -1305,7 +1305,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 54,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_2_7.webp",
@@ -1313,7 +1313,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 55,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_3_2.webp",
@@ -1321,7 +1321,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 56,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_3_3.webp",
@@ -1329,7 +1329,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 57,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_3_4.webp",
@@ -1337,7 +1337,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 58,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_3_5.webp",
@@ -1345,7 +1345,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 59,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_55.webp",
@@ -1353,7 +1353,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 60,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_56.webp",
@@ -1361,7 +1361,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 61,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_58.webp",
@@ -1369,7 +1369,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 62,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_1_3.webp",
@@ -1377,7 +1377,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 63,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_0_57.webp",
@@ -1385,7 +1385,7 @@
         }
     },
     {
-        "model": "core.productimage",
+        "model": "products.productimage",
         "pk": 64,
         "fields": {
             "image": "product_imgs/Leonardo_Diffusion_Product_image_side_view_of_running_shoe_run_3_6_wGMOZTz.webp",

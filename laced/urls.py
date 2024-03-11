@@ -21,6 +21,8 @@ from . import settings
 from core import views as core_views
 from users import views as user_views
 from checkout import views as checkout_views
+from products import views as product_views
+from cart import views as cart_views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -28,23 +30,23 @@ urlpatterns = [
     path("login/", user_views.login_view, name="login"),
     path("logout/", user_views.logout_view, name="logout"),
     path("signup/", user_views.signup_view, name="signup"),
-    path("account/", core_views.account_view, name="account"),
+    path("account/", user_views.account_view, name="account"),
     path("account/addresses/", user_views.account_addresses_view, name="account_addresses"),
-    path("account/orders/", core_views.account_orders_view, name="account_orders"),
-    path("account/favourites/", core_views.account_favourites_view, name="account_favourites"),
-    path("products/", core_views.products_view, name="products"),
+    path("account/orders/", user_views.account_orders_view, name="account_orders"),
+    path("account/favourites/", user_views.account_favourites_view, name="account_favourites"),
+    path("products/", product_views.products_view, name="products"),
     path(
         "products/<int:product_id>/",
-        core_views.product_detail_view,
+        product_views.product_detail_view,
         name="product_detail",
     ),
-    path("products/add_to_cart/", core_views.add_to_cart, name="add_to_cart"),
-    path("cart/", core_views.cart_view, name="cart"),
-    path("cart/update_cart_quantity/<int:cart_item_id>/<int:quantity>/", core_views.update_cart_quantity, name="update_cart_quantity"),
-    path("cart/remove_from_cart/<int:cart_item_id>/", core_views.remove_from_cart, name="delete_cart_item"),
+    path("products/add_to_cart/", cart_views.add_to_cart, name="add_to_cart"),
+    path("cart/", cart_views.cart_view, name="cart"),
+    path("cart/update_cart_quantity/<int:cart_item_id>/<int:quantity>/", cart_views.update_cart_quantity, name="update_cart_quantity"),
+    path("cart/remove_from_cart/<int:cart_item_id>/", cart_views.remove_from_cart, name="delete_cart_item"),
     path(
         "products/<int:product_id>/favourite/",
-        core_views.add_remove_user_favourite,
+        user_views.add_remove_user_favourite,
         name="favourite",
     ),
     path("checkout/", checkout_views.checkout_view, name="checkout"),

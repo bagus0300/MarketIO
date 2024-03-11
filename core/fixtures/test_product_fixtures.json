@@ -1,6 +1,6 @@
 [
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 1,
         "fields": {
             "name": "JavaScript Runner Pro",
@@ -13,7 +13,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 2,
         "fields": {
             "name": "HTML5 Hurdle Sprinter",
@@ -26,7 +26,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 3,
         "fields": {
             "name": "Python Performer Elite",
@@ -39,7 +39,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 4,
         "fields": {
             "name": "React Runner Dynamic",
@@ -52,7 +52,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 5,
         "fields": {
             "name": "Vue.js Velocity Runner",
@@ -65,7 +65,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 6,
         "fields": {
             "name": "Django Dynamo Sprinter",
@@ -78,7 +78,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 7,
         "fields": {
             "name": "SQL Slick Sprinter",
@@ -91,7 +91,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 8,
         "fields": {
             "name": "Node.js Nova Runner",
@@ -104,7 +104,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 9,
         "fields": {
             "name": "CSS Cyclone Sprinter",
@@ -117,7 +117,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 10,
         "fields": {
             "name": "Bootstrap Blaze Runner",
@@ -130,7 +130,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 11,
         "fields": {
             "name": "Angular Accelerator Runner",
@@ -143,7 +143,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 12,
         "fields": {
             "name": "Vue.js Velocity Sprinter",
@@ -156,7 +156,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 13,
         "fields": {
             "name": "Python Performer Sprinter",
@@ -169,7 +169,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 14,
         "fields": {
             "name": "React Runner Precision",
@@ -182,7 +182,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 15,
         "fields": {
             "name": "HTML5 Hurdle Sprinter Dynamic",
@@ -195,7 +195,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 16,
         "fields": {
             "name": "Django Dynamo Runner Pro",
@@ -208,7 +208,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 17,
         "fields": {
             "name": "SQL Slick Sprinter Elite",
@@ -221,7 +221,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 18,
         "fields": {
             "name": "Node.js Nova Sprinter",
@@ -234,7 +234,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 19,
         "fields": {
             "name": "CSS Cyclone Runner Dynamic",
@@ -247,7 +247,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 20,
         "fields": {
             "name": "Bootstrap Blaze Sprinter",
@@ -260,7 +260,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 21,
         "fields": {
             "name": "Angular Accelerator Sprinter",
@@ -273,7 +273,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 22,
         "fields": {
             "name": "Vue.js Velocity Runner Pro",
@@ -286,7 +286,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 23,
         "fields": {
             "name": "Python Performer Sprinter Elite",
@@ -299,7 +299,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 24,
         "fields": {
             "name": "React Runner Precision Pro",
@@ -312,7 +312,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 25,
         "fields": {
             "name": "HTML5 Hurdle Sprinter Dynamic Elite",
@@ -325,7 +325,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 26,
         "fields": {
             "name": "Django Dynamo Runner Pro Max",
@@ -338,7 +338,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 27,
         "fields": {
             "name": "SQL Slick Sprinter Elite X",
@@ -351,7 +351,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 28,
         "fields": {
             "name": "Node.js Nova Sprinter Max",
@@ -364,7 +364,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 29,
         "fields": {
             "name": "CSS Cyclone Runner Dynamic Elite",
@@ -377,7 +377,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 30,
         "fields": {
             "name": "Bootstrap Blaze Sprinter Pro",
@@ -390,7 +390,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 31,
         "fields": {
             "name": "Angular Accelerator Runner Elite",
@@ -403,7 +403,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 32,
         "fields": {
             "name": "Vue.js Velocity Runner Pro Max",
@@ -416,7 +416,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 33,
         "fields": {
             "name": "Python Performer Sprinter Max",
@@ -429,7 +429,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 34,
         "fields": {
             "name": "React Runner Precision Pro X",
@@ -442,7 +442,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 35,
         "fields": {
             "name": "HTML5 Hurdle Sprinter Dynamic Elite X",
@@ -455,7 +455,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 36,
         "fields": {
             "name": "Django Dynamo Runner Pro Max Plus",
@@ -468,7 +468,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 37,
         "fields": {
             "name": "SQL Slick Sprinter Elite X2",
@@ -481,7 +481,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 38,
         "fields": {
             "name": "Node.js Nova Sprinter Max Pro",
@@ -494,7 +494,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 39,
         "fields": {
             "name": "CSS Cyclone Runner Dynamic Elite X",
@@ -507,7 +507,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 40,
         "fields": {
             "name": "Bootstrap Blaze Sprinter Pro Max",
@@ -520,7 +520,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 41,
         "fields": {
             "name": "Angular Accelerator Runner Elite X",
@@ -533,7 +533,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 42,
         "fields": {
             "name": "Vue.js Velocity Runner Pro Max Plus",
@@ -546,7 +546,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 43,
         "fields": {
             "name": "Python Performer Sprinter Max Pro",
@@ -559,7 +559,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 44,
         "fields": {
             "name": "React Runner Precision Pro X2",
@@ -572,7 +572,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 45,
         "fields": {
             "name": "HTML5 Hurdle Sprinter Dynamic Elite X2",
@@ -585,7 +585,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 46,
         "fields": {
             "name": "Django Dynamo Runner Pro Max Plus X",
@@ -598,7 +598,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 47,
         "fields": {
             "name": "SQL Slick Sprinter Elite X2 Plus",
@@ -611,7 +611,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 48,
         "fields": {
             "name": "Node.js Nova Sprinter Max Pro X",
@@ -624,7 +624,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 49,
         "fields": {
             "name": "CSS Cyclone Runner Dynamic Elite X2",
@@ -637,7 +637,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 50,
         "fields": {
             "name": "Bootstrap Blaze Sprinter Pro Max Plus",
@@ -650,7 +650,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 51,
         "fields": {
             "name": "Angular Accelerator Runner Elite X2",
@@ -663,7 +663,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 52,
         "fields": {
             "name": "Vue.js Velocity Runner Pro Max Plus X",
@@ -676,7 +676,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 53,
         "fields": {
             "name": "Python Performer Sprinter Max Pro X",
@@ -689,7 +689,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 54,
         "fields": {
             "name": "React Runner Precision Pro X2 Plus",
@@ -702,7 +702,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 55,
         "fields": {
             "name": "HTML5 Hurdle Sprinter Dynamic Elite X2 Plus",
@@ -715,7 +715,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 56,
         "fields": {
             "name": "Django Dynamo Runner Pro Max Plus X2",
@@ -728,7 +728,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 57,
         "fields": {
             "name": "SQL Slick Sprinter Elite X2 Plus X",
@@ -741,7 +741,7 @@
         }
     },
     {
-        "model": "core.product",
+        "model": "products.product",
         "pk": 58,
         "fields": {
             "name": "Node.js Nova Sprinter Max Pro X2",

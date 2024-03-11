@@ -1,4 +1,4 @@
-from core.models import Cart
+from cart.models import Cart
 
 
 def cart_quantity_badge(request):

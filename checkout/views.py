@@ -2,7 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
-from core.models import Cart, ProductVariant
+from products.models import ProductVariant
+from cart.models import Cart
 from users.models import UserAddress, User
 from .models import Order, OrderItem, OrderAddress
 import stripe

@@ -13,7 +13,7 @@ class OrderItem(models.Model):
         price (Decimal): The price of this item.
     """
     order = models.ForeignKey("checkout.Order", on_delete=models.CASCADE)
-    item = models.ForeignKey("core.ProductVariant", on_delete=models.CASCADE)
+    item = models.ForeignKey("products.ProductVariant", on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField()
     price = models.DecimalField(decimal_places=2, max_digits=10)
 
