@@ -50,6 +50,7 @@ AUTH_USER_MODEL = "users.User"
 INSTALLED_APPS = [
     'core',
     'users',
+    'checkout',
     "debug_toolbar",
     'django.contrib.admin',
     'django.contrib.auth',

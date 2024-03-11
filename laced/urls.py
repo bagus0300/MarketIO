@@ -20,6 +20,7 @@ from django.conf.urls.static import static
 from . import settings
 from core import views as core_views
 from users import views as user_views
+from checkout import views as checkout_views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -46,12 +47,12 @@ urlpatterns = [
         core_views.add_remove_user_favourite,
         name="favourite",
     ),
-    path("checkout/", core_views.checkout_view, name="checkout"),
-    path("checkout/confirmation/", core_views.checkout_confirmation_view, name="confirmation"),
-    path("checkout/change_address/", core_views.checkout_change_address, name="checkout_change_address"),
-    path("create_payment_intent/", core_views.create_payment_intent, name="create_payment_intent"),
-    path("add_payment_intent_address/", core_views.add_payment_intent_address, name="add_payment_intent_address"),
-    path("stripe_webhook/", core_views.stripe_webhook, name="stripe_webhook"),
+    path("checkout/", checkout_views.checkout_view, name="checkout"),
+    path("checkout/confirmation/", checkout_views.checkout_confirmation_view, name="confirmation"),
+    path("checkout/change_address/", checkout_views.checkout_change_address, name="checkout_change_address"),
+    path("create_payment_intent/", checkout_views.create_payment_intent, name="create_payment_intent"),
+    path("add_payment_intent_address/", checkout_views.add_payment_intent_address, name="add_payment_intent_address"),
+    path("stripe_webhook/", checkout_views.stripe_webhook, name="stripe_webhook"),
     path("__debug__/", include("debug_toolbar.urls")),
 ]
 
