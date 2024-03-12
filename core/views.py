@@ -10,9 +10,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-stripe.api_key = os.getenv("STRIPE_PRIVATE_KEY")
-
-
 def home_view(request):
     """
     Renders the home page view.
