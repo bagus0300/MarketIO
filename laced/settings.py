@@ -22,6 +22,9 @@ DATABASES = {
     'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
 }
 
+MAILCHIMP_API_KEY = os.environ.get("MAILCHIMP_API_KEY")
+MAILCHIMP_DATA_CENTER = os.environ.get("MAILCHIMP_DATA_CENTER")
+MAILCHIMP_LIST_ID = os.environ.get("MAILCHIMP_LIST_ID")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent

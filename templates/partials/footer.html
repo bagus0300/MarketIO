@@ -3,21 +3,19 @@
     <div class="container flex flex-wrap justify-between">
         <div class="flex flex-col justify-between w-full gap-8 py-12 border-t-2 sm:gap-0 sm:flex-row border-primary">
             <div class="flex flex-col justify-between flex-1">
-                <div class="flex flex-col gap-3">
-                    {% comment %} Implement in future release {% endcomment %}
-                    {% comment %} <a href="#">Contact</a>
-                    <a href="#">About</a>
-                    <a href="#">Terms & Conditions</a> {% endcomment %}
-                </div>
-                <div>
-                    <p class="mt-4 mb-2 font-bold sm:mt-0">Subscribe to our email offers</p>
+                <div class="flex flex-col gap-3"></div>
+                <form hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'
+                      hx-swap="innerHTML"
+                      hx-target="#newletter-message-box">
+                    <p id="newletter-message-box" class="mt-4 mb-2 font-bold sm:mt-0">Subscribe to our email offers</p>
                     <div class="relative w-[300px]">
                         <input type="text"
                                name="email"
                                id="newsletter-email"
                                class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
                                placeholder="Email">
-                        <div class="absolute top-0 right-0 w-12 h-12">
+                        <div class="absolute top-0 right-0 w-12 h-12"
+                             hx-post="{% url 'subscribe' %}">
                             <div class="flex items-center justify-center w-full h-full">
                                 <svg width="22"
                                      height="22"
@@ -31,7 +29,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
             <div class="flex flex-col justify-between flex-1 gap-4 sm:gap-0 sm:items-end">
                 <div class="flex flex-col gap-6 sm:items-end">
