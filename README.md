@@ -543,26 +543,53 @@ This section outlines the various technologies used throughout the project and t
 
 # Deployment
 
-Clone the repo to your local machine and follow these steps to deploy locally. These instructions assume you are not using AWS for static files, and are serving static files locally, and that you have a PostgreSQL instance available for connection.
+#### 📦 Local Deployment  
+1. Clone the repository from GitHub by clicking the "Code" button and copying the URL.
+2. Open your preferred IDE and open a terminal session in the directory you want to clone the repository to.
+3. Type `git clone` followed by the URL you copied in step 1 and press enter.
+4. Install the required dependencies by typing `pip install -r requirements.txt` in the terminal.
+5. Note: The project is setup to use environment variables. You will need to set these up in your local environment. See [Environment Variables](#environment-variables) for more information.
+6. Connect your database of choice and run the migrations by typing `python manage.py migrate` in the terminal.
+7. Create a superuser by typing `python manage.py createsuperuser` in the terminal and following the prompts.
+8. Optional: Fixtures for Product-related models are included in the project in the `core/fixtures` directory. To add pre-populated data to the database, run `python manage.py loaddata core/fixtures/[fixture_name].json`.
+9. Run the app by typing `python manage.py runserver` in the terminal and opening the URL in your browser.
 
- 1. In the root of the repo directory, create a `.env` file with the following environment variables.
+#### 💜 Heroku Deployment
+1. Login to the Heroku dashboard and create a new app.
+2. Connect your GitHub repository to your Heroku app.
+3. In the Settings tab, ensure that the Python Buildpack is added.
+4. Set environment variables in the Config Vars section of the Settings tab.
+5. In the Deploy tab, enable automatic deploys from your GitHub repository.
+6. Click the "Deploy Branch" button to deploy the app.
+7. Once the app has been deployed, click the "Open App" button to view the app.
+8. If using S3, you will need to set up an S3 bucket and add the environment variables to your Heroku app (see tutorial [here](https://testdriven.io/blog/storing-django-static-and-media-files-on-amazon-s3/) for reference.)
 
-```python
-DEBUG=FALSE #django debug mode
-SECRET_KEY= #your django secret key
-STRIPE_PRIVATE_KEY= #your stripe private key
-DATABASE_URL= #your postgres database URL
+#### 📐 Environment Variables
+- For local deployment, you will need to create a `.env` file in the root directory of the project and set the environment variables in this file.
+- For Heroku deployment, you will need to set the environment variables through the Heroku CLI or through the Heroku dashboard under 'Config Vars'.
+- You need to define the following variables:
+  - If using a Postgres database:
+    - `DATABASE_URL` - the URL for your Postgres database.
+    - `NAME` - the name of your database.
+    - `USER` - the username for your database.
+    - `PASSWORD` - the password for your database.
+    - `HOST` - the host for your database.
+    - `PORT` - the port for your database.
+  - Django settings:
+    - `SECRET_KEY` - the secret key for your Django project.
+    - `DEBUG` - set to `True` for development, `False` for production.
+  - If using S3:
+    - `USE_S3` - set to `True` to use S3, `False` to use local storage.
+    - `AWS_ACCESS_KEY_ID` - your AWS access key ID.
+    - `AWS_SECRET_ACCESS_KEY` - your AWS secret access key.
+    - `AWS_STORAGE_BUCKET_NAME` - the name of your AWS S3 bucket.
+  - If using Mailchimp (Newsletter form):
+    - `MAILCHIMP_API_KEY` - your Mailchimp API key.
+    - `MAILCHIMP_DATA_CENTER` - your Mailchimp-assigned data center
+    - `MAILCHIMP_LIST_ID` - The ID of your mail-list.
+  - For Stripe checkout:
+    - `STRIPE_PRIVATE_KEY` - your private API key.
 
-#set to false unless you have an AWS instance with S3 and Cloudfront
-USE_S3=FALSE
-#if above is FALSE, ignore below variables
-AWS_ACCESS_KEY_ID= #AWS access key
-AWS_SECRET_ACCESS_KEY= #AWS secret access key
-AWS_STORAGE_BUCKET_NAME= #name of your S3 storage bucket
-AWS_S3_CUSTOM_DOMAIN= #your cloudfront domain
-```
+#### Additional Stripe Configuration
+- Additional to adding your own `STRIPE_PRIVATE_KEY`, you must also set the `return_url` and public key in `checkout.js`
 
-2. Run `pip install -r requirements.txt` to install required packages.
-3. Run `python manage.py loaddata variants.json` to load ProductVariants to the database
-4. Run `python manage.py loaddata data.json` to load all other sample data including products, images etc.
-5. Run the local server with `python manage.py runserver`
