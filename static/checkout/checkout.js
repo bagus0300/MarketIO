@@ -58,10 +58,9 @@ function createStripeElements() {
 async function handleSubmit(e, clientSecret) {
   e.preventDefault();
   setLoading(true);
+  let address;
   try {
-    let address = document.querySelector(
-      '[name="prev_selected_address"]'
-    ).value;
+    address = document.querySelector('[name="prev_selected_address"]').value;
   } catch {
     alert("Please select an address before paying");
     setLoading(false);
@@ -83,10 +82,10 @@ async function handleSubmit(e, clientSecret) {
   const { error } = await stripe.confirmPayment({
     elements,
     confirmParams: {
-      return_url: "https://laced.carlmurray.design/checkout/confirmation/",
+      // return_url: "https://laced.carlmurray.design/checkout/confirmation/",
 
       // Uncomment for local testing only
-      // return_url: "http://localhost:8000/checkout/confirmation/",
+      return_url: "http://localhost:8000/checkout/confirmation/",
       receipt_email: email,
     },
   });
