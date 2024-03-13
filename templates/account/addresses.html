@@ -29,9 +29,9 @@
                 <h2 class="text-2xl font-bold">ADDRESS {{ forloop.counter }}</h2>
                 <p>{{ address.name }}</p>
                 <p>{{ address.address_line_1 }}</p>
-                <p>{{ address.address_line_2 }}</p>
+                {% if address.address_line_2 %}<p>{{ address.address_line_2 }}</p>{% endif %}
                 <p>{{ address.city }}</p>
-                <p>{{ address.county }}</p>
+                <p>{{ address.get_county_display }}</p>
                 <p>{{ address.eircode }}</p>
                 <div class="flex flex-col items-start my-4"
                      hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
@@ -40,7 +40,8 @@
                     {% else %}
                         {% include "partials/_is-not-default-address.html" %}
                     {% endif %}
-                    <button hx-post="{% url "account_addresses" %}?edit={{ address.id }}"
+                    <button hx-get="{% url "account_addresses" %}?edit={{ address.id }}"
+                            hx-swap="beforebegin"
                             class="inline py-2 underline">Edit</button>
                     <button hx-post="{% url "account_addresses" %}?delete={{ address.id }}"
                             hx-swap="outerHTML"

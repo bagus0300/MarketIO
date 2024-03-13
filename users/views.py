@@ -102,7 +102,32 @@ def account_addresses_view(request):
         HttpResponse: The HTTP response object.
     """
     addresses = UserAddress.objects.filter(user=request.user).order_by("-is_default")
+    if request.method == "GET":
+     # IF USER IS EDITING AN ADDRESS
+        if request.GET.get("edit"):
+            address = UserAddress.objects.get(id=request.GET.get("edit"))
+            isEditing = True
+            return render(request, 'partials/_add-address-form.html', {'address': address, 'isEditing': isEditing, "counties": UserAddress.COUNTIES})
     if request.method == "POST":
+        # IF USER IS EDITING AN ADDRESS
+        if request.GET.get("edit"):
+            address = UserAddress.objects.get(id=request.GET.get("edit"))
+            set_default = False
+            if address.is_default == True:
+                set_default = True
+            print(address.is_default)
+            form = CreateUserAddressForm(request.POST, instance=address)
+            if form.is_valid():
+                address.name = form.cleaned_data['name']
+                address.address_line_1 = form.cleaned_data['address_line_1']
+                address.address_line_2 = form.cleaned_data['address_line_2']
+                address.city = form.cleaned_data['city']
+                address.county = form.cleaned_data['county']
+                address.eircode = form.cleaned_data['eircode']
+                if set_default == True:
+                    address.is_default = True
+                address.save()
+                return redirect('/account/addresses')
         # IF USER IS DELETING AN ADDRESS
         if request.GET.get("delete"):
             address = UserAddress.objects.get(id=request.GET.get("delete"))

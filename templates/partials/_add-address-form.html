@@ -1,4 +1,6 @@
-<dialog class="p-20 border-2 w-[600px] border-primary fixed" x-ref="modal">
+<dialog class="p-20 border-2 w-[600px] border-primary fixed"
+        {% if isEditing %}id="edit-address-modal"{% endif %}
+        x-ref="modal">
     <svg x-on:click="$refs.modal.close()"
          class="absolute cursor-pointer right-8 top-8 hover:stroke-secondary stroke-primary"
          width="27"
@@ -9,7 +11,11 @@
         <path class="" d="M2 2L25 25" stroke="" stroke-width="4" />
         <path class="" d="M25 2L2 25" stroke="" stroke-width="4" />
     </svg>
-    <form action="{% url "account_addresses" %}"
+    <form {% if isEditing == True %}
+              action="{% url "account_addresses" %}?edit={{ address.id }}"
+          {% else %}
+              action="{% url "account_addresses" %}"
+          {% endif %}
           method="post"
           class="flex flex-col items-center justify-center w-full gap-6">
         {% csrf_token %}
@@ -20,6 +26,7 @@
                    type="text"
                    name="name"
                    id="name"
+                   {% if isEditing %}value="{{ address.name }}"{% endif %}
                    required>
         </div>
         <div class="w-full">
@@ -28,6 +35,7 @@
                    type="text"
                    name="address_line_1"
                    id="address_line_1"
+                   {% if isEditing %}value="{{ address.address_line_1 }}"{% endif %}
                    required>
         </div>
         <div class="w-full">
@@ -35,6 +43,9 @@
             <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
                    type="text"
                    name="address_line_2"
+                   {% if isEditing %}
+                       {% if address.address_line_2 %}value="{{ address.address_line_2 }}"{% endif %}
+                   {% endif %}
                    id="address_line_2">
         </div>
         <div class="w-full">
@@ -42,6 +53,7 @@
             <input class="w-full h-12 px-3 border-2 border-primary placeholder:text-secondary"
                    type="text"
                    name="city"
+                   {% if isEditing %}value="{{ address.city }}"{% endif %}
                    id="city"
                    required>
         </div>
@@ -52,8 +64,14 @@
                     name="county"
                     id="county"
                     required>
-                <option value="" disabled selected>Select...</option>
-                {% for county in counties %}<option value="{{ county.0 }}">{{ county.1 }}</option>{% endfor %}
+                <option value="" disabled>Select...</option>
+                {% for county in counties %}
+                    {% if county.0 == address.county %}
+                        <option selected value="{{ county.0 }}">{{ county.1 }}</option>
+                    {% else %}
+                        <option value="{{ county.0 }}">{{ county.1 }}</option>
+                    {% endif %}
+                {% endfor %}
             </select>
         </div>
         <div class="w-full">
@@ -62,9 +80,15 @@
                    type="text"
                    name="eircode"
                    id="eircode"
+                   pattern="[A-Za-z0-9]{3} [A-Za-z0-9]{4}"
+                   title="Please enter the format as XXX XXXX, where X can be any letter or digit."
+                   {% if isEditing %}value="{{ address.eircode }}"{% endif %}
                    required>
         </div>
         <button class="inline-block w-full h-12 text-center text-white bg-black md:px-0"
                 type="submit">SAVE ADDRESS</button>
     </form>
 </dialog>
+{% if isEditing %}
+    <script type="text/javascript">document.querySelector('#edit-address-modal').showModal();</script>
+{% endif %}
