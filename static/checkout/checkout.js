@@ -6,6 +6,7 @@ const stripe = Stripe(
 let elements;
 let email;
 let intentID;
+let address;
 
 initialise();
 
@@ -58,9 +59,9 @@ function createStripeElements() {
 async function handleSubmit(e, clientSecret) {
   e.preventDefault();
   setLoading(true);
-  let address;
   try {
-    address = document.querySelector('[name="prev_selected_address"]').value;
+    address = document.querySelector("[name='prev_selected_address']").value;
+    console.log(address);
   } catch {
     alert("Please select an address before paying");
     setLoading(false);
