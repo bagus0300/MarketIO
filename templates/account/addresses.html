@@ -1,8 +1,10 @@
 {% extends "base/base.html" %}
 {% load static %}
-{% block title %}Account | Addresses{% endblock title %}
+{% block title %}
+    Account | Addresses
+{% endblock title %}
 {% block content %}
-    {% include "partials/_add-address-form.html" with state="open"%}
+    {% include "partials/_add-address-form.html" with state="open" %}
     {% include "account/_back_to_account_btn.html" %}
     <div class="grid grid-flow-row grid-cols-1 gap-6 md:grid-cols-8 lg:grid-cols-12"
          x-data="">
@@ -31,7 +33,7 @@
                 <p>{{ address.city }}</p>
                 <p>{{ address.county }}</p>
                 <p>{{ address.eircode }}</p>
-                <div class="flex flex-col items-start my-4 "
+                <div class="flex flex-col items-start my-4"
                      hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
                     {% if address.is_default is True %}
                         {% include "partials/_is-default-address.html" %}
@@ -40,8 +42,7 @@
                     {% endif %}
                     <button hx-post="{% url "account_addresses" %}?edit={{ address.id }}"
                             class="inline py-2 underline">Edit</button>
-                    <button hx-confirm="Are you sure?"
-                            hx-post="{% url "account_addresses" %}?delete={{ address.id }}"
+                    <button hx-post="{% url "account_addresses" %}?delete={{ address.id }}"
                             hx-swap="outerHTML"
                             hx-target="#address-{{ address.id }}"
                             class="inline py-2 underline">Delete</button>

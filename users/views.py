@@ -109,9 +109,12 @@ def account_addresses_view(request):
             # IF USER IS DELETING THEIR DEFAULT ADDRESS, SET THE FIRST ADDRESS IN THE LIST TO DEFAULT
             if address.is_default:
                 address.delete()
-                new_default = addresses.first()
-                new_default.is_default = True
-                new_default.save()
+            # GET ALL ADDRESSES EXCEPT THE ONE BEING DELETED
+                addresses = UserAddress.objects.exclude(id=request.GET.get("delete"))
+                if addresses.exists():
+                    new_default = addresses.first()
+                    new_default.is_default = True
+                    new_default.save()
             # IF USER IS DELETING AN ADDRESS THAT IS NOT THEIR DEFAULT
             else:
                 address.delete()
