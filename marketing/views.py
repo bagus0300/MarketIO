@@ -25,7 +25,7 @@ def subscribe(request):
     response = mailchimp.lists.get_list(list_id)
     try:
         response = mailchimp.lists.add_list_member(list_id, member_info)
-        return HttpResponse("Success! Check your email to confirm subscription.")
+        return HttpResponse("Success! Keep an eye on your inbox for updates.")
     except ApiClientError as error:
         error_json = json.loads(error.text)
         if error_json.get("title") == "Member Exists":
