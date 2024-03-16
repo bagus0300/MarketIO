@@ -72,7 +72,7 @@ def add_product(request):
                 if quantity == '':
                     quantity = 0  # Convert empty strings to None
                 ProductVariant.objects.create(product=product, size=size, quantity=quantity)
-                
+            messages.success(request, "Product added successfully")
             return redirect(reverse('add_product'))  # Redirect to the same page for a new entry
     else:
         product_form = ProductForm()
@@ -109,7 +109,7 @@ def edit_product(request, product_id):
                 quantity = request.POST.get(f'quantity_{variant.size}')
                 variant.quantity = quantity
                 variant.save()
-                
+            messages.success(request, "Product edited successfully")
             return redirect(reverse('edit_product', args=[product.id]))  # Redirect to the same page after editing
     else:
         product_form = ProductForm(instance=product)
