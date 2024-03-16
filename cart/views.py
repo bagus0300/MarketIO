@@ -3,6 +3,7 @@ from products.models import ProductVariant
 from django.http import HttpResponse
 from .models import Cart, CartItem
 
+
 def add_to_cart(request):
     """
     Add a product to the cart.

@@ -13,6 +13,7 @@ import os
 
 stripe.api_key = os.getenv("STRIPE_PRIVATE_KEY")
 
+
 @login_required
 def checkout_view(request):
     """

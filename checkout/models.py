@@ -12,6 +12,7 @@ class OrderItem(models.Model):
         quantity (int): The quantity of this item in the order.
         price (Decimal): The price of this item.
     """
+
     order = models.ForeignKey("checkout.Order", on_delete=models.CASCADE)
     item = models.ForeignKey("products.ProductVariant", on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField()
@@ -33,7 +34,9 @@ class Order(models.Model):
     order_id = models.CharField()
     user = models.ForeignKey("users.User", on_delete=models.DO_NOTHING)
     address = models.ForeignKey(
-        "checkout.OrderAddress", on_delete=models.DO_NOTHING, related_name="order_address"
+        "checkout.OrderAddress",
+        on_delete=models.DO_NOTHING,
+        related_name="order_address",
     )
     email = models.EmailField()
     date_created = models.DateTimeField(auto_now_add=True)

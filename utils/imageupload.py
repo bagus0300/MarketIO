@@ -6,7 +6,7 @@ from django.core.files import File
 def run():
     """
     For bulk uploading product images.
-    Specify local directory where images to be uploaded 
+    Specify local directory where images to be uploaded
     are stored in product_imgs_dir.
     """
     product_imgs_dir = "product_imgs/"
@@ -18,4 +18,3 @@ def run():
             product_img = ProductImage(image=django_file)
             product_img.save()
             print(f"ProductImage {product_img.id} saved.")
-

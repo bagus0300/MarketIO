@@ -3,6 +3,7 @@ from django.core.validators import RegexValidator
 from django.utils.translation import gettext as _
 import os
 
+
 class Product(models.Model):
     """
     Product model for storing product information.
@@ -37,7 +38,9 @@ class Product(models.Model):
         blank=True,
     )
     price = models.DecimalField(decimal_places=2, max_digits=10)
-    sale_price = models.DecimalField(decimal_places=2, max_digits=10, default=None, blank=True, null=True)
+    sale_price = models.DecimalField(
+        decimal_places=2, max_digits=10, default=None, blank=True, null=True
+    )
     is_featured = models.BooleanField(_("Featured Product?"), default=False)
 
     def __str__(self):
@@ -76,7 +79,11 @@ class ProductImage(models.Model):
 
     image = models.ImageField(_("Image"), upload_to=upload_to_product_img)
     product = models.ForeignKey(
-        "products.Product", on_delete=models.SET_NULL, null=True, blank=True, default=None
+        "products.Product",
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        default=None,
     )
 
 
@@ -102,7 +109,9 @@ class ProductVariant(models.Model):
         ("12.5", "UK 12.5"),
         ("13", "UK 13"),
     ]
-    product = models.ForeignKey("products.Product",related_name='variants', on_delete=models.CASCADE)
+    product = models.ForeignKey(
+        "products.Product", related_name="variants", on_delete=models.CASCADE
+    )
     size = models.CharField(_("Size"), max_length=50, choices=SIZES)
     quantity = models.PositiveIntegerField(
         _("Qty in stock"), blank=True, default=0, null=True

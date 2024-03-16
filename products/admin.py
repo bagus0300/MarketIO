@@ -15,6 +15,8 @@ class ProductAdmin(admin.ModelAdmin):
         ProductImageInline,
         ProductVariantInline,
     ]
+
+
 admin.site.register(Product, ProductAdmin)
 admin.site.register(ProductCategory)
 admin.site.register(ProductImage)

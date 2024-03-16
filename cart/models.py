@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class CartItem(models.Model):
     """
     Represents an item in a cart.

@@ -14,6 +14,7 @@ class CustomUserCreationForm(UserCreationForm):
         model = User
         fields = ("email", "first_name", "last_name")
 
+
 class CreateUserAddressForm(ModelForm):
     """
     Form for creating a user address.
@@ -25,6 +26,7 @@ class CreateUserAddressForm(ModelForm):
         exclude (list): The fields to exclude from the form.
 
     """
+
     class Meta:
         model = UserAddress
         exclude = ["user"]

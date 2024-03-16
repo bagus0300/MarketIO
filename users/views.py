@@ -42,7 +42,7 @@ def signup_view(request):
     # If the request method is GET, render the signup template with a blank form
     else:
         form = CustomUserCreationForm()
-    
+
     return render(request, "users/signup.html", {"form": form})
 
 
@@ -103,11 +103,19 @@ def account_addresses_view(request):
     """
     addresses = UserAddress.objects.filter(user=request.user).order_by("-is_default")
     if request.method == "GET":
-     # IF USER IS EDITING AN ADDRESS
+        # IF USER IS EDITING AN ADDRESS
         if request.GET.get("edit"):
             address = UserAddress.objects.get(id=request.GET.get("edit"))
             isEditing = True
-            return render(request, 'partials/_add-address-form.html', {'address': address, 'isEditing': isEditing, "counties": UserAddress.COUNTIES})
+            return render(
+                request,
+                "partials/_add-address-form.html",
+                {
+                    "address": address,
+                    "isEditing": isEditing,
+                    "counties": UserAddress.COUNTIES,
+                },
+            )
     if request.method == "POST":
         # IF USER IS EDITING AN ADDRESS
         if request.GET.get("edit"):
@@ -118,23 +126,23 @@ def account_addresses_view(request):
             print(address.is_default)
             form = CreateUserAddressForm(request.POST, instance=address)
             if form.is_valid():
-                address.name = form.cleaned_data['name']
-                address.address_line_1 = form.cleaned_data['address_line_1']
-                address.address_line_2 = form.cleaned_data['address_line_2']
-                address.city = form.cleaned_data['city']
-                address.county = form.cleaned_data['county']
-                address.eircode = form.cleaned_data['eircode']
+                address.name = form.cleaned_data["name"]
+                address.address_line_1 = form.cleaned_data["address_line_1"]
+                address.address_line_2 = form.cleaned_data["address_line_2"]
+                address.city = form.cleaned_data["city"]
+                address.county = form.cleaned_data["county"]
+                address.eircode = form.cleaned_data["eircode"]
                 if set_default == True:
                     address.is_default = True
                 address.save()
-                return redirect('/account/addresses')
+                return redirect("/account/addresses")
         # IF USER IS DELETING AN ADDRESS
         if request.GET.get("delete"):
             address = UserAddress.objects.get(id=request.GET.get("delete"))
             # IF USER IS DELETING THEIR DEFAULT ADDRESS, SET THE FIRST ADDRESS IN THE LIST TO DEFAULT
             if address.is_default:
                 address.delete()
-            # GET ALL ADDRESSES EXCEPT THE ONE BEING DELETED
+                # GET ALL ADDRESSES EXCEPT THE ONE BEING DELETED
                 addresses = UserAddress.objects.exclude(id=request.GET.get("delete"))
                 if addresses.exists():
                     new_default = addresses.first()
@@ -185,6 +193,7 @@ def account_addresses_view(request):
 
     context = {"addresses": addresses, "counties": UserAddress.COUNTIES}
     return render(request, "account/addresses.html", context)
+
 
 @login_required
 def add_remove_user_favourite(request, product_id):
