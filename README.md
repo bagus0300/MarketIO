@@ -371,6 +371,8 @@ This section outlines the various technologies used throughout the project and t
 
 - Responsiveness was tested as per below table (go to section: [Responsiveness](#-responsiveness-testing))
 - All HTML files were passed through the W3C validator with no errors
+  - NOTE: The Nu HTML validator did present errors which were all associated to htmx and alipine.js attributes added to HTML tage. These errors were filtered out of validation results, as shown in below image. 
+![HTML validation](/readme/img/html-validation.png)
 - All JavaScript files were passed through JSHint with no errors present.
 - The website was tested on major browsers including Chrome, Safari, Firefox and Edge.
 - All user flows were tested in depth including navigating through the purchase flow, clicking CTAs and links, and form submission.
