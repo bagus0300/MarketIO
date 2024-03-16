@@ -284,7 +284,7 @@ This section outlines the various technologies used throughout the project and t
 <details>
 
 - [Stripe Elements](https://stripe.com/docs/payments/elements) - used for PCI compliant payments processing
-
+- MailChimp API - used to add functional marketing newsletter signup form
 </details>
 
 ## Content
@@ -301,6 +301,15 @@ This section outlines the various technologies used throughout the project and t
 
 - Laced is an online eCommerce store where customers can purchase footware online and have it delivered to them.
 - All footware designs are AI generated using Leonardo.ai image generation, offering unique and differentiated footware designs.
+
+### Purpose & Value to users
+- Innovative AI-Generated Footwear: Step into the future of fashion with our cutting-edge AI-generated footwear, crafted using state-of-the-art technology to create unique designs that push the boundaries of style.
+- Exclusive Products: Discover a curated selection of footwear that is exclusive to Laced, offering designs and styles that you won't find anywhere else. Each pair is meticulously crafted to stand out in the world of sports and streetwear fashion.
+- Tailored for Sports and Streetwear: Designed with the active lifestyle in mind, our footwear blends functionality with fashion, making them perfect for both sports enthusiasts and streetwear aficionados alike. From sleek running shoes to stylish sneakers, we have something for every urban explorer.
+- Seamless Shopping Experience: Enjoy a smooth and intuitive shopping journey on our website, with a user-friendly interface that makes browsing, selecting, and purchasing your favorite products a breeze. Our streamlined checkout process ensures a hassle-free experience from start to finish.
+- Secure Payments with Stripe: Shop with confidence knowing that your payments are safe and secure with Stripe, one of the most trusted payment gateways in the industry. Your financial information is encrypted and protected at every step of the transaction.
+- Fast and Performant Site: Experience lightning-fast performance on our website, thanks to optimized coding and robust infrastructure. Whether you're browsing on desktop or mobile, you'll enjoy seamless navigation and quick loading times, ensuring a smooth and responsive user experience.
+
 
 ## Marketing
 
@@ -328,7 +337,7 @@ This section outlines the various technologies used throughout the project and t
 
 ## Newsletter
 
-- A newletter form is present on the footer of every page, which offers a variety of benefits:
+- A functional newletter, implemented with MailChimp, form is present on the footer of every page, which offers a variety of benefits:
 
   - Lead Generation: The newsletter form serves as a lead generation tool, allowing visitors to subscribe to receive updates, promotions, and other relevant content from the store. By capturing email addresses, the store can build a valuable database of potential customers.
 
