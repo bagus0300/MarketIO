@@ -83,10 +83,10 @@ async function handleSubmit(e, clientSecret) {
   const { error } = await stripe.confirmPayment({
     elements,
     confirmParams: {
-      // return_url: "https://laced.carlmurray.design/checkout/confirmation/",
+      return_url: "https://laced.carlmurray.design/checkout/confirmation/",
 
       // Uncomment for local testing only
-      return_url: "http://localhost:8000/checkout/confirmation/",
+      // return_url: "http://localhost:8000/checkout/confirmation/",
       receipt_email: email,
     },
   });
