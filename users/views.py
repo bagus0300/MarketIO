@@ -90,7 +90,7 @@ def logout_view(request):
     messages.info(request, "Successfully logged out!")
     return redirect("home")
 
-
+@login_required
 def account_addresses_view(request):
     """
     View function for handling user addresses.

@@ -43,7 +43,7 @@ def checkout_view(request):
 
     return render(request, "checkout/checkout.html", context)
 
-
+@login_required
 def checkout_change_address(request):
     """
     View function for handling the change of shipping address during checkout.
@@ -134,7 +134,7 @@ def add_payment_intent_address(request):
     stripe.PaymentIntent.modify(intent_id, metadata=payment_intent.metadata)
     return HttpResponse("")
 
-
+@login_required
 def checkout_confirmation_view(request):
     """
     Renders the checkout confirmation page with the order details.

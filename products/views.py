@@ -4,6 +4,7 @@ from users.models import UserFavourite
 from .forms import ProductForm, ProductImageForm, ProductVariantForm
 from django.urls import reverse
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 
 def products_view(request):
@@ -53,7 +54,7 @@ def product_detail_view(request, product_id):
     }
     return render(request, "products/product_detail_view.html", context)
 
-
+@login_required
 def add_product(request):
     if request.user.is_superuser is False:
         return redirect(reverse("home"))
@@ -93,7 +94,7 @@ def add_product(request):
         },
     )
 
-
+@login_required
 def edit_product(request, product_id):
     if request.user.is_superuser is False:
         return redirect(reverse("home"))
@@ -155,7 +156,7 @@ def edit_product(request, product_id):
         },
     )
 
-
+@login_required
 def delete_product(request, product_id):
     if request.user.is_superuser is False:
         return redirect(reverse("home"))
