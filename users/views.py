@@ -123,7 +123,6 @@ def account_addresses_view(request):
             set_default = False
             if address.is_default == True:
                 set_default = True
-            print(address.is_default)
             form = CreateUserAddressForm(request.POST, instance=address)
             if form.is_valid():
                 address.name = form.cleaned_data["name"]

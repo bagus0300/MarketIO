@@ -61,7 +61,6 @@ async function handleSubmit(e, clientSecret) {
   setLoading(true);
   try {
     address = document.querySelector("[name='prev_selected_address']").value;
-    console.log(address);
   } catch {
     alert("Please select an address before paying");
     setLoading(false);
