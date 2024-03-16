@@ -154,6 +154,8 @@ Description: Represents an address associated with an order.
   - Update: Users can edit a saved address.
   - Delete: Users can delete addresses from their profile.
 - Admin CRUD functionality exists for all Models and is done from the Django Admin dashboard.
+- Additional role-based authorisation enables site admins to add, edit and delete products on the site's front-end by going to `/products/{add|edit|delete}/{id}`. 
+![Product CRUD example](/readme/img/product-crud.png)
 
 ## Authentication & Authorisation
 
