@@ -3,6 +3,7 @@ from .models import Product, ProductVariant
 from users.models import UserFavourite
 from .forms import ProductForm, ProductImageForm, ProductVariantForm
 from django.urls import reverse
+from django.contrib import messages
 
 
 def products_view(request):
@@ -123,3 +124,13 @@ def edit_product(request, product_id):
     variant_formset = [ProductVariantForm(data) for data in variants_data]
     
     return render(request, "products/edit_product.html", {"product": product, "product_form": product_form, "image_form": image_form, "variant_choices": variant_choices, "variant_formset": variant_formset, "variants_data": variants_data})
+
+
+def delete_product(request, product_id):
+    if request.user.is_superuser is False:
+        return redirect(reverse('home'))
+
+    product = get_object_or_404(Product, id=product_id)
+    product.delete()
+    messages.success(request, "Product deleted successfully")
+    return redirect(reverse('products'))
