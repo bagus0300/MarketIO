@@ -167,6 +167,7 @@ Description: Represents an address associated with an order.
 
 - The homepage shows Featured products and Sale products.
 - Six Featured/Sale products shown are chosen at random each time the page is loaded.
+![Homepage](/readme/img/site-screens/landing.png)
 
 ## Footer
 
@@ -175,6 +176,8 @@ Description: Represents an address associated with an order.
 ## Shop Page
 
 - The Shop page, accessed from the top navigation, shows all products.
+![Products](/readme/img/site-screens/products.png)
+
 
 ## Product Detail Page
 
@@ -182,32 +185,43 @@ Description: Represents an address associated with an order.
 - Users can select a product variant, choose a quantity and add to cart.
 - Only variants which are in stock are shown on the page.
 - When the Add to Cart button is pressed, an AJAX request is sent to a Django view which updates the user's cart.
+![Product detail](/readme/img/site-screens/product-detail.png)
+
 
 ## Account
+
+![Account overview](/readme/img/site-screens/account.png)
 
 The Account page contains the following pages:
 
 ### Orders
 - The user can view all of their order history.
+![Orders](/readme/img/site-screens/orders.png)
+
 
 ### Addresses
 - CRUD functionality is implemented in this page.
 - The user can create, edit or delete a shipping address which can then be selected during checkout.
+![Addresses](/readme/img/site-screens/addresses.png)
 
 ### Favourites
 - The user can add a product as a "favourite" from the product detail page.
 - The Favourites page lets the user review their favourited products to make purchasing at a later date easier.
+![Favourites](/readme/img/site-screens/favourites.png)
 
 
 ## Cart
 - If a user is not logged in, the cart is associated with the current session ID. It can then be converted to a user's cart if they decide to login, so that they don't lose their items.
 - A badge beside the cart shows the quantity of items in the current cart, and is updated via `htmx` when a product is added/removed to/from the cart.
+![Cart](/readme/img/site-screens/cart.png)
 
 
 ## Checkout
 - The checkout page features an address selection widget that uses `htmx` to update the chosen address.
 - The payment form utilises Stripe Elements to ensure the secure and PCI compliant processing of payments.
 - An order summary is shown so the user can review their order before payment.
+![Checkout](/readme/img/site-screens/checkout.png)
+
 
 ## Roadmap
 
