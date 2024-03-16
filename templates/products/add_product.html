@@ -1,0 +1,28 @@
+{% extends "base/base.html" %}
+{% block content %}
+    <div class="flex flex-col items-start md:w-1/2">
+        <h1 class="text-2xl font-bold">Edit Product</h1>
+        <form method="post"
+              enctype="multipart/form-data"
+              class="flex flex-col gap-4">
+            {% csrf_token %}
+            {{ product_form.as_p }}
+            <h2 class="text-xl font-bold">Product Image</h2>
+            {{ image_form.as_p }}
+            <h2 class="text-xl font-bold">Product Variants</h2>
+            {% for size, _ in variant_choices %}
+                <div class="flex">
+                    <span class="p-2 w-28">{{ size }}</span>
+                    <input type="number"
+                           name="quantity_{{ size }}"
+                           min="0"
+                           value="{% for variant in variant_data %}
+                                      {% if variant.size == size %}{{ variant.quantity }}{% endif %}
+                                  {% endfor %}"
+                           class="w-12 border-b border-b-primary">
+                </div>
+            {% endfor %}
+            <button type="submit" class="px-4 py-2 mt-4 text-white bg-primary">SAVE CHANGES</button>
+        </form>
+    </div>
+{% endblock content %}

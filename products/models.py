@@ -37,7 +37,7 @@ class Product(models.Model):
         blank=True,
     )
     price = models.DecimalField(decimal_places=2, max_digits=10)
-    sale_price = models.DecimalField(decimal_places=2, max_digits=10, default=False)
+    sale_price = models.DecimalField(decimal_places=2, max_digits=10, default=None, blank=True, null=True)
     is_featured = models.BooleanField(_("Featured Product?"), default=False)
 
     def __str__(self):
@@ -102,7 +102,7 @@ class ProductVariant(models.Model):
         ("12.5", "UK 12.5"),
         ("13", "UK 13"),
     ]
-    product = models.ForeignKey("products.Product", on_delete=models.CASCADE)
+    product = models.ForeignKey("products.Product",related_name='variants', on_delete=models.CASCADE)
     size = models.CharField(_("Size"), max_length=50, choices=SIZES)
     quantity = models.PositiveIntegerField(
         _("Qty in stock"), blank=True, default=0, null=True

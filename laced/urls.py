@@ -20,6 +20,8 @@ urlpatterns = [
     path("account/orders/", user_views.account_orders_view, name="account_orders"),
     path("account/favourites/", user_views.account_favourites_view, name="account_favourites"),
     path("products/", product_views.products_view, name="products"),
+    path("products/add", product_views.add_product, name="add_product"),
+    path("products/edit/<int:product_id>", product_views.edit_product, name="edit_product"),
     path(
         "products/<int:product_id>/",
         product_views.product_detail_view,

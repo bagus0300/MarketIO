@@ -1,7 +1,11 @@
 {% extends 'base/base.html' %}
 {% load static %}
-{% block metadesc %}{{ product.description }}{% endblock metadesc %}
-{% block title %}{{product.name}}{% endblock title %}
+{% block metadesc %}
+    {{ product.description }}
+{% endblock metadesc %}
+{% block title %}
+    {{ product.name }}
+{% endblock title %}
 {% block content %}
     <a href="{% url 'products' %}"
        class="flex items-center gap-2 py-2 mb-4 text-lg w-fit hover:underline">
@@ -10,11 +14,12 @@
              height="22"
              viewBox="0 0 22 22"
              fill="none"
-             transform="scale(-1, 1)"
              xmlns="http://www.w3.org/2000/svg">
-            <line x1="-8.74228e-08" y1="11" x2="20.7778" y2="11" stroke="black" stroke-width="2" />
-            <line x1="21.2929" y1="11.7071" x2="10.2929" y2="0.707106" stroke="black" stroke-width="2" />
-            <line y1="-1" x2="13.8279" y2="-1" transform="matrix(-0.707107 0.707107 0.707107 0.707107 20.7778 12.2227)" stroke="black" stroke-width="2" />
+            <g transform="scale(-1, 1)" transform-origin="50% 50%">
+            <line x1="-8.74228e-08" y1="11" x2="20.7778" y2="11" stroke="black" stroke-width="2"></line>
+            <line x1="21.2929" y1="11.7071" x2="10.2929" y2="0.707106" stroke="black" stroke-width="2"></line>
+            <line y1="-1" x2="13.8279" y2="-1" transform="matrix(-0.707107 0.707107 0.707107 0.707107 20.7778 12.2227)" stroke="black" stroke-width="2"></line>
+            </g>
         </svg>
         <span>Back to Products</span></a>
     <div class="grid w-full grid-cols-12 gap-4 lg:gap-16"
@@ -30,17 +35,17 @@
                     {% if product.sale_price %}
                         <h2 class="inline-block mr-1 font-bold text-green-600">€{{ product.sale_price }}</h2>
                     {% endif %}
-                    <h2 class=" text-primary {% if product.sale_price %}inline-block line-through text-secondary{% endif %}">
-                        €{{ product.price }}
-                    </h2>
+                    <h2 class="text-primary
+                               {% if product.sale_price %}inline-block line-through text-secondary{% endif %}">€{{ product.price }}</h2>
                 </div>
                 <h2 class="mt-4 text-lg text-secondary">SKU: {{ product.sku }}</h2>
                 <p class="my-8 text-xl text-primary">{{ product.description }}</p>
             </div>
             <div class="flex flex-col gap-4">
                 <!-- SIZE SELECTION -->
-                <ul id="sizesContainer" class="grid grid-cols-6 gap-3 md:grid-cols-8 lg:grid-cols-10 xl:grid-cols-12">
-                    {% for variant in product.productvariant_set.all %}
+                <ul id="sizesContainer"
+                    class="grid grid-cols-6 gap-3 md:grid-cols-8 lg:grid-cols-10 xl:grid-cols-12">
+                    {% for variant in product.variants.all %}
                         {% if variant.quantity is not 0 %}
                             <li class="col-span-2 bg-white">
                                 <button data-selected
@@ -59,7 +64,7 @@
                       hx-post="{% url 'add_to_cart' %}"
                       hx-trigger="submit throttle:3s">
                     <input type="hidden" name="product_id" value="{{ product.id }}">
-                    <input type="hidden" name="product_variant" required>
+                    <input type="hidden" name="product_variant">
                     {% csrf_token %}
                     <!-- QTY SELECTION -->
                     <div class="flex justify-between col-span-12 bg-white border-2 sm:col-span-6 xl:col-span-4 border-primary text-primary"
