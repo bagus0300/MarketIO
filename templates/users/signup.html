@@ -7,8 +7,7 @@
             {% for field in form %}{{ field.errors }}{% endfor %}
         {% endif %}
     </div>
-    <form action=""
-          method="post"
+    <form method="post"
           class="flex flex-col items-center justify-center w-full gap-6">
         {% csrf_token %}
         <div class="w-full">

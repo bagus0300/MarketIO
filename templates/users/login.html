@@ -4,8 +4,7 @@
     <div class="mb-4 font-bold text-red-600">
         {% if form.errors %}{{ form.non_field_errors }}{% endif %}
     </div>
-    <form action=""
-          method="post"
+    <form method="post"
           class="flex flex-col items-center justify-center w-full gap-6">
         {% csrf_token %}
         <div class="w-full">
