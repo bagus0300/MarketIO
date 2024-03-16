@@ -68,9 +68,8 @@
                     <!-- QTY SELECTION -->
                     <div class="flex justify-between col-span-12 bg-white border-2 sm:col-span-6 xl:col-span-4 border-primary text-primary"
                          x-data="{qty:1}">
-                        <button form="false"
-                                class="flex items-center justify-center h-full text-white transition-all bg-black aspect-square hover:bg-secondary"
-                                x-on:click="qty > 1 ? qty-- : ''">
+                        <div class="flex items-center justify-center h-full text-white transition-all bg-black select-none aspect-square hover:bg-secondary"
+                             x-on:click="qty > 1 ? qty-- : ''">
                             <svg width="21"
                                  height="2"
                                  viewBox="0 0 21 2"
@@ -78,7 +77,7 @@
                                  xmlns="http://www.w3.org/2000/svg">
                                 <line x1="0.0712891" y1="1" x2="20.1733" y2="1" stroke="white" stroke-width="2" />
                             </svg>
-                        </button>
+                        </div>
                         <!-- QTY INPUT -->
                         <input type="text"
                                name="quantity"
@@ -86,10 +85,8 @@
                                class="w-full py-4 text-xl text-center text-primary"
                                x-text="qty"
                                x-bind:value="qty">
-                        <button hx-disable
-                                form="false"
-                                class="flex items-center justify-center h-full text-white transition-all bg-black aspect-square hover:bg-secondary"
-                                x-on:click="qty < 10 ? qty++ : ''">
+                        <div class="flex items-center justify-center h-full text-white transition-all bg-black select-none aspect-square hover:bg-secondary"
+                             x-on:click="qty < 10 ? qty++ : ''">
                             <svg width="21"
                                  height="20"
                                  viewBox="0 0 21 20"
@@ -97,7 +94,7 @@
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.8827 9V0H9.88265V9H0.82666V11H9.88265V20H11.8827V11H20.9287V9H11.8827Z" fill="white" />
                             </svg>
-                        </button>
+                        </div>
                     </div>
                     <!-- ADD TO BAG -->
                     <button id="submit"
