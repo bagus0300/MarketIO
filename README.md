@@ -1,7 +1,7 @@
 # MarketIO
 
 ## Description
-MarketIO is an e-commerce product comparison platform that scrapes products in real-time across 5 different platforms - AliExpress, Amazon, EzBuy, Lazada and Qoo10.
+MarketIO is an e-commerce product comparison platform that scrapes products in real-time across 5 different platforms - AliExpress, Amazon, EzBuy, Lazada and Qoo10.  
 
 ## Features
 1. User authentication via the convential username and password, or via social platforms like Google
